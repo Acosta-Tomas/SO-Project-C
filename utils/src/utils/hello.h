@@ -58,6 +58,6 @@ void liberar_conexion(int socket_cliente);
 void eliminar_paquete(t_paquete* paquete);
 
 void leer_consola(t_log*);
-void iterator(char*, t_log*);
+void iterator(char*);
 
 #endif

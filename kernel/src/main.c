@@ -39,7 +39,11 @@ int main(int argc, char* argv[]) {
 
 // Probando poder crear un server que escuche como el tp0 en un thread (esta funcion la pasaria a otro archivo server.c);
 void servidor_main(t_config* config) {
-    t_log* logger = log_create("kernel.logs", config_get_string_value(config, "LOGGER_SERVIDOR"), true, LOG_LEVEL_INFO);
+    t_log* logger = log_create("kernel.logs", config_get_string_value(config, "LOGGER_SERVIDOR"), true, LOG_LEVEL_DEBUG);
+
+    void myiterator(char* value) {
+        log_info(logger,"%s", value);
+    }
 
     log_info(logger, "Thread Servidor creado exitosamente");
 
@@ -60,12 +64,12 @@ void servidor_main(t_config* config) {
 		case PAQUETE:
 			lista = recibir_paquete(cliente_fd);
 			log_info(logger, "Me llegaron los siguientes valores:\n");
-			list_iterate(lista, (void*) iterator);
+			list_iterate(lista, (void*) myiterator);
 			break;
 		case -1:
 			log_error(logger, "el cliente se desconecto. Terminando servidor");
             log_destroy(logger);
-			exit(EXIT_FAILURE);
+			return;
 		default:
 			log_warning(logger,"Operacion desconocida. No quieras meter la pata");
 			break;

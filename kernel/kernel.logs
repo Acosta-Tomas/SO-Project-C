@@ -12,3 +12,80 @@
 [INFO] 09:41:29:051 Kernel-Cliente/(82485:82514): otro mas
 [INFO] 09:41:31:570 Kernel-Cliente/(82485:82514): perfectoo
 [INFO] 09:41:33:506 Kernel-Cliente/(82485:82514): salgo
+[INFO] 10:37:13:577 Kernel-Servidor/(118122:118127): Thread Servidor creado exitosamente
+[INFO] 10:37:13:577 Kernel-Servidor/(118122:118127): Servidor listo para recibir al cliente
+[INFO] 10:37:14:577 Kernel-Cliente/(118122:118144): Thread Cliente creado exitosamente
+[INFO] 10:37:14:577 Kernel-Cliente/(118122:118144): 127.0.0.1
+[INFO] 10:37:14:577 Kernel-Cliente/(118122:118144): 8002
+[INFO] 10:37:14:577 Kernel-Cliente/(118122:118144): 127.0.0.1
+[INFO] 10:37:14:577 Kernel-Cliente/(118122:118144): 8006
+[INFO] 10:37:14:577 Kernel-Cliente/(118122:118144): 8007
+[INFO] 10:39:15:909 Kernel-Servidor/(119691:119696): Thread Servidor creado exitosamente
+[INFO] 10:39:15:909 Kernel-Servidor/(119691:119696): Servidor listo para recibir al cliente
+[INFO] 10:39:16:909 Kernel-Cliente/(119691:119713): Thread Cliente creado exitosamente
+[INFO] 10:39:16:909 Kernel-Cliente/(119691:119713): 127.0.0.1
+[INFO] 10:39:16:909 Kernel-Cliente/(119691:119713): 8002
+[INFO] 10:39:16:909 Kernel-Cliente/(119691:119713): 127.0.0.1
+[INFO] 10:39:16:909 Kernel-Cliente/(119691:119713): 8006
+[INFO] 10:39:16:909 Kernel-Cliente/(119691:119713): 8007
+[INFO] 10:41:07:154 Kernel-Servidor/(119691:119696): Se conecto un cliente
+[INFO] 10:41:46:090 Kernel-Servidor/(119691:119696): Me llegaron los siguientes valores:
+
+[INFO] 10:43:43:053 Kernel-Servidor/(122912:122917): Thread Servidor creado exitosamente
+[INFO] 10:43:43:053 Kernel-Servidor/(122912:122917): Servidor listo para recibir al cliente
+[INFO] 10:43:44:053 Kernel-Cliente/(122912:122934): Thread Cliente creado exitosamente
+[INFO] 10:43:44:053 Kernel-Cliente/(122912:122934): 127.0.0.1
+[INFO] 10:43:44:053 Kernel-Cliente/(122912:122934): 8002
+[INFO] 10:43:44:053 Kernel-Cliente/(122912:122934): 127.0.0.1
+[INFO] 10:43:44:053 Kernel-Cliente/(122912:122934): 8006
+[INFO] 10:43:44:053 Kernel-Cliente/(122912:122934): 8007
+[INFO] 10:43:54:252 Kernel-Cliente/(122912:122934): stemrinemos
+[INFO] 10:44:24:291 Kernel-Servidor/(122912:122917): Se conecto un cliente
+[INFO] 10:44:39:261 Kernel-Servidor/(122912:122917): Me llegaron los siguientes valores:
+
+[INFO] 10:56:21:241 Kernel-Servidor/(131017:131021): Thread Servidor creado exitosamente
+[INFO] 10:56:21:241 Kernel-Servidor/(131017:131021): Servidor listo para recibir al cliente
+[INFO] 10:56:22:241 Kernel-Cliente/(131017:131038): Thread Cliente creado exitosamente
+[INFO] 10:56:22:241 Kernel-Cliente/(131017:131038): 127.0.0.1
+[INFO] 10:56:22:241 Kernel-Cliente/(131017:131038): 8002
+[INFO] 10:56:22:241 Kernel-Cliente/(131017:131038): 127.0.0.1
+[INFO] 10:56:22:241 Kernel-Cliente/(131017:131038): 8006
+[INFO] 10:56:22:241 Kernel-Cliente/(131017:131038): 8007
+[INFO] 10:56:27:189 Kernel-Cliente/(131017:131038): salgamos
+[INFO] 10:57:14:379 Kernel-Servidor/(131017:131021): Se conecto un cliente
+[INFO] 10:57:28:992 Kernel-Servidor/(131017:131021): Me llegaron los siguientes valores:
+
+[INFO] 10:57:28:993 Kernel-Servidor/(131017:131021): espero que no te rompas kernel
+[INFO] 10:57:28:993 Kernel-Servidor/(131017:131021): jajaa dale
+[ERROR] 10:57:28:993 Kernel-Servidor/(131017:131021): el cliente se desconecto. Terminando servidor
+[INFO] 11:02:10:831 Kernel-Servidor/(134886:134893): Thread Servidor creado exitosamente
+[INFO] 11:02:10:843 Kernel-Servidor/(134886:134893): Servidor listo para recibir al cliente
+[INFO] 11:02:11:828 Kernel-Cliente/(134886:134903): Thread Cliente creado exitosamente
+[INFO] 11:02:11:828 Kernel-Cliente/(134886:134903): 127.0.0.1
+[INFO] 11:02:11:829 Kernel-Cliente/(134886:134903): 8002
+[INFO] 11:02:11:829 Kernel-Cliente/(134886:134903): 127.0.0.1
+[INFO] 11:02:11:829 Kernel-Cliente/(134886:134903): 8006
+[INFO] 11:02:11:829 Kernel-Cliente/(134886:134903): 8007
+[INFO] 11:02:28:006 Kernel-Servidor/(134886:134893): Se conecto un cliente
+[INFO] 11:02:36:705 Kernel-Servidor/(134886:134893): Me llegaron los siguientes valores:
+
+[INFO] 11:02:36:705 Kernel-Servidor/(134886:134893): Me conecte wachin
+[ERROR] 11:02:36:706 Kernel-Servidor/(134886:134893): el cliente se desconecto. Terminando servidor
+[INFO] 11:07:35:308 Kernel-Servidor/(138486:138493): Thread Servidor creado exitosamente
+[INFO] 11:07:35:320 Kernel-Servidor/(138486:138493): Servidor listo para recibir al cliente
+[INFO] 11:07:36:305 Kernel-Cliente/(138486:138498): Thread Cliente creado exitosamente
+[INFO] 11:07:36:305 Kernel-Cliente/(138486:138498): 127.0.0.1
+[INFO] 11:07:36:306 Kernel-Cliente/(138486:138498): 8002
+[INFO] 11:07:36:306 Kernel-Cliente/(138486:138498): 127.0.0.1
+[INFO] 11:07:36:306 Kernel-Cliente/(138486:138498): 8006
+[INFO] 11:07:36:306 Kernel-Cliente/(138486:138498): 8007
+[INFO] 11:07:54:008 Kernel-Servidor/(138486:138493): Se conecto un cliente
+[INFO] 11:08:13:420 Kernel-Servidor/(138486:138493): Me llegaron los siguientes valores:
+
+[INFO] 11:08:13:420 Kernel-Servidor/(138486:138493): nos vemos
+[INFO] 11:08:13:420 Kernel-Servidor/(138486:138493): chay
+[ERROR] 11:08:13:420 Kernel-Servidor/(138486:138493): el cliente se desconecto. Terminando servidor
+[INFO] 11:08:22:949 Kernel-Cliente/(138486:138498): escribo aca
+[INFO] 11:08:27:199 Kernel-Cliente/(138486:138498): a y me sigue la consola
+[INFO] 11:08:28:030 Kernel-Cliente/(138486:138498): okey
+[INFO] 11:08:31:247 Kernel-Cliente/(138486:138498): chau

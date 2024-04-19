@@ -231,6 +231,6 @@ void leer_consola(t_log* logger)
 
 }
 
-void iterator(char* value, t_log* logger) {
-	log_info(logger,"%s", value);
-}
+// void iterator(char* value) {
+// 	log_info(logger,"%s", value);
+// }
