@@ -1,0 +1,14 @@
+[INFO] 09:25:41:183 Kernel-Servidor/(74417:74421): Thread Servidor creado exitosamente
+[INFO] 09:32:08:468 Kernel-Servidor/(78436:78447): Thread Servidor creado exitosamente
+[INFO] 09:38:24:517 Kernel-Servidor/(82485:82490): Thread Servidor creado exitosamente
+[INFO] 09:38:24:517 Kernel-Servidor/(82485:82490): Servidor listo para recibir al cliente
+[INFO] 09:38:25:518 Kernel-Cliente/(82485:82514): Thread Cliente creado exitosamente
+[INFO] 09:38:25:518 Kernel-Cliente/(82485:82514): 127.0.0.1
+[INFO] 09:38:25:518 Kernel-Cliente/(82485:82514): 8002
+[INFO] 09:38:25:518 Kernel-Cliente/(82485:82514): 127.0.0.1
+[INFO] 09:38:25:518 Kernel-Cliente/(82485:82514): 8006
+[INFO] 09:38:25:518 Kernel-Cliente/(82485:82514): 8007
+[INFO] 09:41:26:148 Kernel-Cliente/(82485:82514): escribo
+[INFO] 09:41:29:051 Kernel-Cliente/(82485:82514): otro mas
+[INFO] 09:41:31:570 Kernel-Cliente/(82485:82514): perfectoo
+[INFO] 09:41:33:506 Kernel-Cliente/(82485:82514): salgo
