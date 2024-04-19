@@ -54,27 +54,54 @@ void servidor_main(t_config* config) {
     log_info(logger, "Se conecto un cliente");
 
     t_list* lista;
-	
-    while (1) {
-		int cod_op = recibir_operacion(cliente_fd);
-		switch (cod_op) {
-		case MENSAJE:
-			recibir_mensaje(cliente_fd, logger);
-			break;
-		case PAQUETE:
-			lista = recibir_paquete(cliente_fd);
-			log_info(logger, "Me llegaron los siguientes valores:\n");
-			list_iterate(lista, (void*) myiterator);
-			break;
-		case -1:
-			log_error(logger, "el cliente se desconecto. Terminando servidor");
-            log_destroy(logger);
-			return;
-		default:
-			log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-			break;
+
+    for (int cod_op = recibir_operacion(cliente_fd); cod_op != -1; cod_op = recibir_operacion(cliente_fd)){
+        switch (cod_op) {
+            case MENSAJE:
+                recibir_mensaje(cliente_fd, logger);
+                break;
+            case PAQUETE:
+                lista = recibir_paquete(cliente_fd);
+                log_info(logger, "Me llegaron los siguientes valores:\n");
+                list_iterate(lista, (void*) myiterator);
+                break;
+            default:
+                log_warning(logger,"Operacion desconocida. No quieras meter la pata");
+                break;
 		}
-	}
+    }
+
+    log_error(logger, "el cliente se desconecto, servidor terminado");
+    close(server_fd);
+
+    
+    char* ip_cpu = config_get_string_value(config, "IP_CPU");
+    char* puerto_cpu_dispatch = config_get_string_value(config, "PUERTO_CPU_DISPATCH");
+    int conexion = crear_conexion(ip_cpu, puerto_cpu_dispatch);
+	log_info(logger, "Me conecto a CPU para enviar los paquetes recibidos de mi cliente");
+    enviar_mensaje("Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion", conexion);
+    // paquete(conexion);
+    liberar_conexion(conexion);
+    // while (1) {
+	// 	int cod_op = recibir_operacion(cliente_fd);
+	// 	switch (cod_op) {
+	// 	case MENSAJE:
+	// 		recibir_mensaje(cliente_fd, logger);
+	// 		break;
+	// 	case PAQUETE:
+	// 		lista = recibir_paquete(cliente_fd);
+	// 		log_info(logger, "Me llegaron los siguientes valores:\n");
+	// 		list_iterate(lista, (void*) myiterator);
+	// 		break;
+	// 	case -1:
+	// 		log_error(logger, "el cliente se desconecto. Terminando servidor");
+    //         log_destroy(logger);
+	// 		return;
+	// 	default:
+	// 		log_warning(logger,"Operacion desconocida. No quieras meter la pata");
+	// 		break;
+	// 	}
+	// }
     log_destroy(logger);
 }
 

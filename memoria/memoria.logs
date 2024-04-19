@@ -1,0 +1,4 @@
+[INFO] 12:00:08:131 Memoria-Servidor/(171581:171581): Servidor listo para recibir al cliente
+[INFO] 12:03:23:036 Memoria-Servidor/(171581:171581): Se conecto un cliente
+[INFO] 12:03:23:037 Memoria-Servidor/(171581:171581): Me llego el mensaje Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion
+[ERROR] 12:03:23:038 Memoria-Servidor/(171581:171581): el cliente se desconecto, servidor terminado

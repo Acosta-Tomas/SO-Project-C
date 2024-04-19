@@ -89,3 +89,48 @@
 [INFO] 11:08:27:199 Kernel-Cliente/(138486:138498): a y me sigue la consola
 [INFO] 11:08:28:030 Kernel-Cliente/(138486:138498): okey
 [INFO] 11:08:31:247 Kernel-Cliente/(138486:138498): chau
+[INFO] 11:23:42:119 Kernel-Servidor/(148401:148406): Thread Servidor creado exitosamente
+[INFO] 11:23:42:119 Kernel-Servidor/(148401:148406): Servidor listo para recibir al cliente
+[INFO] 11:23:43:119 Kernel-Cliente/(148401:148423): Thread Cliente creado exitosamente
+[INFO] 11:23:43:119 Kernel-Cliente/(148401:148423): 127.0.0.1
+[INFO] 11:23:43:119 Kernel-Cliente/(148401:148423): 8002
+[INFO] 11:23:43:119 Kernel-Cliente/(148401:148423): 127.0.0.1
+[INFO] 11:23:43:119 Kernel-Cliente/(148401:148423): 8006
+[INFO] 11:23:43:119 Kernel-Cliente/(148401:148423): 8007
+[INFO] 11:23:47:017 Kernel-Cliente/(148401:148423): chau
+[INFO] 11:24:13:282 Kernel-Servidor/(148401:148406): Se conecto un cliente
+[INFO] 11:24:55:846 Kernel-Servidor/(148401:148406): Me llegaron los siguientes valores:
+
+[INFO] 11:24:55:846 Kernel-Servidor/(148401:148406): vamo que vamo
+[ERROR] 11:24:55:846 Kernel-Servidor/(148401:148406): el cliente se desconecto
+[INFO] 11:43:47:176 Kernel-Servidor/(160974:160979): Thread Servidor creado exitosamente
+[INFO] 11:43:47:176 Kernel-Servidor/(160974:160979): Servidor listo para recibir al cliente
+[INFO] 11:43:48:176 Kernel-Cliente/(160974:161008): Thread Cliente creado exitosamente
+[INFO] 11:43:48:176 Kernel-Cliente/(160974:161008): 127.0.0.1
+[INFO] 11:43:48:176 Kernel-Cliente/(160974:161008): 8002
+[INFO] 11:43:48:176 Kernel-Cliente/(160974:161008): 127.0.0.1
+[INFO] 11:43:48:176 Kernel-Cliente/(160974:161008): 8006
+[INFO] 11:43:48:176 Kernel-Cliente/(160974:161008): 8007
+[INFO] 11:43:52:743 Kernel-Cliente/(160974:161008): cerranis este
+[INFO] 11:44:32:217 Kernel-Servidor/(160974:160979): Se conecto un cliente
+[INFO] 11:45:01:232 Kernel-Servidor/(160974:160979): Me llegaron los siguientes valores:
+
+[INFO] 11:45:01:232 Kernel-Servidor/(160974:160979): Envio para cpu que no llega todaviam
+[INFO] 11:45:01:232 Kernel-Servidor/(160974:160979): probando la conexion despues de esto
+[ERROR] 11:45:01:232 Kernel-Servidor/(160974:160979): el cliente se desconecto, servidor terminado
+[INFO] 11:45:01:232 Kernel-Servidor/(160974:160979): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:01:20:173 Kernel-Servidor/(172473:172474): Thread Servidor creado exitosamente
+[INFO] 12:01:20:185 Kernel-Servidor/(172473:172474): Servidor listo para recibir al cliente
+[INFO] 12:01:21:170 Kernel-Cliente/(172473:172479): Thread Cliente creado exitosamente
+[INFO] 12:01:21:171 Kernel-Cliente/(172473:172479): 127.0.0.1
+[INFO] 12:01:21:171 Kernel-Cliente/(172473:172479): 8002
+[INFO] 12:01:21:171 Kernel-Cliente/(172473:172479): 127.0.0.1
+[INFO] 12:01:21:171 Kernel-Cliente/(172473:172479): 8006
+[INFO] 12:01:21:171 Kernel-Cliente/(172473:172479): 8007
+[INFO] 12:01:25:442 Kernel-Cliente/(172473:172479): s
+[INFO] 12:03:08:807 Kernel-Servidor/(172473:172474): Se conecto un cliente
+[INFO] 12:03:23:031 Kernel-Servidor/(172473:172474): Me llegaron los siguientes valores:
+
+[INFO] 12:03:23:031 Kernel-Servidor/(172473:172474): Mando solo este mensaje
+[ERROR] 12:03:23:032 Kernel-Servidor/(172473:172474): el cliente se desconecto, servidor terminado
+[INFO] 12:03:23:033 Kernel-Servidor/(172473:172474): Me conecto a CPU para enviar los paquetes recibidos de mi cliente

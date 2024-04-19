@@ -1,0 +1,9 @@
+[INFO] 11:44:09:195 CPU-Servidor/(161363:161363): Servidor listo para recibir al cliente
+[INFO] 11:45:01:233 CPU-Servidor/(161363:161363): Se conecto un cliente
+[INFO] 11:45:01:233 CPU-Servidor/(161363:161363): Me llego el mensaje Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion
+[ERROR] 11:45:01:233 CPU-Servidor/(161363:161363): el cliente se desconecto, terminando servidor
+[INFO] 12:01:01:687 CPU-Servidor/(172225:172225): Servidor listo para recibir al cliente
+[INFO] 12:03:23:033 CPU-Servidor/(172225:172225): Se conecto un cliente
+[INFO] 12:03:23:034 CPU-Servidor/(172225:172225): Me llego el mensaje Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion
+[ERROR] 12:03:23:035 CPU-Servidor/(172225:172225): el cliente se desconecto, servidor terminado
+[INFO] 12:03:23:036 CPU-Servidor/(172225:172225): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente

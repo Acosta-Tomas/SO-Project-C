@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     log_info(logger, puerto_memoria);
 
     conexion = crear_conexion(ip_kernel, puerto_kernel);
-
+    log_info(logger, "Me conecto al kernel para enviar paquetes");
     paquete(conexion);
 
     log_destroy(logger);
