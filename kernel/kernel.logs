@@ -134,3 +134,160 @@
 [INFO] 12:03:23:031 Kernel-Servidor/(172473:172474): Mando solo este mensaje
 [ERROR] 12:03:23:032 Kernel-Servidor/(172473:172474): el cliente se desconecto, servidor terminado
 [INFO] 12:03:23:033 Kernel-Servidor/(172473:172474): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 11:58:02:991 Kernel-Servidor/(22967:22974): Thread Servidor creado exitosamente
+[INFO] 11:58:03:003 Kernel-Servidor/(22967:22974): Servidor listo para recibir al cliente
+[INFO] 11:58:03:987 Kernel-Cliente/(22967:22979): Thread Cliente creado exitosamente
+[INFO] 11:58:03:988 Kernel-Cliente/(22967:22979): 127.0.0.1
+[INFO] 11:58:03:988 Kernel-Cliente/(22967:22979): 8002
+[INFO] 11:58:03:988 Kernel-Cliente/(22967:22979): 127.0.0.1
+[INFO] 11:58:03:988 Kernel-Cliente/(22967:22979): 8006
+[INFO] 11:58:03:988 Kernel-Cliente/(22967:22979): 8007
+[INFO] 11:58:11:460 Kernel-Servidor/(22967:22974): Se conecto un cliente
+[INFO] 11:58:18:905 Kernel-Servidor/(22967:22974): Me llegaron los siguientes valores:
+
+[INFO] 11:58:18:905 Kernel-Servidor/(22967:22974): podre mandar 
+[INFO] 11:58:18:905 Kernel-Servidor/(22967:22974): estos
+[INFO] 11:58:18:906 Kernel-Servidor/(22967:22974): mensajes?
+[INFO] 11:58:18:907 Kernel-Servidor/(22967:22974): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:08:42:508 Kernel-Servidor/(27673:27680): Thread Servidor creado exitosamente
+[INFO] 12:08:42:520 Kernel-Servidor/(27673:27680): Servidor listo para recibir al cliente
+[INFO] 12:08:43:506 Kernel-Cliente/(27673:27685): Thread Cliente creado exitosamente
+[INFO] 12:08:43:506 Kernel-Cliente/(27673:27685): 127.0.0.1
+[INFO] 12:08:43:506 Kernel-Cliente/(27673:27685): 8002
+[INFO] 12:08:43:506 Kernel-Cliente/(27673:27685): 127.0.0.1
+[INFO] 12:08:43:506 Kernel-Cliente/(27673:27685): 8006
+[INFO] 12:08:43:506 Kernel-Cliente/(27673:27685): 8007
+[INFO] 12:08:47:227 Kernel-Servidor/(27673:27680): Se conecto un cliente
+[INFO] 12:12:41:117 Kernel-Cliente/(27673:27685): s
+[INFO] 12:13:09:305 Kernel-Servidor/(27673:27680): Me llegaron los siguientes valores:
+
+[INFO] 12:13:09:305 Kernel-Servidor/(27673:27680): Envio paquete para memoria
+[INFO] 12:13:09:306 Kernel-Servidor/(27673:27680): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:14:03:152 Kernel-Servidor/(30021:30022): Thread Servidor creado exitosamente
+[INFO] 12:14:03:165 Kernel-Servidor/(30021:30022): Servidor listo para recibir al cliente
+[INFO] 12:14:04:150 Kernel-Cliente/(30021:30033): Thread Cliente creado exitosamente
+[INFO] 12:14:04:150 Kernel-Cliente/(30021:30033): 127.0.0.1
+[INFO] 12:14:04:150 Kernel-Cliente/(30021:30033): 8002
+[INFO] 12:14:04:150 Kernel-Cliente/(30021:30033): 127.0.0.1
+[INFO] 12:14:04:150 Kernel-Cliente/(30021:30033): 8006
+[INFO] 12:14:04:150 Kernel-Cliente/(30021:30033): 8007
+[INFO] 12:14:05:635 Kernel-Servidor/(30021:30022): Se conecto un cliente
+[INFO] 12:14:07:243 Kernel-Cliente/(30021:30033): ok
+[INFO] 12:14:15:980 Kernel-Servidor/(30021:30022): Me llegaron los siguientes valores:
+
+[INFO] 12:14:15:980 Kernel-Servidor/(30021:30022): Sigue la conexion?
+[INFO] 12:14:15:981 Kernel-Servidor/(30021:30022): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:06:739 Kernel-Servidor/(34230:34232): Thread Servidor creado exitosamente
+[INFO] 12:23:06:751 Kernel-Servidor/(34230:34232): Servidor listo para recibir al cliente
+[INFO] 12:23:07:736 Kernel-Cliente/(34230:34237): Thread Cliente creado exitosamente
+[INFO] 12:23:07:737 Kernel-Cliente/(34230:34237): 127.0.0.1
+[INFO] 12:23:07:737 Kernel-Cliente/(34230:34237): 8002
+[INFO] 12:23:07:737 Kernel-Cliente/(34230:34237): 127.0.0.1
+[INFO] 12:23:07:737 Kernel-Cliente/(34230:34237): 8006
+[INFO] 12:23:07:737 Kernel-Cliente/(34230:34237): 8007
+[INFO] 12:23:16:457 Kernel-Servidor/(34230:34232): Se conecto un cliente
+[INFO] 12:23:50:982 Kernel-Servidor/(34230:34232): Me llegaron los siguientes valores:
+
+[INFO] 12:23:50:982 Kernel-Servidor/(34230:34232): Hola memoria, me escuchas?
+[INFO] 12:23:50:983 Kernel-Servidor/(34230:34232): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:27:38:979 Kernel-Servidor/(36394:36396): Thread Servidor creado exitosamente
+[INFO] 12:27:38:991 Kernel-Servidor/(36394:36396): Servidor listo para recibir al cliente
+[INFO] 12:27:39:976 Kernel-Cliente/(36394:36401): Thread Cliente creado exitosamente
+[INFO] 12:27:39:976 Kernel-Cliente/(36394:36401): 127.0.0.1
+[INFO] 12:27:39:976 Kernel-Cliente/(36394:36401): 8002
+[INFO] 12:27:39:976 Kernel-Cliente/(36394:36401): 127.0.0.1
+[INFO] 12:27:39:976 Kernel-Cliente/(36394:36401): 8006
+[INFO] 12:27:39:976 Kernel-Cliente/(36394:36401): 8007
+[INFO] 12:27:42:947 Kernel-Servidor/(36394:36396): Se conecto un cliente
+[INFO] 12:28:19:095 Kernel-Servidor/(36394:36396): Me llegaron los siguientes valores:
+
+[INFO] 12:28:19:095 Kernel-Servidor/(36394:36396): Hola
+[INFO] 12:28:19:096 Kernel-Servidor/(36394:36396): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:29:32:828 Kernel-Servidor/(36394:36396): Se conecto un cliente
+[INFO] 12:29:41:479 Kernel-Servidor/(36394:36396): Me llegaron los siguientes valores:
+
+[INFO] 12:29:41:479 Kernel-Servidor/(36394:36396): A genial puedo mandar otro mas
+[INFO] 12:29:41:480 Kernel-Servidor/(36394:36396): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:29:45:590 Kernel-Servidor/(36394:36396): Se conecto un cliente
+[INFO] 12:29:49:989 Kernel-Servidor/(36394:36396): Me llegaron los siguientes valores:
+
+[INFO] 12:29:49:989 Kernel-Servidor/(36394:36396): Chau
+[INFO] 12:29:49:990 Kernel-Servidor/(36394:36396): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:46:52:281 Kernel-Servidor/(44626:44627): Thread Servidor creado exitosamente
+[INFO] 12:46:52:293 Kernel-Servidor/(44626:44627): Servidor listo para recibir al cliente
+[INFO] 12:46:53:279 Kernel-Cliente/(44626:44632): Thread Cliente creado exitosamente
+[INFO] 12:46:53:279 Kernel-Cliente/(44626:44632): 127.0.0.1
+[INFO] 12:46:53:279 Kernel-Cliente/(44626:44632): 8002
+[INFO] 12:46:53:279 Kernel-Cliente/(44626:44632): 127.0.0.1
+[INFO] 12:46:53:279 Kernel-Cliente/(44626:44632): 8006
+[INFO] 12:46:53:279 Kernel-Cliente/(44626:44632): 8007
+[INFO] 12:47:02:119 Kernel-Servidor/(44626:44627): Se conecto un cliente
+[INFO] 12:47:58:087 Kernel-Servidor/(44626:44627): Me llegaron los siguientes valores:
+
+[INFO] 12:47:58:088 Kernel-Servidor/(44626:44627): Holaaa
+[ERROR] 12:47:58:088 Kernel-Servidor/(44626:44627): el cliente se desconecto.
+[INFO] 12:47:58:090 Kernel-Servidor/(44626:44627): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 12:48:13:945 Kernel-Servidor/(44626:44627): Se conecto un cliente
+[INFO] 12:48:20:738 Kernel-Servidor/(44626:44627): Me llegaron los siguientes valores:
+
+[INFO] 12:48:20:738 Kernel-Servidor/(44626:44627): buenisimo bro!!!!
+[ERROR] 12:48:20:738 Kernel-Servidor/(44626:44627): el cliente se desconecto.
+[INFO] 12:48:20:739 Kernel-Servidor/(44626:44627): Me conecto a CPU para enviar los paquetes recibidos de mi cliente
+[INFO] 13:53:26:790 Kernel-Servidor/(73186:73188): Server ready - SOCKET: 4
+[INFO] 13:53:27:785 Kernel-Cliente/(73186:73199): Thread Cliente creado exitosamente
+[INFO] 13:53:42:954 Kernel-Servidor/(73382:73384): Server ready - SOCKET: 4
+[INFO] 13:53:43:948 Kernel-Cliente/(73382:73395): Thread Cliente creado exitosamente
+[INFO] 13:53:59:546 Kernel-Servidor/(73382:73384): New client - SOCKET: 5
+[INFO] 13:54:10:213 Kernel-Servidor/(73382:73384): Me llegaron los siguientes valores:
+
+[INFO] 13:54:10:213 Kernel-Servidor/(73382:73384): Mandemoos este mensaje
+[ERROR] 13:54:10:214 Kernel-Servidor/(73382:73384): Client disconnected - SOCKET: 5
+[INFO] 13:54:10:215 Kernel-Servidor/(73382:73384): Connected to CPU - SOCKET: 5
+[INFO] 14:05:16:135 Kernel-Servidor/(78477:78479): Server ready - SOCKET: 4
+[INFO] 14:05:17:129 Kernel-Cliente/(78477:78484): Thread Cliente creado exitosamente
+[INFO] 14:05:23:760 Kernel-Servidor/(78564:78566): Server ready - SOCKET: 4
+[INFO] 14:05:24:754 Kernel-Cliente/(78564:78577): Thread Cliente creado exitosamente
+[INFO] 14:15:05:822 Kernel-Servidor/(78564:78566): New client - SOCKET: 5
+[ERROR] 14:15:08:942 Kernel-Servidor/(78564:78566): Client disconnected - SOCKET: 5
+[INFO] 14:15:08:943 Kernel-Servidor/(78564:78566): Connected to CPU - SOCKET: 5
+[INFO] 14:15:26:348 Kernel-Servidor/(82993:82994): Server ready - SOCKET: 4
+[INFO] 14:15:27:343 Kernel-Cliente/(82993:83005): Thread Cliente creado exitosamente
+[INFO] 14:15:28:578 Kernel-Servidor/(82993:82994): New client - SOCKET: 5
+[INFO] 14:15:55:034 Kernel-Servidor/(82993:82994): Me llegaron los siguientes valores:
+
+[INFO] 14:15:55:035 Kernel-Servidor/(82993:82994): Hola que onda? lo mando a memoria
+[INFO] 14:15:55:035 Kernel-Servidor/(82993:82994): okey
+[ERROR] 14:15:55:035 Kernel-Servidor/(82993:82994): Client disconnected - SOCKET: 5
+[INFO] 14:15:55:036 Kernel-Servidor/(82993:82994): Connected to CPU - SOCKET: 5
+[INFO] 14:24:47:379 Kernel-Servidor/(82993:82994): New client - SOCKET: 5
+[INFO] 14:24:50:634 Kernel-Servidor/(82993:82994): Me llegaron los siguientes valores:
+
+[INFO] 14:24:50:634 Kernel-Servidor/(82993:82994): escribo
+[ERROR] 14:24:50:635 Kernel-Servidor/(82993:82994): Client disconnected - SOCKET: 5
+[INFO] 14:24:50:635 Kernel-Servidor/(82993:82994): Connected to CPU - SOCKET: 5
+[INFO] 14:48:59:429 Kernel-Servidor/(82993:82994): New client - SOCKET: 5
+[INFO] 14:49:04:097 Kernel-Servidor/(82993:82994): Me llegaron los siguientes valores:
+
+[INFO] 14:49:04:097 Kernel-Servidor/(82993:82994): okey
+[ERROR] 14:49:04:098 Kernel-Servidor/(82993:82994): Client disconnected - SOCKET: 5
+[INFO] 14:49:04:098 Kernel-Servidor/(82993:82994): Connected to CPU - SOCKET: 5
+[INFO] 16:49:00:948 Kernel-Servidor/(62034:62039): Server ready - SOCKET: 4
+[INFO] 16:49:01:949 Kernel-Cliente/(62034:62059): Thread - Client for testing
+[INFO] 16:49:14:977 Kernel-Servidor/(62231:62232): Server ready - SOCKET: 4
+[INFO] 16:49:15:972 Kernel-Cliente/(62231:62237): Thread - Client for testing
+[INFO] 16:49:24:231 Kernel-Servidor/(62231:62232): New client - SOCKET: 5
+[INFO] 16:49:52:463 Kernel-Servidor/(62231:62232): Me llegaron los siguientes valores:
+
+[INFO] 16:49:52:463 Kernel-Servidor/(62231:62232): Llega este mensaje?
+[ERROR] 16:49:52:463 Kernel-Servidor/(62231:62232): Client disconnected - SOCKET: 5
+[INFO] 16:49:52:464 Kernel-Servidor/(62231:62232): Connected to CPU - SOCKET: 5
+[INFO] 16:50:04:536 Kernel-Servidor/(62231:62232): New client - SOCKET: 5
+[INFO] 16:51:15:826 Kernel-Servidor/(62231:62232): Me llegaron los siguientes valores:
+
+[INFO] 16:51:15:826 Kernel-Servidor/(62231:62232): Fijarse que el flujo de trabajo es:
+[INFO] 16:51:15:826 Kernel-Servidor/(62231:62232): Lo que ingreo aca primero va a KERNEL
+[INFO] 16:51:15:826 Kernel-Servidor/(62231:62232): de KERNEL va a CPU
+[INFO] 16:51:15:826 Kernel-Servidor/(62231:62232): y de CPU va a MEMORIA
+[INFO] 16:51:15:826 Kernel-Servidor/(62231:62232): todos cierra la conexion pero estan a la escucha, esto es porque el proceso entradasalida se corta
+[ERROR] 16:51:15:827 Kernel-Servidor/(62231:62232): Client disconnected - SOCKET: 5
+[INFO] 16:51:15:827 Kernel-Servidor/(62231:62232): Connected to CPU - SOCKET: 5

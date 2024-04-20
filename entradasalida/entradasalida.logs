@@ -33,3 +33,61 @@
 [INFO] 12:03:08:805 I/O-Cliente/(173632:173632): 127.0.0.1
 [INFO] 12:03:08:805 I/O-Cliente/(173632:173632): 8002
 [INFO] 12:03:08:808 I/O-Cliente/(173632:173632): Me conecto al kernel para enviar paquetes
+[INFO] 11:55:02:260 I/O-Cliente/(21393:21393): 127.0.0.1
+[INFO] 11:55:02:271 I/O-Cliente/(21393:21393): 8003
+[INFO] 11:55:02:272 I/O-Cliente/(21393:21393): 127.0.0.1
+[INFO] 11:55:02:272 I/O-Cliente/(21393:21393): 8002
+[INFO] 11:55:02:275 I/O-Cliente/(21393:21393): Me conecto al kernel para enviar paquetes
+[INFO] 11:58:11:446 I/O-Cliente/(23069:23069): 127.0.0.1
+[INFO] 11:58:11:457 I/O-Cliente/(23069:23069): 8003
+[INFO] 11:58:11:458 I/O-Cliente/(23069:23069): 127.0.0.1
+[INFO] 11:58:11:458 I/O-Cliente/(23069:23069): 8002
+[INFO] 11:58:11:460 I/O-Cliente/(23069:23069): Me conecto al kernel para enviar paquetes
+[INFO] 12:08:47:213 I/O-Cliente/(27747:27747): 127.0.0.1
+[INFO] 12:08:47:224 I/O-Cliente/(27747:27747): 8003
+[INFO] 12:08:47:224 I/O-Cliente/(27747:27747): 127.0.0.1
+[INFO] 12:08:47:224 I/O-Cliente/(27747:27747): 8002
+[INFO] 12:08:47:227 I/O-Cliente/(27747:27747): Me conecto al kernel para enviar paquetes
+[INFO] 12:14:05:622 I/O-Cliente/(30075:30075): 127.0.0.1
+[INFO] 12:14:05:633 I/O-Cliente/(30075:30075): 8003
+[INFO] 12:14:05:633 I/O-Cliente/(30075:30075): 127.0.0.1
+[INFO] 12:14:05:633 I/O-Cliente/(30075:30075): 8002
+[INFO] 12:14:05:636 I/O-Cliente/(30075:30075): Me conecto al kernel para enviar paquetes
+[INFO] 12:23:16:443 I/O-Cliente/(34338:34338): 127.0.0.1
+[INFO] 12:23:16:454 I/O-Cliente/(34338:34338): 8003
+[INFO] 12:23:16:454 I/O-Cliente/(34338:34338): 127.0.0.1
+[INFO] 12:23:16:454 I/O-Cliente/(34338:34338): 8002
+[INFO] 12:23:16:457 I/O-Cliente/(34338:34338): Me conecto al kernel para enviar paquetes
+[INFO] 12:27:42:933 I/O-Cliente/(36461:36461): 127.0.0.1
+[INFO] 12:27:42:944 I/O-Cliente/(36461:36461): 8003
+[INFO] 12:27:42:944 I/O-Cliente/(36461:36461): 127.0.0.1
+[INFO] 12:27:42:944 I/O-Cliente/(36461:36461): 8002
+[INFO] 12:27:42:947 I/O-Cliente/(36461:36461): Me conecto al kernel para enviar paquetes
+[INFO] 12:29:32:814 I/O-Cliente/(37274:37274): 127.0.0.1
+[INFO] 12:29:32:825 I/O-Cliente/(37274:37274): 8003
+[INFO] 12:29:32:825 I/O-Cliente/(37274:37274): 127.0.0.1
+[INFO] 12:29:32:826 I/O-Cliente/(37274:37274): 8002
+[INFO] 12:29:32:828 I/O-Cliente/(37274:37274): Me conecto al kernel para enviar paquetes
+[INFO] 12:29:45:574 I/O-Cliente/(37397:37397): 127.0.0.1
+[INFO] 12:29:45:587 I/O-Cliente/(37397:37397): 8003
+[INFO] 12:29:45:587 I/O-Cliente/(37397:37397): 127.0.0.1
+[INFO] 12:29:45:587 I/O-Cliente/(37397:37397): 8002
+[INFO] 12:29:45:590 I/O-Cliente/(37397:37397): Me conecto al kernel para enviar paquetes
+[INFO] 12:47:02:105 I/O-Cliente/(44727:44727): 127.0.0.1
+[INFO] 12:47:02:116 I/O-Cliente/(44727:44727): 8003
+[INFO] 12:47:02:116 I/O-Cliente/(44727:44727): 127.0.0.1
+[INFO] 12:47:02:116 I/O-Cliente/(44727:44727): 8002
+[INFO] 12:47:02:119 I/O-Cliente/(44727:44727): Me conecto al kernel para enviar paquetes
+[INFO] 12:48:13:931 I/O-Cliente/(45263:45263): 127.0.0.1
+[INFO] 12:48:13:942 I/O-Cliente/(45263:45263): 8003
+[INFO] 12:48:13:942 I/O-Cliente/(45263:45263): 127.0.0.1
+[INFO] 12:48:13:942 I/O-Cliente/(45263:45263): 8002
+[INFO] 12:48:13:945 I/O-Cliente/(45263:45263): Me conecto al kernel para enviar paquetes
+[INFO] 13:53:59:549 I/O-Cliente/(73574:73574): Connected to Kernel - SOCKET: 4
+[INFO] 14:15:05:825 I/O-Cliente/(82740:82740): Connected to Kernel -  SOCKET: 4
+[INFO] 14:15:28:582 I/O-Cliente/(83046:83046): Connected to Kernel -  SOCKET: 4
+[INFO] 14:24:47:383 I/O-Cliente/(86951:86951): Connected to Kernel -  SOCKET: 4
+[INFO] 14:48:59:432 I/O-Cliente/(97226:97226): Connected to Kernel -  SOCKET: 4
+[INFO] 16:34:07:414 I/O-Cliente/(54956:54956): Connected to Kernel -  SOCKET: 4
+[INFO] 16:49:24:234 I/O-Cliente/(62360:62360): Connected to Kernel -  SOCKET: 4
+[INFO] 16:50:04:540 I/O-Cliente/(62676:62676): Connected to Kernel -  SOCKET: 4

@@ -1,43 +1,30 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <utils/hello.h>
-
-void paquete(int);
+#include "main.h"
 
 int main(int argc, char* argv[]) {
-    decir_hola("una Interfaz de Entrada/Salida");
-    t_config* config = config_create("entradasalida.config");
+    t_config* config = config_create(CONFIG_FILE);
 
     if (config == NULL) exit(EXIT_FAILURE); 
 
-    t_log* logger = log_create("entradasalida.logs", config_get_string_value(config, "LOGGER_CLIENTE"), true, LOG_LEVEL_INFO);
+    t_log* logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_CLIENT_LOG), true, LOG_LEVEL_INFO);
 
     int conexion;
-    char* ip_kernel = config_get_string_value(config, "IP_KERNEL");
-    char* puerto_kernel = config_get_string_value(config, "PUERTO_KERNEL");
-    char* ip_memoria = config_get_string_value(config, "IP_MEMORIA");
-    char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-
-    // Revisar pporque siempre me tira warnings con esto!
-    log_info(logger, ip_kernel);
-    log_info(logger, puerto_kernel);
-    log_info(logger, ip_memoria);
-    log_info(logger, puerto_memoria);
+    char* ip_kernel = config_get_string_value(config, KEY_IP_KERNEL);
+    char* puerto_kernel = config_get_string_value(config, KEY_PUERTO_KERNEL);
+    char* ip_memoria = config_get_string_value(config, KEY_IP_MEMORIA);
+    char* puerto_memoria = config_get_string_value(config, KEY_PUERTO_MEMORIA);
 
     conexion = crear_conexion(ip_kernel, puerto_kernel);
-    log_info(logger, "Me conecto al kernel para enviar paquetes");
-    paquete(conexion);
 
-    log_destroy(logger);
-    config_destroy(config);
-	liberar_conexion(conexion);
+    log_info(logger, "Connected to Kernel -  SOCKET: %d", conexion);
+
+    paquete_por_consola(conexion);
+
+    terminar_programa(conexion, logger, config);
 
     return EXIT_SUCCESS;
 }
 
-void paquete(int conexion)
-{
-	// Ahora toca lo divertido!
+void paquete_por_consola(int conexion){
 	char* leido;
 	t_paquete* paquete;
 
@@ -52,5 +39,4 @@ void paquete(int conexion)
 
 	enviar_paquete(paquete, conexion);
 	eliminar_paquete(paquete);
-	// ¡No te olvides de liberar las líneas y el paquete antes de regresar!
 }

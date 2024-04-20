@@ -2,3 +2,1888 @@
 [INFO] 12:03:23:036 Memoria-Servidor/(171581:171581): Se conecto un cliente
 [INFO] 12:03:23:037 Memoria-Servidor/(171581:171581): Me llego el mensaje Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion
 [ERROR] 12:03:23:038 Memoria-Servidor/(171581:171581): el cliente se desconecto, servidor terminado
+[INFO] 11:55:34:279 Memoria-Servidor/(21692:21692): Servidor listo para recibir al cliente
+[INFO] 11:58:18:911 Memoria-Servidor/(21692:21692): Se conecto un cliente
+[INFO] 11:58:18:912 Memoria-Servidor/(21692:21692): Me llego el mensaje Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion
+[ERROR] 11:58:18:912 Memoria-Servidor/(21692:21692): el cliente se desconecto, servidor terminado
+[INFO] 12:08:37:293 Memoria-Servidor/(27568:27568): Servidor listo para recibir al cliente
+[INFO] 12:13:09:310 Memoria-Servidor/(27568:27568): Se conecto un cliente
+[INFO] 12:13:09:311 Memoria-Servidor/(27568:27568): Me llegaron los siguientes valores:
+
+[INFO] 12:13:09:312 Memoria-Servidor/(27568:27568): Envio paquete para memoria
+[ERROR] 12:13:09:312 Memoria-Servidor/(27568:27568): el cliente se desconecto
+[INFO] 12:14:15:985 Memoria-Servidor/(27568:27568): Se conecto un cliente
+[INFO] 12:14:15:986 Memoria-Servidor/(27568:27568): Me llegaron los siguientes valores:
+
+[INFO] 12:14:15:986 Memoria-Servidor/(27568:27568): Sigue la conexion?
+[ERROR] 12:14:15:986 Memoria-Servidor/(27568:27568): el cliente se desconecto
+[INFO] 12:22:53:038 Memoria-Servidor/(33998:33998): Servidor listo para recibir al cliente
+[INFO] 12:23:50:987 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:50:988 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:50:989 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:50:989 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:50:989 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:50:990 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:50:990 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:50:990 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:50:990 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:50:990 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:50:990 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:50:990 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:50:990 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:50:990 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:50:990 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:50:991 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:054 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:054 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:054 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:054 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:054 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:054 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:054 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:054 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:054 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:055 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:055 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:055 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:056 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:056 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:056 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:056 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:056 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:056 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:056 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:056 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:056 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:057 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:057 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:057 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:52:057 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:52:058 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:094 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:094 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:094 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:095 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:095 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:095 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:095 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:095 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:096 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:096 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:096 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:096 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:096 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:096 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:096 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:097 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:097 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:097 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:097 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:097 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:53:097 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:53:097 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:134 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:134 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:134 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:134 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:135 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:135 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:135 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:135 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:135 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:136 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:136 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:136 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:136 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:136 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:136 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:137 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:137 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:137 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:137 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:137 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:137 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:137 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:138 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:138 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:138 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:138 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:138 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:138 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:139 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:139 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:139 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:139 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:139 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:139 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:140 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:140 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:140 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:140 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:140 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:141 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:141 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:54:141 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:54:141 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:54:141 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:54:141 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:174 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:174 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:174 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:174 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:175 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:175 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:175 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:175 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:175 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:175 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:176 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:176 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:176 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:176 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:176 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:176 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:177 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:177 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:177 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:177 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:177 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:177 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:177 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:178 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:178 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:178 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:178 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:178 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:179 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:179 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:179 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:55:179 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:55:179 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:214 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:214 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:214 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:214 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:214 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:214 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:214 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:214 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:215 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:215 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:215 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:215 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:216 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:216 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:216 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:216 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:216 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:216 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:217 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:217 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:217 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:217 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:217 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:217 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:217 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:218 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:218 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:218 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:218 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:218 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:218 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:218 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:219 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:219 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:219 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:219 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:219 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:219 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:219 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:220 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:220 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:220 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:220 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:220 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:220 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:221 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:221 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:221 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:221 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:221 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:221 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:221 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:222 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:222 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:222 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:56:222 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:56:222 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:254 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:254 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:254 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:254 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:254 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:255 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:255 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:255 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:255 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:255 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:255 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:255 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:256 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:256 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:256 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:256 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:256 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:256 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:257 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:257 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:257 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:257 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:257 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:257 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:258 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:258 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:258 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:258 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:258 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:258 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:258 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:259 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:259 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:259 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:259 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:259 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:259 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:260 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:260 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:260 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:260 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:260 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:260 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:261 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:261 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:261 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:261 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:261 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:261 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:262 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:262 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:262 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:262 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:262 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:262 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:262 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:263 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:263 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:263 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:263 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:263 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:263 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:264 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:264 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:264 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:264 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:264 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:264 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:264 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:265 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:265 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:265 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:265 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:265 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:265 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:265 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:266 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:266 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:266 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:266 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:266 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:266 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:266 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:267 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:267 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:267 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:267 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:267 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:267 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:267 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:268 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:268 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:268 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:268 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:268 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:268 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:268 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:269 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:269 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:269 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:269 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:269 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:269 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:270 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:270 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:270 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:270 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:57:270 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:57:270 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:57:270 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:57:270 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:294 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:294 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:294 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:294 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:294 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:294 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:294 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:294 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:294 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:295 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:295 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:295 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:295 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:296 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:296 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:296 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:296 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:296 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:297 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:297 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:297 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:58:297 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:58:297 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:334 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:334 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:334 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:334 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:335 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:335 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:335 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:335 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:335 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:336 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:336 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:336 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:336 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:336 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:336 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:336 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:337 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:337 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:337 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:337 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:337 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:337 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:337 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:338 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:338 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:338 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:338 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:338 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:338 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:338 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:339 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:339 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:339 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:23:59:339 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:23:59:339 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:374 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:374 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:374 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:374 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:374 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:374 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:374 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:374 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:374 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:374 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:375 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:375 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:375 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:375 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:375 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:375 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:375 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:375 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:376 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:376 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:376 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:376 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:376 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:376 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:377 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:377 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:377 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:377 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:377 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:378 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:378 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:378 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:378 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:00:378 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:00:378 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:414 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:414 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:414 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:414 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:415 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:415 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:415 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:415 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:415 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:415 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:416 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:416 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:416 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:416 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:416 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:416 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:417 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:417 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:417 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:417 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:417 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:417 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:418 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:418 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:418 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:418 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:01:418 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:01:418 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:454 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:454 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:454 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:454 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:454 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:454 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:454 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:454 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:455 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:455 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:455 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:455 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:455 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:455 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:455 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:456 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:456 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:456 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:456 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:456 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:456 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:456 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:456 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:457 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:457 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:457 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:457 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:457 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:457 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:458 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:458 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:458 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:458 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:458 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:458 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:458 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:459 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:459 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:459 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:459 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:459 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:459 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:460 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:460 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:460 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:460 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:460 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:460 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:461 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:461 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:461 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:461 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:461 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:461 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:461 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:02:461 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:02:461 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:02:461 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:02:461 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:494 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:494 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:494 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:494 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:494 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:494 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:494 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:494 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:495 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:495 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:495 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:495 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:495 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:496 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:496 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Se conecto un cliente
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Me llegaron los siguientes valores:
+
+[INFO] 12:24:03:496 Memoria-Servidor/(33998:33998): Hola memoria, me escuchas?
+[ERROR] 12:24:03:496 Memoria-Servidor/(33998:33998): el cliente se desconecto
+[INFO] 12:27:27:607 Memoria-Servidor/(36201:36201): Servidor listo para recibir al cliente
+[INFO] 12:28:19:100 Memoria-Servidor/(36201:36201): Se conecto un cliente
+[INFO] 12:28:19:102 Memoria-Servidor/(36201:36201): Me llegaron los siguientes valores:
+
+[INFO] 12:28:19:102 Memoria-Servidor/(36201:36201): Hola
+[ERROR] 12:28:19:102 Memoria-Servidor/(36201:36201): el cliente se desconecto
+[INFO] 12:29:41:480 Memoria-Servidor/(36201:36201): Se conecto un cliente
+[INFO] 12:29:41:480 Memoria-Servidor/(36201:36201): Me llegaron los siguientes valores:
+
+[INFO] 12:29:41:481 Memoria-Servidor/(36201:36201): A genial puedo mandar otro mas
+[ERROR] 12:29:41:481 Memoria-Servidor/(36201:36201): el cliente se desconecto
+[INFO] 12:29:49:990 Memoria-Servidor/(36201:36201): Se conecto un cliente
+[INFO] 12:29:49:990 Memoria-Servidor/(36201:36201): Me llegaron los siguientes valores:
+
+[INFO] 12:29:49:990 Memoria-Servidor/(36201:36201): Chau
+[ERROR] 12:29:49:990 Memoria-Servidor/(36201:36201): el cliente se desconecto
+[INFO] 12:46:47:720 Memoria-Servidor/(44502:44502): Servidor listo para recibir al cliente
+[INFO] 12:47:58:094 Memoria-Servidor/(44502:44502): Se conecto un cliente
+[INFO] 12:47:58:096 Memoria-Servidor/(44502:44502): Me llegaron los siguientes valores:
+
+[INFO] 12:47:58:097 Memoria-Servidor/(44502:44502): Holaaa
+[ERROR] 12:47:58:097 Memoria-Servidor/(44502:44502): el cliente se desconecto
+[INFO] 12:48:20:739 Memoria-Servidor/(44502:44502): Se conecto un cliente
+[INFO] 12:48:20:740 Memoria-Servidor/(44502:44502): Me llegaron los siguientes valores:
+
+[INFO] 12:48:20:740 Memoria-Servidor/(44502:44502): buenisimo bro!!!!
+[ERROR] 12:48:20:740 Memoria-Servidor/(44502:44502): el cliente se desconecto
+[INFO] 13:50:53:248 Memoria-Servidor/(71702:71702): Servidor listo para recibir al cliente
+[INFO] 13:52:21:703 Memoria-Servidor/(72495:72495): Server ready - SOCKET: 4
+[INFO] 13:54:10:219 Memoria-Servidor/(72495:72495): New client - SOCKET: 5
+[INFO] 13:54:10:220 Memoria-Servidor/(72495:72495): Me llegaron los siguientes valores:
+
+[INFO] 13:54:10:221 Memoria-Servidor/(72495:72495): Mandemoos este mensaje
+[ERROR] 13:54:10:221 Memoria-Servidor/(72495:72495): Client disconnected - SOCKET: 5
+[INFO] 14:05:11:785 Memoria-Servidor/(78354:78354): Server ready - SOCKET: 4
+[INFO] 14:15:08:946 Memoria-Servidor/(78354:78354): New client - SOCKET: 5
+[ERROR] 14:15:08:948 Memoria-Servidor/(78354:78354): Client disconnected - SOCKET: 5
+[INFO] 14:15:21:806 Memoria-Servidor/(82891:82891): Server ready - SOCKET: 4
+[INFO] 14:15:55:041 Memoria-Servidor/(82891:82891): New client - SOCKET: 5
+[INFO] 14:15:55:043 Memoria-Servidor/(82891:82891): Me llegaron los siguientes valores:
+
+[INFO] 14:15:55:044 Memoria-Servidor/(82891:82891): Hola que onda? lo mando a memoria
+[INFO] 14:15:55:044 Memoria-Servidor/(82891:82891): okey
+[ERROR] 14:15:55:044 Memoria-Servidor/(82891:82891): Client disconnected - SOCKET: 5
+[INFO] 14:24:50:635 Memoria-Servidor/(82891:82891): New client - SOCKET: 5
+[INFO] 14:24:50:636 Memoria-Servidor/(82891:82891): Me llegaron los siguientes valores:
+
+[INFO] 14:24:50:636 Memoria-Servidor/(82891:82891): escribo
+[ERROR] 14:24:50:636 Memoria-Servidor/(82891:82891): Client disconnected - SOCKET: 5
+[INFO] 14:49:04:098 Memoria-Servidor/(82891:82891): New client - SOCKET: 5
+[INFO] 14:49:04:099 Memoria-Servidor/(82891:82891): Me llegaron los siguientes valores:
+
+[INFO] 14:49:04:099 Memoria-Servidor/(82891:82891): okey
+[ERROR] 14:49:04:099 Memoria-Servidor/(82891:82891): Client disconnected - SOCKET: 5
+[INFO] 16:37:03:484 Memoria-Servidor/(56563:56563): Server ready - SOCKET: 4
+[INFO] 16:49:52:468 Memoria-Servidor/(56563:56563): New client - SOCKET: 5
+[INFO] 16:49:52:470 Memoria-Servidor/(56563:56563): Me llegaron los siguientes valores:
+
+[INFO] 16:49:52:471 Memoria-Servidor/(56563:56563): Llega este mensaje?
+[ERROR] 16:49:52:471 Memoria-Servidor/(56563:56563): Client disconnected - SOCKET: 5
+[INFO] 16:51:15:829 Memoria-Servidor/(56563:56563): New client - SOCKET: 5
+[INFO] 16:51:15:829 Memoria-Servidor/(56563:56563): Me llegaron los siguientes valores:
+
+[INFO] 16:51:15:829 Memoria-Servidor/(56563:56563): Fijarse que el flujo de trabajo es:
+[INFO] 16:51:15:829 Memoria-Servidor/(56563:56563): Lo que ingreo aca primero va a KERNEL
+[INFO] 16:51:15:830 Memoria-Servidor/(56563:56563): de KERNEL va a CPU
+[INFO] 16:51:15:830 Memoria-Servidor/(56563:56563): y de CPU va a MEMORIA
+[INFO] 16:51:15:830 Memoria-Servidor/(56563:56563): todos cierra la conexion pero estan a la escucha, esto es porque el proceso entradasalida se corta
+[ERROR] 16:51:15:830 Memoria-Servidor/(56563:56563): Client disconnected - SOCKET: 5

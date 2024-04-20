@@ -7,3 +7,1194 @@
 [INFO] 12:03:23:034 CPU-Servidor/(172225:172225): Me llego el mensaje Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion
 [ERROR] 12:03:23:035 CPU-Servidor/(172225:172225): el cliente se desconecto, servidor terminado
 [INFO] 12:03:23:036 CPU-Servidor/(172225:172225): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 11:55:37:418 CPU-Servidor/(21761:21761): Servidor listo para recibir al cliente
+[INFO] 11:58:18:907 CPU-Servidor/(21761:21761): Se conecto un cliente
+[INFO] 11:58:18:909 CPU-Servidor/(21761:21761): Me llegaron los siguientes valores:
+
+[INFO] 11:58:18:909 CPU-Servidor/(21761:21761): podre mandar 
+[INFO] 11:58:18:909 CPU-Servidor/(21761:21761): estos
+[INFO] 11:58:18:909 CPU-Servidor/(21761:21761): mensajes?
+[ERROR] 11:58:18:909 CPU-Servidor/(21761:21761): el cliente se desconecto, servidor terminado
+[INFO] 11:58:18:911 CPU-Servidor/(21761:21761): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:08:40:000 CPU-Servidor/(27621:27621): Servidor listo para recibir al cliente
+[INFO] 12:13:09:306 CPU-Servidor/(27621:27621): Se conecto un cliente
+[INFO] 12:13:09:308 CPU-Servidor/(27621:27621): Me llegaron los siguientes valores:
+
+[INFO] 12:13:09:308 CPU-Servidor/(27621:27621): Envio paquete para memoria
+[ERROR] 12:13:09:308 CPU-Servidor/(27621:27621): el cliente se desconecto, servidor terminado
+[INFO] 12:13:09:310 CPU-Servidor/(27621:27621): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:14:00:578 CPU-Servidor/(29969:29969): Servidor listo para recibir al cliente
+[INFO] 12:14:15:981 CPU-Servidor/(29969:29969): Se conecto un cliente
+[INFO] 12:14:15:983 CPU-Servidor/(29969:29969): Me llegaron los siguientes valores:
+
+[INFO] 12:14:15:983 CPU-Servidor/(29969:29969): Sigue la conexion?
+[ERROR] 12:14:15:984 CPU-Servidor/(29969:29969): el cliente se desconecto, servidor terminado
+[INFO] 12:14:15:985 CPU-Servidor/(29969:29969): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:22:56:168 CPU-Servidor/(34058:34058): Servidor listo para recibir al cliente
+[INFO] 12:23:50:983 CPU-Servidor/(34058:34058): Se conecto un cliente
+[INFO] 12:23:50:985 CPU-Servidor/(34058:34058): Me llegaron los siguientes valores:
+
+[INFO] 12:23:50:985 CPU-Servidor/(34058:34058): Hola memoria, me escuchas?
+[ERROR] 12:23:50:985 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:50:987 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:50:988 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:50:988 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:50:988 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:50:988 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:50:988 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:50:988 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:50:988 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:50:989 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:50:989 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:50:989 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:50:989 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:054 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:054 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:054 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:054 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:054 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:054 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:054 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:055 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:056 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:056 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:056 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:056 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:056 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:056 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:52:056 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:52:057 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:094 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:094 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:094 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:094 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:094 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:094 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:094 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:094 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:094 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:094 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:094 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:095 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:095 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:095 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:095 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:095 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:095 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:096 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:096 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:096 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:096 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:096 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:096 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:096 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:097 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:097 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:097 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:097 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:097 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:097 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:097 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:097 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:53:097 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:53:097 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:53:097 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:134 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:134 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:134 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:134 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:134 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:134 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:134 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:134 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:134 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:135 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:135 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:135 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:135 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:135 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:136 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:136 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:136 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:136 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:136 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:136 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:136 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:136 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:137 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:137 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:137 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:137 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:137 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:137 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:138 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:138 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:138 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:138 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:138 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:138 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:138 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:139 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:139 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:139 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:139 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:139 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:139 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:139 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:140 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:140 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:140 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:140 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:140 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:140 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:54:140 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:54:140 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:54:140 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:174 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:174 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:174 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:174 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:174 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:175 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:175 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:175 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:175 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:175 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:175 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:175 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:176 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:176 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:176 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:176 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:176 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:176 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:176 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:177 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:177 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:177 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:177 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:177 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:177 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:177 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:178 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:178 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:178 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:178 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:55:178 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:55:178 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:214 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:214 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:214 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:214 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:214 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:214 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:214 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:215 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:215 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:215 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:215 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:215 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:215 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:216 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:216 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:216 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:216 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:216 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:216 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:217 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:217 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:217 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:217 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:217 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:217 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:217 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:217 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:218 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:218 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:218 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:218 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:218 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:218 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:219 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:219 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:219 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:219 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:219 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:219 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:219 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:220 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:220 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:220 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:220 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:220 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:220 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:220 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:221 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:221 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:221 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:221 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:221 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:221 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:221 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:56:222 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:56:222 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:56:222 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:254 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:254 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:254 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:254 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:254 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:254 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:255 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:255 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:255 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:255 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:255 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:255 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:255 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:256 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:256 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:256 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:256 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:256 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:257 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:257 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:257 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:257 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:257 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:257 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:257 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:257 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:258 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:258 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:258 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:258 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:258 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:259 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:259 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:259 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:259 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:259 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:259 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:259 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:260 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:260 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:260 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:260 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:260 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:261 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:261 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:261 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:261 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:261 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:261 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:261 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:262 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:262 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:262 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:262 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:262 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:262 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:262 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:262 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:263 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:263 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:263 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:263 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:263 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:263 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:264 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:264 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:264 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:264 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:264 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:264 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:264 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:265 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:265 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:265 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:265 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:265 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:265 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:265 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:266 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:266 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:266 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:266 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:266 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:266 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:266 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:267 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:267 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:267 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:267 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:267 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:267 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:267 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:268 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:268 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:268 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:268 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:268 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:268 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:268 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:269 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:269 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:269 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:269 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:57:269 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:57:269 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:294 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:294 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:294 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:294 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:294 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:294 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:294 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:294 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:294 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:295 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:295 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:295 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:295 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:295 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:296 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:296 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:296 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:296 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:296 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:58:296 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:58:297 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:58:297 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:334 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:334 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:334 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:334 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:334 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:334 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:334 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:334 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:334 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:334 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:335 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:335 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:335 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:335 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:335 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:335 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:335 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:335 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:335 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:335 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:335 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:335 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:336 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:336 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:336 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:336 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:336 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:336 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:336 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:336 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:337 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:337 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:337 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:337 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:337 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:337 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:337 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:338 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:338 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:338 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:338 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:338 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:338 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:338 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:338 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:338 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:23:59:339 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:23:59:339 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:23:59:339 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:374 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:374 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:374 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:374 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:374 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:374 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:374 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:374 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:374 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:375 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:375 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:375 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:375 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:375 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:375 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:375 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:376 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:376 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:376 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:376 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:376 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:376 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:376 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:377 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:377 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:377 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:377 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:377 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:377 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:377 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:378 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:00:378 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:00:378 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:00:378 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:414 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:414 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:414 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:414 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:414 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:414 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:414 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:414 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:414 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:414 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:414 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:414 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:415 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:415 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:415 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:415 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:415 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:415 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:416 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:416 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:416 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:416 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:416 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:416 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:416 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:417 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:417 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:417 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:417 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:417 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:417 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:417 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:418 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:418 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:418 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:01:418 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:01:418 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:01:418 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:454 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:454 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:454 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:454 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:454 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:454 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:454 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:454 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:454 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:454 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:454 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:454 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:455 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:455 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:455 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:455 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:455 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:455 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:455 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:456 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:456 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:456 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:456 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:456 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:456 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:457 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:457 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:457 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:457 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:457 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:457 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:457 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:458 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:458 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:458 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:458 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:458 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:458 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:459 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:459 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:459 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:459 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:459 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:459 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:459 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:459 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:460 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:460 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:460 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:460 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:460 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:02:460 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:02:460 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:494 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:494 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:494 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:494 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:494 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:494 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:494 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:494 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:494 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:494 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:494 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:494 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:495 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:495 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:495 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:495 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:24:03:495 CPU-Servidor/(34058:34058): Se conecto un cliente
+[ERROR] 12:24:03:495 CPU-Servidor/(34058:34058): el cliente se desconecto, servidor terminado
+[INFO] 12:24:04:534 CPU-Servidor/(34058:34058): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:27:34:852 CPU-Servidor/(36330:36330): Servidor listo para recibir al cliente
+[INFO] 12:28:19:096 CPU-Servidor/(36330:36330): Se conecto un cliente
+[INFO] 12:28:19:098 CPU-Servidor/(36330:36330): Me llegaron los siguientes valores:
+
+[INFO] 12:28:19:098 CPU-Servidor/(36330:36330): Hola
+[ERROR] 12:28:19:099 CPU-Servidor/(36330:36330): el cliente se desconecto, servidor terminado
+[INFO] 12:28:19:100 CPU-Servidor/(36330:36330): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:29:41:480 CPU-Servidor/(36330:36330): Se conecto un cliente
+[INFO] 12:29:41:480 CPU-Servidor/(36330:36330): Me llegaron los siguientes valores:
+
+[INFO] 12:29:41:480 CPU-Servidor/(36330:36330): A genial puedo mandar otro mas
+[ERROR] 12:29:41:480 CPU-Servidor/(36330:36330): el cliente se desconecto, servidor terminado
+[INFO] 12:29:41:480 CPU-Servidor/(36330:36330): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:29:49:989 CPU-Servidor/(36330:36330): Se conecto un cliente
+[INFO] 12:29:49:990 CPU-Servidor/(36330:36330): Me llegaron los siguientes valores:
+
+[INFO] 12:29:49:990 CPU-Servidor/(36330:36330): Chau
+[ERROR] 12:29:49:990 CPU-Servidor/(36330:36330): el cliente se desconecto, servidor terminado
+[INFO] 12:29:49:990 CPU-Servidor/(36330:36330): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:46:49:925 CPU-Servidor/(44560:44560): Servidor listo para recibir al cliente
+[INFO] 12:47:58:090 CPU-Servidor/(44560:44560): Se conecto un cliente
+[INFO] 12:47:58:091 CPU-Servidor/(44560:44560): Me llegaron los siguientes valores:
+
+[INFO] 12:47:58:092 CPU-Servidor/(44560:44560): Holaaa
+[ERROR] 12:47:58:092 CPU-Servidor/(44560:44560): el cliente se desconecto.
+[INFO] 12:47:58:094 CPU-Servidor/(44560:44560): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 12:48:20:739 CPU-Servidor/(44560:44560): Se conecto un cliente
+[INFO] 12:48:20:739 CPU-Servidor/(44560:44560): Me llegaron los siguientes valores:
+
+[INFO] 12:48:20:739 CPU-Servidor/(44560:44560): buenisimo bro!!!!
+[ERROR] 12:48:20:739 CPU-Servidor/(44560:44560): el cliente se desconecto.
+[INFO] 12:48:20:739 CPU-Servidor/(44560:44560): Me conecto a Memoria para enviar los paquetes recibidos de mi cliente
+[INFO] 13:52:43:047 CPU-Servidor/(72721:72721): Server ready - SOCKET: 4
+[INFO] 13:53:07:485 CPU-Servidor/(72975:72975): Server ready - SOCKET: 4
+[INFO] 13:54:10:215 CPU-Servidor/(72975:72975): New client - SOCKET: 5
+[INFO] 13:54:10:217 CPU-Servidor/(72975:72975): Me llegaron los siguientes valores:
+
+[INFO] 13:54:10:217 CPU-Servidor/(72975:72975): Mandemoos este mensaje
+[ERROR] 13:54:10:218 CPU-Servidor/(72975:72975): Client disconnected - SOCKET: 5
+[INFO] 13:54:10:219 CPU-Servidor/(72975:72975): Connected to CPU - SOCKET: 5
+[INFO] 14:05:14:010 CPU-Servidor/(78413:78413): Server ready - SOCKET: 4
+[INFO] 14:15:08:944 CPU-Servidor/(78413:78413): New client - SOCKET: 5
+[ERROR] 14:15:08:945 CPU-Servidor/(78413:78413): Client disconnected - SOCKET: 5
+[INFO] 14:15:08:946 CPU-Servidor/(78413:78413): Connected to Memoria - SOCKET: 5
+[INFO] 14:15:23:995 CPU-Servidor/(82942:82942): Server ready - SOCKET: 4
+[INFO] 14:15:55:036 CPU-Servidor/(82942:82942): New client - SOCKET: 5
+[INFO] 14:15:55:039 CPU-Servidor/(82942:82942): Me llegaron los siguientes valores:
+
+[INFO] 14:15:55:039 CPU-Servidor/(82942:82942): Hola que onda? lo mando a memoria
+[INFO] 14:15:55:039 CPU-Servidor/(82942:82942): okey
+[ERROR] 14:15:55:040 CPU-Servidor/(82942:82942): Client disconnected - SOCKET: 5
+[INFO] 14:15:55:041 CPU-Servidor/(82942:82942): Connected to Memoria - SOCKET: 5
+[INFO] 14:24:50:635 CPU-Servidor/(82942:82942): New client - SOCKET: 5
+[INFO] 14:24:50:635 CPU-Servidor/(82942:82942): Me llegaron los siguientes valores:
+
+[INFO] 14:24:50:635 CPU-Servidor/(82942:82942): escribo
+[ERROR] 14:24:50:635 CPU-Servidor/(82942:82942): Client disconnected - SOCKET: 5
+[INFO] 14:24:50:635 CPU-Servidor/(82942:82942): Connected to Memoria - SOCKET: 5
+[INFO] 14:49:04:098 CPU-Servidor/(82942:82942): New client - SOCKET: 5
+[INFO] 14:49:04:098 CPU-Servidor/(82942:82942): Me llegaron los siguientes valores:
+
+[INFO] 14:49:04:098 CPU-Servidor/(82942:82942): okey
+[ERROR] 14:49:04:098 CPU-Servidor/(82942:82942): Client disconnected - SOCKET: 5
+[INFO] 14:49:04:098 CPU-Servidor/(82942:82942): Connected to Memoria - SOCKET: 5
+[INFO] 16:37:14:437 CPU-Servidor/(56718:56718): Server ready - SOCKET: 4
+[INFO] 16:49:52:464 CPU-Servidor/(56718:56718): New client - SOCKET: 5
+[INFO] 16:49:52:466 CPU-Servidor/(56718:56718): Me llegaron los siguientes valores:
+
+[INFO] 16:49:52:467 CPU-Servidor/(56718:56718): Llega este mensaje?
+[ERROR] 16:49:52:467 CPU-Servidor/(56718:56718): Client disconnected - SOCKET: 5
+[INFO] 16:49:52:468 CPU-Servidor/(56718:56718): Connected to Memoria - SOCKET: 5
+[INFO] 16:51:15:827 CPU-Servidor/(56718:56718): New client - SOCKET: 5
+[INFO] 16:51:15:828 CPU-Servidor/(56718:56718): Me llegaron los siguientes valores:
+
+[INFO] 16:51:15:828 CPU-Servidor/(56718:56718): Fijarse que el flujo de trabajo es:
+[INFO] 16:51:15:828 CPU-Servidor/(56718:56718): Lo que ingreo aca primero va a KERNEL
+[INFO] 16:51:15:828 CPU-Servidor/(56718:56718): de KERNEL va a CPU
+[INFO] 16:51:15:828 CPU-Servidor/(56718:56718): y de CPU va a MEMORIA
+[INFO] 16:51:15:828 CPU-Servidor/(56718:56718): todos cierra la conexion pero estan a la escucha, esto es porque el proceso entradasalida se corta
+[ERROR] 16:51:15:829 CPU-Servidor/(56718:56718): Client disconnected - SOCKET: 5
+[INFO] 16:51:15:829 CPU-Servidor/(56718:56718): Connected to Memoria - SOCKET: 5
