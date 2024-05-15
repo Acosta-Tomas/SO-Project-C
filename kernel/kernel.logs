@@ -291,3 +291,22 @@
 [INFO] 16:51:15:826 Kernel-Servidor/(62231:62232): todos cierra la conexion pero estan a la escucha, esto es porque el proceso entradasalida se corta
 [ERROR] 16:51:15:827 Kernel-Servidor/(62231:62232): Client disconnected - SOCKET: 5
 [INFO] 16:51:15:827 Kernel-Servidor/(62231:62232): Connected to CPU - SOCKET: 5
+[INFO] 20:33:34:948 Kernel-Servidor/(4693:4694): Server ready - SOCKET: 4
+[INFO] 20:33:35:942 Kernel-Cliente/(4693:4705): Thread - Client for testing
+[INFO] 20:33:44:857 Kernel-Servidor/(4693:4694): New client - SOCKET: 5
+[INFO] 20:35:58:620 Kernel-Servidor/(4693:4694): Me llegaron los siguientes valores:
+
+[INFO] 20:35:58:621 Kernel-Servidor/(4693:4694): Saludamos
+[INFO] 20:35:58:621 Kernel-Servidor/(4693:4694): a 
+[INFO] 20:35:58:621 Kernel-Servidor/(4693:4694): vale 
+[INFO] 20:35:58:621 Kernel-Servidor/(4693:4694): para tp
+[INFO] 20:35:58:621 Kernel-Servidor/(4693:4694): ssoo
+[ERROR] 20:35:58:621 Kernel-Servidor/(4693:4694): Client disconnected - SOCKET: 5
+[INFO] 20:35:58:622 Kernel-Servidor/(4693:4694): Connected to CPU - SOCKET: 5
+[INFO] 20:36:29:108 Kernel-Servidor/(4693:4694): New client - SOCKET: 5
+[INFO] 20:36:33:683 Kernel-Servidor/(4693:4694): Me llegaron los siguientes valores:
+
+[INFO] 20:36:33:683 Kernel-Servidor/(4693:4694): podemos 
+[INFO] 20:36:33:683 Kernel-Servidor/(4693:4694): seguir mandando
+[ERROR] 20:36:33:683 Kernel-Servidor/(4693:4694): Client disconnected - SOCKET: 5
+[INFO] 20:36:33:683 Kernel-Servidor/(4693:4694): Connected to CPU - SOCKET: 5

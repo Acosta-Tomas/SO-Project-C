@@ -1887,3 +1887,20 @@
 [INFO] 16:51:15:830 Memoria-Servidor/(56563:56563): y de CPU va a MEMORIA
 [INFO] 16:51:15:830 Memoria-Servidor/(56563:56563): todos cierra la conexion pero estan a la escucha, esto es porque el proceso entradasalida se corta
 [ERROR] 16:51:15:830 Memoria-Servidor/(56563:56563): Client disconnected - SOCKET: 5
+[INFO] 20:32:54:712 Memoria-Servidor/(4188:4188): Server ready - SOCKET: 4
+[INFO] 20:33:18:750 Memoria-Servidor/(4438:4438): Server ready - SOCKET: 4
+[INFO] 20:35:58:627 Memoria-Servidor/(4438:4438): New client - SOCKET: 5
+[INFO] 20:35:58:629 Memoria-Servidor/(4438:4438): Me llegaron los siguientes valores:
+
+[INFO] 20:35:58:629 Memoria-Servidor/(4438:4438): Saludamos
+[INFO] 20:35:58:630 Memoria-Servidor/(4438:4438): a 
+[INFO] 20:35:58:630 Memoria-Servidor/(4438:4438): vale 
+[INFO] 20:35:58:630 Memoria-Servidor/(4438:4438): para tp
+[INFO] 20:35:58:630 Memoria-Servidor/(4438:4438): ssoo
+[ERROR] 20:35:58:630 Memoria-Servidor/(4438:4438): Client disconnected - SOCKET: 5
+[INFO] 20:36:33:684 Memoria-Servidor/(4438:4438): New client - SOCKET: 5
+[INFO] 20:36:33:684 Memoria-Servidor/(4438:4438): Me llegaron los siguientes valores:
+
+[INFO] 20:36:33:684 Memoria-Servidor/(4438:4438): podemos 
+[INFO] 20:36:33:684 Memoria-Servidor/(4438:4438): seguir mandando
+[ERROR] 20:36:33:685 Memoria-Servidor/(4438:4438): Client disconnected - SOCKET: 5

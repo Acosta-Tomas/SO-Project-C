@@ -1198,3 +1198,22 @@
 [INFO] 16:51:15:828 CPU-Servidor/(56718:56718): todos cierra la conexion pero estan a la escucha, esto es porque el proceso entradasalida se corta
 [ERROR] 16:51:15:829 CPU-Servidor/(56718:56718): Client disconnected - SOCKET: 5
 [INFO] 16:51:15:829 CPU-Servidor/(56718:56718): Connected to Memoria - SOCKET: 5
+[INFO] 20:33:10:954 CPU-Servidor/(4345:4345): Server ready - SOCKET: 4
+[INFO] 20:33:21:858 CPU-Servidor/(4498:4498): Server ready - SOCKET: 4
+[INFO] 20:35:58:622 CPU-Servidor/(4498:4498): New client - SOCKET: 5
+[INFO] 20:35:58:624 CPU-Servidor/(4498:4498): Me llegaron los siguientes valores:
+
+[INFO] 20:35:58:625 CPU-Servidor/(4498:4498): Saludamos
+[INFO] 20:35:58:625 CPU-Servidor/(4498:4498): a 
+[INFO] 20:35:58:625 CPU-Servidor/(4498:4498): vale 
+[INFO] 20:35:58:625 CPU-Servidor/(4498:4498): para tp
+[INFO] 20:35:58:625 CPU-Servidor/(4498:4498): ssoo
+[ERROR] 20:35:58:625 CPU-Servidor/(4498:4498): Client disconnected - SOCKET: 5
+[INFO] 20:35:58:627 CPU-Servidor/(4498:4498): Connected to Memoria - SOCKET: 5
+[INFO] 20:36:33:683 CPU-Servidor/(4498:4498): New client - SOCKET: 5
+[INFO] 20:36:33:684 CPU-Servidor/(4498:4498): Me llegaron los siguientes valores:
+
+[INFO] 20:36:33:684 CPU-Servidor/(4498:4498): podemos 
+[INFO] 20:36:33:684 CPU-Servidor/(4498:4498): seguir mandando
+[ERROR] 20:36:33:684 CPU-Servidor/(4498:4498): Client disconnected - SOCKET: 5
+[INFO] 20:36:33:684 CPU-Servidor/(4498:4498): Connected to Memoria - SOCKET: 5
