@@ -19,15 +19,16 @@ void* serializar_paquete(t_paquete* paquete, int bytes){
 }
 
 int crear_conexion(char *ip, char* puerto){
-	struct addrinfo hints;
-	struct addrinfo *server_info;
+	struct addrinfo hints, *server_info;
 
 	memset(&hints, 0, sizeof(hints));
 	hints.ai_family = AF_INET;
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_flags = AI_PASSIVE;
 
-	getaddrinfo(ip, puerto, &hints, &server_info);
+	int getadd = getaddrinfo(ip, puerto, &hints, &server_info);
+
+	char* stringAdd = gai_strerror(getadd);
 
 	// Ahora vamos a crear el socket.
 	int socket_cliente = socket(server_info->ai_family, 
@@ -70,10 +71,10 @@ void crear_buffer(t_paquete* paquete){
 	paquete->buffer->stream = NULL;
 }
 
-t_paquete* crear_paquete(void){
+t_paquete* crear_paquete(op_code op){
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 
-	paquete->codigo_operacion = PAQUETE;
+	paquete->codigo_operacion = op;
 	crear_buffer(paquete);
 	
 	return paquete;

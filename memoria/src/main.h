@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <utils/server.h>
+#include <utils/client.h>
 
 // FILES
 #define CONFIG_FILE "memoria.config"

@@ -28,7 +28,7 @@ void paquete_por_consola(int conexion){
 	char* leido;
 	t_paquete* paquete;
 
-	paquete = crear_paquete();
+	paquete = crear_paquete(PAQUETE);
 
 	for (leido = readline("> "); leido && strcmp(leido, ""); leido = readline("> ")){
 		agregar_a_paquete(paquete, leido, strlen(leido) + 1);

@@ -1904,3 +1904,150 @@
 [INFO] 20:36:33:684 Memoria-Servidor/(4438:4438): podemos 
 [INFO] 20:36:33:684 Memoria-Servidor/(4438:4438): seguir mandando
 [ERROR] 20:36:33:685 Memoria-Servidor/(4438:4438): Client disconnected - SOCKET: 5
+[INFO] 19:47:32:651 Memoria-Servidor/(79906:79906): Server ready - SOCKET: 4
+[INFO] 19:59:49:968 Memoria-Servidor/(85811:85811): Server ready - SOCKET: 4
+[INFO] 20:29:37:781 Memoria-Servidor/(85811:85811): New client - SOCKET: 5
+[INFO] 20:29:37:783 Memoria-Servidor/(85811:85811): PC 0x403d0a0
+[INFO] 20:29:37:783 Memoria-Servidor/(85811:85811): PID 0x403d1a0
+[ERROR] 20:29:37:786 Memoria-Servidor/(85811:85811): Client disconnected - SOCKET: 5
+[INFO] 20:33:33:122 Memoria-Servidor/(85811:85811): New client - SOCKET: 5
+[INFO] 20:33:33:123 Memoria-Servidor/(85811:85811): PC 0x403d3d0
+[INFO] 20:33:33:123 Memoria-Servidor/(85811:85811): PID 0x403d610
+[ERROR] 20:33:33:125 Memoria-Servidor/(85811:85811): Client disconnected - SOCKET: 5
+[INFO] 20:35:03:375 Memoria-Servidor/(101899:101899): Server ready - SOCKET: 4
+[INFO] 20:35:07:508 Memoria-Servidor/(101899:101899): New client - SOCKET: 5
+[INFO] 20:35:07:510 Memoria-Servidor/(101899:101899): PC 67358880
+[INFO] 20:35:07:510 Memoria-Servidor/(101899:101899): PID 67359136
+[ERROR] 20:35:07:513 Memoria-Servidor/(101899:101899): Client disconnected - SOCKET: 5
+[INFO] 14:48:26:499 Memoria-Servidor/(65307:65307): Server ready - SOCKET: 4
+[INFO] 14:54:13:457 Memoria-Servidor/(65307:65307): New client - SOCKET: 5
+[INFO] 14:54:13:458 Memoria-Servidor/(65307:65307): PC 8
+[INFO] 14:54:13:458 Memoria-Servidor/(65307:65307): PID 0
+[WARNING] 14:54:13:459 Memoria-Servidor/(65307:65307): Operacion desconocida. No quieras meter la pata
+[ERROR] 14:54:13:459 Memoria-Servidor/(65307:65307): Client disconnected - SOCKET: 5
+[INFO] 14:56:05:364 Memoria-Servidor/(65307:65307): New client - SOCKET: 5
+[INFO] 15:02:19:470 Memoria-Servidor/(65307:65307): PC 8
+[INFO] 15:02:19:471 Memoria-Servidor/(65307:65307): PID 0
+[WARNING] 15:02:19:471 Memoria-Servidor/(65307:65307): Operacion desconocida. No quieras meter la pata
+[ERROR] 15:02:19:471 Memoria-Servidor/(65307:65307): Client disconnected - SOCKET: 5
+[INFO] 15:04:18:464 Memoria-Servidor/(74064:74064): Server ready - SOCKET: 4
+[INFO] 15:04:29:772 Memoria-Servidor/(74064:74064): New client - SOCKET: 5
+[INFO] 15:04:46:033 Memoria-Servidor/(74064:74064): PC 0
+[INFO] 15:04:46:033 Memoria-Servidor/(74064:74064): PID 20
+[ERROR] 15:05:48:092 Memoria-Servidor/(74064:74064): Client disconnected - SOCKET: 5
+[INFO] 15:12:13:813 Memoria-Servidor/(77907:77907): Server ready - SOCKET: 4
+[INFO] 15:12:24:676 Memoria-Servidor/(77907:77907): New client - SOCKET: 5
+[INFO] 15:12:35:082 Memoria-Servidor/(77907:77907): PC 0
+[INFO] 15:12:35:082 Memoria-Servidor/(77907:77907): PID 20
+[ERROR] 16:09:54:061 Memoria-Servidor/(77907:77907): Client disconnected - SOCKET: 5
+[INFO] 19:52:37:597 Memoria-Servidor/(198694:198694): Server ready - SOCKET: 4
+[INFO] 19:52:54:087 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 19:53:19:889 Memoria-Servidor/(198694:198694): PC 0
+[INFO] 19:53:19:890 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 19:55:55:318 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 19:57:14:543 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 19:57:26:874 Memoria-Servidor/(198694:198694): PC 0
+[INFO] 19:57:26:874 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 19:57:48:411 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 19:57:50:104 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 19:58:08:419 Memoria-Servidor/(198694:198694): PC 0
+[INFO] 19:58:08:420 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 19:58:56:039 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 20:00:26:621 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 20:00:33:683 Memoria-Servidor/(198694:198694): PC 0
+[INFO] 20:00:33:683 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 20:02:55:527 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 20:03:11:635 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 20:03:14:250 Memoria-Servidor/(198694:198694): PC 0
+[INFO] 20:03:14:250 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 20:28:45:544 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 21:34:59:067 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 21:35:08:362 Memoria-Servidor/(198694:198694): PC 0
+[INFO] 21:35:08:362 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 21:36:15:224 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 21:39:43:207 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 21:39:45:957 Memoria-Servidor/(198694:198694): PC 0
+[INFO] 21:39:45:957 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 21:43:33:775 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 21:44:33:872 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 21:45:09:141 Memoria-Servidor/(198694:198694): PC 0
+[INFO] 21:45:09:142 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 21:46:02:117 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:40:30:807 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 22:41:30:831 Memoria-Servidor/(198694:198694): PC 20
+[INFO] 22:41:30:832 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 22:41:30:832 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:41:32:563 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 22:42:23:154 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:42:24:853 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 22:43:00:462 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:43:02:117 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 22:46:01:320 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:46:03:049 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 22:46:57:536 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:46:59:137 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 22:48:38:218 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:48:39:881 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 22:49:39:885 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:49:41:614 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 22:51:30:862 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 22:53:29:443 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 22:56:58:442 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 23:02:58:860 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 23:05:43:094 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 23:05:44:741 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 23:06:14:375 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 23:08:03:087 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[INFO] 23:08:29:959 Memoria-Servidor/(198694:198694): PC 4294958272
+[INFO] 23:08:29:959 Memoria-Servidor/(198694:198694): PID 20
+[ERROR] 23:09:24:241 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 23:10:50:454 Memoria-Servidor/(198694:198694): New client - SOCKET: 5
+[ERROR] 23:12:02:296 Memoria-Servidor/(198694:198694): Client disconnected - SOCKET: 5
+[INFO] 07:33:59:506 Memoria-Servidor/(1649:1649): Server ready - SOCKET: 4
+[INFO] 07:35:24:397 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 07:36:30:615 Memoria-Servidor/(1649:1649): PC 0
+[INFO] 07:36:30:615 Memoria-Servidor/(1649:1649): PID 20
+[ERROR] 07:41:00:007 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 07:41:13:981 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 07:41:17:382 Memoria-Servidor/(1649:1649): PC 0
+[INFO] 07:41:17:382 Memoria-Servidor/(1649:1649): PID 20
+[ERROR] 07:44:43:915 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 07:44:49:593 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 07:44:49:593 Memoria-Servidor/(1649:1649): PC 0
+[INFO] 07:44:49:593 Memoria-Servidor/(1649:1649): PID 20
+[ERROR] 07:46:19:935 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 07:46:34:985 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 07:46:34:985 Memoria-Servidor/(1649:1649): PC 0
+[INFO] 07:46:34:986 Memoria-Servidor/(1649:1649): PID 20
+[ERROR] 07:47:26:821 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 07:47:29:534 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 07:47:29:534 Memoria-Servidor/(1649:1649): PC 0
+[INFO] 07:47:29:534 Memoria-Servidor/(1649:1649): PID 20
+[ERROR] 07:48:24:786 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 07:48:27:918 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 07:48:27:918 Memoria-Servidor/(1649:1649): PC 0
+[INFO] 07:48:27:919 Memoria-Servidor/(1649:1649): PID 20
+[ERROR] 07:49:42:498 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 07:49:47:983 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 07:49:47:983 Memoria-Servidor/(1649:1649): PC 0
+[INFO] 07:49:47:983 Memoria-Servidor/(1649:1649): PID 20
+[ERROR] 07:51:37:666 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 07:51:40:889 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 07:51:40:889 Memoria-Servidor/(1649:1649): PC 0
+[INFO] 07:51:40:890 Memoria-Servidor/(1649:1649): PID 20
+[ERROR] 08:00:54:885 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 08:07:04:963 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[ERROR] 08:07:43:586 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 08:09:52:387 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[ERROR] 08:10:17:302 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 08:11:42:074 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[ERROR] 08:11:49:135 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 08:13:25:261 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[ERROR] 08:14:25:100 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 08:16:18:317 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[ERROR] 08:16:18:319 Memoria-Servidor/(1649:1649): Client disconnected - SOCKET: 5
+[INFO] 08:22:01:630 Memoria-Servidor/(1649:1649): New client - SOCKET: 5
+[INFO] 08:24:35:799 Memoria-Servidor/(28676:28676): Server ready - SOCKET: 4
+[INFO] 08:47:23:784 Memoria-Servidor/(1490:1490): Server ready - SOCKET: 4
+[INFO] 08:47:54:475 Memoria-Servidor/(1490:1490): New client - SOCKET: 5
+[ERROR] 08:49:29:753 Memoria-Servidor/(1490:1490): Client disconnected - SOCKET: 5

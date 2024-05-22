@@ -74,7 +74,7 @@ void servidor_main() {
         log_info(logger, "Connected to CPU - SOCKET: %d", conexion);
         // enviar_mensaje("Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion", conexion);
 
-        t_paquete * paquete = crear_paquete();
+        t_paquete * paquete = crear_paquete(PAQUETE);
 
         void mi_paquete_add(char * value) {
             agregar_a_paquete(paquete, value, strlen(value) + 1);

@@ -17,9 +17,19 @@
 
 typedef enum{
 	MENSAJE,
-	PAQUETE
+	PAQUETE,
+	GET_INSTRUCTION,
+	RESP_INSTRUCTION,
 } op_code;
 
+typedef enum {
+	SET,
+    SUM,
+    SUB,
+    JNZ,
+    IO_GEN_SLEEP,
+	EXIT,
+} set_instruction;
 typedef struct{
 	int size;
 	void* stream;
