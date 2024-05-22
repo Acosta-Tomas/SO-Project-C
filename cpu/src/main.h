@@ -6,6 +6,8 @@
 #include <utils/client.h>
 #include <utils/server.h>
 #include <utils/general.h>
+#include <pthread.h>
+#include <semaphore.h>
 
 // FILES
 #define CONFIG_FILE "cpu.config"
@@ -43,9 +45,19 @@ typedef struct {
     char* params[5];
 } t_intruction_execute;
 
+typedef enum {
+	RUNNING,
+    TERMINATED,
+    BLOCKED,
+    ERROR
+} cpu_status;
+
 extern t_log* logger;
 extern t_config* config;
 extern t_registros* registros;
+extern sem_t run;
+extern sem_t wait;
+extern sem_t mutex_registros;
 
 t_registros* create_registros(void);
 void log_registers();
@@ -53,12 +65,17 @@ void log_registers();
 void cpu(int);
 t_list* fetch(int);
 t_intruction_execute* decode(t_list*);
-void exec(t_intruction_execute*);
+cpu_status exec(t_intruction_execute*);
 void check_interrupt(void);
 
 set_instruction mapInstruction(char*);
-void* getRegister(char*);
-void setTo(char*, char*);
-void agregar_uint_a_paquete(t_paquete*, void*, int); // pasar a utils
+void* get_register(char*);
+void update_register_uint32(char*, void (*update_function)(uint32_t*, uint32_t), uint32_t);
+void update_register_uint8(char*, void (*update_function)(uint8_t*, uint8_t), uint8_t);
+void pc_plus_plus(uint32_t*, uint32_t);
+void set_registro_uint8(uint8_t*, uint8_t);
+void set_registro_uint32(uint32_t*, uint32_t);
+uint8_t atouint8(char*);
+uint32_t atouint32(char*);
 
 #endif

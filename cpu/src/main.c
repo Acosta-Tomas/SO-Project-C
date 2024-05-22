@@ -4,11 +4,18 @@ t_log* logger;
 t_registros* registros;
 t_config* config;
 
+sem_t run;
+sem_t wait;
+sem_t mutex_registros;
+
 int main(int argc, char* argv[]) {
     config = config_create(CONFIG_FILE);
-    registros = create_registros();
 
     if (config == NULL) exit(EXIT_FAILURE); 
+
+    sem_init(&run, 0, 0);
+    sem_init(&wait, 0, 1);
+    sem_init(&mutex_registros, 0, 1);
 
     logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_SERVER_LOG), true, LOG_LEVEL_DEBUG);
 
@@ -17,7 +24,11 @@ int main(int argc, char* argv[]) {
     int conexion = crear_conexion(ip_memoria, puerto_memoria);
 
     log_info(logger, "Connected to Memoria - SOCKET: %d", conexion);
+    
+    registros = create_registros();
 
+    sem_post(&run);
+    
     cpu(conexion);
 
     liberar_conexion(conexion);
@@ -74,6 +85,8 @@ int main(int argc, char* argv[]) {
     //     liberar_conexion(conexion);
     // }
 
+    sem_destroy(&run);
+    sem_destroy(&wait);
     free(registros);
     // close(server_fd);
     log_destroy(logger);

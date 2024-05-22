@@ -26,9 +26,7 @@ int crear_conexion(char *ip, char* puerto){
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_flags = AI_PASSIVE;
 
-	int getadd = getaddrinfo(ip, puerto, &hints, &server_info);
-
-	char* stringAdd = gai_strerror(getadd);
+	getaddrinfo(ip, puerto, &hints, &server_info);
 
 	// Ahora vamos a crear el socket.
 	int socket_cliente = socket(server_info->ai_family, 
@@ -91,6 +89,15 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio){
 
 	// Se agrega al buffer el tamaño del size y el nuevo valor
 	paquete->buffer->size += tamanio + sizeof(int); 
+}
+
+void agregar_uint_a_paquete(t_paquete* paquete, void* valor, int tamanio){
+
+    paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio);
+
+    memcpy(paquete->buffer->stream + paquete->buffer->size, valor, tamanio);
+
+    paquete->buffer->size += tamanio; 
 }
 
 void enviar_paquete(t_paquete* paquete, int socket_cliente){

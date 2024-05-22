@@ -2051,3 +2051,116 @@
 [INFO] 08:47:23:784 Memoria-Servidor/(1490:1490): Server ready - SOCKET: 4
 [INFO] 08:47:54:475 Memoria-Servidor/(1490:1490): New client - SOCKET: 5
 [ERROR] 08:49:29:753 Memoria-Servidor/(1490:1490): Client disconnected - SOCKET: 5
+[INFO] 09:26:40:114 Memoria-Servidor/(22615:22615): Server ready - SOCKET: 4
+[INFO] 09:26:46:832 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 09:26:46:833 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 09:26:46:833 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 09:27:09:015 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 09:28:29:422 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 09:28:29:423 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 09:28:29:423 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 09:28:39:564 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:14:10:324 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[ERROR] 13:16:17:948 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:16:19:557 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:16:38:950 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:16:38:950 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:20:40:732 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:20:42:397 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:20:45:589 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:20:45:589 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:22:18:647 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:22:20:326 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:22:22:228 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:22:22:228 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:27:43:962 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:27:45:556 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:27:47:148 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:27:47:148 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:28:59:686 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:29:01:335 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:29:04:489 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:29:04:489 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:29:43:342 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:29:45:029 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:29:45:593 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:29:45:593 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:30:52:129 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:30:53:778 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:30:56:124 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:30:56:124 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:31:22:194 Memoria-Servidor/(22615:22615): PC 1
+[INFO] 13:31:22:194 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:31:25:932 Memoria-Servidor/(22615:22615): PC 2
+[INFO] 13:31:25:932 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:31:32:202 Memoria-Servidor/(22615:22615): PC 3
+[INFO] 13:31:32:202 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:31:35:599 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:32:01:745 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:32:05:040 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:32:05:040 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:32:07:415 Memoria-Servidor/(22615:22615): PC 1
+[INFO] 13:32:07:415 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:32:09:184 Memoria-Servidor/(22615:22615): PC 2
+[INFO] 13:32:09:184 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:32:10:188 Memoria-Servidor/(22615:22615): PC 3
+[INFO] 13:32:10:188 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:32:13:148 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:39:34:093 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:39:35:704 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:39:35:704 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:39:37:730 Memoria-Servidor/(22615:22615): PC 1
+[INFO] 13:39:37:730 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:39:38:549 Memoria-Servidor/(22615:22615): PC 2
+[INFO] 13:39:38:549 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:39:39:327 Memoria-Servidor/(22615:22615): PC 3
+[INFO] 13:39:39:327 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:39:40:033 Memoria-Servidor/(22615:22615): PC 4
+[INFO] 13:39:40:033 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:39:40:723 Memoria-Servidor/(22615:22615): PC 5
+[INFO] 13:39:40:724 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:39:41:302 Memoria-Servidor/(22615:22615): PC 6
+[INFO] 13:39:41:302 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:39:45:877 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:47:31:387 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:47:44:251 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:47:44:251 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:48:11:538 Memoria-Servidor/(22615:22615): PC 1
+[INFO] 13:48:11:538 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:48:28:971 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 13:48:38:128 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 13:48:39:441 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 13:48:39:441 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:49:28:193 Memoria-Servidor/(22615:22615): PC 1
+[INFO] 13:49:28:193 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 13:49:29:840 Memoria-Servidor/(22615:22615): PC 2
+[INFO] 13:49:29:840 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 13:49:31:004 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 14:45:12:694 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 14:45:15:902 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 14:45:15:902 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 14:47:26:567 Memoria-Servidor/(22615:22615): PC 1
+[INFO] 14:47:26:567 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 14:47:29:277 Memoria-Servidor/(22615:22615): PC 2
+[INFO] 14:47:29:277 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 14:47:33:458 Memoria-Servidor/(22615:22615): PC 3
+[INFO] 14:47:33:458 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 14:47:41:132 Memoria-Servidor/(22615:22615): PC 4
+[INFO] 14:47:41:132 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 14:47:43:485 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5
+[INFO] 15:06:14:734 Memoria-Servidor/(22615:22615): New client - SOCKET: 5
+[INFO] 15:06:19:473 Memoria-Servidor/(22615:22615): PC 0
+[INFO] 15:06:19:473 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 15:06:21:710 Memoria-Servidor/(22615:22615): PC 1
+[INFO] 15:06:21:710 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 15:06:23:525 Memoria-Servidor/(22615:22615): PC 2
+[INFO] 15:06:23:525 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 15:06:24:856 Memoria-Servidor/(22615:22615): PC 3
+[INFO] 15:06:24:856 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 15:06:25:999 Memoria-Servidor/(22615:22615): PC 4
+[INFO] 15:06:25:999 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 15:06:27:157 Memoria-Servidor/(22615:22615): PC 5
+[INFO] 15:06:27:157 Memoria-Servidor/(22615:22615): PID 20
+[INFO] 15:06:28:250 Memoria-Servidor/(22615:22615): PC 6
+[INFO] 15:06:28:250 Memoria-Servidor/(22615:22615): PID 20
+[ERROR] 15:06:34:986 Memoria-Servidor/(22615:22615): Client disconnected - SOCKET: 5

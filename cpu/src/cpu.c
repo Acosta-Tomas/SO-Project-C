@@ -1,24 +1,24 @@
 #include "main.h"
 
-
-void agregar_uint_a_paquete(t_paquete* paquete, void* valor, int tamanio){
-
-    paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio);
-
-    memcpy(paquete->buffer->stream + paquete->buffer->size, valor, tamanio);
-
-    paquete->buffer->size += tamanio; 
-}
-
 void cpu(int conexion){
     t_list* list_instruction;
     t_intruction_execute* decoded_instruction;
+    cpu_status result;
 
-    list_instruction = fetch(conexion);
+    while(1) {
+        sem_wait(&run);
+        result = RUNNING;
 
-    decoded_instruction = decode(list_instruction);
+        while(result == RUNNING) {
+            list_instruction = fetch(conexion);
+            decoded_instruction = decode(list_instruction);
+            result = exec(decoded_instruction);
 
-    exec(decoded_instruction);
+            update_register_uint32(PC, pc_plus_plus, (uint32_t) 1);
+        }
+        sem_post(&wait);
+    }
+
 }
 
 t_list* fetch(int conexion) {
@@ -26,7 +26,7 @@ t_list* fetch(int conexion) {
     t_paquete* pc_paquete = crear_paquete(GET_INSTRUCTION);
     u_int32_t pid = 20;
 
-    agregar_uint_a_paquete(pc_paquete, &registros->pc, sizeof(uint32_t));
+    agregar_uint_a_paquete(pc_paquete, get_register(PC), sizeof(uint32_t));
     agregar_uint_a_paquete(pc_paquete, &pid, sizeof(uint32_t));
 
     enviar_paquete(pc_paquete, conexion);
@@ -72,49 +72,129 @@ t_intruction_execute* decode(t_list* list_instruction) {
             decoded_instruction->operation = IO_GEN_SLEEP;
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->params[1] = list_remove(list_instruction, 0);
-            break;        
+            break;    
+
+        case EXIT:
+            decoded_instruction->operation = EXIT;
+            break;
         
         default:
-            decoded_instruction->operation = EXIT;
+            decoded_instruction->operation = UNKNOWN;
             break;
     }
 
     decoded_instruction->total_params = 2;
 
+    list_destroy(list_instruction);
+
     return decoded_instruction;
 }
 
-void exec(t_intruction_execute* decoded_instruction) {
-    switch (decoded_instruction->operation)
-    {
-    case SET:
-        setTo(decoded_instruction->params[0], decoded_instruction->params[1]);
-        break;
+cpu_status exec(t_intruction_execute* decoded_instruction) {
+    cpu_status status = RUNNING; 
+    switch (decoded_instruction->operation){
+        case SET: 
+            update_register_uint8(decoded_instruction->params[0], set_registro_uint8, atouint8(decoded_instruction->params[1]));
+            break;
     
-    default:
-        break;
+        case EXIT: 
+            status = TERMINATED;
+            break;
+
+        default:
+            status = UNKNOWN;
+            break;
     }
 
     free(decoded_instruction);
-}
 
-void setTo(char* registro, char* valor){
-    char *endptr; // Used to detect conversion errors
-
-    uint8_t u_valor = (uint8_t)strtoul(valor, &endptr, 10);
-
-    if (*endptr != '\0') {
-        printf("Error: Conversion failed. Non-numeric characters found: %s\n", endptr);
-        return;
-    }
-
-    uint8_t * regis = getRegister(registro);
-
-    *(regis) = u_valor;
+    return status;
 }
 
 void check_interrupt() { 
 
+}
+
+// Funcion generica para cambiar el valor de un registro.
+
+void update_register_uint8(char* registro, void (*update_function) (uint8_t *, uint8_t), uint8_t value) {
+    sem_wait(&mutex_registros);
+    (*update_function)(get_register(registro), value);
+    sem_post(&mutex_registros);
+}
+
+void update_register_uint32(char* registro, void (*update_function) (uint32_t *, uint32_t), uint32_t value) {
+    sem_wait(&mutex_registros);
+    (*update_function)(get_register(registro), value);
+    sem_post(&mutex_registros);
+}
+
+
+// Funciones para updatear un registro (uno es para ++ y el otro para setear valor)
+
+void pc_plus_plus(u_int32_t* registro, u_int32_t value){
+    *(registro) += value;
+}
+
+void set_registro_uint8(uint8_t* registro, uint8_t value) {
+    *(registro) = value;
+}
+
+void set_registro_uint32(uint32_t* registro, uint32_t value) {
+    *(registro) = value;
+}
+
+// El numero en char que viene de lo leido en memoria, hay que pasarlo a uint que corresponda
+
+uint8_t atouint8(char* value) {
+    char *endptr; // Used to detect conversion errors
+    uint8_t new_value = (uint8_t) strtoul(value, &endptr, 10);
+
+    if (*endptr != '\0') {
+        printf("Error: Conversion failed. Non-numeric characters found: %s\n", endptr);
+        return 0;
+    }
+    
+    return new_value;
+}
+
+uint32_t atouint32(char* value) {
+    char *endptr; // Used to detect conversion errors
+    uint8_t new_value = (uint8_t) strtoul(value, &endptr, 10);
+
+    if (*endptr != '\0') {
+        printf("Error: Conversion failed. Non-numeric characters found: %s\n", endptr);
+        return 0;
+    }
+    
+    return new_value;
+}
+
+// Mapper para pasar las instrucciones a sus ENUMS
+set_instruction mapInstruction (char* intruction) {
+    if (strcmp(intruction, "SET") == 0) return SET;
+    if (strcmp(intruction, "SUM") == 0) return SUM;
+    if (strcmp(intruction, "SUB") == 0) return SUB;
+    if (strcmp(intruction, "JNZ") == 0) return JNZ;
+    if (strcmp(intruction, "IO_GEN_SLEEP") == 0) return IO_GEN_SLEEP;
+    if (strcmp(intruction, "EXIT") == 0) return EXIT;
+    return UNKNOWN;
+}
+
+// Retorna la direccion de memoria del registro que se quiere modificar
+void* get_register (char* registro) {    
+    if (strcmp(registro, PC) == 0) return &(registros->pc);
+    if (strcmp(registro, AX) == 0) return &(registros->ax);
+    if (strcmp(registro, BX) == 0) return &(registros->bx);
+    if (strcmp(registro, CX) == 0) return &(registros->cx);
+    if (strcmp(registro, DX) == 0) return &(registros->di);
+    if (strcmp(registro, EAX) == 0) return &(registros->eax);
+    if (strcmp(registro, EBX) == 0) return &(registros->ebx);
+    if (strcmp(registro, ECX) == 0) return &(registros->ecx);
+    if (strcmp(registro, EDX) == 0) return &(registros->edx);
+    if (strcmp(registro, SI) == 0) return &(registros->si);
+    if (strcmp(registro, DI) == 0) return &(registros->di);
+    return registros;
 }
 
 t_registros *create_registros() {
@@ -150,18 +230,4 @@ void log_registers () {
     log_info(logger, "EDX %u", registros->edx);
     log_info(logger, "SI %u", registros->si);
     log_info(logger, "DI %u", registros->di);
-}
-
-set_instruction mapInstruction (char* intruction) {
-    if (strcmp(intruction, "SET") == 0) return SET;
-    if (strcmp(intruction, "SUM") == 0) return SUM;
-    if (strcmp(intruction, "SUB") == 0) return SUB;
-    if (strcmp(intruction, "JNZ") == 0) return JNZ;
-    if (strcmp(intruction, "IO_GEN_SLEEP") == 0) return IO_GEN_SLEEP;
-    return -1;
-}
-
-void* getRegister (char* registro) {    
-    if (strcmp(registro, AX) == 0) return &(registros->ax);
-    return registros;
 }

@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
                     
                     char* mensaje1 = "SET";
                     char* mensaje2 = "AX";
-                    char* mensaje3 = "234234";
+                    char* mensaje3 = "23";
                     t_paquete* pc_paquete = crear_paquete(RESP_INSTRUCTION);
                     agregar_a_paquete(pc_paquete, mensaje1, strlen(mensaje1) + 1);
                     agregar_a_paquete(pc_paquete, mensaje2, strlen(mensaje2) + 1);

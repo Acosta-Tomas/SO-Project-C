@@ -29,6 +29,7 @@ typedef enum {
     JNZ,
     IO_GEN_SLEEP,
 	EXIT,
+	UNKNOWN,
 } set_instruction;
 typedef struct{
 	int size;

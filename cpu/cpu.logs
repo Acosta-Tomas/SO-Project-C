@@ -1841,3 +1841,82 @@
 [INFO] 07:51:46:527 CPU-Servidor/(10908:10908): Tamaño 8
 [INFO] 07:51:54:028 CPU-Servidor/(10908:10908): Tamaño 250
 [INFO] 08:25:31:840 CPU-Servidor/(29449:29449): Connected to Memoria - SOCKET: 4
+[INFO] 09:01:18:289 CPU-Servidor/(9909:9909): Connected to Memoria - SOCKET: 4
+[INFO] 09:03:16:799 CPU-Servidor/(10920:10920): Connected to Memoria - SOCKET: 4
+[INFO] 09:03:40:528 CPU-Servidor/(11245:11245): Connected to Memoria - SOCKET: 4
+[INFO] 09:03:40:529 CPU-Servidor/(11245:11245): Codigo Operacion 3
+[INFO] 09:06:36:283 CPU-Servidor/(12641:12641): Connected to Memoria - SOCKET: 4
+[INFO] 09:07:39:680 CPU-Servidor/(13252:13252): Connected to Memoria - SOCKET: 4
+[INFO] 09:07:39:681 CPU-Servidor/(13252:13252): Codigo Operacion 3
+[INFO] 09:07:49:492 CPU-Servidor/(13442:13442): Connected to Memoria - SOCKET: 4
+[INFO] 09:07:49:492 CPU-Servidor/(13442:13442): Codigo Operacion 3
+[INFO] 09:13:02:583 CPU-Servidor/(15898:15898): Connected to Memoria - SOCKET: 4
+[INFO] 09:13:02:583 CPU-Servidor/(15898:15898): Codigo Operacion 3
+[INFO] 09:23:55:516 CPU-Servidor/(20813:20813): Connected to Memoria - SOCKET: 4
+[INFO] 09:23:55:516 CPU-Servidor/(20813:20813): Codigo Operacion 3
+[INFO] 09:25:12:470 CPU-Servidor/(21594:21594): Connected to Memoria - SOCKET: 4
+[INFO] 09:26:17:428 CPU-Servidor/(22292:22292): Connected to Memoria - SOCKET: 4
+[INFO] 09:26:46:831 CPU-Servidor/(22754:22754): Connected to Memoria - SOCKET: 4
+[INFO] 09:26:46:834 CPU-Servidor/(22754:22754): Codigo Operacion 3
+[INFO] 09:28:29:422 CPU-Servidor/(23634:23634): Connected to Memoria - SOCKET: 4
+[INFO] 09:28:29:423 CPU-Servidor/(23634:23634): Codigo Operacion 3
+[INFO] 13:14:10:324 CPU-Servidor/(119496:119496): Connected to Memoria - SOCKET: 4
+[INFO] 13:16:19:557 CPU-Servidor/(120573:120573): Connected to Memoria - SOCKET: 4
+[INFO] 13:16:38:951 CPU-Servidor/(120573:120573): Codigo Operacion 3
+[INFO] 13:20:42:397 CPU-Servidor/(122606:122606): Connected to Memoria - SOCKET: 4
+[INFO] 13:20:45:590 CPU-Servidor/(122606:122606): Codigo Operacion 3
+[INFO] 13:22:20:326 CPU-Servidor/(123458:123458): Connected to Memoria - SOCKET: 4
+[INFO] 13:22:22:228 CPU-Servidor/(123458:123458): Codigo Operacion 3
+[INFO] 13:27:45:556 CPU-Servidor/(125969:125969): Connected to Memoria - SOCKET: 4
+[INFO] 13:27:47:148 CPU-Servidor/(125969:125969): Codigo Operacion 3
+[INFO] 13:29:01:335 CPU-Servidor/(126655:126655): Connected to Memoria - SOCKET: 4
+[INFO] 13:29:04:489 CPU-Servidor/(126655:126655): Codigo Operacion 3
+[INFO] 13:29:41:736 CPU-Servidor/(126655:126655): Registro PC: 1124090705
+[INFO] 13:29:45:029 CPU-Servidor/(127147:127147): Connected to Memoria - SOCKET: 4
+[INFO] 13:29:45:593 CPU-Servidor/(127147:127147): Codigo Operacion 3
+[INFO] 13:29:57:908 CPU-Servidor/(127147:127147): Registro PC: 1124090704
+[INFO] 13:30:53:778 CPU-Servidor/(127815:127815): Connected to Memoria - SOCKET: 4
+[INFO] 13:30:56:124 CPU-Servidor/(127815:127815): Codigo Operacion 3
+[INFO] 13:31:03:230 CPU-Servidor/(127815:127815): Registro PC: 0
+[INFO] 13:31:09:639 CPU-Servidor/(127815:127815): Registro PC: 1
+[INFO] 13:31:22:194 CPU-Servidor/(127815:127815): Codigo Operacion 3
+[INFO] 13:31:25:932 CPU-Servidor/(127815:127815): Registro PC: 1
+[INFO] 13:31:25:932 CPU-Servidor/(127815:127815): Registro PC: 2
+[INFO] 13:31:25:932 CPU-Servidor/(127815:127815): Codigo Operacion 3
+[INFO] 13:31:32:202 CPU-Servidor/(127815:127815): Registro PC: 2
+[INFO] 13:31:32:202 CPU-Servidor/(127815:127815): Registro PC: 3
+[INFO] 13:31:32:202 CPU-Servidor/(127815:127815): Codigo Operacion 3
+[INFO] 13:32:01:745 CPU-Servidor/(128586:128586): Connected to Memoria - SOCKET: 4
+[INFO] 13:32:05:040 CPU-Servidor/(128586:128586): Codigo Operacion 3
+[INFO] 13:32:07:415 CPU-Servidor/(128586:128586): Codigo Operacion 3
+[INFO] 13:32:09:184 CPU-Servidor/(128586:128586): Codigo Operacion 3
+[INFO] 13:32:10:188 CPU-Servidor/(128586:128586): Codigo Operacion 3
+[INFO] 13:39:34:093 CPU-Servidor/(131986:131986): Connected to Memoria - SOCKET: 4
+[INFO] 13:39:35:704 CPU-Servidor/(131986:131986): Codigo Operacion 3
+[INFO] 13:39:37:730 CPU-Servidor/(131986:131986): Codigo Operacion 3
+[INFO] 13:39:38:549 CPU-Servidor/(131986:131986): Codigo Operacion 3
+[INFO] 13:39:39:327 CPU-Servidor/(131986:131986): Codigo Operacion 3
+[INFO] 13:39:40:033 CPU-Servidor/(131986:131986): Codigo Operacion 3
+[INFO] 13:39:40:724 CPU-Servidor/(131986:131986): Codigo Operacion 3
+[INFO] 13:39:41:303 CPU-Servidor/(131986:131986): Codigo Operacion 3
+[INFO] 13:47:31:387 CPU-Servidor/(135581:135581): Connected to Memoria - SOCKET: 4
+[INFO] 13:47:44:251 CPU-Servidor/(135581:135581): Codigo Operacion 3
+[INFO] 13:48:11:538 CPU-Servidor/(135581:135581): Codigo Operacion 3
+[INFO] 13:48:38:128 CPU-Servidor/(136262:136262): Connected to Memoria - SOCKET: 4
+[INFO] 13:48:39:441 CPU-Servidor/(136262:136262): Codigo Operacion 3
+[INFO] 13:49:28:193 CPU-Servidor/(136262:136262): Codigo Operacion 3
+[INFO] 13:49:29:840 CPU-Servidor/(136262:136262): Codigo Operacion 3
+[INFO] 14:45:12:694 CPU-Servidor/(161164:161164): Connected to Memoria - SOCKET: 4
+[INFO] 14:45:15:902 CPU-Servidor/(161164:161164): Codigo Operacion 3
+[INFO] 14:47:26:567 CPU-Servidor/(161164:161164): Codigo Operacion 3
+[INFO] 14:47:29:277 CPU-Servidor/(161164:161164): Codigo Operacion 3
+[INFO] 14:47:33:458 CPU-Servidor/(161164:161164): Codigo Operacion 3
+[INFO] 14:47:41:132 CPU-Servidor/(161164:161164): Codigo Operacion 3
+[INFO] 15:06:14:734 CPU-Servidor/(170651:170651): Connected to Memoria - SOCKET: 4
+[INFO] 15:06:19:473 CPU-Servidor/(170651:170651): Codigo Operacion 3
+[INFO] 15:06:21:710 CPU-Servidor/(170651:170651): Codigo Operacion 3
+[INFO] 15:06:23:525 CPU-Servidor/(170651:170651): Codigo Operacion 3
+[INFO] 15:06:24:856 CPU-Servidor/(170651:170651): Codigo Operacion 3
+[INFO] 15:06:25:999 CPU-Servidor/(170651:170651): Codigo Operacion 3
+[INFO] 15:06:27:157 CPU-Servidor/(170651:170651): Codigo Operacion 3
+[INFO] 15:06:28:250 CPU-Servidor/(170651:170651): Codigo Operacion 3
