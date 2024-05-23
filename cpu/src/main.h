@@ -52,6 +52,11 @@ typedef enum {
     ERROR
 } cpu_status;
 
+typedef enum {
+    SUMA,
+    RESTA
+} cpu_operation;
+
 extern t_log* logger;
 extern t_config* config;
 extern t_registros* registros;
@@ -68,14 +73,21 @@ t_intruction_execute* decode(t_list*);
 cpu_status exec(t_intruction_execute*);
 void check_interrupt(void);
 
-set_instruction mapInstruction(char*);
+
 void* get_register(char*);
+
 void update_register_uint32(char*, void (*update_function)(uint32_t*, uint32_t), uint32_t);
 void update_register_uint8(char*, void (*update_function)(uint8_t*, uint8_t), uint8_t);
-void pc_plus_plus(uint32_t*, uint32_t);
+void operation_register_uint8(char*, char*, cpu_operation);
+void operation_register_uint32(char*, char*, cpu_operation);
 void set_registro_uint8(uint8_t*, uint8_t);
 void set_registro_uint32(uint32_t*, uint32_t);
+bool jnz_register(char*, char*);
+
+void pc_plus_plus(uint32_t*, uint32_t);
 uint8_t atouint8(char*);
 uint32_t atouint32(char*);
+unsigned long sizeof_register(char*);
+set_instruction mapInstruction(char*);
 
 #endif

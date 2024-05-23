@@ -13,8 +13,6 @@ void cpu(int conexion){
             list_instruction = fetch(conexion);
             decoded_instruction = decode(list_instruction);
             result = exec(decoded_instruction);
-
-            update_register_uint32(PC, pc_plus_plus, (uint32_t) 1);
         }
         sem_post(&wait);
     }
@@ -92,11 +90,33 @@ t_intruction_execute* decode(t_list* list_instruction) {
 
 cpu_status exec(t_intruction_execute* decoded_instruction) {
     cpu_status status = RUNNING; 
+    bool ignorePC = false;
+
     switch (decoded_instruction->operation){
         case SET: 
-            update_register_uint8(decoded_instruction->params[0], set_registro_uint8, atouint8(decoded_instruction->params[1]));
+            if (sizeof(uint8_t) == sizeof_register(decoded_instruction->params[0]))
+                update_register_uint8(decoded_instruction->params[0], set_registro_uint8, atouint8(decoded_instruction->params[1]));
+            else 
+                update_register_uint32(decoded_instruction->params[0], set_registro_uint32, atouint32(decoded_instruction->params[1]));
             break;
-    
+
+        case SUM:
+            if (sizeof(uint8_t) == sizeof_register(decoded_instruction->params[0]))
+                operation_register_uint8(decoded_instruction->params[0], decoded_instruction->params[1], SUMA);
+            else 
+                operation_register_uint32(decoded_instruction->params[0], decoded_instruction->params[1], SUMA);
+            break;
+
+        case SUB:
+            if (sizeof(uint8_t) == sizeof_register(decoded_instruction->params[0]))
+                operation_register_uint8(decoded_instruction->params[0], decoded_instruction->params[1], RESTA);
+            else 
+                operation_register_uint32(decoded_instruction->params[0], decoded_instruction->params[1], RESTA);
+            break;
+
+        case JNZ:
+            ignorePC = jnz_register(decoded_instruction->params[0], decoded_instruction->params[1]);
+            break;
         case EXIT: 
             status = TERMINATED;
             break;
@@ -107,6 +127,8 @@ cpu_status exec(t_intruction_execute* decoded_instruction) {
     }
 
     free(decoded_instruction);
+
+    if (!ignorePC) update_register_uint32(PC, pc_plus_plus, (uint32_t) 1);
 
     return status;
 }
@@ -129,6 +151,70 @@ void update_register_uint32(char* registro, void (*update_function) (uint32_t *,
     sem_post(&mutex_registros);
 }
 
+void operation_register_uint8(char* destino, char* origen, cpu_operation operation){
+    sem_wait(&mutex_registros);
+
+    uint8_t* reg_destino = (uint8_t*) get_register(destino);
+    uint8_t* reg_origen = (uint8_t*) get_register(origen);
+
+    if (sizeof(*(reg_destino)) != sizeof(*(reg_origen))) {
+        sem_post(&mutex_registros);
+        return;
+    }; // iria error
+
+    switch (operation){
+        case SUMA: set_registro_uint8(reg_destino, *(reg_destino) + *(reg_origen));
+            break;
+        
+        case RESTA: set_registro_uint8(reg_destino, *(reg_destino) - *(reg_origen));
+            break;
+        default:
+            break;
+    }
+
+    sem_post(&mutex_registros);
+}
+
+void operation_register_uint32(char* destino, char* origen, cpu_operation operation){
+    sem_wait(&mutex_registros);
+
+    uint32_t* reg_destino = (uint32_t*) get_register(destino);
+    uint32_t* reg_origen = (uint32_t*) get_register(origen);
+
+    if (sizeof(*(reg_destino)) != sizeof(*(reg_origen))) {
+        sem_post(&mutex_registros);
+        return;
+    }; // iria error
+
+    switch (operation){
+        case SUMA: set_registro_uint32(reg_destino, *(reg_destino) + *(reg_origen));
+            break;
+        
+        case RESTA: set_registro_uint32(reg_destino, *(reg_destino) - *(reg_origen));
+            break;
+        default:
+            break;
+    }
+
+    sem_post(&mutex_registros);
+}
+
+
+bool jnz_register(char* registro, char* next_pc){
+    sem_wait(&mutex_registros);
+    uint8_t* reg = (uint8_t*) get_register(registro);
+    bool isZero = *(reg) == 0;
+    sem_post(&mutex_registros);
+    
+    if (isZero) return false;
+
+    uint32_t new_pc = atouint32(next_pc);
+
+    update_register_uint32(PC, set_registro_uint32, new_pc);
+
+
+    return true;
+}
 
 // Funciones para updatear un registro (uno es para ++ y el otro para setear valor)
 
@@ -160,7 +246,7 @@ uint8_t atouint8(char* value) {
 
 uint32_t atouint32(char* value) {
     char *endptr; // Used to detect conversion errors
-    uint8_t new_value = (uint8_t) strtoul(value, &endptr, 10);
+    uint32_t new_value = (uint32_t) strtoul(value, &endptr, 10);
 
     if (*endptr != '\0') {
         printf("Error: Conversion failed. Non-numeric characters found: %s\n", endptr);
@@ -195,6 +281,20 @@ void* get_register (char* registro) {
     if (strcmp(registro, SI) == 0) return &(registros->si);
     if (strcmp(registro, DI) == 0) return &(registros->di);
     return registros;
+}
+
+unsigned long sizeof_register(char* registro){
+    char* char_registers[4] = { AX, BX, CX, DX };
+    unsigned long size = 4;
+
+    for(int i = 0; i < 4; i += 1){
+        if (strcmp(char_registers[i], registro) == 0) {
+            size = 1;
+            break;
+        }
+    }
+
+    return size;
 }
 
 t_registros *create_registros() {
