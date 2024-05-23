@@ -3,7 +3,7 @@
 void cpu(int conexion){
     t_list* list_instruction;
     t_intruction_execute* decoded_instruction;
-    cpu_status result;
+    pid_status result;
 
     while(1) {
         sem_wait(&run);
@@ -21,7 +21,7 @@ void cpu(int conexion){
 
 t_list* fetch(int conexion) {
     t_list* list_instruction;
-    t_paquete* pc_paquete = crear_paquete(GET_INSTRUCTION);
+    t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
     u_int32_t pid = 20;
 
     agregar_uint_a_paquete(pc_paquete, get_register(PC), sizeof(uint32_t));
@@ -88,8 +88,8 @@ t_intruction_execute* decode(t_list* list_instruction) {
     return decoded_instruction;
 }
 
-cpu_status exec(t_intruction_execute* decoded_instruction) {
-    cpu_status status = RUNNING; 
+pid_status exec(t_intruction_execute* decoded_instruction) {
+    pid_status status = RUNNING; 
     bool ignorePC = false;
 
     switch (decoded_instruction->operation){

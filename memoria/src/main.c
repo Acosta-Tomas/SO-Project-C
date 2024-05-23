@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
                     }
                     list_iterate(lista, (void*) myiterator); // Ver alguna manera de pasar un log al iterator, por ahi ahora es relevanto pero desp no
                  
-                case GET_INSTRUCTION:
+                case INSTRUCTION:
                     uint32_t pc;
                     uint32_t pid;
                     int tmñ;
@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
                         char* mensaje1 = "SET";
                         char* mensaje2 = "AX";
                         char* mensaje3 = "20";
-                        t_paquete* pc_paquete = crear_paquete(RESP_INSTRUCTION);
+                        t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
                         agregar_a_paquete(pc_paquete, mensaje1, strlen(mensaje1) + 1);
                         agregar_a_paquete(pc_paquete, mensaje2, strlen(mensaje2) + 1);
                         agregar_a_paquete(pc_paquete, mensaje3, strlen(mensaje3) + 1);
@@ -57,7 +57,7 @@ int main(int argc, char* argv[]) {
                         char* mensaje1 = "SET";
                         char* mensaje2 = "BX";
                         char* mensaje3 = "10";
-                        t_paquete* pc_paquete = crear_paquete(RESP_INSTRUCTION);
+                        t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
                         agregar_a_paquete(pc_paquete, mensaje1, strlen(mensaje1) + 1);
                         agregar_a_paquete(pc_paquete, mensaje2, strlen(mensaje2) + 1);
                         agregar_a_paquete(pc_paquete, mensaje3, strlen(mensaje3) + 1);
@@ -68,7 +68,7 @@ int main(int argc, char* argv[]) {
                         char* mensaje1 = "SUB";
                         char* mensaje2 = "AX";
                         char* mensaje3 = "BX";
-                        t_paquete* pc_paquete = crear_paquete(RESP_INSTRUCTION);
+                        t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
                         agregar_a_paquete(pc_paquete, mensaje1, strlen(mensaje1) + 1);
                         agregar_a_paquete(pc_paquete, mensaje2, strlen(mensaje2) + 1);
                         agregar_a_paquete(pc_paquete, mensaje3, strlen(mensaje3) + 1);
@@ -79,7 +79,7 @@ int main(int argc, char* argv[]) {
                         char* mensaje1 = "JNZ";
                         char* mensaje2 = "AX";
                         char* mensaje3 = "2";
-                        t_paquete* pc_paquete = crear_paquete(RESP_INSTRUCTION);
+                        t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
                         agregar_a_paquete(pc_paquete, mensaje1, strlen(mensaje1) + 1);
                         agregar_a_paquete(pc_paquete, mensaje2, strlen(mensaje2) + 1);
                         agregar_a_paquete(pc_paquete, mensaje3, strlen(mensaje3) + 1);
@@ -88,7 +88,7 @@ int main(int argc, char* argv[]) {
 
                     if (pc == 4) {
                         char* mensaje1 = "EXIT";
-                        t_paquete* pc_paquete = crear_paquete(RESP_INSTRUCTION);
+                        t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
                         agregar_a_paquete(pc_paquete, mensaje1, strlen(mensaje1) + 1);
                         enviar_paquete(pc_paquete, cliente_fd);
                     }                                     

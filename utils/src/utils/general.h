@@ -15,22 +15,33 @@
 #include <assert.h>
 #include <signal.h>
 
+typedef enum {
+	RUNNING,
+    TERMINATED,
+    BLOCKED,
+    ERROR
+} pid_status;
 typedef enum{
 	MENSAJE,
 	PAQUETE,
-	GET_INSTRUCTION,
-	RESP_INSTRUCTION,
+	INSTRUCTION,
+	PCB,
+	IO,
+	INIT_PID,
+	INTERRUPT
 } op_code;
 
-typedef enum {
-	SET,
-    SUM,
-    SUB,
-    JNZ,
-    IO_GEN_SLEEP,
-	EXIT,
-	UNKNOWN,
-} set_instruction;
+typedef struct {
+    uint32_t pc, si, di;
+    uint8_t ax, bx, cx, dx;
+    uint32_t eax, ebx, ecx, edx;
+} t_registros;
+
+typedef struct {
+	uint32_t pid, pc, quantum;
+	t_registros* registers;
+	pid_status status;
+} t_context;
 typedef struct{
 	int size;
 	void* stream;

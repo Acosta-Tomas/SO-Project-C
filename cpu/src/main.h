@@ -33,11 +33,20 @@
 #define SI "SI"
 #define DI "DI"
 
-typedef struct {
-    uint32_t pc, si, di;
-    uint8_t ax, bx, cx, dx;
-    uint32_t eax, ebx, ecx, edx;
-} t_registros;
+typedef enum {
+	SET,
+    SUM,
+    SUB,
+    JNZ,
+    IO_GEN_SLEEP,
+	EXIT,
+	UNKNOWN,
+} set_instruction;
+
+typedef enum {
+    SUMA,
+    RESTA
+} cpu_operation;
 
 typedef struct {
     set_instruction operation;
@@ -45,17 +54,6 @@ typedef struct {
     char* params[5];
 } t_intruction_execute;
 
-typedef enum {
-	RUNNING,
-    TERMINATED,
-    BLOCKED,
-    ERROR
-} cpu_status;
-
-typedef enum {
-    SUMA,
-    RESTA
-} cpu_operation;
 
 extern t_log* logger;
 extern t_config* config;
@@ -70,7 +68,7 @@ void log_registers();
 void cpu(int);
 t_list* fetch(int);
 t_intruction_execute* decode(t_list*);
-cpu_status exec(t_intruction_execute*);
+pid_status exec(t_intruction_execute*);
 void check_interrupt(void);
 
 
