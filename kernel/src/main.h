@@ -44,8 +44,6 @@ op_code iniciar_proceso(int, char*, char*);
 void enviar_new(void);
 t_pcb* crear_context(uint32_t);
 void enviar_cpu(int, t_pcb*);
-void agregar_pcb_paquete(t_paquete*, t_pcb*);
 t_pcb* esperar_cpu(int);
-t_pcb* recibir_pcb(int);
 
 #endif

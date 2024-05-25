@@ -88,3 +88,51 @@ t_list* recibir_paquete(int socket_cliente){
 	free(buffer);
 	return valores;
 }
+
+
+t_pcb* recibir_pcb(int conexion, t_log* logger){
+    int size;
+    int desplazamiento = 0;
+    void* buffer;
+    t_pcb* pcb = malloc(sizeof(t_pcb));
+    pcb->registers = malloc(sizeof(t_registros));
+
+    buffer = recibir_buffer(&size, conexion);
+
+    memcpy(&pcb->pid, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->pc, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->quantum, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->status, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->registers->ax, buffer - desplazamiento, sizeof(uint8_t));
+    desplazamiento += sizeof(uint8_t);
+    memcpy(&pcb->registers->bx, buffer - desplazamiento, sizeof(uint8_t));
+    desplazamiento += sizeof(uint8_t);
+    memcpy(&pcb->registers->cx, buffer - desplazamiento, sizeof(uint8_t));
+    desplazamiento += sizeof(uint8_t);
+    memcpy(&pcb->registers->dx, buffer - desplazamiento, sizeof(uint8_t));
+    desplazamiento += sizeof(uint8_t);
+    memcpy(&pcb->registers->eax, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->registers->ebx, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->registers->ecx, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->registers->edx, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->registers->si, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->registers->di, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&pcb->registers->pc, buffer - desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+
+    if (size != 0) log_info(logger, "Error al recibir PCB");
+
+	free(buffer);
+
+    return pcb;
+}

@@ -124,3 +124,23 @@ void terminar_programa(int conexion, t_log* logger, t_config* config){
 	config_destroy(config);
 	liberar_conexion(conexion);
 }
+
+void agregar_pcb_paquete(t_paquete* paquete, t_pcb* pcb){
+    agregar_uint_a_paquete(paquete, &pcb->pid, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->pc, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->quantum, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->status, sizeof(pid_status));
+
+    // registros
+    agregar_uint_a_paquete(paquete, &pcb->registers->ax, sizeof(uint8_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->bx, sizeof(uint8_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->cx, sizeof(uint8_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->dx, sizeof(uint8_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->eax, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->ebx, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->ecx, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->edx, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->si, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->di, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &pcb->registers->pc, sizeof(uint32_t));
+}

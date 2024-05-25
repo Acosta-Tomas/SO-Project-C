@@ -9,5 +9,6 @@ int esperar_cliente(int);
 t_list* recibir_paquete(int);
 void recibir_mensaje(int, t_log*);
 int recibir_operacion(int);
+void agregar_pcb_paquete(t_paquete*, t_pcb*);
 
 #endif

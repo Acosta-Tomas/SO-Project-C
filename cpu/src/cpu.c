@@ -1,25 +1,33 @@
 #include "main.h"
 
-void cpu(int conexion){
+void cpu(int memoria_fd, int kernel_fd){
     t_list* list_instruction;
     t_intruction_execute* decoded_instruction;
     pid_status result;
 
-    while(1) {
-        sem_wait(&run);
-        result = RUNNING;
+    result = RUNNING;
 
-        while(result == RUNNING) {
-            list_instruction = fetch(conexion);
-            decoded_instruction = decode(list_instruction);
-            result = exec(decoded_instruction);
-        }
-        sem_post(&wait);
+    while(result == RUNNING) {
+        list_instruction = fetch(memoria_fd);
+        decoded_instruction = decode(list_instruction);
+        result = exec(decoded_instruction, kernel_fd);
     }
 
+    pcb->pc = pcb->registers->pc;
+
+    t_paquete* paquete = crear_paquete(PCB);
+
+    agregar_pcb_paquete(paquete, pcb);
+    enviar_paquete(paquete, kernel_fd);
+
+    eliminar_paquete(paquete);
+
+    log_info(logger, "Proceso enviado a Kernel - PID: %u", pcb->pid);
+    free(pcb->registers);
+    free(pcb);
 }
 
-t_list* fetch(int conexion) {
+t_list* fetch(int memoria_fd) {
     t_list* list_instruction;
     t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
     u_int32_t pid = 20;
@@ -27,12 +35,12 @@ t_list* fetch(int conexion) {
     agregar_uint_a_paquete(pc_paquete, get_register(PC), sizeof(uint32_t));
     agregar_uint_a_paquete(pc_paquete, &pid, sizeof(uint32_t));
 
-    enviar_paquete(pc_paquete, conexion);
+    enviar_paquete(pc_paquete, memoria_fd);
     
     eliminar_paquete(pc_paquete);
     
-    int cod_op = recibir_operacion(conexion);
-    list_instruction = recibir_paquete(conexion);
+    int cod_op = recibir_operacion(memoria_fd);
+    list_instruction = recibir_paquete(memoria_fd);
 
     return list_instruction;
 }
@@ -85,7 +93,7 @@ t_intruction_execute* decode(t_list* list_instruction) {
     return decoded_instruction;
 }
 
-pid_status exec(t_intruction_execute* decoded_instruction) {
+pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd) {
     pid_status status = RUNNING; 
     bool ignorePC = false;
 
@@ -137,25 +145,25 @@ void check_interrupt() {
 // Funcion generica para cambiar el valor de un registro.
 
 void update_register_uint8(char* registro, void (*update_function) (uint8_t *, uint8_t), uint8_t value) {
-    sem_wait(&mutex_registros);
+    // sem_wait(&mutex_registros);
     (*update_function)(get_register(registro), value);
-    sem_post(&mutex_registros);
+    // sem_post(&mutex_registros);
 }
 
 void update_register_uint32(char* registro, void (*update_function) (uint32_t *, uint32_t), uint32_t value) {
-    sem_wait(&mutex_registros);
+    // sem_wait(&mutex_registros);
     (*update_function)(get_register(registro), value);
-    sem_post(&mutex_registros);
+    // sem_post(&mutex_registros);
 }
 
 void operation_register_uint8(char* destino, char* origen, cpu_operation operation){
-    sem_wait(&mutex_registros);
+    // sem_wait(&mutex_registros);
 
     uint8_t* reg_destino = (uint8_t*) get_register(destino);
     uint8_t* reg_origen = (uint8_t*) get_register(origen);
 
     if (sizeof(*(reg_destino)) != sizeof(*(reg_origen))) {
-        sem_post(&mutex_registros);
+        // sem_post(&mutex_registros);
         return;
     }; // iria error
 
@@ -169,17 +177,17 @@ void operation_register_uint8(char* destino, char* origen, cpu_operation operati
             break;
     }
 
-    sem_post(&mutex_registros);
+    // sem_post(&mutex_registros);
 }
 
 void operation_register_uint32(char* destino, char* origen, cpu_operation operation){
-    sem_wait(&mutex_registros);
+    // sem_wait(&mutex_registros);
 
     uint32_t* reg_destino = (uint32_t*) get_register(destino);
     uint32_t* reg_origen = (uint32_t*) get_register(origen);
 
     if (sizeof(*(reg_destino)) != sizeof(*(reg_origen))) {
-        sem_post(&mutex_registros);
+        // sem_post(&mutex_registros);
         return;
     }; // iria error
 
@@ -193,15 +201,15 @@ void operation_register_uint32(char* destino, char* origen, cpu_operation operat
             break;
     }
 
-    sem_post(&mutex_registros);
+    // sem_post(&mutex_registros);
 }
 
 
 bool jnz_register(char* registro, char* next_pc){
-    sem_wait(&mutex_registros);
+    // sem_wait(&mutex_registros);
     uint8_t* reg = (uint8_t*) get_register(registro);
     bool isZero = *(reg) == 0;
-    sem_post(&mutex_registros);
+    // sem_post(&mutex_registros);
     
     if (isZero) return false;
 
@@ -266,18 +274,18 @@ set_instruction mapInstruction (char* intruction) {
 
 // Retorna la direccion de memoria del registro que se quiere modificar
 void* get_register (char* registro) {    
-    if (strcmp(registro, PC) == 0) return &(registros->pc);
-    if (strcmp(registro, AX) == 0) return &(registros->ax);
-    if (strcmp(registro, BX) == 0) return &(registros->bx);
-    if (strcmp(registro, CX) == 0) return &(registros->cx);
-    if (strcmp(registro, DX) == 0) return &(registros->di);
-    if (strcmp(registro, EAX) == 0) return &(registros->eax);
-    if (strcmp(registro, EBX) == 0) return &(registros->ebx);
-    if (strcmp(registro, ECX) == 0) return &(registros->ecx);
-    if (strcmp(registro, EDX) == 0) return &(registros->edx);
-    if (strcmp(registro, SI) == 0) return &(registros->si);
-    if (strcmp(registro, DI) == 0) return &(registros->di);
-    return registros;
+    if (strcmp(registro, PC) == 0) return &(pcb->registers->pc);
+    if (strcmp(registro, AX) == 0) return &(pcb->registers->ax);
+    if (strcmp(registro, BX) == 0) return &(pcb->registers->bx);
+    if (strcmp(registro, CX) == 0) return &(pcb->registers->cx);
+    if (strcmp(registro, DX) == 0) return &(pcb->registers->di);
+    if (strcmp(registro, EAX) == 0) return &(pcb->registers->eax);
+    if (strcmp(registro, EBX) == 0) return &(pcb->registers->ebx);
+    if (strcmp(registro, ECX) == 0) return &(pcb->registers->ecx);
+    if (strcmp(registro, EDX) == 0) return &(pcb->registers->edx);
+    if (strcmp(registro, SI) == 0) return &(pcb->registers->si);
+    if (strcmp(registro, DI) == 0) return &(pcb->registers->di);
+    return pcb->registers;
 }
 
 unsigned long sizeof_register(char* registro){
@@ -316,15 +324,15 @@ t_registros *create_registros() {
 }
 
 void log_registers () {
-    log_info(logger, "PC %u", registros->pc);
-    log_info(logger, "AX %hhu", registros->ax);
-    log_info(logger, "BC %hhu", registros->bx);
-    log_info(logger, "CX %hhu", registros->cx);
-    log_info(logger, "DX %hhu", registros->dx);
-    log_info(logger, "EAX %u", registros->eax);
-    log_info(logger, "EBX %u", registros->ebx);
-    log_info(logger, "ECX %u", registros->ecx);
-    log_info(logger, "EDX %u", registros->edx);
-    log_info(logger, "SI %u", registros->si);
-    log_info(logger, "DI %u", registros->di);
+    log_info(logger, "PC %u", pcb->registers->pc);
+    log_info(logger, "AX %hhu", pcb->registers->ax);
+    log_info(logger, "BC %hhu", pcb->registers->bx);
+    log_info(logger, "CX %hhu", pcb->registers->cx);
+    log_info(logger, "DX %hhu", pcb->registers->dx);
+    log_info(logger, "EAX %u", pcb->registers->eax);
+    log_info(logger, "EBX %u", pcb->registers->ebx);
+    log_info(logger, "ECX %u", pcb->registers->ecx);
+    log_info(logger, "EDX %u", pcb->registers->edx);
+    log_info(logger, "SI %u", pcb->registers->si);
+    log_info(logger, "DI %u", pcb->registers->di);
 }

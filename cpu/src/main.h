@@ -45,7 +45,7 @@ typedef struct {
 
 extern t_log* logger;
 extern t_config* config;
-extern t_registros* registros;
+extern t_pcb* pcb;
 extern sem_t run;
 extern sem_t wait;
 extern sem_t mutex_registros;
@@ -53,10 +53,10 @@ extern sem_t mutex_registros;
 t_registros* create_registros(void);
 void log_registers();
 
-void cpu(int);
+void cpu(int, int);
 t_list* fetch(int);
 t_intruction_execute* decode(t_list*);
-pid_status exec(t_intruction_execute*);
+pid_status exec(t_intruction_execute*, int);
 void check_interrupt(void);
 
 
