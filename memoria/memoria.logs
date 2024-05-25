@@ -1904,3 +1904,7 @@
 [INFO] 20:36:33:684 Memoria-Servidor/(4438:4438): podemos 
 [INFO] 20:36:33:684 Memoria-Servidor/(4438:4438): seguir mandando
 [ERROR] 20:36:33:685 Memoria-Servidor/(4438:4438): Client disconnected - SOCKET: 5
+[INFO] 02:25:37:964 Memoria-Servidor/(4674:4674): Server ready - SOCKET: 4
+[INFO] 17:10:35:294 Memoria-Servidor/(2307:2307): Server ready - SOCKET: 4
+[INFO] 17:12:01:221 Memoria-Servidor/(2503:2503): Server ready - SOCKET: 4
+[INFO] 17:17:55:231 Memoria-Servidor/(2786:2786): Server ready - SOCKET: 4
