@@ -12,5 +12,6 @@ void enviar_paquete(t_paquete*, int);
 void liberar_conexion(int);
 void eliminar_paquete(t_paquete*);
 t_pcb* recibir_pcb(int, t_log*);
+void agregar_init_process_paquete(t_paquete*, uint32_t, char*);
 
 #endif

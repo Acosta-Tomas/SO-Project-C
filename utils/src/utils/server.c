@@ -99,40 +99,64 @@ t_pcb* recibir_pcb(int conexion, t_log* logger){
 
     buffer = recibir_buffer(&size, conexion);
 
-    memcpy(&pcb->pid, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->pid, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->pc, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->pc, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->quantum, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->quantum, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->status, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->status, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->registers->ax, buffer - desplazamiento, sizeof(uint8_t));
+    memcpy(&pcb->registers->ax, buffer + desplazamiento, sizeof(uint8_t));
     desplazamiento += sizeof(uint8_t);
-    memcpy(&pcb->registers->bx, buffer - desplazamiento, sizeof(uint8_t));
+    memcpy(&pcb->registers->bx, buffer + desplazamiento, sizeof(uint8_t));
     desplazamiento += sizeof(uint8_t);
-    memcpy(&pcb->registers->cx, buffer - desplazamiento, sizeof(uint8_t));
+    memcpy(&pcb->registers->cx, buffer + desplazamiento, sizeof(uint8_t));
     desplazamiento += sizeof(uint8_t);
-    memcpy(&pcb->registers->dx, buffer - desplazamiento, sizeof(uint8_t));
+    memcpy(&pcb->registers->dx, buffer + desplazamiento, sizeof(uint8_t));
     desplazamiento += sizeof(uint8_t);
-    memcpy(&pcb->registers->eax, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->registers->eax, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->registers->ebx, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->registers->ebx, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->registers->ecx, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->registers->ecx, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->registers->edx, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->registers->edx, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->registers->si, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->registers->si, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->registers->di, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->registers->di, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-    memcpy(&pcb->registers->pc, buffer - desplazamiento, sizeof(uint32_t));
+    memcpy(&pcb->registers->pc, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
 
-    if (size != 0) log_info(logger, "Error al recibir PCB");
+    if (size != desplazamiento) log_info(logger, "Error al recibir PCB");
 
 	free(buffer);
 
     return pcb;
+}
+
+t_init_pid* recibir_init_process(int conexion, t_log* logger){
+    int size;
+    int desplazamiento = 0;
+    void* buffer;
+    t_init_pid* pid_to_init = malloc(sizeof(t_init_pid));
+	int string_size;
+
+    buffer = recibir_buffer(&size, conexion);
+
+    memcpy(&pid_to_init->pid, buffer + desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&string_size, buffer + desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+	pid_to_init->path = malloc(string_size);
+    memcpy(pid_to_init->path, buffer + desplazamiento, string_size);
+    desplazamiento += string_size;
+
+    if (size != desplazamiento) log_info(logger, "Error al recibir PID Para iniciar");
+
+	free(buffer);
+
+    return pid_to_init;
 }

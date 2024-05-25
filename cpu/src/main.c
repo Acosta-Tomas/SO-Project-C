@@ -31,13 +31,14 @@ int main(int argc, char* argv[]) {
 
         for (int cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
             if (cod_op == PCB) {
-                pcb = recibir_pcb(memoria_fd, logger);
+                pcb = recibir_pcb(kernel_fd, logger);
 
                 cpu(memoria_fd, kernel_fd);
             }
         }
     }
-     liberar_conexion(memoria_fd);
+    
+    liberar_conexion(memoria_fd);
     close(dispatch_fd);
     log_destroy(logger);
     config_destroy(config);

@@ -477,3 +477,918 @@
 [INFO] 21:30:35:321 Kernel/(12139:12247): Context PC: 0
 [INFO] 21:30:35:321 Kernel/(12139:12247): Context STATUS: 0
 [INFO] 21:30:35:321 Kernel/(12139:12247): Context PC-reg: 0
+[INFO] 10:41:33:285 Kernel/(44952:44954): Thread planificado de corto plazo creado
+[INFO] 10:41:33:288 Kernel/(44952:44956): Thread consola creado
+[INFO] 10:41:33:300 Kernel/(44952:44954): Connected to CPU - SOCKET: 4
+[INFO] 10:41:33:288 Kernel/(44952:44955): Thread entrada salida creado
+[INFO] 10:41:33:301 Kernel/(44952:44956): Connected to Memoria - SOCKET: 5
+[INFO] 10:41:33:288 Kernel/(44952:44953): Thread planificado de largo plazo creado
+[INFO] 10:45:19:639 Kernel/(46676:46830): Thread planificado de largo plazo creado
+[INFO] 10:45:19:639 Kernel/(46676:46831): Thread planificado de corto plazo creado
+[INFO] 10:45:19:639 Kernel/(46676:46831): Connected to CPU - SOCKET: 4
+[INFO] 10:45:19:639 Kernel/(46676:46832): Thread entrada salida creado
+[INFO] 10:45:19:639 Kernel/(46676:46834): Thread consola creado
+[INFO] 10:45:19:639 Kernel/(46676:46834): Connected to Memoria - SOCKET: 5
+[INFO] 10:48:52:693 Kernel/(48640:48723): Thread planificado de largo plazo creado
+[INFO] 10:48:52:693 Kernel/(48640:48724): Thread planificado de corto plazo creado
+[INFO] 10:48:52:693 Kernel/(48640:48724): Connected to CPU - SOCKET: 4
+[INFO] 10:48:52:694 Kernel/(48640:48725): Thread entrada salida creado
+[INFO] 10:48:52:694 Kernel/(48640:48726): Thread consola creado
+[INFO] 10:48:52:694 Kernel/(48640:48726): Connected to Memoria - SOCKET: 5
+[INFO] 10:49:26:219 Kernel/(48640:48726): Comando: INICIAR_PROCESO
+[INFO] 10:49:27:675 Kernel/(48640:48726): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 10:50:16:376 Kernel/(49587:49588): Thread planificado de largo plazo creado
+[INFO] 10:50:16:379 Kernel/(49587:49590): Thread planificado de corto plazo creado
+[INFO] 10:50:16:380 Kernel/(49587:49591): Thread entrada salida creado
+[INFO] 10:50:16:380 Kernel/(49587:49592): Thread consola creado
+[INFO] 10:50:16:394 Kernel/(49587:49590): Connected to CPU - SOCKET: 4
+[INFO] 10:50:16:395 Kernel/(49587:49592): Connected to Memoria - SOCKET: 5
+[INFO] 10:50:46:359 Kernel/(49587:49592): Comando: INICIAR_PROCESO
+[INFO] 10:50:46:360 Kernel/(49587:49592): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 10:55:12:491 Kernel/(1921:1924): Thread planificado de corto plazo creado
+[INFO] 10:55:12:486 Kernel/(1921:1923): Thread planificado de largo plazo creado
+[INFO] 10:55:12:486 Kernel/(1921:1926): Thread consola creado
+[INFO] 10:55:12:499 Kernel/(1921:1924): Connected to CPU - SOCKET: 4
+[INFO] 10:55:12:483 Kernel/(1921:1925): Thread entrada salida creado
+[INFO] 10:55:12:501 Kernel/(1921:1926): Connected to Memoria - SOCKET: 5
+[INFO] 10:55:40:005 Kernel/(1921:1926): Comando: INICIAR_PROCESO
+[INFO] 10:55:40:006 Kernel/(1921:1926): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 10:57:41:875 Kernel/(3227:3231): Thread consola creado
+[INFO] 10:57:41:866 Kernel/(3227:3229): Thread planificado de corto plazo creado
+[INFO] 10:57:41:883 Kernel/(3227:3231): Connected to Memoria - SOCKET: 4
+[INFO] 10:57:41:879 Kernel/(3227:3228): Thread planificado de largo plazo creado
+[INFO] 10:57:41:870 Kernel/(3227:3230): Thread entrada salida creado
+[INFO] 10:57:41:925 Kernel/(3227:3229): Connected to CPU - SOCKET: 5
+[INFO] 10:58:18:447 Kernel/(3227:3231): Comando: INICIAR_PROCESO
+[INFO] 10:58:18:447 Kernel/(3227:3231): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:08:15:579 Kernel/(8115:8118): Thread planificado de corto plazo creado
+[INFO] 11:08:15:590 Kernel/(8115:8117): Thread planificado de largo plazo creado
+[INFO] 11:08:15:595 Kernel/(8115:8118): Connected to CPU - SOCKET: 4
+[INFO] 11:08:15:591 Kernel/(8115:8120): Thread consola creado
+[INFO] 11:08:15:590 Kernel/(8115:8119): Thread entrada salida creado
+[INFO] 11:08:15:595 Kernel/(8115:8120): Connected to Memoria - SOCKET: 5
+[INFO] 11:08:45:517 Kernel/(8115:8120): Comando: INICIAR_PROCESO
+[INFO] 11:08:45:517 Kernel/(8115:8120): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:09:54:424 Kernel/(9033:9037): Thread entrada salida creado
+[INFO] 11:09:54:418 Kernel/(9033:9035): Thread planificado de largo plazo creado
+[INFO] 11:09:54:419 Kernel/(9033:9038): Thread consola creado
+[INFO] 11:09:54:415 Kernel/(9033:9036): Thread planificado de corto plazo creado
+[INFO] 11:09:54:433 Kernel/(9033:9036): Connected to CPU - SOCKET: 5
+[INFO] 11:09:54:433 Kernel/(9033:9038): Connected to Memoria - SOCKET: 4
+[INFO] 11:10:13:968 Kernel/(9033:9038): Comando: INICIAR_PROCESO
+[INFO] 11:10:13:968 Kernel/(9033:9038): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:15:17:503 Kernel/(11707:11709): Thread planificado de corto plazo creado
+[INFO] 11:15:17:506 Kernel/(11707:11711): Thread consola creado
+[INFO] 11:15:17:506 Kernel/(11707:11708): Thread planificado de largo plazo creado
+[INFO] 11:15:17:518 Kernel/(11707:11709): Connected to CPU - SOCKET: 4
+[INFO] 11:15:17:506 Kernel/(11707:11710): Thread entrada salida creado
+[INFO] 11:15:17:521 Kernel/(11707:11711): Connected to Memoria - SOCKET: 5
+[INFO] 11:15:40:039 Kernel/(11707:11711): Comando: INICIAR_PROCESO
+[INFO] 11:15:40:040 Kernel/(11707:11711): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:20:25:638 Kernel/(14079:14081): Thread planificado de corto plazo creado
+[INFO] 11:20:25:642 Kernel/(14079:14083): Thread consola creado
+[INFO] 11:20:25:654 Kernel/(14079:14081): Connected to CPU - SOCKET: 4
+[INFO] 11:20:25:642 Kernel/(14079:14082): Thread entrada salida creado
+[INFO] 11:20:25:642 Kernel/(14079:14080): Thread planificado de largo plazo creado
+[INFO] 11:20:25:654 Kernel/(14079:14083): Connected to Memoria - SOCKET: 5
+[INFO] 11:20:36:224 Kernel/(14079:14083): Comando: INICIAR_PROCESO
+[INFO] 11:20:36:224 Kernel/(14079:14083): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:25:26:200 Kernel/(16490:16493): Thread entrada salida creado
+[INFO] 11:25:26:211 Kernel/(16490:16492): Thread planificado de corto plazo creado
+[INFO] 11:25:26:202 Kernel/(16490:16491): Thread planificado de largo plazo creado
+[INFO] 11:25:26:217 Kernel/(16490:16492): Connected to CPU - SOCKET: 4
+[INFO] 11:25:26:212 Kernel/(16490:16494): Thread consola creado
+[INFO] 11:25:26:218 Kernel/(16490:16494): Connected to Memoria - SOCKET: 5
+[INFO] 11:25:31:031 Kernel/(16490:16494): Comando: INICIAR_PROCESO
+[INFO] 11:25:31:031 Kernel/(16490:16494): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:29:00:632 Kernel/(18268:18270): Thread planificado de corto plazo creado
+[INFO] 11:29:00:625 Kernel/(18268:18269): Thread planificado de largo plazo creado
+[INFO] 11:29:00:622 Kernel/(18268:18271): Thread entrada salida creado
+[INFO] 11:29:00:640 Kernel/(18268:18270): Connected to CPU - SOCKET: 4
+[INFO] 11:29:00:626 Kernel/(18268:18272): Thread consola creado
+[INFO] 11:29:00:642 Kernel/(18268:18272): Connected to Memoria - SOCKET: 5
+[INFO] 11:29:08:493 Kernel/(18268:18272): Comando: INICIAR_PROCESO
+[INFO] 11:29:08:493 Kernel/(18268:18272): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:29:59:922 Kernel/(18938:18949): Thread planificado de corto plazo creado
+[INFO] 11:29:59:935 Kernel/(18938:18951): Thread consola creado
+[INFO] 11:29:59:937 Kernel/(18938:18949): Connected to CPU - SOCKET: 4
+[INFO] 11:29:59:938 Kernel/(18938:18951): Connected to Memoria - SOCKET: 5
+[INFO] 11:29:59:933 Kernel/(18938:18950): Thread entrada salida creado
+[INFO] 11:29:59:932 Kernel/(18938:18948): Thread planificado de largo plazo creado
+[INFO] 11:30:07:907 Kernel/(18938:18951): Comando: INICIAR_PROCESO
+[INFO] 11:30:07:907 Kernel/(18938:18951): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:36:16:402 Kernel/(21976:21981): Thread consola creado
+[INFO] 11:36:16:404 Kernel/(21976:21980): Thread entrada salida creado
+[INFO] 11:36:16:405 Kernel/(21976:21978): Thread planificado de largo plazo creado
+[INFO] 11:36:16:405 Kernel/(21976:21979): Thread planificado de corto plazo creado
+[INFO] 11:36:16:417 Kernel/(21976:21981): Connected to Memoria - SOCKET: 4
+[INFO] 11:36:16:419 Kernel/(21976:21979): Connected to CPU - SOCKET: 5
+[INFO] 11:36:20:457 Kernel/(21976:21981): Comando: INICIAR_PROCESO
+[INFO] 11:36:20:457 Kernel/(21976:21981): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:44:08:891 Kernel/(25614:25616): Thread planificado de largo plazo creado
+[INFO] 11:44:08:895 Kernel/(25614:25619): Thread consola creado
+[INFO] 11:44:08:885 Kernel/(25614:25618): Thread entrada salida creado
+[INFO] 11:44:08:882 Kernel/(25614:25617): Thread planificado de corto plazo creado
+[INFO] 11:44:08:899 Kernel/(25614:25619): Connected to Memoria - SOCKET: 4
+[INFO] 11:44:08:901 Kernel/(25614:25617): Connected to CPU - SOCKET: 5
+[INFO] 11:44:12:235 Kernel/(25614:25619): Comando: INICIAR_PROCESO
+[INFO] 11:44:12:236 Kernel/(25614:25619): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:46:51:207 Kernel/(27127:27132): Thread consola creado
+[INFO] 11:46:51:218 Kernel/(27127:27130): Thread planificado de corto plazo creado
+[INFO] 11:46:51:222 Kernel/(27127:27132): Connected to Memoria - SOCKET: 4
+[INFO] 11:46:51:218 Kernel/(27127:27131): Thread entrada salida creado
+[INFO] 11:46:51:218 Kernel/(27127:27129): Thread planificado de largo plazo creado
+[INFO] 11:46:51:281 Kernel/(27127:27130): Connected to CPU - SOCKET: 5
+[INFO] 11:47:02:317 Kernel/(27127:27132): Comando: INICIAR_PROCESO
+[INFO] 11:47:02:317 Kernel/(27127:27132): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:53:30:072 Kernel/(30405:30410): Thread consola creado
+[INFO] 11:53:30:064 Kernel/(30405:30408): Thread planificado de corto plazo creado
+[INFO] 11:53:30:081 Kernel/(30405:30410): Connected to Memoria - SOCKET: 4
+[INFO] 11:53:30:077 Kernel/(30405:30407): Thread planificado de largo plazo creado
+[INFO] 11:53:30:067 Kernel/(30405:30409): Thread entrada salida creado
+[INFO] 11:53:30:135 Kernel/(30405:30408): Connected to CPU - SOCKET: 6
+[INFO] 11:53:52:020 Kernel/(30405:30410): Comando: INICIAR_PROCESO
+[INFO] 11:53:52:020 Kernel/(30405:30410): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:56:17:167 Kernel/(31894:31899): Thread consola creado
+[INFO] 11:56:17:171 Kernel/(31894:31896): Thread planificado de corto plazo creado
+[INFO] 11:56:17:175 Kernel/(31894:31899): Connected to Memoria - SOCKET: 4
+[INFO] 11:56:17:161 Kernel/(31894:31895): Thread planificado de largo plazo creado
+[INFO] 11:56:17:159 Kernel/(31894:31898): Thread entrada salida creado
+[INFO] 11:56:17:234 Kernel/(31894:31896): Connected to CPU - SOCKET: 5
+[INFO] 11:56:33:279 Kernel/(31894:31899): Comando: INICIAR_PROCESO
+[INFO] 11:56:33:280 Kernel/(31894:31899): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 11:57:11:943 Kernel/(32522:32525): Thread entrada salida creado
+[INFO] 11:57:11:953 Kernel/(32522:32524): Thread planificado de corto plazo creado
+[INFO] 11:57:11:954 Kernel/(32522:32523): Thread planificado de largo plazo creado
+[INFO] 11:57:11:959 Kernel/(32522:32524): Connected to CPU - SOCKET: 4
+[INFO] 11:57:11:954 Kernel/(32522:32526): Thread consola creado
+[INFO] 11:57:11:960 Kernel/(32522:32526): Connected to Memoria - SOCKET: 5
+[INFO] 11:57:23:269 Kernel/(32522:32526): Comando: INICIAR_PROCESO
+[INFO] 11:57:23:269 Kernel/(32522:32526): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 12:31:17:791 Kernel/(47897:47900): Thread planificado de corto plazo creado
+[INFO] 12:31:17:794 Kernel/(47897:47902): Thread consola creado
+[INFO] 12:31:17:807 Kernel/(47897:47900): Connected to CPU - SOCKET: 4
+[INFO] 12:31:17:808 Kernel/(47897:47902): Connected to Memoria - SOCKET: 5
+[INFO] 12:31:17:795 Kernel/(47897:47899): Thread planificado de largo plazo creado
+[INFO] 12:31:17:795 Kernel/(47897:47901): Thread entrada salida creado
+[INFO] 12:32:53:034 Kernel/(48661:48665): Thread entrada salida creado
+[INFO] 12:32:53:037 Kernel/(48661:48663): Thread planificado de largo plazo creado
+[INFO] 12:32:53:037 Kernel/(48661:48666): Thread consola creado
+[INFO] 12:32:53:038 Kernel/(48661:48664): Thread planificado de corto plazo creado
+[INFO] 12:32:53:052 Kernel/(48661:48666): Connected to Memoria - SOCKET: 4
+[INFO] 12:32:53:052 Kernel/(48661:48664): Connected to CPU - SOCKET: 5
+[INFO] 12:33:07:374 Kernel/(48908:48911): Thread planificado de corto plazo creado
+[INFO] 12:33:07:368 Kernel/(48908:48910): Thread planificado de largo plazo creado
+[INFO] 12:33:07:368 Kernel/(48908:48913): Thread consola creado
+[INFO] 12:33:07:383 Kernel/(48908:48911): Connected to CPU - SOCKET: 4
+[INFO] 12:33:07:365 Kernel/(48908:48912): Thread entrada salida creado
+[INFO] 12:33:07:384 Kernel/(48908:48913): Connected to Memoria - SOCKET: 5
+[INFO] 12:38:05:990 Kernel/(51214:51219): Thread consola creado
+[INFO] 12:38:05:982 Kernel/(51214:51217): Thread planificado de corto plazo creado
+[INFO] 12:38:05:998 Kernel/(51214:51219): Connected to Memoria - SOCKET: 4
+[INFO] 12:38:05:995 Kernel/(51214:51216): Thread planificado de largo plazo creado
+[INFO] 12:38:05:985 Kernel/(51214:51218): Thread entrada salida creado
+[INFO] 12:38:06:057 Kernel/(51214:51217): Connected to CPU - SOCKET: 5
+[INFO] 12:42:12:942 Kernel/(1704:1713): Thread consola creado
+[INFO] 12:42:12:945 Kernel/(1704:1712): Thread entrada salida creado
+[INFO] 12:42:12:957 Kernel/(1704:1713): Connected to Memoria - SOCKET: 4
+[INFO] 12:42:12:946 Kernel/(1704:1710): Thread planificado de largo plazo creado
+[INFO] 12:42:12:945 Kernel/(1704:1711): Thread planificado de corto plazo creado
+[INFO] 12:42:13:000 Kernel/(1704:1711): Connected to CPU - SOCKET: 5
+[INFO] 13:04:22:272 Kernel/(11376:11381): Thread consola creado
+[INFO] 13:04:22:265 Kernel/(11376:11379): Thread planificado de corto plazo creado
+[INFO] 13:04:22:281 Kernel/(11376:11381): Connected to Memoria - SOCKET: 4
+[INFO] 13:04:22:277 Kernel/(11376:11378): Thread planificado de largo plazo creado
+[INFO] 13:04:22:267 Kernel/(11376:11380): Thread entrada salida creado
+[INFO] 13:04:22:339 Kernel/(11376:11379): Connected to CPU - SOCKET: 5
+[INFO] 13:04:51:960 Kernel/(11376:11381): Comando: INICIAR_PROCESO
+[INFO] 13:04:51:960 Kernel/(11376:11381): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:06:51:167 Kernel/(12899:12902): Thread entrada salida creado
+[INFO] 13:06:51:179 Kernel/(12899:12903): Thread consola creado
+[INFO] 13:06:51:180 Kernel/(12899:12901): Thread planificado de corto plazo creado
+[INFO] 13:06:51:184 Kernel/(12899:12903): Connected to Memoria - SOCKET: 4
+[INFO] 13:06:51:178 Kernel/(12899:12900): Thread planificado de largo plazo creado
+[INFO] 13:06:51:184 Kernel/(12899:12901): Connected to CPU - SOCKET: 5
+[INFO] 13:07:21:532 Kernel/(12899:12903): Comando: INICIAR_PROCESO
+[INFO] 13:07:21:532 Kernel/(12899:12903): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:07:32:770 Kernel/(12899:12901): Proceso enviado a CPU - PID: 0
+[INFO] 13:12:54:425 Kernel/(16045:16049): Thread entrada salida creado
+[INFO] 13:12:54:438 Kernel/(16045:16050): Thread consola creado
+[INFO] 13:12:54:436 Kernel/(16045:16047): Thread planificado de largo plazo creado
+[INFO] 13:12:54:438 Kernel/(16045:16048): Thread planificado de corto plazo creado
+[INFO] 13:12:54:443 Kernel/(16045:16050): Connected to Memoria - SOCKET: 4
+[INFO] 13:12:54:443 Kernel/(16045:16048): Connected to CPU - SOCKET: 5
+[INFO] 13:13:01:399 Kernel/(16045:16050): Comando: INICIAR_PROCESO
+[INFO] 13:13:01:399 Kernel/(16045:16050): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:13:01:410 Kernel/(16045:16048): Proceso enviado a CPU - PID: 0
+[INFO] 13:16:29:749 Kernel/(17958:17960): Thread planificado de corto plazo creado
+[INFO] 13:16:29:752 Kernel/(17958:17962): Thread consola creado
+[INFO] 13:16:29:765 Kernel/(17958:17960): Connected to CPU - SOCKET: 4
+[INFO] 13:16:29:765 Kernel/(17958:17962): Connected to Memoria - SOCKET: 5
+[INFO] 13:16:29:752 Kernel/(17958:17959): Thread planificado de largo plazo creado
+[INFO] 13:16:29:752 Kernel/(17958:17961): Thread entrada salida creado
+[INFO] 13:16:43:231 Kernel/(17958:17962): Comando: INICIAR_PROCESO
+[INFO] 13:16:43:231 Kernel/(17958:17962): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:16:43:238 Kernel/(17958:17960): Proceso enviado a CPU - PID: 0
+[INFO] 13:21:39:463 Kernel/(20266:20268): Thread planificado de corto plazo creado
+[INFO] 13:21:39:475 Kernel/(20266:20270): Thread consola creado
+[INFO] 13:21:39:478 Kernel/(20266:20268): Connected to CPU - SOCKET: 4
+[INFO] 13:21:39:478 Kernel/(20266:20270): Connected to Memoria - SOCKET: 5
+[INFO] 13:21:39:475 Kernel/(20266:20269): Thread entrada salida creado
+[INFO] 13:21:39:473 Kernel/(20266:20267): Thread planificado de largo plazo creado
+[INFO] 13:22:24:588 Kernel/(20740:20742): Thread planificado de corto plazo creado
+[INFO] 13:22:24:598 Kernel/(20740:20741): Thread planificado de largo plazo creado
+[INFO] 13:22:24:604 Kernel/(20740:20742): Connected to CPU - SOCKET: 4
+[INFO] 13:22:24:600 Kernel/(20740:20744): Thread consola creado
+[INFO] 13:22:24:599 Kernel/(20740:20743): Thread entrada salida creado
+[INFO] 13:22:24:604 Kernel/(20740:20744): Connected to Memoria - SOCKET: 5
+[INFO] 13:22:36:404 Kernel/(20740:20744): Comando: INICIAR_PROCESO
+[INFO] 13:22:36:405 Kernel/(20740:20744): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:22:36:410 Kernel/(20740:20742): paquete size: 48
+[INFO] 13:22:36:411 Kernel/(20740:20742): paquete stram: 0x80010b0
+[INFO] 13:22:36:411 Kernel/(20740:20742): Proceso enviado a CPU - PID: 0
+[INFO] 13:26:47:691 Kernel/(22942:22947): Thread consola creado
+[INFO] 13:26:47:683 Kernel/(22942:22945): Thread planificado de corto plazo creado
+[INFO] 13:26:47:700 Kernel/(22942:22947): Connected to Memoria - SOCKET: 4
+[INFO] 13:26:47:696 Kernel/(22942:22944): Thread planificado de largo plazo creado
+[INFO] 13:26:47:686 Kernel/(22942:22946): Thread entrada salida creado
+[INFO] 13:26:47:759 Kernel/(22942:22945): Connected to CPU - SOCKET: 5
+[INFO] 13:26:54:538 Kernel/(22942:22947): Comando: INICIAR_PROCESO
+[INFO] 13:26:54:538 Kernel/(22942:22947): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:26:54:543 Kernel/(22942:22945): paquete size: 48
+[INFO] 13:26:54:543 Kernel/(22942:22945): paquete stram: (null)
+[INFO] 13:26:54:544 Kernel/(22942:22945): Proceso enviado a CPU - PID: 0
+[INFO] 13:29:41:054 Kernel/(24324:24408): Thread planificado de largo plazo creado
+[INFO] 13:29:41:054 Kernel/(24324:24409): Thread planificado de corto plazo creado
+[INFO] 13:29:41:054 Kernel/(24324:24409): Connected to CPU - SOCKET: 4
+[INFO] 13:29:41:054 Kernel/(24324:24410): Thread entrada salida creado
+[INFO] 13:29:41:054 Kernel/(24324:24411): Thread consola creado
+[INFO] 13:29:41:054 Kernel/(24324:24411): Connected to Memoria - SOCKET: 5
+[INFO] 13:29:49:443 Kernel/(24324:24411): Comando: INICIAR_PROCESO
+[INFO] 13:29:49:443 Kernel/(24324:24411): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:33:03:247 Kernel/(24324:24409): paquete size: 48
+[INFO] 13:33:04:590 Kernel/(24324:24409): paquete stram: (null)
+[INFO] 13:35:21:375 Kernel/(24324:24409): Proceso enviado a CPU - PID: 0
+[INFO] 13:41:27:906 Kernel/(29584:29693): Thread planificado de largo plazo creado
+[INFO] 13:41:27:906 Kernel/(29584:29694): Thread planificado de corto plazo creado
+[INFO] 13:41:27:906 Kernel/(29584:29694): Connected to CPU - SOCKET: 4
+[INFO] 13:41:27:907 Kernel/(29584:29695): Thread entrada salida creado
+[INFO] 13:41:27:907 Kernel/(29584:29696): Thread consola creado
+[INFO] 13:41:27:907 Kernel/(29584:29696): Connected to Memoria - SOCKET: 5
+[INFO] 13:41:42:304 Kernel/(29987:29992): Thread consola creado
+[INFO] 13:41:42:307 Kernel/(29987:29991): Thread entrada salida creado
+[INFO] 13:41:42:307 Kernel/(29987:29990): Thread planificado de corto plazo creado
+[INFO] 13:41:42:308 Kernel/(29987:29989): Thread planificado de largo plazo creado
+[INFO] 13:41:42:321 Kernel/(29987:29992): Connected to Memoria - SOCKET: 4
+[INFO] 13:41:42:321 Kernel/(29987:29990): Connected to CPU - SOCKET: 5
+[INFO] 13:41:56:695 Kernel/(29987:29992): Comando: INICIAR_PROCESO
+[INFO] 13:41:56:695 Kernel/(29987:29992): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:41:56:700 Kernel/(29987:29990): paquete size: 48
+[INFO] 13:41:56:700 Kernel/(29987:29990): paquete stram: (null)
+[INFO] 13:41:56:701 Kernel/(29987:29990): Proceso enviado a CPU - PID: 0
+[INFO] 13:44:48:223 Kernel/(29987:29990): Procesi fin de Quantum - PID: 0
+[INFO] 13:44:48:223 Kernel/(29987:29990): paquete size: 48
+[INFO] 13:44:48:223 Kernel/(29987:29990): paquete stram: (null)
+[INFO] 13:44:48:223 Kernel/(29987:29990): Proceso enviado a CPU - PID: 0
+[INFO] 13:47:10:980 Kernel/(32541:32622): Thread planificado de largo plazo creado
+[INFO] 13:47:10:980 Kernel/(32541:32623): Thread planificado de corto plazo creado
+[INFO] 13:47:10:980 Kernel/(32541:32623): Connected to CPU - SOCKET: 4
+[INFO] 13:47:10:981 Kernel/(32541:32624): Thread entrada salida creado
+[INFO] 13:47:10:981 Kernel/(32541:32625): Thread consola creado
+[INFO] 13:47:10:981 Kernel/(32541:32625): Connected to Memoria - SOCKET: 5
+[INFO] 13:47:21:159 Kernel/(32541:32625): Comando: INICIAR_PROCESO
+[INFO] 13:47:21:159 Kernel/(32541:32625): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:47:31:287 Kernel/(32541:32623): paquete size: 48
+[INFO] 13:47:31:676 Kernel/(32541:32623): paquete stram: (null)
+[INFO] 13:47:53:986 Kernel/(32541:32623): Proceso enviado a CPU - PID: 0
+[INFO] 13:48:44:394 Kernel/(32541:32623): Procesi fin de Quantum - PID: 0
+[INFO] 13:48:56:590 Kernel/(32541:32623): paquete size: 48
+[INFO] 13:48:56:850 Kernel/(32541:32623): paquete stram: (null)
+[INFO] 13:48:57:944 Kernel/(32541:32623): Proceso enviado a CPU - PID: 0
+[INFO] 13:52:06:736 Kernel/(35026:35095): Thread planificado de largo plazo creado
+[INFO] 13:52:06:736 Kernel/(35026:35096): Thread planificado de corto plazo creado
+[INFO] 13:52:06:736 Kernel/(35026:35096): Connected to CPU - SOCKET: 4
+[INFO] 13:52:06:736 Kernel/(35026:35097): Thread entrada salida creado
+[INFO] 13:52:06:736 Kernel/(35026:35098): Thread consola creado
+[INFO] 13:52:06:736 Kernel/(35026:35098): Connected to Memoria - SOCKET: 5
+[INFO] 13:52:23:395 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:52:23:395 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:52:31:403 Kernel/(35026:35096): Proceso enviado a CPU - PID: 0
+[INFO] 13:52:57:904 Kernel/(35026:35096): Proceso Finalizado - PID: 0
+[INFO] 13:53:50:734 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:53:50:734 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:54:15:634 Kernel/(35026:35096): Proceso enviado a CPU - PID: 1
+[INFO] 13:54:30:700 Kernel/(35026:35096): Proceso Finalizado - PID: 1
+[INFO] 13:54:57:823 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:54:57:823 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:01:016 Kernel/(35026:35096): Proceso enviado a CPU - PID: 2
+[INFO] 13:55:01:017 Kernel/(35026:35096): Proceso Finalizado - PID: 2
+[INFO] 13:55:05:754 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:05:754 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:05:755 Kernel/(35026:35096): Proceso enviado a CPU - PID: 3
+[INFO] 13:55:05:756 Kernel/(35026:35096): Proceso Finalizado - PID: 3
+[INFO] 13:55:06:266 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:06:266 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:06:266 Kernel/(35026:35096): Proceso enviado a CPU - PID: 4
+[INFO] 13:55:06:268 Kernel/(35026:35096): Proceso Finalizado - PID: 4
+[INFO] 13:55:06:795 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:06:795 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:06:795 Kernel/(35026:35096): Proceso enviado a CPU - PID: 5
+[INFO] 13:55:06:796 Kernel/(35026:35096): Proceso Finalizado - PID: 5
+[INFO] 13:55:07:235 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:07:235 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:07:235 Kernel/(35026:35096): Proceso enviado a CPU - PID: 6
+[INFO] 13:55:07:237 Kernel/(35026:35096): Proceso Finalizado - PID: 6
+[INFO] 13:55:07:656 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:07:656 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:07:656 Kernel/(35026:35096): Proceso enviado a CPU - PID: 7
+[INFO] 13:55:07:657 Kernel/(35026:35096): Proceso Finalizado - PID: 7
+[INFO] 13:55:08:033 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:08:033 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:08:033 Kernel/(35026:35096): Proceso enviado a CPU - PID: 8
+[INFO] 13:55:08:034 Kernel/(35026:35096): Proceso Finalizado - PID: 8
+[INFO] 13:55:08:403 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:08:403 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:08:403 Kernel/(35026:35096): Proceso enviado a CPU - PID: 9
+[INFO] 13:55:08:404 Kernel/(35026:35096): Proceso Finalizado - PID: 9
+[INFO] 13:55:08:784 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:08:784 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:08:784 Kernel/(35026:35096): Proceso enviado a CPU - PID: 10
+[INFO] 13:55:08:785 Kernel/(35026:35096): Proceso Finalizado - PID: 10
+[INFO] 13:55:09:215 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:09:215 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:09:215 Kernel/(35026:35096): Proceso enviado a CPU - PID: 11
+[INFO] 13:55:09:216 Kernel/(35026:35096): Proceso Finalizado - PID: 11
+[INFO] 13:55:09:654 Kernel/(35026:35098): Comando: INICIAR_PROCESO
+[INFO] 13:55:09:654 Kernel/(35026:35098): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 13:55:09:654 Kernel/(35026:35096): Proceso enviado a CPU - PID: 12
+[INFO] 13:55:09:655 Kernel/(35026:35096): Proceso Finalizado - PID: 12
+[INFO] 14:46:43:399 Kernel/(59416:59419): Thread planificado de corto plazo creado
+[INFO] 14:46:43:403 Kernel/(59416:59421): Thread consola creado
+[INFO] 14:46:43:416 Kernel/(59416:59419): Connected to CPU - SOCKET: 4
+[INFO] 14:46:43:403 Kernel/(59416:59418): Thread planificado de largo plazo creado
+[INFO] 14:46:43:416 Kernel/(59416:59421): Connected to Memoria - SOCKET: 5
+[INFO] 14:46:43:403 Kernel/(59416:59420): Thread entrada salida creado
+[INFO] 14:47:16:257 Kernel/(59416:59421): Comando: INICIAR_PROCESO
+[INFO] 14:47:16:258 Kernel/(59416:59421): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 14:47:26:018 Kernel/(59416:59419): Proceso enviado a CPU - PID: 0
+[INFO] 14:48:23:324 Kernel/(60467:60470): Thread entrada salida creado
+[INFO] 14:48:23:334 Kernel/(60467:60469): Thread planificado de corto plazo creado
+[INFO] 14:48:23:335 Kernel/(60467:60468): Thread planificado de largo plazo creado
+[INFO] 14:48:23:335 Kernel/(60467:60471): Thread consola creado
+[INFO] 14:48:23:340 Kernel/(60467:60469): Connected to CPU - SOCKET: 4
+[INFO] 14:48:23:341 Kernel/(60467:60471): Connected to Memoria - SOCKET: 5
+[INFO] 14:48:29:752 Kernel/(60467:60471): Comando: INICIAR_PROCESO
+[INFO] 14:48:29:752 Kernel/(60467:60471): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 14:48:29:757 Kernel/(60467:60469): Proceso enviado a CPU - PID: 0
+[INFO] 14:50:26:073 Kernel/(61647:61651): Thread consola creado
+[INFO] 14:50:26:085 Kernel/(61647:61648): Thread planificado de largo plazo creado
+[INFO] 14:50:26:089 Kernel/(61647:61651): Connected to Memoria - SOCKET: 4
+[INFO] 14:50:26:086 Kernel/(61647:61649): Thread planificado de corto plazo creado
+[INFO] 14:50:26:086 Kernel/(61647:61650): Thread entrada salida creado
+[INFO] 14:50:26:148 Kernel/(61647:61649): Connected to CPU - SOCKET: 5
+[INFO] 14:50:34:408 Kernel/(61647:61651): Comando: INICIAR_PROCESO
+[INFO] 14:50:34:408 Kernel/(61647:61651): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 14:50:34:413 Kernel/(61647:61649): Proceso enviado a CPU - PID: 0
+[INFO] 14:56:01:824 Kernel/(64343:64347): Thread consola creado
+[INFO] 14:56:01:827 Kernel/(64343:64344): Thread planificado de largo plazo creado
+[INFO] 14:56:01:828 Kernel/(64343:64345): Thread planificado de corto plazo creado
+[INFO] 14:56:01:841 Kernel/(64343:64347): Connected to Memoria - SOCKET: 4
+[INFO] 14:56:01:827 Kernel/(64343:64346): Thread entrada salida creado
+[INFO] 14:56:01:899 Kernel/(64343:64345): Connected to CPU - SOCKET: 6
+[INFO] 14:56:10:484 Kernel/(64343:64347): Comando: INICIAR_PROCESO
+[INFO] 14:56:10:484 Kernel/(64343:64347): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 14:56:10:490 Kernel/(64343:64345): Proceso enviado a CPU - PID: 0
+[INFO] 15:02:05:077 Kernel/(67190:67194): Thread entrada salida creado
+[INFO] 15:02:05:091 Kernel/(67190:67195): Thread consola creado
+[INFO] 15:02:05:091 Kernel/(67190:67193): Thread planificado de corto plazo creado
+[INFO] 15:02:05:095 Kernel/(67190:67195): Connected to Memoria - SOCKET: 4
+[INFO] 15:02:05:089 Kernel/(67190:67192): Thread planificado de largo plazo creado
+[INFO] 15:02:05:143 Kernel/(67190:67193): Connected to CPU - SOCKET: 5
+[INFO] 15:02:15:398 Kernel/(67190:67195): Comando: INICIAR_PROCESO
+[INFO] 15:02:15:398 Kernel/(67190:67195): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:02:18:089 Kernel/(67190:67193): Proceso enviado a CPU - PID: 0
+[INFO] 15:03:59:899 Kernel/(68334:68336): Thread planificado de corto plazo creado
+[INFO] 15:03:59:902 Kernel/(68334:68338): Thread consola creado
+[INFO] 15:03:59:903 Kernel/(68334:68335): Thread planificado de largo plazo creado
+[INFO] 15:03:59:903 Kernel/(68334:68337): Thread entrada salida creado
+[INFO] 15:03:59:916 Kernel/(68334:68338): Connected to Memoria - SOCKET: 5
+[INFO] 15:03:59:915 Kernel/(68334:68336): Connected to CPU - SOCKET: 4
+[INFO] 15:04:01:720 Kernel/(68334:68338): Comando: INICIAR_PROCESO
+[INFO] 15:04:01:720 Kernel/(68334:68338): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:04:03:737 Kernel/(68334:68336): Proceso enviado a CPU - PID: 0
+[INFO] 15:09:07:388 Kernel/(68334:68338): Comando: INICIAR_PROCESO
+[INFO] 15:09:07:388 Kernel/(68334:68338): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:09:07:388 Kernel/(68334:68336): Proceso enviado a CPU - PID: 1
+[INFO] 15:09:33:733 Kernel/(68334:68338): Comando: INICIAR_PROCESO
+[INFO] 15:09:33:733 Kernel/(68334:68338): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_2
+[INFO] 15:09:33:734 Kernel/(68334:68336): Proceso enviado a CPU - PID: 2
+[INFO] 15:10:19:305 Kernel/(68334:68338): Comando: INICIAR_PROCESO
+[INFO] 15:10:19:305 Kernel/(68334:68338): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_3
+[INFO] 15:10:19:308 Kernel/(68334:68336): Proceso enviado a CPU - PID: 3
+[INFO] 15:18:24:633 Kernel/(75583:75588): Thread consola creado
+[INFO] 15:18:24:625 Kernel/(75583:75586): Thread planificado de corto plazo creado
+[INFO] 15:18:24:641 Kernel/(75583:75588): Connected to Memoria - SOCKET: 4
+[INFO] 15:18:24:637 Kernel/(75583:75585): Thread planificado de largo plazo creado
+[INFO] 15:18:24:627 Kernel/(75583:75587): Thread entrada salida creado
+[INFO] 15:18:24:669 Kernel/(75583:75586): Connected to CPU - SOCKET: 5
+[INFO] 15:18:31:389 Kernel/(75583:75588): Comando: INICIAR_PROCESO
+[INFO] 15:18:31:389 Kernel/(75583:75588): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:18:35:357 Kernel/(75583:75586): Proceso enviado a CPU - PID: 0
+[INFO] 15:18:35:364 Kernel/(75583:75586): Proceso Finalizado - PID: 0
+[INFO] 15:18:35:364 Kernel/(75583:75586): PC 4
+[INFO] 15:18:35:365 Kernel/(75583:75586): AX 2
+[INFO] 15:18:35:365 Kernel/(75583:75586): BC 1
+[INFO] 15:18:35:365 Kernel/(75583:75586): CX 0
+[INFO] 15:18:35:365 Kernel/(75583:75586): DX 0
+[INFO] 15:18:35:365 Kernel/(75583:75586): EAX 1330794591
+[INFO] 15:18:35:365 Kernel/(75583:75586): EBX 1330857283
+[INFO] 15:18:35:365 Kernel/(75583:75586): ECX 1869377280
+[INFO] 15:18:35:365 Kernel/(75583:75586): EDX 1970299743
+[INFO] 15:18:35:365 Kernel/(75583:75586): SI 0
+[INFO] 15:18:35:366 Kernel/(75583:75586): DI 0
+[INFO] 15:19:20:620 Kernel/(75583:75588): Comando: INICIAR_PROCESO
+[INFO] 15:19:20:620 Kernel/(75583:75588): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_2
+[INFO] 15:19:20:621 Kernel/(75583:75586): Proceso enviado a CPU - PID: 1
+[INFO] 15:19:20:624 Kernel/(75583:75586): Proceso Finalizado - PID: 1
+[INFO] 15:19:20:624 Kernel/(75583:75586): PC 11
+[INFO] 15:19:20:624 Kernel/(75583:75586): AX 1
+[INFO] 15:19:20:624 Kernel/(75583:75586): BC 1
+[INFO] 15:19:20:624 Kernel/(75583:75586): CX 1
+[INFO] 15:19:20:624 Kernel/(75583:75586): DX 0
+[INFO] 15:19:20:624 Kernel/(75583:75586): EAX 1000
+[INFO] 15:19:20:624 Kernel/(75583:75586): EBX 1000
+[INFO] 15:19:20:624 Kernel/(75583:75586): ECX 1000
+[INFO] 15:19:20:624 Kernel/(75583:75586): EDX 1000
+[INFO] 15:19:20:624 Kernel/(75583:75586): SI 0
+[INFO] 15:19:20:624 Kernel/(75583:75586): DI 64
+[INFO] 15:21:38:513 Kernel/(75583:75588): Comando: INICIAR_PROCESO
+[INFO] 15:21:38:513 Kernel/(75583:75588): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 15:21:38:515 Kernel/(75583:75586): Proceso enviado a CPU - PID: 2
+[INFO] 15:41:47:946 Kernel/(5357:5360): Thread entrada salida creado
+[INFO] 15:41:47:958 Kernel/(5357:5361): Thread consola creado
+[INFO] 15:41:47:958 Kernel/(5357:5359): Thread planificado de corto plazo creado
+[INFO] 15:41:47:962 Kernel/(5357:5361): Connected to Memoria - SOCKET: 4
+[INFO] 15:41:47:956 Kernel/(5357:5358): Thread planificado de largo plazo creado
+[INFO] 15:41:47:962 Kernel/(5357:5359): Connected to CPU - SOCKET: 5
+[INFO] 15:42:06:376 Kernel/(5357:5361): Comando: INICIAR_PROCESO
+[INFO] 15:42:06:376 Kernel/(5357:5361): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:42:06:391 Kernel/(5357:5359): Proceso enviado a CPU - PID: 0
+[INFO] 15:42:06:402 Kernel/(5357:5359): Proceso Finalizado - PID: 0
+[INFO] 15:42:06:402 Kernel/(5357:5359): PC 4
+[INFO] 15:42:06:402 Kernel/(5357:5359): AX 2
+[INFO] 15:42:06:402 Kernel/(5357:5359): BC 1
+[INFO] 15:42:06:402 Kernel/(5357:5359): CX 0
+[INFO] 15:42:06:402 Kernel/(5357:5359): DX 0
+[INFO] 15:42:06:402 Kernel/(5357:5359): EAX 1330794591
+[INFO] 15:42:06:403 Kernel/(5357:5359): EBX 1330857283
+[INFO] 15:42:06:403 Kernel/(5357:5359): ECX 1869377280
+[INFO] 15:42:06:403 Kernel/(5357:5359): EDX 1970299743
+[INFO] 15:42:06:403 Kernel/(5357:5359): SI 0
+[INFO] 15:42:06:403 Kernel/(5357:5359): DI 0
+[INFO] 15:43:03:089 Kernel/(5357:5361): Comando: INICIAR_PROCESO
+[INFO] 15:43:03:089 Kernel/(5357:5361): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_2
+[INFO] 15:43:03:092 Kernel/(5357:5359): Proceso enviado a CPU - PID: 1
+[INFO] 15:43:03:101 Kernel/(5357:5359): Proceso Finalizado - PID: 1
+[INFO] 15:43:03:101 Kernel/(5357:5359): PC 11
+[INFO] 15:43:03:101 Kernel/(5357:5359): AX 1
+[INFO] 15:43:03:101 Kernel/(5357:5359): BC 1
+[INFO] 15:43:03:101 Kernel/(5357:5359): CX 1
+[INFO] 15:43:03:101 Kernel/(5357:5359): DX 0
+[INFO] 15:43:03:101 Kernel/(5357:5359): EAX 1000
+[INFO] 15:43:03:101 Kernel/(5357:5359): EBX 1000
+[INFO] 15:43:03:101 Kernel/(5357:5359): ECX 1000
+[INFO] 15:43:03:101 Kernel/(5357:5359): EDX 1000
+[INFO] 15:43:03:101 Kernel/(5357:5359): SI 0
+[INFO] 15:43:03:101 Kernel/(5357:5359): DI 64
+[INFO] 15:44:28:670 Kernel/(5357:5361): Comando: INICIAR_PROCESO
+[INFO] 15:44:28:670 Kernel/(5357:5361): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 15:44:28:671 Kernel/(5357:5359): Proceso enviado a CPU - PID: 2
+[INFO] 15:47:50:944 Kernel/(8642:8647): Thread consola creado
+[INFO] 15:47:50:936 Kernel/(8642:8645): Thread planificado de corto plazo creado
+[INFO] 15:47:50:952 Kernel/(8642:8647): Connected to Memoria - SOCKET: 4
+[INFO] 15:47:50:948 Kernel/(8642:8644): Thread planificado de largo plazo creado
+[INFO] 15:47:50:939 Kernel/(8642:8646): Thread entrada salida creado
+[INFO] 15:47:51:010 Kernel/(8642:8645): Connected to CPU - SOCKET: 5
+[INFO] 15:47:55:034 Kernel/(8642:8647): Comando: INICIAR_PROCESO
+[INFO] 15:47:55:034 Kernel/(8642:8647): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:47:55:047 Kernel/(8642:8645): Proceso enviado a CPU - PID: 0
+[INFO] 15:47:55:058 Kernel/(8642:8645): Proceso Finalizado - PID: 0
+[INFO] 15:47:55:059 Kernel/(8642:8645): PC 4
+[INFO] 15:47:55:059 Kernel/(8642:8645): AX 2
+[INFO] 15:47:55:059 Kernel/(8642:8645): BX 1
+[INFO] 15:47:55:059 Kernel/(8642:8645): CX 0
+[INFO] 15:47:55:059 Kernel/(8642:8645): DX 0
+[INFO] 15:47:55:060 Kernel/(8642:8645): EAX 1330794591
+[INFO] 15:47:55:060 Kernel/(8642:8645): EBX 1330857283
+[INFO] 15:47:55:060 Kernel/(8642:8645): ECX 1869377280
+[INFO] 15:47:55:060 Kernel/(8642:8645): EDX 1970299743
+[INFO] 15:47:55:060 Kernel/(8642:8645): SI 0
+[INFO] 15:47:55:060 Kernel/(8642:8645): DI 0
+[INFO] 15:48:02:924 Kernel/(8642:8647): Comando: INICIAR_PROCESO
+[INFO] 15:48:02:924 Kernel/(8642:8647): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 15:48:02:926 Kernel/(8642:8645): Proceso enviado a CPU - PID: 1
+[INFO] 15:49:16:378 Kernel/(9488:9493): Thread consola creado
+[INFO] 15:49:16:370 Kernel/(9488:9491): Thread planificado de corto plazo creado
+[INFO] 15:49:16:386 Kernel/(9488:9493): Connected to Memoria - SOCKET: 4
+[INFO] 15:49:16:383 Kernel/(9488:9490): Thread planificado de largo plazo creado
+[INFO] 15:49:16:373 Kernel/(9488:9492): Thread entrada salida creado
+[INFO] 15:49:16:444 Kernel/(9488:9491): Connected to CPU - SOCKET: 5
+[INFO] 15:49:20:570 Kernel/(9488:9493): Comando: INICIAR_PROCESO
+[INFO] 15:49:20:570 Kernel/(9488:9493): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:49:20:575 Kernel/(9488:9491): Proceso enviado a CPU - PID: 0
+[INFO] 15:49:20:588 Kernel/(9488:9491): Proceso Finalizado - PID: 0
+[INFO] 15:49:20:588 Kernel/(9488:9491): PC 4
+[INFO] 15:49:20:588 Kernel/(9488:9491): AX 2
+[INFO] 15:49:20:588 Kernel/(9488:9491): BX 1
+[INFO] 15:49:20:588 Kernel/(9488:9491): CX 0
+[INFO] 15:49:20:588 Kernel/(9488:9491): DX 0
+[INFO] 15:49:20:588 Kernel/(9488:9491): EAX 1330794591
+[INFO] 15:49:20:589 Kernel/(9488:9491): EBX 1330857283
+[INFO] 15:49:20:589 Kernel/(9488:9491): ECX 1869377280
+[INFO] 15:49:20:589 Kernel/(9488:9491): EDX 1970299743
+[INFO] 15:49:20:589 Kernel/(9488:9491): SI 0
+[INFO] 15:49:20:589 Kernel/(9488:9491): DI 0
+[INFO] 15:49:25:385 Kernel/(9488:9493): Comando: INICIAR_PROCESO
+[INFO] 15:49:25:385 Kernel/(9488:9493): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 15:49:25:386 Kernel/(9488:9491): Proceso enviado a CPU - PID: 1
+[INFO] 15:54:40:022 Kernel/(12318:12322): Thread consola creado
+[INFO] 15:54:40:033 Kernel/(12318:12319): Thread planificado de largo plazo creado
+[INFO] 15:54:40:038 Kernel/(12318:12322): Connected to Memoria - SOCKET: 4
+[INFO] 15:54:40:034 Kernel/(12318:12320): Thread planificado de corto plazo creado
+[INFO] 15:54:40:034 Kernel/(12318:12321): Thread entrada salida creado
+[INFO] 15:54:40:096 Kernel/(12318:12320): Connected to CPU - SOCKET: 5
+[INFO] 15:55:03:318 Kernel/(12318:12322): Comando: INICIAR_PROCESO
+[INFO] 15:55:03:318 Kernel/(12318:12322): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:55:03:328 Kernel/(12318:12320): Proceso enviado a CPU - PID: 0
+[INFO] 15:55:03:340 Kernel/(12318:12320): Proceso Finalizado - PID: 0
+[INFO] 15:55:03:340 Kernel/(12318:12320): PC 4
+[INFO] 15:55:03:341 Kernel/(12318:12320): AX 2
+[INFO] 15:55:03:341 Kernel/(12318:12320): BX 1
+[INFO] 15:55:03:341 Kernel/(12318:12320): CX 0
+[INFO] 15:55:03:341 Kernel/(12318:12320): DX 0
+[INFO] 15:55:03:341 Kernel/(12318:12320): EAX 1330794591
+[INFO] 15:55:03:341 Kernel/(12318:12320): EBX 1330857283
+[INFO] 15:55:03:341 Kernel/(12318:12320): ECX 1869377280
+[INFO] 15:55:03:341 Kernel/(12318:12320): EDX 1970299743
+[INFO] 15:55:03:341 Kernel/(12318:12320): SI 0
+[INFO] 15:55:03:341 Kernel/(12318:12320): DI 0
+[INFO] 15:55:56:674 Kernel/(13036:13041): Thread consola creado
+[INFO] 15:55:56:666 Kernel/(13036:13039): Thread planificado de corto plazo creado
+[INFO] 15:55:56:682 Kernel/(13036:13041): Connected to Memoria - SOCKET: 4
+[INFO] 15:55:56:679 Kernel/(13036:13038): Thread planificado de largo plazo creado
+[INFO] 15:55:56:669 Kernel/(13036:13040): Thread entrada salida creado
+[INFO] 15:55:56:740 Kernel/(13036:13039): Connected to CPU - SOCKET: 5
+[INFO] 15:56:07:652 Kernel/(13036:13041): Comando: INICIAR_PROCESO
+[INFO] 15:56:07:652 Kernel/(13036:13041): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 15:56:07:658 Kernel/(13036:13039): Proceso enviado a CPU - PID: 0
+[INFO] 15:56:07:668 Kernel/(13036:13039): Proceso Finalizado - PID: 0
+[INFO] 15:56:07:668 Kernel/(13036:13039): PC 4
+[INFO] 15:56:07:669 Kernel/(13036:13039): AX 2
+[INFO] 15:56:07:669 Kernel/(13036:13039): BX 1
+[INFO] 15:56:07:669 Kernel/(13036:13039): CX 0
+[INFO] 15:56:07:669 Kernel/(13036:13039): DX 0
+[INFO] 15:56:07:669 Kernel/(13036:13039): EAX 1330794591
+[INFO] 15:56:07:669 Kernel/(13036:13039): EBX 1330857283
+[INFO] 15:56:07:669 Kernel/(13036:13039): ECX 1869377280
+[INFO] 15:56:07:669 Kernel/(13036:13039): EDX 1970299743
+[INFO] 15:56:07:669 Kernel/(13036:13039): SI 0
+[INFO] 15:56:07:670 Kernel/(13036:13039): DI 0
+[INFO] 15:56:34:919 Kernel/(13036:13041): Comando: INICIAR_PROCESO
+[INFO] 15:56:34:919 Kernel/(13036:13041): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 15:56:34:920 Kernel/(13036:13039): Proceso enviado a CPU - PID: 1
+[INFO] 15:56:34:950 Kernel/(13036:13039): Proceso Finalizado - PID: 1
+[INFO] 15:56:34:950 Kernel/(13036:13039): PC 7
+[INFO] 15:56:34:950 Kernel/(13036:13039): AX 0
+[INFO] 15:56:34:950 Kernel/(13036:13039): BX 0
+[INFO] 15:56:34:951 Kernel/(13036:13039): CX 0
+[INFO] 15:56:34:951 Kernel/(13036:13039): DX 0
+[INFO] 15:56:34:951 Kernel/(13036:13039): EAX 10
+[INFO] 15:56:34:951 Kernel/(13036:13039): EBX 10
+[INFO] 15:56:34:951 Kernel/(13036:13039): ECX 99840
+[INFO] 15:56:34:951 Kernel/(13036:13039): EDX 1970299743
+[INFO] 15:56:34:951 Kernel/(13036:13039): SI 0
+[INFO] 15:56:34:951 Kernel/(13036:13039): DI 0
+[INFO] 15:58:26:494 Kernel/(13036:13041): Comando: INICIAR_PROCESO
+[INFO] 15:58:26:494 Kernel/(13036:13041): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 15:58:26:496 Kernel/(13036:13039): Proceso enviado a CPU - PID: 2
+[INFO] 15:58:26:524 Kernel/(13036:13039): Proceso Finalizado - PID: 2
+[INFO] 15:58:26:524 Kernel/(13036:13039): PC 7
+[INFO] 15:58:26:524 Kernel/(13036:13039): AX 0
+[INFO] 15:58:26:524 Kernel/(13036:13039): BX 0
+[INFO] 15:58:26:524 Kernel/(13036:13039): CX 0
+[INFO] 15:58:26:524 Kernel/(13036:13039): DX 0
+[INFO] 15:58:26:525 Kernel/(13036:13039): EAX 10
+[INFO] 15:58:26:525 Kernel/(13036:13039): EBX 10
+[INFO] 15:58:26:525 Kernel/(13036:13039): ECX 99840
+[INFO] 15:58:26:525 Kernel/(13036:13039): EDX 1970299743
+[INFO] 15:58:26:525 Kernel/(13036:13039): SI 0
+[INFO] 15:58:26:525 Kernel/(13036:13039): DI 0
+[INFO] 16:01:20:460 Kernel/(13036:13041): Comando: INICIAR_PROCESO
+[INFO] 16:01:20:460 Kernel/(13036:13041): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:01:20:462 Kernel/(13036:13039): Proceso enviado a CPU - PID: 3
+[INFO] 16:01:20:491 Kernel/(13036:13039): Proceso Finalizado - PID: 3
+[INFO] 16:01:20:491 Kernel/(13036:13039): PC 7
+[INFO] 16:01:20:491 Kernel/(13036:13039): AX 0
+[INFO] 16:01:20:491 Kernel/(13036:13039): BX 0
+[INFO] 16:01:20:491 Kernel/(13036:13039): CX 0
+[INFO] 16:01:20:491 Kernel/(13036:13039): DX 0
+[INFO] 16:01:20:491 Kernel/(13036:13039): EAX 10
+[INFO] 16:01:20:491 Kernel/(13036:13039): EBX 10
+[INFO] 16:01:20:491 Kernel/(13036:13039): ECX 99840
+[INFO] 16:01:20:491 Kernel/(13036:13039): EDX 1970299743
+[INFO] 16:01:20:491 Kernel/(13036:13039): SI 0
+[INFO] 16:01:20:491 Kernel/(13036:13039): DI 0
+[INFO] 16:01:37:686 Kernel/(15753:15754): Thread planificado de largo plazo creado
+[INFO] 16:01:37:692 Kernel/(15753:15757): Thread consola creado
+[INFO] 16:01:37:681 Kernel/(15753:15756): Thread entrada salida creado
+[INFO] 16:01:37:695 Kernel/(15753:15757): Connected to Memoria - SOCKET: 4
+[INFO] 16:01:37:678 Kernel/(15753:15755): Thread planificado de corto plazo creado
+[INFO] 16:01:37:731 Kernel/(15753:15755): Connected to CPU - SOCKET: 6
+[INFO] 16:01:39:777 Kernel/(15753:15757): Comando: INICIAR_PROCESO
+[INFO] 16:01:39:777 Kernel/(15753:15757): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:01:39:783 Kernel/(15753:15755): Proceso enviado a CPU - PID: 0
+[INFO] 16:01:39:793 Kernel/(15753:15755): Proceso Finalizado - PID: 0
+[INFO] 16:01:39:793 Kernel/(15753:15755): PC 4
+[INFO] 16:01:39:793 Kernel/(15753:15755): AX 2
+[INFO] 16:01:39:793 Kernel/(15753:15755): BX 1
+[INFO] 16:01:39:794 Kernel/(15753:15755): CX 0
+[INFO] 16:01:39:794 Kernel/(15753:15755): DX 0
+[INFO] 16:01:39:794 Kernel/(15753:15755): EAX 1330794591
+[INFO] 16:01:39:794 Kernel/(15753:15755): EBX 1330857283
+[INFO] 16:01:39:794 Kernel/(15753:15755): ECX 1869377280
+[INFO] 16:01:39:794 Kernel/(15753:15755): EDX 1970299743
+[INFO] 16:01:39:794 Kernel/(15753:15755): SI 0
+[INFO] 16:01:39:794 Kernel/(15753:15755): DI 0
+[INFO] 16:02:54:938 Kernel/(16480:16483): Thread planificado de corto plazo creado
+[INFO] 16:02:54:953 Kernel/(16480:16485): Thread consola creado
+[INFO] 16:02:54:955 Kernel/(16480:16483): Connected to CPU - SOCKET: 4
+[INFO] 16:02:54:956 Kernel/(16480:16485): Connected to Memoria - SOCKET: 5
+[INFO] 16:02:54:952 Kernel/(16480:16482): Thread planificado de largo plazo creado
+[INFO] 16:02:54:941 Kernel/(16480:16484): Thread entrada salida creado
+[INFO] 16:03:06:111 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:06:111 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:06:123 Kernel/(16480:16483): Proceso enviado a CPU - PID: 0
+[INFO] 16:03:06:162 Kernel/(16480:16483): Proceso Finalizado - PID: 0
+[INFO] 16:03:06:162 Kernel/(16480:16483): PC 7
+[INFO] 16:03:06:163 Kernel/(16480:16483): AX 0
+[INFO] 16:03:06:163 Kernel/(16480:16483): BX 0
+[INFO] 16:03:06:163 Kernel/(16480:16483): CX 0
+[INFO] 16:03:06:163 Kernel/(16480:16483): DX 0
+[INFO] 16:03:06:163 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:06:163 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:06:163 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:06:163 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:06:164 Kernel/(16480:16483): SI 0
+[INFO] 16:03:06:164 Kernel/(16480:16483): DI 0
+[INFO] 16:03:30:294 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:30:294 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:30:296 Kernel/(16480:16483): Proceso enviado a CPU - PID: 1
+[INFO] 16:03:30:326 Kernel/(16480:16483): Proceso Finalizado - PID: 1
+[INFO] 16:03:30:326 Kernel/(16480:16483): PC 7
+[INFO] 16:03:30:326 Kernel/(16480:16483): AX 0
+[INFO] 16:03:30:326 Kernel/(16480:16483): BX 0
+[INFO] 16:03:30:326 Kernel/(16480:16483): CX 0
+[INFO] 16:03:30:326 Kernel/(16480:16483): DX 0
+[INFO] 16:03:30:326 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:30:326 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:30:326 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:30:326 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:30:326 Kernel/(16480:16483): SI 0
+[INFO] 16:03:30:326 Kernel/(16480:16483): DI 0
+[INFO] 16:03:32:660 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:32:660 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:32:661 Kernel/(16480:16483): Proceso enviado a CPU - PID: 2
+[INFO] 16:03:32:690 Kernel/(16480:16483): Proceso Finalizado - PID: 2
+[INFO] 16:03:32:690 Kernel/(16480:16483): PC 7
+[INFO] 16:03:32:690 Kernel/(16480:16483): AX 0
+[INFO] 16:03:32:690 Kernel/(16480:16483): BX 0
+[INFO] 16:03:32:690 Kernel/(16480:16483): CX 0
+[INFO] 16:03:32:690 Kernel/(16480:16483): DX 0
+[INFO] 16:03:32:690 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:32:690 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:32:690 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:32:690 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:32:690 Kernel/(16480:16483): SI 0
+[INFO] 16:03:32:690 Kernel/(16480:16483): DI 0
+[INFO] 16:03:34:312 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:34:312 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:34:313 Kernel/(16480:16483): Proceso enviado a CPU - PID: 3
+[INFO] 16:03:34:342 Kernel/(16480:16483): Proceso Finalizado - PID: 3
+[INFO] 16:03:34:342 Kernel/(16480:16483): PC 7
+[INFO] 16:03:34:342 Kernel/(16480:16483): AX 0
+[INFO] 16:03:34:342 Kernel/(16480:16483): BX 0
+[INFO] 16:03:34:342 Kernel/(16480:16483): CX 0
+[INFO] 16:03:34:342 Kernel/(16480:16483): DX 0
+[INFO] 16:03:34:342 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:34:342 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:34:342 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:34:342 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:34:342 Kernel/(16480:16483): SI 0
+[INFO] 16:03:34:342 Kernel/(16480:16483): DI 0
+[INFO] 16:03:35:727 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:35:727 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:35:728 Kernel/(16480:16483): Proceso enviado a CPU - PID: 4
+[INFO] 16:03:35:757 Kernel/(16480:16483): Proceso Finalizado - PID: 4
+[INFO] 16:03:35:757 Kernel/(16480:16483): PC 7
+[INFO] 16:03:35:757 Kernel/(16480:16483): AX 0
+[INFO] 16:03:35:757 Kernel/(16480:16483): BX 0
+[INFO] 16:03:35:757 Kernel/(16480:16483): CX 0
+[INFO] 16:03:35:757 Kernel/(16480:16483): DX 0
+[INFO] 16:03:35:757 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:35:757 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:35:757 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:35:757 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:35:757 Kernel/(16480:16483): SI 0
+[INFO] 16:03:35:757 Kernel/(16480:16483): DI 0
+[INFO] 16:03:36:756 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:36:756 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:36:757 Kernel/(16480:16483): Proceso enviado a CPU - PID: 5
+[INFO] 16:03:36:787 Kernel/(16480:16483): Proceso Finalizado - PID: 5
+[INFO] 16:03:36:787 Kernel/(16480:16483): PC 7
+[INFO] 16:03:36:787 Kernel/(16480:16483): AX 0
+[INFO] 16:03:36:787 Kernel/(16480:16483): BX 0
+[INFO] 16:03:36:787 Kernel/(16480:16483): CX 0
+[INFO] 16:03:36:787 Kernel/(16480:16483): DX 0
+[INFO] 16:03:36:787 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:36:787 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:36:787 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:36:787 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:36:787 Kernel/(16480:16483): SI 0
+[INFO] 16:03:36:787 Kernel/(16480:16483): DI 0
+[INFO] 16:03:37:612 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:37:612 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:37:613 Kernel/(16480:16483): Proceso enviado a CPU - PID: 6
+[INFO] 16:03:37:641 Kernel/(16480:16483): Proceso Finalizado - PID: 6
+[INFO] 16:03:37:641 Kernel/(16480:16483): PC 7
+[INFO] 16:03:37:641 Kernel/(16480:16483): AX 0
+[INFO] 16:03:37:641 Kernel/(16480:16483): BX 0
+[INFO] 16:03:37:641 Kernel/(16480:16483): CX 0
+[INFO] 16:03:37:641 Kernel/(16480:16483): DX 0
+[INFO] 16:03:37:641 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:37:641 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:37:641 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:37:641 Kernel/(16480:16483): EDX 0
+[INFO] 16:03:37:641 Kernel/(16480:16483): SI 0
+[INFO] 16:03:37:641 Kernel/(16480:16483): DI 0
+[INFO] 16:03:40:003 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:40:003 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:40:004 Kernel/(16480:16483): Proceso enviado a CPU - PID: 7
+[INFO] 16:03:40:035 Kernel/(16480:16483): Proceso Finalizado - PID: 7
+[INFO] 16:03:40:035 Kernel/(16480:16483): PC 7
+[INFO] 16:03:40:035 Kernel/(16480:16483): AX 0
+[INFO] 16:03:40:035 Kernel/(16480:16483): BX 0
+[INFO] 16:03:40:035 Kernel/(16480:16483): CX 0
+[INFO] 16:03:40:035 Kernel/(16480:16483): DX 0
+[INFO] 16:03:40:035 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:40:035 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:40:035 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:40:035 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:40:035 Kernel/(16480:16483): SI 0
+[INFO] 16:03:40:035 Kernel/(16480:16483): DI 0
+[INFO] 16:03:43:069 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:43:069 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:43:070 Kernel/(16480:16483): Proceso enviado a CPU - PID: 8
+[INFO] 16:03:43:098 Kernel/(16480:16483): Proceso Finalizado - PID: 8
+[INFO] 16:03:43:098 Kernel/(16480:16483): PC 7
+[INFO] 16:03:43:098 Kernel/(16480:16483): AX 0
+[INFO] 16:03:43:098 Kernel/(16480:16483): BX 0
+[INFO] 16:03:43:098 Kernel/(16480:16483): CX 0
+[INFO] 16:03:43:098 Kernel/(16480:16483): DX 0
+[INFO] 16:03:43:098 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:43:098 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:43:098 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:43:098 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:43:098 Kernel/(16480:16483): SI 0
+[INFO] 16:03:43:098 Kernel/(16480:16483): DI 0
+[INFO] 16:03:45:828 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:03:45:828 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:03:45:829 Kernel/(16480:16483): Proceso enviado a CPU - PID: 9
+[INFO] 16:03:45:863 Kernel/(16480:16483): Proceso Finalizado - PID: 9
+[INFO] 16:03:45:863 Kernel/(16480:16483): PC 7
+[INFO] 16:03:45:863 Kernel/(16480:16483): AX 0
+[INFO] 16:03:45:863 Kernel/(16480:16483): BX 0
+[INFO] 16:03:45:863 Kernel/(16480:16483): CX 0
+[INFO] 16:03:45:863 Kernel/(16480:16483): DX 0
+[INFO] 16:03:45:863 Kernel/(16480:16483): EAX 10
+[INFO] 16:03:45:863 Kernel/(16480:16483): EBX 10
+[INFO] 16:03:45:863 Kernel/(16480:16483): ECX 99840
+[INFO] 16:03:45:863 Kernel/(16480:16483): EDX 1970299743
+[INFO] 16:03:45:863 Kernel/(16480:16483): SI 0
+[INFO] 16:03:45:863 Kernel/(16480:16483): DI 0
+[INFO] 16:07:24:293 Kernel/(16480:16485): Comando: INICIAR_PROCESO
+[INFO] 16:07:24:293 Kernel/(16480:16485): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:07:24:294 Kernel/(16480:16483): Proceso enviado a CPU - PID: 10
+[INFO] 16:07:24:314 Kernel/(16480:16483): Proceso Finalizado - PID: 10
+[INFO] 16:07:24:314 Kernel/(16480:16483): PC 7
+[INFO] 16:07:24:314 Kernel/(16480:16483): AX 0
+[INFO] 16:07:24:314 Kernel/(16480:16483): BX 0
+[INFO] 16:07:24:314 Kernel/(16480:16483): CX 0
+[INFO] 16:07:24:314 Kernel/(16480:16483): DX 0
+[INFO] 16:07:24:314 Kernel/(16480:16483): EAX 10
+[INFO] 16:07:24:314 Kernel/(16480:16483): EBX 10
+[INFO] 16:07:24:314 Kernel/(16480:16483): ECX 0
+[INFO] 16:07:24:314 Kernel/(16480:16483): EDX 0
+[INFO] 16:07:24:314 Kernel/(16480:16483): SI 0
+[INFO] 16:07:24:314 Kernel/(16480:16483): DI 0
+[INFO] 16:14:56:786 Kernel/(22061:22065): Thread consola creado
+[INFO] 16:14:56:797 Kernel/(22061:22062): Thread planificado de largo plazo creado
+[INFO] 16:14:56:801 Kernel/(22061:22065): Connected to Memoria - SOCKET: 4
+[INFO] 16:14:56:797 Kernel/(22061:22063): Thread planificado de corto plazo creado
+[INFO] 16:14:56:797 Kernel/(22061:22064): Thread entrada salida creado
+[INFO] 16:14:56:859 Kernel/(22061:22063): Connected to CPU - SOCKET: 5
+[INFO] 16:15:02:344 Kernel/(22061:22065): Comando: INICIAR_PROCESO
+[INFO] 16:15:02:344 Kernel/(22061:22065): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:20:59:847 Kernel/(24814:24818): Thread consola creado
+[INFO] 16:20:59:839 Kernel/(24814:24816): Thread planificado de corto plazo creado
+[INFO] 16:20:59:855 Kernel/(24814:24818): Connected to Memoria - SOCKET: 4
+[INFO] 16:20:59:852 Kernel/(24814:24815): Thread planificado de largo plazo creado
+[INFO] 16:20:59:842 Kernel/(24814:24817): Thread entrada salida creado
+[INFO] 16:20:59:905 Kernel/(24814:24816): Connected to CPU - SOCKET: 6
+[INFO] 16:21:08:144 Kernel/(24814:24818): Comando: INICIAR_PROCESO
+[INFO] 16:21:08:144 Kernel/(24814:24818): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:21:08:156 Kernel/(24814:24816): Proceso enviado a CPU - PID: 0
+[INFO] 16:21:08:335 Kernel/(24814:24816): Proceso Finalizado - PID: 0
+[INFO] 16:21:08:335 Kernel/(24814:24816): PC 7
+[INFO] 16:21:08:335 Kernel/(24814:24816): AX 0
+[INFO] 16:21:08:335 Kernel/(24814:24816): BX 0
+[INFO] 16:21:08:335 Kernel/(24814:24816): CX 0
+[INFO] 16:21:08:335 Kernel/(24814:24816): DX 0
+[INFO] 16:21:08:336 Kernel/(24814:24816): EAX 10
+[INFO] 16:21:08:336 Kernel/(24814:24816): EBX 10
+[INFO] 16:21:08:336 Kernel/(24814:24816): ECX 99840
+[INFO] 16:21:08:336 Kernel/(24814:24816): EDX 1970299743
+[INFO] 16:21:08:336 Kernel/(24814:24816): SI 0
+[INFO] 16:21:08:336 Kernel/(24814:24816): DI 0
+[INFO] 16:24:59:215 Kernel/(26906:26909): Thread planificado de corto plazo creado
+[INFO] 16:24:59:228 Kernel/(26906:26910): Thread entrada salida creado
+[INFO] 16:24:59:227 Kernel/(26906:26911): Thread consola creado
+[INFO] 16:24:59:231 Kernel/(26906:26909): Connected to CPU - SOCKET: 4
+[INFO] 16:24:59:226 Kernel/(26906:26908): Thread planificado de largo plazo creado
+[INFO] 16:24:59:233 Kernel/(26906:26911): Connected to Memoria - SOCKET: 5
+[INFO] 16:25:01:383 Kernel/(26906:26911): Comando: INICIAR_PROCESO
+[INFO] 16:25:01:383 Kernel/(26906:26911): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:25:01:395 Kernel/(26906:26909): Proceso enviado a CPU - PID: 0
+[INFO] 16:25:01:574 Kernel/(26906:26909): Proceso Finalizado - PID: 0
+[INFO] 16:25:01:575 Kernel/(26906:26909): PC 7
+[INFO] 16:25:01:575 Kernel/(26906:26909): AX 0
+[INFO] 16:25:01:575 Kernel/(26906:26909): BX 0
+[INFO] 16:25:01:575 Kernel/(26906:26909): CX 0
+[INFO] 16:25:01:575 Kernel/(26906:26909): DX 0
+[INFO] 16:25:01:575 Kernel/(26906:26909): EAX 10
+[INFO] 16:25:01:576 Kernel/(26906:26909): EBX 10
+[INFO] 16:25:01:576 Kernel/(26906:26909): ECX 99840
+[INFO] 16:25:01:576 Kernel/(26906:26909): EDX 1970299743
+[INFO] 16:25:01:576 Kernel/(26906:26909): SI 0
+[INFO] 16:25:01:576 Kernel/(26906:26909): DI 0
+[INFO] 16:31:30:224 Kernel/(29942:29947): Thread consola creado
+[INFO] 16:31:30:216 Kernel/(29942:29945): Thread planificado de corto plazo creado
+[INFO] 16:31:30:232 Kernel/(29942:29947): Connected to Memoria - SOCKET: 4
+[INFO] 16:31:30:229 Kernel/(29942:29944): Thread planificado de largo plazo creado
+[INFO] 16:31:30:219 Kernel/(29942:29946): Thread entrada salida creado
+[INFO] 16:31:30:290 Kernel/(29942:29945): Connected to CPU - SOCKET: 5
+[INFO] 16:31:36:203 Kernel/(29942:29947): Comando: INICIAR_PROCESO
+[INFO] 16:31:36:204 Kernel/(29942:29947): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 16:31:36:215 Kernel/(29942:29945): Proceso enviado a CPU - PID: 0
+[INFO] 16:31:36:228 Kernel/(29942:29945): Proceso Finalizado - PID: 0
+[INFO] 16:31:36:228 Kernel/(29942:29945): PC 4
+[INFO] 16:31:36:228 Kernel/(29942:29945): AX 2
+[INFO] 16:31:36:228 Kernel/(29942:29945): BX 1
+[INFO] 16:31:36:229 Kernel/(29942:29945): CX 0
+[INFO] 16:31:36:229 Kernel/(29942:29945): DX 0
+[INFO] 16:31:36:229 Kernel/(29942:29945): EAX 1330794591
+[INFO] 16:31:36:229 Kernel/(29942:29945): EBX 1330857283
+[INFO] 16:31:36:229 Kernel/(29942:29945): ECX 1869377280
+[INFO] 16:31:36:229 Kernel/(29942:29945): EDX 1970299743
+[INFO] 16:31:36:229 Kernel/(29942:29945): SI 0
+[INFO] 16:31:36:229 Kernel/(29942:29945): DI 0
+[INFO] 16:31:44:581 Kernel/(29942:29947): Comando: INICIAR_PROCESO
+[INFO] 16:31:44:581 Kernel/(29942:29947): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_2
+[INFO] 16:31:44:583 Kernel/(29942:29945): Proceso enviado a CPU - PID: 1
+[INFO] 16:31:44:592 Kernel/(29942:29945): Proceso Finalizado - PID: 1
+[INFO] 16:31:44:592 Kernel/(29942:29945): PC 11
+[INFO] 16:31:44:592 Kernel/(29942:29945): AX 1
+[INFO] 16:31:44:592 Kernel/(29942:29945): BX 1
+[INFO] 16:31:44:592 Kernel/(29942:29945): CX 1
+[INFO] 16:31:44:592 Kernel/(29942:29945): DX 1
+[INFO] 16:31:44:592 Kernel/(29942:29945): EAX 1000
+[INFO] 16:31:44:592 Kernel/(29942:29945): EBX 1000
+[INFO] 16:31:44:592 Kernel/(29942:29945): ECX 1000
+[INFO] 16:31:44:592 Kernel/(29942:29945): EDX 1000
+[INFO] 16:31:44:592 Kernel/(29942:29945): SI 0
+[INFO] 16:31:44:592 Kernel/(29942:29945): DI 64
+[INFO] 16:31:50:638 Kernel/(29942:29947): Comando: INICIAR_PROCESO
+[INFO] 16:31:50:639 Kernel/(29942:29947): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_4
+[INFO] 16:31:50:640 Kernel/(29942:29945): Proceso enviado a CPU - PID: 2
+[INFO] 16:32:21:427 Kernel/(29942:29945): Proceso Finalizado - PID: 2
+[INFO] 16:32:21:427 Kernel/(29942:29945): PC 7
+[INFO] 16:32:21:427 Kernel/(29942:29945): AX 0
+[INFO] 16:32:21:427 Kernel/(29942:29945): BX 0
+[INFO] 16:32:21:427 Kernel/(29942:29945): CX 0
+[INFO] 16:32:21:427 Kernel/(29942:29945): DX 0
+[INFO] 16:32:21:427 Kernel/(29942:29945): EAX 10
+[INFO] 16:32:21:427 Kernel/(29942:29945): EBX 10
+[INFO] 16:32:21:427 Kernel/(29942:29945): ECX 0
+[INFO] 16:32:21:427 Kernel/(29942:29945): EDX 1970299743
+[INFO] 16:32:21:427 Kernel/(29942:29945): SI 0
+[INFO] 16:32:21:427 Kernel/(29942:29945): DI 0

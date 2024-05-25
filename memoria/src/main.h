@@ -18,4 +18,14 @@
 extern t_log* logger;
 extern t_config* config;
 
+typedef struct {
+	uint32_t pid;
+    t_list* file; 
+} t_memoria;
+
+op_code leer_archivo(uint32_t, const char*);
+void* memoria(void*);
+char** get_instruction_pid(uint32_t, uint32_t);
+void enviar_instruccion(int, char**);
+
 #endif

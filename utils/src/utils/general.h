@@ -68,6 +68,11 @@ typedef struct {
 	uint32_t sleep_time;
 } t_io;
 
+typedef struct {
+	uint32_t pid;
+	char* path;
+} t_init_pid;
+
 typedef struct{
 	op_code codigo_operacion;
 	t_buffer* buffer;
@@ -79,5 +84,6 @@ typedef struct{
 */
 void decir_hola(char*);
 void leer_consola(t_log*);
+void log_registers(t_pcb*, t_log*);
 
 #endif

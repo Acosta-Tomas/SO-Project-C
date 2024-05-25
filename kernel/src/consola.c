@@ -39,13 +39,15 @@ void* consola_main(void *arg){
 
 op_code iniciar_proceso(int conexion, char* comando, char* archivo){
     if (archivo == NULL) return INIT_PID_ERROR;
+    char* pathAbsolute = string_new();
+    string_append(&pathAbsolute, "/home/tomasacosta/SSOO/c-comenta-pruebas/preliminares");
+    string_append(&pathAbsolute, archivo);
 
     t_paquete* paquete = crear_paquete(INIT_PID);
     log_info(logger, "Comando: %s", comando);
-    log_info(logger, "Archivo: %s", archivo);
+    log_info(logger, "Archivo: %s", pathAbsolute);
 
-    agregar_a_paquete(paquete, comando, strlen(comando) + 1);
-    agregar_a_paquete(paquete, archivo, strlen(comando) + 1);
+    agregar_init_process_paquete(paquete, next_pid, pathAbsolute);
 
     enviar_paquete(paquete, conexion);
     eliminar_paquete(paquete);

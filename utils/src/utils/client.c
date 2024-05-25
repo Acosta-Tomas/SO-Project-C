@@ -144,3 +144,8 @@ void agregar_pcb_paquete(t_paquete* paquete, t_pcb* pcb){
     agregar_uint_a_paquete(paquete, &pcb->registers->di, sizeof(uint32_t));
     agregar_uint_a_paquete(paquete, &pcb->registers->pc, sizeof(uint32_t));
 }
+
+void agregar_init_process_paquete(t_paquete* paquete, uint32_t pid, char* path){
+	agregar_uint_a_paquete(paquete, &pid, sizeof(uint32_t));
+	agregar_a_paquete(paquete, path, strlen(path) + 1);
+}

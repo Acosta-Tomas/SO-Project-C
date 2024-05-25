@@ -14,6 +14,7 @@ void cpu(int memoria_fd, int kernel_fd){
     }
 
     pcb->pc = pcb->registers->pc;
+    pcb->status = result;
 
     t_paquete* paquete = crear_paquete(PCB);
 
@@ -30,13 +31,11 @@ void cpu(int memoria_fd, int kernel_fd){
 t_list* fetch(int memoria_fd) {
     t_list* list_instruction;
     t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
-    u_int32_t pid = 20;
 
     agregar_uint_a_paquete(pc_paquete, get_register(PC), sizeof(uint32_t));
-    agregar_uint_a_paquete(pc_paquete, &pid, sizeof(uint32_t));
+    agregar_uint_a_paquete(pc_paquete, &pcb->pid, sizeof(uint32_t));
 
     enviar_paquete(pc_paquete, memoria_fd);
-    
     eliminar_paquete(pc_paquete);
     
     int cod_op = recibir_operacion(memoria_fd);
@@ -49,6 +48,7 @@ t_intruction_execute* decode(t_list* list_instruction) {
     t_intruction_execute* decoded_instruction = malloc(sizeof(t_intruction_execute));
     
     char* instruction_type = list_remove(list_instruction, 0);
+    log_info(logger, "Ejecutar instruccion: %s", instruction_type);
 
     switch (mapInstruction(instruction_type)){
         case SET:
@@ -207,8 +207,15 @@ void operation_register_uint32(char* destino, char* origen, cpu_operation operat
 
 bool jnz_register(char* registro, char* next_pc){
     // sem_wait(&mutex_registros);
-    uint8_t* reg = (uint8_t*) get_register(registro);
-    bool isZero = *(reg) == 0;
+    bool isZero;
+    if (sizeof_register(registro) == sizeof(u_int8_t)){
+        uint8_t* reg = (uint8_t*) get_register(registro);
+        isZero = *(reg) == 0;
+    } else {
+        uint32_t* reg = (uint32_t*) get_register(registro);
+        isZero = *(reg) == 0;
+    }
+
     // sem_post(&mutex_registros);
     
     if (isZero) return false;
@@ -278,7 +285,7 @@ void* get_register (char* registro) {
     if (strcmp(registro, AX) == 0) return &(pcb->registers->ax);
     if (strcmp(registro, BX) == 0) return &(pcb->registers->bx);
     if (strcmp(registro, CX) == 0) return &(pcb->registers->cx);
-    if (strcmp(registro, DX) == 0) return &(pcb->registers->di);
+    if (strcmp(registro, DX) == 0) return &(pcb->registers->dx);
     if (strcmp(registro, EAX) == 0) return &(pcb->registers->eax);
     if (strcmp(registro, EBX) == 0) return &(pcb->registers->ebx);
     if (strcmp(registro, ECX) == 0) return &(pcb->registers->ecx);
@@ -321,18 +328,4 @@ t_registros *create_registros() {
     regis->di = 0;
     
     return regis;
-}
-
-void log_registers () {
-    log_info(logger, "PC %u", pcb->registers->pc);
-    log_info(logger, "AX %hhu", pcb->registers->ax);
-    log_info(logger, "BC %hhu", pcb->registers->bx);
-    log_info(logger, "CX %hhu", pcb->registers->cx);
-    log_info(logger, "DX %hhu", pcb->registers->dx);
-    log_info(logger, "EAX %u", pcb->registers->eax);
-    log_info(logger, "EBX %u", pcb->registers->ebx);
-    log_info(logger, "ECX %u", pcb->registers->ecx);
-    log_info(logger, "EDX %u", pcb->registers->edx);
-    log_info(logger, "SI %u", pcb->registers->si);
-    log_info(logger, "DI %u", pcb->registers->di);
 }

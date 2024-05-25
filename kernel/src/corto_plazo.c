@@ -19,8 +19,9 @@ void* corto_main(void *arg){
         enviar_cpu(conexion, pcb);
         pcb = esperar_cpu(conexion);
 
-        if (pcb->status == TERMINATED) {
+        if (pcb->status == TERMINATED || pcb->status == UNKNOWN) {
             log_info(logger, "Proceso Finalizado - PID: %u", pcb->pid);
+            log_registers(pcb, logger);
             free(pcb->registers);
             free(pcb);
         }
@@ -48,9 +49,7 @@ void enviar_cpu(int conexion, t_pcb* pcb){
     t_paquete* paquete = crear_paquete(PCB);
 
     agregar_pcb_paquete(paquete, pcb);
-
     enviar_paquete(paquete, conexion);
-
     eliminar_paquete(paquete);
 
     log_info(logger, "Proceso enviado a CPU - PID: %u", pcb->pid);
