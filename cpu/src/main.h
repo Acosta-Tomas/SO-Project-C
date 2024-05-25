@@ -6,8 +6,6 @@
 #include <utils/client.h>
 #include <utils/server.h>
 #include <utils/general.h>
-#include <pthread.h>
-#include <semaphore.h>
 
 // FILES
 #define CONFIG_FILE "cpu.config"
@@ -32,16 +30,6 @@
 #define EDX "EDX"
 #define SI "SI"
 #define DI "DI"
-
-typedef enum {
-	SET,
-    SUM,
-    SUB,
-    JNZ,
-    IO_GEN_SLEEP,
-	EXIT,
-	UNKNOWN,
-} set_instruction;
 
 typedef enum {
     SUMA,

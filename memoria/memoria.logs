@@ -26680,3 +26680,85 @@
 [INFO] 08:56:14:389 Memoria-Servidor/(16502:16502): PC 4
 [INFO] 08:56:14:390 Memoria-Servidor/(16502:16502): PID 20
 [ERROR] 08:56:20:247 Memoria-Servidor/(16502:16502): Client disconnected - SOCKET: 5
+[INFO] 19:08:31:539 Memoria-Servidor/(42682:42682): Server ready - SOCKET: 4
+[INFO] 19:09:53:778 Memoria-Servidor/(42682:42682): New client - SOCKET: 5
+[ERROR] 19:10:28:050 Memoria-Servidor/(42682:42682): Client disconnected - SOCKET: 5
+[INFO] 19:11:25:066 Memoria-Servidor/(42682:42682): New client - SOCKET: 5
+[ERROR] 19:13:12:679 Memoria-Servidor/(42682:42682): Client disconnected - SOCKET: 5
+[INFO] 19:13:21:013 Memoria-Servidor/(42682:42682): New client - SOCKET: 5
+[ERROR] 19:14:38:409 Memoria-Servidor/(42682:42682): Client disconnected - SOCKET: 5
+[INFO] 19:14:43:808 Memoria-Servidor/(42682:42682): New client - SOCKET: 5
+[INFO] 19:14:59:346 Memoria-Servidor/(42682:42682): Me llegaron los siguientes valores:
+
+[INFO] 19:14:59:347 Memoria-Servidor/(42682:42682): INICIAR_PROCESO
+[INFO] 19:14:59:347 Memoria-Servidor/(42682:42682): archivo1
+[ERROR] 19:33:45:725 Memoria-Servidor/(42682:42682): Client disconnected - SOCKET: 5
+[INFO] 20:08:51:033 Memoria-Servidor/(42682:42682): New client - SOCKET: 5
+[INFO] 20:09:23:061 Memoria-Servidor/(42682:42682): Me llegaron los siguientes valores:
+
+[INFO] 20:09:23:061 Memoria-Servidor/(42682:42682): INICIAR_PROCESO
+[INFO] 20:09:23:061 Memoria-Servidor/(42682:42682): path
+[INFO] 20:09:23:061 Memoria-Servidor/(42682:42682): 
+[INFO] 20:09:58:264 Memoria-Servidor/(42682:42682): Me llegaron los siguientes valores:
+
+[INFO] 20:09:58:264 Memoria-Servidor/(42682:42682): INICIAR_PROCESO
+[INFO] 20:09:58:265 Memoria-Servidor/(42682:42682): otropath
+[INFO] 20:09:58:265 Memoria-Servidor/(42682:42682): 4
+[ERROR] 20:10:30:466 Memoria-Servidor/(42682:42682): Client disconnected - SOCKET: 5
+[INFO] 20:13:24:799 Memoria-Servidor/(72285:72285): Server ready - SOCKET: 4
+[INFO] 20:13:32:147 Memoria-Servidor/(72285:72285): New client - SOCKET: 5
+[INFO] 20:23:59:435 Memoria-Servidor/(77199:77199): Server ready - SOCKET: 4
+[INFO] 20:24:07:771 Memoria-Servidor/(77307:77307): Server ready - SOCKET: 4
+[INFO] 21:08:11:430 Memoria-Servidor/(910:910): Server ready - SOCKET: 4
+[INFO] 21:10:56:294 Memoria-Servidor/(910:910): New client - SOCKET: 5
+[INFO] 21:11:14:098 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:11:14:099 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:11:14:099 Memoria-Servidor/(910:910): path
+[INFO] 21:11:35:402 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:11:35:402 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:11:35:402 Memoria-Servidor/(910:910): otroPath
+[ERROR] 21:15:00:191 Memoria-Servidor/(910:910): Client disconnected - SOCKET: 5
+[INFO] 21:15:36:576 Memoria-Servidor/(910:910): New client - SOCKET: 5
+[INFO] 21:15:42:434 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:15:42:434 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:15:42:434 Memoria-Servidor/(910:910): PATH
+[INFO] 21:16:00:842 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:16:00:842 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:16:00:842 Memoria-Servidor/(910:910): OTROPATH
+[ERROR] 21:17:55:544 Memoria-Servidor/(910:910): Client disconnected - SOCKET: 5
+[INFO] 21:18:00:801 Memoria-Servidor/(910:910): New client - SOCKET: 5
+[INFO] 21:18:09:009 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:18:09:009 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:18:09:009 Memoria-Servidor/(910:910): path
+[INFO] 21:18:23:849 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:18:23:849 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:18:23:849 Memoria-Servidor/(910:910): otrtosd
+[ERROR] 21:19:42:478 Memoria-Servidor/(910:910): Client disconnected - SOCKET: 5
+[INFO] 21:19:47:314 Memoria-Servidor/(910:910): New client - SOCKET: 5
+[ERROR] 21:20:30:697 Memoria-Servidor/(910:910): Client disconnected - SOCKET: 5
+[INFO] 21:20:34:762 Memoria-Servidor/(910:910): New client - SOCKET: 5
+[INFO] 21:20:40:579 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:20:40:579 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:20:40:579 Memoria-Servidor/(910:910): other
+[INFO] 21:23:57:335 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:23:57:335 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:23:57:335 Memoria-Servidor/(910:910): anotehr
+[ERROR] 21:30:10:926 Memoria-Servidor/(910:910): Client disconnected - SOCKET: 5
+[INFO] 21:30:19:618 Memoria-Servidor/(910:910): New client - SOCKET: 5
+[INFO] 21:30:25:636 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:30:25:636 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:30:25:636 Memoria-Servidor/(910:910): OKEY
+[INFO] 21:30:35:321 Memoria-Servidor/(910:910): Me llegaron los siguientes valores:
+
+[INFO] 21:30:35:321 Memoria-Servidor/(910:910): INICIAR_PROCESO
+[INFO] 21:30:35:321 Memoria-Servidor/(910:910): NOTOKEY
+[ERROR] 21:45:46:308 Memoria-Servidor/(910:910): Client disconnected - SOCKET: 5

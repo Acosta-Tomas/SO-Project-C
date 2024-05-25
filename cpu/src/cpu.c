@@ -32,9 +32,6 @@ t_list* fetch(int conexion) {
     eliminar_paquete(pc_paquete);
     
     int cod_op = recibir_operacion(conexion);
-    
-    log_info(logger, "Codigo Operacion %i", cod_op);
-
     list_instruction = recibir_paquete(conexion);
 
     return list_instruction;

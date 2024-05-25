@@ -23,13 +23,16 @@ int main(int argc, char* argv[]) {
                 case MENSAJE:
                     recibir_mensaje(cliente_fd, logger);
                     break;
-                case PAQUETE:
+                case INIT_PID:
                     lista = recibir_paquete(cliente_fd);
                     log_info(logger, "Me llegaron los siguientes valores:\n");
                     void myiterator(char* value) {
                         log_info(logger,"%s", value);
                     }
-                    list_iterate(lista, (void*) myiterator); // Ver alguna manera de pasar un log al iterator, por ahi ahora es relevanto pero desp no
+                    list_iterate(lista, (void*) myiterator);
+                    op_code success = INIT_PID_SUCCESS;
+                    send(cliente_fd, &success, sizeof(op_code), 0);
+                    break;
                  
                 case INSTRUCTION:
                     uint32_t pc;
