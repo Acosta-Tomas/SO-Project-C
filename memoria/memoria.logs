@@ -26762,3 +26762,7 @@
 [INFO] 21:30:35:321 Memoria-Servidor/(910:910): INICIAR_PROCESO
 [INFO] 21:30:35:321 Memoria-Servidor/(910:910): NOTOKEY
 [ERROR] 21:45:46:308 Memoria-Servidor/(910:910): Client disconnected - SOCKET: 5
+[INFO] 02:25:37:964 Memoria-Servidor/(4674:4674): Server ready - SOCKET: 4
+[INFO] 17:10:35:294 Memoria-Servidor/(2307:2307): Server ready - SOCKET: 4
+[INFO] 17:12:01:221 Memoria-Servidor/(2503:2503): Server ready - SOCKET: 4
+[INFO] 17:17:55:231 Memoria-Servidor/(2786:2786): Server ready - SOCKET: 4
