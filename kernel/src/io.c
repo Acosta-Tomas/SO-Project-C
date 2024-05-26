@@ -1,59 +1,64 @@
 #include "main.h"
 
 void* io_main(void *arg) {
-        log_info(logger, "Thread entrada salida creado");
-    // void myiterator(char* value) {
-    //     log_info(logger,"%s", value);
-    // }
+    log_info(logger, "Thread entrada salida creado");
 
-    // int server_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA));
-    // log_info(logger, "Server ready - SOCKET: %d", server_fd);
 
-    // while(1) {
-    //     int cliente_fd = esperar_cliente(server_fd);
-    //     log_info(logger, "New client - SOCKET: %d", cliente_fd);
+    int server_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA));
+    log_info(logger, "Server ready - SOCKET: %d", server_fd);
 
-    //     t_list* lista;
+    while(1) {
+        int cliente_fd = esperar_cliente(server_fd);
+        log_info(logger, "New client - SOCKET: %d", cliente_fd);
 
-    //     for (int cod_op = recibir_operacion(cliente_fd); cod_op != -1; cod_op = recibir_operacion(cliente_fd)){
-    //         switch (cod_op) {
-    //             case MENSAJE:
-    //                 recibir_mensaje(cliente_fd, logger);
-    //                 break;
-    //             case PAQUETE:
-    //                 lista = recibir_paquete(cliente_fd);
-    //                 log_info(logger, "Me llegaron los siguientes valores:\n");
-    //                 list_iterate(lista, (void*) myiterator);
-    //                 break;
-    //             default:
-    //                 log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-    //                 break;
-    //             }
-    //     }
+        bool bad_op = false;
 
-    //     log_error(logger, "Client disconnected - SOCKET: %d", cliente_fd);
+        while (!bad_op){
+            sem_wait(&hay_io);
+            sem_wait(&mutex_io);
+            t_io* io = queue_pop(queue_io);
+            sem_post(&mutex_io);
 
-    //     char* ip_cpu = config_get_string_value(config, KEY_IP_CPU);
-    //     char* puerto_cpu_dispatch = config_get_string_value(config, KEY_PUERTO_CPU_DISPATCH);
-
-    //     int conexion = crear_conexion(ip_cpu, puerto_cpu_dispatch);
-    //     log_info(logger, "Connected to CPU - SOCKET: %d", conexion);
-    //     // enviar_mensaje("Aca deberia mandar la lista obtenida del cliente, probando ahora la conexion", conexion);
-
-    //     t_paquete * paquete = crear_paquete(PAQUETE);
-
-    //     void mi_paquete_add(char * value) {
-    //         agregar_a_paquete(paquete, value, strlen(value) + 1);
-    //     }
-
-    //     list_iterate(lista, (void *) mi_paquete_add);
-
-    //     enviar_paquete(paquete, conexion);
-    
-    //     eliminar_paquete(paquete);
-    //     liberar_conexion(conexion);
-    // }
+            t_paquete* paquete = crear_paquete(IO);
         
-    // close(server_fd);
+            agregar_io_paquete(paquete, io->type_instruction, io->name_interface, io->sleep_time);
+            enviar_paquete(paquete, cliente_fd);
+            eliminar_paquete(paquete);
+            free(io->name_interface);
+            free(io->sleep_time);
+            free(io);
+
+            op_code cod_op = recibir_operacion(cliente_fd);
+        
+            sem_wait(&mutex_blocked);
+            t_pcb* pcb = queue_pop(queue_blocked);
+            sem_post(&mutex_blocked);
+
+            switch (cod_op){
+                case IO_ERROR:
+                    log_error(logger, "Error en IO %u", pcb->pid);
+                    free(pcb->registers);
+                    free(pcb);
+                    break;
+
+                case IO_SUCCESS:
+                    log_info(logger, "Fin IO proceso a ready: %u", pcb->pid);
+
+                    sem_wait(&mutex_ready);
+                    queue_push(queue_ready, pcb);
+                    sem_post(&mutex_ready);
+                    sem_post(&hay_ready);
+                break;
+                
+                default:
+                    bad_op = true;
+                    break;
+            }
+        }
+
+        log_error(logger, "Client disconnected - SOCKET: %d", cliente_fd);
+    }
+        
+    close(server_fd);
     return EXIT_SUCCESS;
 }

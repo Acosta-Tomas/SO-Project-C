@@ -101,12 +101,12 @@ op_code leer_archivo(uint32_t pid, const char *nombre_archivo){
     pid_memoria->file = list_create();
 
     while(fgets(buffer, tamaño_archivo, archivo) != NULL){
-        log_info(logger, "instruccion %s", buffer);
+        // log_info(logger, "instruccion %s", buffer);
         int size_line = strlen(buffer);
         if (!feof(archivo)) size_line -= 1; 
         char* file_line = malloc(size_line);
         memcpy(file_line, buffer, size_line);
-        log_info(logger, "line %s", file_line);
+        // log_info(logger, "line %s", file_line);
         list_add(pid_memoria->file, file_line);
     }
 
@@ -141,7 +141,7 @@ void enviar_instruccion(int client_fd, char** array_instruction){
     t_paquete* paquete = crear_paquete(INSTRUCTION);
 
     for(int i = 0; i < string_array_size(array_instruction); i += 1){
-        log_info(logger, "Instruccion: %s", array_instruction[i]);
+        // log_info(logger, "Instruccion: %s", array_instruction[i]);
         agregar_a_paquete(paquete, array_instruction[i], strlen(array_instruction[i]) + 1);
     }
 

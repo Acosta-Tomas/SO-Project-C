@@ -149,3 +149,9 @@ void agregar_init_process_paquete(t_paquete* paquete, uint32_t pid, char* path){
 	agregar_uint_a_paquete(paquete, &pid, sizeof(uint32_t));
 	agregar_a_paquete(paquete, path, strlen(path) + 1);
 }
+
+void agregar_io_paquete(t_paquete* paquete, set_instruction instruction, char* interfaz, char* time){
+	agregar_uint_a_paquete(paquete, &instruction, sizeof(set_instruction));
+	agregar_a_paquete(paquete, interfaz, strlen(interfaz) + 1);
+	agregar_a_paquete(paquete, time, strlen(time) + 1);
+}

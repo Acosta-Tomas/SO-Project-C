@@ -30,6 +30,8 @@ typedef enum{
 	INSTRUCTION,
 	PCB,
 	IO,
+	IO_SUCCESS,
+	IO_ERROR,
 	INIT_PID,
 	INIT_PID_SUCCESS,
 	INIT_PID_ERROR,
@@ -65,8 +67,13 @@ typedef struct{
 typedef struct {
 	char* name_interface;
 	set_instruction type_instruction;
-	uint32_t sleep_time;
+	char* sleep_time;
 } t_io;
+
+typedef struct {
+	uint32_t pid;
+	uint32_t quantum;
+} t_quantum;
 
 typedef struct {
 	uint32_t pid;

@@ -3,14 +3,15 @@
 void cpu(int memoria_fd, int kernel_fd){
     t_list* list_instruction;
     t_intruction_execute* decoded_instruction;
-    pid_status result;
+    pid_status result = pcb->status;
+    bool interrupt = check_interrupt(result);
 
-    result = RUNNING;
 
-    while(result == RUNNING) {
+    while(result == RUNNING && !interrupt) {
         list_instruction = fetch(memoria_fd);
         decoded_instruction = decode(list_instruction);
         result = exec(decoded_instruction, kernel_fd);
+        interrupt = check_interrupt(result);
     }
 
     pcb->pc = pcb->registers->pc;
@@ -37,8 +38,10 @@ t_list* fetch(int memoria_fd) {
 
     enviar_paquete(pc_paquete, memoria_fd);
     eliminar_paquete(pc_paquete);
+
+    log_info(logger, "Fetch PC: %u", pcb->registers->pc);
     
-    int cod_op = recibir_operacion(memoria_fd);
+    op_code cod_op = recibir_operacion(memoria_fd);
     list_instruction = recibir_paquete(memoria_fd);
 
     return list_instruction;
@@ -48,7 +51,7 @@ t_intruction_execute* decode(t_list* list_instruction) {
     t_intruction_execute* decoded_instruction = malloc(sizeof(t_intruction_execute));
     
     char* instruction_type = list_remove(list_instruction, 0);
-    log_info(logger, "Ejecutar instruccion: %s", instruction_type);
+    log_info(logger, "Execute: %s", instruction_type);
 
     switch (mapInstruction(instruction_type)){
         case SET:
@@ -122,12 +125,17 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd) {
         case JNZ:
             ignorePC = jnz_register(decoded_instruction->params[0], decoded_instruction->params[1]);
             break;
+
+        case IO_GEN_SLEEP:
+            status = enviar_io(kernel_fd, decoded_instruction);
+            break;
+
         case EXIT: 
             status = TERMINATED;
             break;
 
         default:
-            status = UNKNOWN;
+            status = ERROR;
             break;
     }
 
@@ -138,8 +146,14 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd) {
     return status;
 }
 
-void check_interrupt() { 
+bool check_interrupt() { 
+    bool interrupt;
+    sem_wait(&mutex_interrupt);
+    interrupt = has_interrupt;
+    has_interrupt = false;
+    sem_post(&mutex_interrupt);
 
+    return interrupt;
 }
 
 // Funcion generica para cambiar el valor de un registro.
@@ -226,6 +240,17 @@ bool jnz_register(char* registro, char* next_pc){
 
 
     return true;
+}
+
+pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
+    t_paquete* paquete = crear_paquete(IO);
+    
+    agregar_io_paquete(paquete, decoded->operation, decoded->params[0], decoded->params[1]);
+    enviar_paquete(paquete, kernel_fd);
+    eliminar_paquete(paquete);
+
+    log_info(logger, "Wait IO: %s - time: %s", decoded->params[0], decoded->params[1]);
+    return BLOCKED;
 }
 
 // Funciones para updatear un registro (uno es para ++ y el otro para setear valor)

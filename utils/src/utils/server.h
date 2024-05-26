@@ -11,5 +11,6 @@ void recibir_mensaje(int, t_log*);
 int recibir_operacion(int);
 void agregar_pcb_paquete(t_paquete*, t_pcb*);
 t_init_pid* recibir_init_process(int, t_log*);
+t_io* recibir_io(int, t_log*);
 
 #endif

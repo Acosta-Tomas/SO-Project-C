@@ -32,6 +32,8 @@ void* consola_main(void *arg){
         } else  printf("Comando no reconocido, intente nuevamente\n");
 
     }
+
+    liberar_conexion(conexion);
    
    return EXIT_SUCCESS;
 }

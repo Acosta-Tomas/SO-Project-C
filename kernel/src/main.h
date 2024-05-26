@@ -21,24 +21,33 @@
 #define KEY_PUERTO_CPU_INTERRUPT "PUERTO_CPU_INTERRUPT"
 #define KEY_IP_MEMORIA "IP_MEMORIA"
 #define KEY_PUERTO_MEMORIA "PUERTO_MEMORIA"
+#define KEY_ALGORITMO_PLANIFICACION "ALGORITMO_PLANIFICACION"
+#define KEY_QUANTUM "QUANTUM"
 
 extern t_config* config;
 extern t_log* logger;
+
 extern sem_t hay_ready;
 extern sem_t mutex_ready;
 extern sem_t hay_io;
 extern sem_t mutex_io;
 extern sem_t hay_new;
 extern sem_t mutex_new;
+extern sem_t mutex_blocked;
+extern sem_t start_quantum;
+
 extern t_queue* queue_ready;
 extern t_queue* queue_io;
 extern t_queue* queue_new;
+extern t_queue* queue_blocked;
 extern uint32_t next_pid;
+extern t_quantum* running_pid;
 
 void* largo_main(void *arg);
 void* corto_main(void *arg);
 void* io_main(void *arg);
 void* consola_main(void *arg);
+void* quantum_main(void *arg);
 
 op_code iniciar_proceso(int, char*, char*);
 void enviar_new(void);

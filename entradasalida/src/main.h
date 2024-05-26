@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <utils/client.h>
+#include <utils/server.h>
+#include <utils/general.h>
 
 // FILES
 #define CONFIG_FILE "entradasalida.config"
