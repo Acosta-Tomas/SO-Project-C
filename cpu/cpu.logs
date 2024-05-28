@@ -1,0 +1,45 @@
+[INFO] 21:29:38:116 CPU-Servidor/(41503:41506): Interrupt ready - SOCKET: 4
+[INFO] 21:29:38:126 CPU-Servidor/(41503:41505): Dispatch ready - SOCKET: 5
+[INFO] 21:29:38:129 CPU-Servidor/(41503:41505): Connected to Memoria - SOCKET: 7
+[INFO] 21:30:19:148 CPU-Servidor/(41503:41505): Dispatch client - SOCKET: 8
+[INFO] 21:30:19:207 CPU-Servidor/(41503:41506): Interrupt client - SOCKET: 6
+[INFO] 21:30:40:131 CPU-Servidor/(41503:41505): Se recibio PID: 0
+[INFO] 21:30:40:132 CPU-Servidor/(41503:41505): Fetch PC: 0
+[INFO] 21:30:40:135 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:30:40:136 CPU-Servidor/(41503:41505): Fetch PC: 1
+[INFO] 21:30:40:136 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:30:40:137 CPU-Servidor/(41503:41505): Fetch PC: 2
+[INFO] 21:30:40:137 CPU-Servidor/(41503:41505): Execute: SUM
+[INFO] 21:30:40:138 CPU-Servidor/(41503:41505): Fetch PC: 3
+[INFO] 21:30:40:138 CPU-Servidor/(41503:41505): Execute: EXIT
+[INFO] 21:30:40:139 CPU-Servidor/(41503:41505): Proceso enviado a Kernel - PID: 0
+[INFO] 21:30:42:131 CPU-Servidor/(41503:41506): Interrupcion - PID: 0
+[INFO] 21:31:24:402 CPU-Servidor/(41503:41505): Se recibio PID: 1
+[INFO] 21:31:24:403 CPU-Servidor/(41503:41505): Fetch PC: 0
+[INFO] 21:31:24:403 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:31:24:403 CPU-Servidor/(41503:41505): Fetch PC: 1
+[INFO] 21:31:24:404 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:31:24:404 CPU-Servidor/(41503:41505): Fetch PC: 2
+[INFO] 21:31:24:405 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:31:24:405 CPU-Servidor/(41503:41505): Fetch PC: 3
+[INFO] 21:31:24:405 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:31:24:406 CPU-Servidor/(41503:41505): Fetch PC: 4
+[INFO] 21:31:24:406 CPU-Servidor/(41503:41505): Execute: IO_GEN_SLEEP
+[INFO] 21:31:24:407 CPU-Servidor/(41503:41505): Wait IO: Interfaz1 - time: 10
+[INFO] 21:31:24:407 CPU-Servidor/(41503:41505): Proceso enviado a Kernel - PID: 1
+[INFO] 21:31:26:403 CPU-Servidor/(41503:41506): Interrupcion - PID: 1
+[INFO] 21:31:39:411 CPU-Servidor/(41503:41505): Se recibio PID: 1
+[INFO] 21:31:39:411 CPU-Servidor/(41503:41505): Fetch PC: 5
+[INFO] 21:31:39:411 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:31:39:412 CPU-Servidor/(41503:41505): Fetch PC: 6
+[INFO] 21:31:39:412 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:31:39:412 CPU-Servidor/(41503:41505): Fetch PC: 7
+[INFO] 21:31:39:413 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:31:39:413 CPU-Servidor/(41503:41505): Fetch PC: 8
+[INFO] 21:31:39:413 CPU-Servidor/(41503:41505): Execute: SET
+[INFO] 21:31:39:413 CPU-Servidor/(41503:41505): Fetch PC: 9
+[INFO] 21:31:39:414 CPU-Servidor/(41503:41505): Execute: EXIT
+[INFO] 21:31:39:414 CPU-Servidor/(41503:41505): Proceso enviado a Kernel - PID: 1
+[INFO] 21:31:41:411 CPU-Servidor/(41503:41506): Interrupcion - PID: 1
+[ERROR] 21:32:25:912 CPU-Servidor/(41503:41506): Interrupt client disconnected - SOCKET: 6
+[ERROR] 21:32:25:912 CPU-Servidor/(41503:41505): Dispatch client disconnected - SOCKET: 8

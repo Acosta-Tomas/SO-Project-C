@@ -1,0 +1,50 @@
+[INFO] 21:30:19:131 Kernel/(41882:41884): Thread planificado de corto plazo creado
+[INFO] 21:30:19:134 Kernel/(41882:41886): Thread consola creado
+[INFO] 21:30:19:148 Kernel/(41882:41884): Connected to CPU Dispatch - SOCKET: 4
+[INFO] 21:30:19:135 Kernel/(41882:41885): Thread entrada salida creado
+[INFO] 21:30:19:135 Kernel/(41882:41883): Thread planificado de largo plazo creado
+[INFO] 21:30:19:150 Kernel/(41882:41885): Server ready - SOCKET: 6
+[INFO] 21:30:19:149 Kernel/(41882:41886): Connected to Memoria - SOCKET: 5
+[INFO] 21:30:19:135 Kernel/(41882:41882): is interrup? 12
+[INFO] 21:30:19:198 Kernel/(41882:41889): Thread Quatum creado
+[INFO] 21:30:19:208 Kernel/(41882:41889): Connected to CPU Interrupt -  SOCKET: 8
+[INFO] 21:30:24:210 Kernel/(41882:41885): New client - SOCKET: 7
+[INFO] 21:30:40:118 Kernel/(41882:41886): Comando: INICIAR_PROCESO
+[INFO] 21:30:40:118 Kernel/(41882:41886): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_solo_cpu_1
+[INFO] 21:30:40:129 Kernel/(41882:41889): Comienzo Quantum - PID: 0 - Tiempo :2000
+[INFO] 21:30:40:131 Kernel/(41882:41884): Proceso enviado a CPU - PID: 0
+[INFO] 21:30:40:139 Kernel/(41882:41884): Proceso Finalizado - PID: 0
+[INFO] 21:30:40:140 Kernel/(41882:41884): PC 4
+[INFO] 21:30:40:140 Kernel/(41882:41884): AX 2
+[INFO] 21:30:40:140 Kernel/(41882:41884): BX 1
+[INFO] 21:30:40:140 Kernel/(41882:41884): CX 0
+[INFO] 21:30:40:140 Kernel/(41882:41884): DX 0
+[INFO] 21:30:40:140 Kernel/(41882:41884): EAX 0
+[INFO] 21:30:40:140 Kernel/(41882:41884): EBX 0
+[INFO] 21:30:40:140 Kernel/(41882:41884): ECX 1
+[INFO] 21:30:40:140 Kernel/(41882:41884): EDX 1836213620
+[INFO] 21:30:40:140 Kernel/(41882:41884): SI 0
+[INFO] 21:30:40:140 Kernel/(41882:41884): DI 0
+[INFO] 21:30:42:131 Kernel/(41882:41889): Enviada Interrupcion
+[INFO] 21:31:24:399 Kernel/(41882:41886): Comando: INICIAR_PROCESO
+[INFO] 21:31:24:400 Kernel/(41882:41886): Archivo: /home/tomasacosta/SSOO/c-comenta-pruebas/preliminares/script_io_basico_1
+[INFO] 21:31:24:402 Kernel/(41882:41889): Comienzo Quantum - PID: 1 - Tiempo :2000
+[INFO] 21:31:24:402 Kernel/(41882:41884): Proceso enviado a CPU - PID: 1
+[INFO] 21:31:24:408 Kernel/(41882:41884): Proceso bloqueado - PID: 1
+[INFO] 21:31:26:403 Kernel/(41882:41889): Enviada Interrupcion
+[INFO] 21:31:39:411 Kernel/(41882:41885): Fin IO proceso a ready: 1
+[INFO] 21:31:39:411 Kernel/(41882:41889): Comienzo Quantum - PID: 1 - Tiempo :2000
+[INFO] 21:31:39:411 Kernel/(41882:41884): Proceso enviado a CPU - PID: 1
+[INFO] 21:31:39:414 Kernel/(41882:41884): Proceso Finalizado - PID: 1
+[INFO] 21:31:39:414 Kernel/(41882:41884): PC 10
+[INFO] 21:31:39:414 Kernel/(41882:41884): AX 0
+[INFO] 21:31:39:414 Kernel/(41882:41884): BX 0
+[INFO] 21:31:39:414 Kernel/(41882:41884): CX 0
+[INFO] 21:31:39:414 Kernel/(41882:41884): DX 0
+[INFO] 21:31:39:414 Kernel/(41882:41884): EAX 1
+[INFO] 21:31:39:414 Kernel/(41882:41884): EBX 1
+[INFO] 21:31:39:414 Kernel/(41882:41884): ECX 1
+[INFO] 21:31:39:414 Kernel/(41882:41884): EDX 1
+[INFO] 21:31:39:414 Kernel/(41882:41884): SI 0
+[INFO] 21:31:39:414 Kernel/(41882:41884): DI 0
+[INFO] 21:31:41:411 Kernel/(41882:41889): Enviada Interrupcion

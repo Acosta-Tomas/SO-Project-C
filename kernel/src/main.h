@@ -1,12 +1,12 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <utils/client.h>
-#include <utils/server.h>
-#include <utils/general.h>
+#include <semaphore.h>
+#include <readline/readline.h>
 #include <commons/collections/queue.h>
+#include <utils/pcb_protocol.h>
+#include <utils/io_protocol.h>
+#include <utils/mem_protocol.h>
 
 // FILES
 #define CONFIG_FILE "kernel.config"
@@ -23,6 +23,11 @@
 #define KEY_PUERTO_MEMORIA "PUERTO_MEMORIA"
 #define KEY_ALGORITMO_PLANIFICACION "ALGORITMO_PLANIFICACION"
 #define KEY_QUANTUM "QUANTUM"
+
+typedef struct {
+	uint32_t pid;
+	uint32_t quantum;
+} t_quantum; // Kenrel
 
 extern t_config* config;
 extern t_log* logger;
@@ -42,6 +47,7 @@ extern t_queue* queue_new;
 extern t_queue* queue_blocked;
 extern uint32_t next_pid;
 extern t_quantum* running_pid;
+
 
 void* largo_main(void *arg);
 void* corto_main(void *arg);

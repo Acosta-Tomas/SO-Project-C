@@ -1,4 +1,62 @@
-#include <utils/client.h>
+#include "general_protocol.h"
+
+// SERVER
+
+int recibir_operacion(int socket_cliente){
+	int cod_op;
+
+	// Recibir codigo operacion
+	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0) return cod_op;
+	else{
+		close(socket_cliente);
+		return -1;
+	}
+}
+
+void* recibir_buffer(int* size, int socket_cliente){
+	void * buffer;
+
+	// Recibo el tamaño de lo que vamos a leer
+	recv(socket_cliente, size, sizeof(int), MSG_WAITALL);
+	buffer = malloc(*size);
+	// Guardo espacio para ese tamaño y espero que lo manden
+	recv(socket_cliente, buffer, *size, MSG_WAITALL);
+
+	return buffer;
+}
+
+void recibir_mensaje(int socket_cliente, t_log* logger){
+	int size;
+
+	char* buffer = recibir_buffer(&size, socket_cliente); // Sabemos que es char pq es un msj string
+	
+	log_info(logger, "Me llego el mensaje %s", buffer);
+	free(buffer);
+}
+
+t_list* recibir_paquete(int socket_cliente){
+	int size;
+	int desplazamiento = 0;
+	void * buffer;
+	t_list* valores = list_create();
+	int tamanio;
+
+	// Recibimos el bufffer entero serialiado
+	buffer = recibir_buffer(&size, socket_cliente);
+	while(desplazamiento < size)
+	{
+		memcpy(&tamanio, buffer + desplazamiento, sizeof(int)); // Copiamos el size del dato (es un int siempre)
+		desplazamiento+=sizeof(int);
+		char* valor = malloc(tamanio); // reservamos memoria para ese dato que viene
+		memcpy(valor, buffer+desplazamiento, tamanio); // guardamos el valor 
+		desplazamiento+=tamanio;
+		list_add(valores, valor);	// Agregamos a la lista
+	}
+	free(buffer);
+	return valores;
+}
+
+// CLIENT
 
 void* serializar_paquete(t_paquete* paquete, int bytes){
 	// bytes tiene la cantidad del sizde del stream + size(codigo op) +  size(buffer)
@@ -16,30 +74,6 @@ void* serializar_paquete(t_paquete* paquete, int bytes){
 	desplazamiento+= paquete->buffer->size;
 
 	return magic;
-}
-
-int crear_conexion(char *ip, char* puerto){
-	struct addrinfo hints, *server_info;
-
-	memset(&hints, 0, sizeof(hints));
-	hints.ai_family = AF_INET;
-	hints.ai_socktype = SOCK_STREAM;
-	hints.ai_flags = AI_PASSIVE;
-
-	getaddrinfo(ip, puerto, &hints, &server_info);
-
-	// Ahora vamos a crear el socket.
-	int socket_cliente = socket(server_info->ai_family, 
-								server_info->ai_socktype, 
-								server_info->ai_protocol);
-
-	// Ahora que tenemos el socket, vamos a conectarlo
-	connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen);
-
-
-	freeaddrinfo(server_info);
-
-	return socket_cliente;
 }
 
 void enviar_mensaje(char* mensaje, int socket_cliente){
@@ -76,7 +110,7 @@ t_paquete* crear_paquete(op_code op){
 	crear_buffer(paquete);
 	
 	return paquete;
-}
+} 
 
 void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio){
 	// Se mueve con un tamaño nuevo de -> tamaño actual del stream (buffer_size) + tamaño de lo que viene (tamanio) + int (para agregar de cuanto es el tamaño nuevo de lo que viene)
@@ -89,7 +123,7 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio){
 
 	// Se agrega al buffer el tamaño del size y el nuevo valor
 	paquete->buffer->size += tamanio + sizeof(int); 
-}
+} 
 
 void agregar_uint_a_paquete(t_paquete* paquete, void* valor, int tamanio){
 
@@ -113,45 +147,4 @@ void eliminar_paquete(t_paquete* paquete){
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-}
-
-void liberar_conexion(int socket_cliente){
-	close(socket_cliente);
-}
-
-void terminar_programa(int conexion, t_log* logger, t_config* config){
-	log_destroy(logger);
-	config_destroy(config);
-	liberar_conexion(conexion);
-}
-
-void agregar_pcb_paquete(t_paquete* paquete, t_pcb* pcb){
-    agregar_uint_a_paquete(paquete, &pcb->pid, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->pc, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->quantum, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->status, sizeof(pid_status));
-
-    // registros
-    agregar_uint_a_paquete(paquete, &pcb->registers->ax, sizeof(uint8_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->bx, sizeof(uint8_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->cx, sizeof(uint8_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->dx, sizeof(uint8_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->eax, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->ebx, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->ecx, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->edx, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->si, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->di, sizeof(uint32_t));
-    agregar_uint_a_paquete(paquete, &pcb->registers->pc, sizeof(uint32_t));
-}
-
-void agregar_init_process_paquete(t_paquete* paquete, uint32_t pid, char* path){
-	agregar_uint_a_paquete(paquete, &pid, sizeof(uint32_t));
-	agregar_a_paquete(paquete, path, strlen(path) + 1);
-}
-
-void agregar_io_paquete(t_paquete* paquete, set_instruction instruction, char* interfaz, char* time){
-	agregar_uint_a_paquete(paquete, &instruction, sizeof(set_instruction));
-	agregar_a_paquete(paquete, interfaz, strlen(interfaz) + 1);
-	agregar_a_paquete(paquete, time, strlen(time) + 1);
 }

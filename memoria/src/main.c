@@ -37,7 +37,6 @@ int main(int argc, char* argv[]) {
 
 
 void* memoria(void *client) {
-    t_list* lista;
     int cliente_fd = *((int*) client);
 
     for (int cod_op = recibir_operacion(cliente_fd); cod_op != -1; cod_op = recibir_operacion(cliente_fd)){

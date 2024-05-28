@@ -1,11 +1,9 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <utils/client.h>
-#include <utils/server.h>
-#include <utils/general.h>
+#include <semaphore.h>
+#include <utils/pcb_protocol.h>
+#include <utils/io_protocol.h>
 
 // FILES
 #define CONFIG_FILE "cpu.config"

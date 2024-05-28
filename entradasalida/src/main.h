@@ -1,11 +1,7 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <utils/client.h>
-#include <utils/server.h>
-#include <utils/general.h>
+#include <utils/io_protocol.h>
 
 // FILES
 #define CONFIG_FILE "entradasalida.config"
@@ -20,7 +16,5 @@
 
 extern t_log* logger;
 extern t_config* config;
-
-void paquete_por_consola(int);
 
 #endif
