@@ -17,6 +17,7 @@ typedef struct {
     t_list* file; 
 } t_memoria;
 
+extern t_list* lista_memoria;
 extern t_log* logger;
 extern t_config* config;
 

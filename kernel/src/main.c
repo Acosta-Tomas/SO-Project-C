@@ -51,20 +51,21 @@ int main(int argc, char* argv[]) {
         log_error(logger, "Problema al crear hilo para el planificador de largo plazo");
         exit(EXIT_FAILURE);
     }
+
     if (pthread_create(&corto_thread, NULL, corto_main, NULL)) {
         log_error(logger, "Problema al crear hilo para el planificador de largo plazo");
         exit(EXIT_FAILURE);
     }
+
     if (pthread_create(&io_thread, NULL, io_main, NULL)) {
         log_error(logger, "Problema al crear hilo para el planificador de largo plazo");
         exit(EXIT_FAILURE);
     }
+
     if (pthread_create(&consola_thread, NULL, consola_main, NULL)) {
         log_error(logger, "Problema al crear hilo para el planificador de largo plazo");
         exit(EXIT_FAILURE);
     }
-
-    log_info(logger, "is interrup? %d", strcmp(algoritmo, "FIFO"));
 
     if (strcmp(algoritmo, "FIFO") != 0) {
         if (pthread_create(&quatum_thread, NULL, quantum_main, NULL)) {
@@ -95,15 +96,3 @@ int main(int argc, char* argv[]) {
     config_destroy(config);
     return EXIT_SUCCESS;
 }
-
-// // Solo para probar threads, se incia y termina al toque
-// void cliente_main(){
-//     t_log* logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_CLIENT_LOG), true, LOG_LEVEL_INFO);
-//     log_info(logger, "Thread - Client for testing");
-
-//     char* ip_cpu = config_get_string_value(config, KEY_IP_CPU);
-//     char* puerto_cpu_dispatch = config_get_string_value(config, KEY_PUERTO_CPU_DISPATCH);
-//     char* puerto_cpu_interrupt = config_get_string_value(config, KEY_PUERTO_CPU_INTERRUPT);
-
-//     log_destroy(logger);
-// }

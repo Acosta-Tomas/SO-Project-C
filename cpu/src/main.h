@@ -50,10 +50,6 @@ extern bool has_interrupt;
 extern sem_t mutex_interrupt;
 // extern sem_t mutex_pcb;
 
-
-t_registros* create_registros(void);
-void log_registers();
-
 void* dispatch(void*);
 void* interrupt(void*);
 
