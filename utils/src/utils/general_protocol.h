@@ -22,7 +22,11 @@ typedef enum{
 	INIT_PID,
 	INIT_PID_SUCCESS,
 	INIT_PID_ERROR,
-	INTERRUPT
+	INTERRUPT,
+	MEM_RESIZE,
+	MEM_READ,
+	MEM_WRITE,
+	MEM_PID_PAGE,
 } op_code;
 
 typedef struct{

@@ -18,3 +18,11 @@ extern t_log* logger;
 extern t_config* config;
 
 #endif
+
+/*
+    Agregar interfaz de
+        STDIN
+        STDOUT
+
+    Agregar hilo para conectarse a memoria (Para dichos )
+*/

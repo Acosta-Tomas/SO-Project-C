@@ -77,3 +77,15 @@ unsigned long sizeof_register(char*);
 set_instruction mapInstruction(char*);
 
 #endif
+
+/*
+    Agregar instrucciones de:
+        MOV_IN, 
+        MOV_OUT, 
+        RESIZE, 
+        COPY_STRING, 
+        IO_STDIN_READ, 
+        IO_STDOUT_WRITE.
+        SIGNA, -> Si llego con manejador de recursos
+        WAIT -> Si llego con manejador de recursos
+*/

@@ -1,10 +1,15 @@
 #include "main.h"
 
-t_list* lista_memoria;
+t_dictionary* memoria_procesos;
 t_log* logger;
+t_config* config;
+void* memoria_usuario;
+t_bitarray* bit_map;
+int page_size;
+int max_pages;
 
 int main(int argc, char* argv[]) {
-    t_config* config = config_create("memoria.config");
+    config = config_create("memoria.config");
 
     if (config == NULL) exit(EXIT_FAILURE); 
 
@@ -13,7 +18,22 @@ int main(int argc, char* argv[]) {
     int server_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA));
     log_info(logger, "Server ready - SOCKET: %d", server_fd);
 
-    lista_memoria = list_create();
+    memoria_procesos = dictionary_create();
+
+    int mem_size = config_get_int_value(config, KEY_TAM_MEMORIA);
+    page_size = config_get_int_value(config, KEY_TAM_PAGINA);
+
+    max_pages = mem_size/page_size;
+
+    void* bits = calloc(1, max_pages/8);
+
+    if (bits == NULL) {
+        perror("Error al asignar memoria");
+        return EXIT_FAILURE;
+    }
+
+    memoria_usuario = malloc(mem_size);
+    bit_map = bitarray_create_with_mode(bits, max_pages/8, MSB_FIRST);
 
     while (1) {
         int* cliente_fd = malloc(sizeof(int));
