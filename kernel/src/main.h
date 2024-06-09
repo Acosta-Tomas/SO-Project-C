@@ -62,3 +62,10 @@ void enviar_cpu(int, t_pcb*);
 t_pcb* esperar_cpu(int);
 
 #endif
+
+/*
+	Arreglar el RR y agregar el RR (dejar que mueran o matar hilos) usar de commons el times
+	Aceptar varias I/O con su respectivo nombre (Manejar que no exista la interfaz pedida de CPU)
+	Planificador largo plazo (maximo de proceso y eliminar un programa)
+	Manejar recursos (menos prioridad)
+*/
