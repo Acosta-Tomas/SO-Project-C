@@ -45,7 +45,9 @@ typedef struct {
 extern t_log* logger;
 extern t_config* config;
 extern t_pcb* pcb;
+
 extern bool has_interrupt;
+extern uint32_t page_size;
 
 extern sem_t mutex_interrupt;
 // extern sem_t mutex_pcb;
@@ -56,7 +58,7 @@ void* interrupt(void*);
 void cpu(int, int);
 t_list* fetch(int);
 t_intruction_execute* decode(t_list*);
-pid_status exec(t_intruction_execute*, int);
+pid_status exec(t_intruction_execute*, int, int);
 bool check_interrupt();
 
 void* get_register(char*);
@@ -69,6 +71,7 @@ void set_registro_uint8(uint8_t*, uint8_t);
 void set_registro_uint32(uint32_t*, uint32_t);
 bool jnz_register(char*, char*);
 pid_status enviar_io(int, t_intruction_execute*);
+pid_status resize_process(int, char*);
 
 void pc_plus_plus(uint32_t*, uint32_t);
 uint8_t atouint8(char*);
@@ -82,7 +85,7 @@ set_instruction mapInstruction(char*);
     Agregar instrucciones de:
         MOV_IN, 
         MOV_OUT, 
-        RESIZE, 
+        RESIZE, OK
         COPY_STRING, 
         IO_STDIN_READ, 
         IO_STDOUT_WRITE.

@@ -25,11 +25,11 @@ typedef struct {
 } t_memoria;
 
 
-extern int page_size;
-extern int max_pages;
-extern void* memoria_usuario;
-extern t_bitarray* bit_map;
-extern t_dictionary* memoria_procesos;
+extern uint32_t page_size;
+extern uint32_t max_pages;
+extern void* memoria_usuario; 
+extern t_bitarray* bit_map; // Neceista sem?
+extern t_dictionary* memoria_procesos; // necesita sem?
 extern t_log* logger;
 extern t_config* config;
 
@@ -37,6 +37,10 @@ op_code leer_archivo(uint32_t, const char*);
 void* memoria(void*);
 char** get_instruction_pid(uint32_t, uint32_t);
 void enviar_instruccion(int, char**);
+void resize_process(int);
+op_code resize_up(int, t_list*);
+void resize_down(int, t_list*);
+void retardo(void);
 
 #endif
  /* 

@@ -3,6 +3,7 @@
 t_log* logger;
 t_config* config;
 t_pcb* pcb;
+uint32_t page_size;
 
 pthread_t thread_dispatch, thread_interrupt;
 
@@ -45,17 +46,21 @@ int main(int argc, char* argv[]) {
 
 void* dispatch(void* arg) {
     int dispatch_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA_DISPATCH));
-    log_info(logger, "Dispatch ready - SOCKET: %d", dispatch_fd);
+    log_info(logger, "Dispatch - SOCKET: %d", dispatch_fd);
 
     char* ip_memoria = config_get_string_value(config, KEY_IP_MEMORIA);
     char* puerto_memoria = config_get_string_value(config, KEY_PUERTO_MEMORIA);
     int memoria_fd = crear_conexion(ip_memoria, puerto_memoria);
+    op_code code_op = MEM_PAGE_SIZE;
 
-    log_info(logger, "Connected to Memoria - SOCKET: %d", memoria_fd);
+    send(memoria_fd, &code_op , sizeof(op_code), 0);
+    recv(memoria_fd, &page_size, sizeof(uint32_t), MSG_WAITALL);
+
+    log_info(logger, "Memoria - SOCKET: %d - Page size: %u", memoria_fd, page_size);
 
     while(1) {
         int kernel_fd = esperar_cliente(dispatch_fd);
-        log_info(logger, "Dispatch client - SOCKET: %d", kernel_fd);
+        log_info(logger, "Dispatch connected - SOCKET: %d", kernel_fd);
 
         for (op_code cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
             if (cod_op == PCB) {
@@ -71,7 +76,7 @@ void* dispatch(void* arg) {
             }
         }
 
-        log_error(logger, "Dispatch client disconnected - SOCKET: %d", kernel_fd);
+        log_error(logger, "Dispatch disconnected - SOCKET: %d", kernel_fd);
     }
     
     liberar_conexion(memoria_fd);
@@ -80,11 +85,11 @@ void* dispatch(void* arg) {
 
 void* interrupt(void* arg) {
     int dispatch_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA_INTERRUPT));
-    log_info(logger, "Interrupt ready - SOCKET: %d", dispatch_fd);
+    log_info(logger, "Interrupt - SOCKET: %d", dispatch_fd);
 
     while(1) {
         int kernel_fd = esperar_cliente(dispatch_fd);
-        log_info(logger, "Interrupt client - SOCKET: %d", kernel_fd);
+        log_info(logger, "Interrupt connected - SOCKET: %d", kernel_fd);
 
         for (op_code cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
             if (cod_op == INTERRUPT) {
@@ -101,7 +106,7 @@ void* interrupt(void* arg) {
             }
         }
 
-        log_error(logger, "Interrupt client disconnected - SOCKET: %d", kernel_fd);
+        log_error(logger, "Interrupt disconnected - SOCKET: %d", kernel_fd);
     }
 
     close(dispatch_fd);

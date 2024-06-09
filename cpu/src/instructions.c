@@ -111,6 +111,21 @@ void set_registro_uint32(uint32_t* registro, uint32_t value) {
     *(registro) = value;
 }
 
+pid_status resize_process(int memoria_fd, char* size){
+    uint32_t new_size = atouint32(size);
+    op_code code_op = MEM_RESIZE;
+
+
+    send(memoria_fd, &code_op, sizeof(op_code), 0);
+    send(memoria_fd, &pcb->pid, sizeof(uint32_t), 0);
+    send(memoria_fd, &new_size, sizeof(uint32_t), 0);
+    recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
+
+    if (code_op == MEM_ERROR) return ERROR;
+
+    return RUNNING;
+}
+
 // El numero en char que viene de lo leido en memoria, hay que pasarlo a uint que corresponda
 
 uint8_t atouint8(char* value) {
@@ -143,6 +158,12 @@ set_instruction mapInstruction (char* intruction) {
     if (strcmp(intruction, "SUM") == 0) return SUM;
     if (strcmp(intruction, "SUB") == 0) return SUB;
     if (strcmp(intruction, "JNZ") == 0) return JNZ;
+    if (strcmp(intruction, "MOV_IN") == 0) return MOV_IN;
+    if (strcmp(intruction, "MOV_OUT") == 0) return MOV_OUT;
+    if (strcmp(intruction, "RESIZE") == 0) return RESIZE;
+    if (strcmp(intruction, "COPY_STRING") == 0) return COPY_STRING;
+    if (strcmp(intruction, "IO_STDIN_READ") == 0) return IO_STDIN_READ;
+    if (strcmp(intruction, "IO_STDOUT_WRITE") == 0) return IO_STDOUT_WRITE;
     if (strcmp(intruction, "IO_GEN_SLEEP") == 0) return IO_GEN_SLEEP;
     if (strcmp(intruction, "EXIT") == 0) return EXIT;
     return UNKNOWN;

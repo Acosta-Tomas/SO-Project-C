@@ -10,7 +10,7 @@ void cpu(int memoria_fd, int kernel_fd){
     while(result == RUNNING && !interrupt) {
         list_instruction = fetch(memoria_fd);
         decoded_instruction = decode(list_instruction);
-        result = exec(decoded_instruction, kernel_fd);
+        result = exec(decoded_instruction, kernel_fd, memoria_fd);
         interrupt = check_interrupt(result);
     }
 
@@ -74,6 +74,11 @@ t_intruction_execute* decode(t_list* list_instruction) {
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->params[1] = list_remove(list_instruction, 0);
             break;
+        case RESIZE:
+            decoded_instruction->operation = RESIZE;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            break;
+
         case IO_GEN_SLEEP:
             decoded_instruction->operation = IO_GEN_SLEEP;
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
@@ -96,7 +101,7 @@ t_intruction_execute* decode(t_list* list_instruction) {
     return decoded_instruction;
 }
 
-pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd) {
+pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int memoria_fd) {
     pid_status status = RUNNING; 
     bool ignorePC = false;
 
@@ -124,6 +129,10 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd) {
 
         case JNZ:
             ignorePC = jnz_register(decoded_instruction->params[0], decoded_instruction->params[1]);
+            break;
+
+        case RESIZE: 
+            status = resize_process(memoria_fd, decoded_instruction->params[0]);
             break;
 
         case IO_GEN_SLEEP:

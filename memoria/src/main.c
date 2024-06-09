@@ -1,12 +1,15 @@
 #include "main.h"
 
 t_dictionary* memoria_procesos;
-t_log* logger;
-t_config* config;
 void* memoria_usuario;
 t_bitarray* bit_map;
-int page_size;
-int max_pages;
+
+uint32_t page_size;
+uint32_t max_pages;
+
+t_log* logger;
+t_config* config;
+
 
 int main(int argc, char* argv[]) {
     config = config_create("memoria.config");
@@ -20,10 +23,10 @@ int main(int argc, char* argv[]) {
 
     memoria_procesos = dictionary_create();
 
-    int mem_size = config_get_int_value(config, KEY_TAM_MEMORIA);
-    page_size = config_get_int_value(config, KEY_TAM_PAGINA);
-
+    uint32_t mem_size = (uint32_t) config_get_int_value(config, KEY_TAM_MEMORIA);
+    page_size = (uint32_t) config_get_int_value(config, KEY_TAM_PAGINA);
     max_pages = mem_size/page_size;
+    memoria_usuario = malloc(mem_size);
 
     void* bits = calloc(1, max_pages/8);
 
@@ -32,7 +35,6 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
 
-    memoria_usuario = malloc(mem_size);
     bit_map = bitarray_create_with_mode(bits, max_pages/8, MSB_FIRST);
 
     while (1) {

@@ -8,6 +8,15 @@ void* memoria(void *client) {
             case MENSAJE:
                 recibir_mensaje(cliente_fd, logger);
                 break;
+
+            case MEM_PAGE_SIZE:
+                send(cliente_fd, &page_size, sizeof(page_size), 0);
+                break;
+
+            case MEM_RESIZE:
+                resize_process(cliente_fd);
+                break;
+
             case INIT_PID:
                 t_init_pid* pid_to_init = recibir_init_process(cliente_fd, logger);
 
@@ -31,7 +40,6 @@ void* memoria(void *client) {
                 enviar_instruccion(cliente_fd, array_instruction);     
 
                 log_info(logger, "PID: %u - PC: %u enviado a CPU", pid, pc);  
-
                 break;
             default:
                 log_warning(logger,"Operacion desconocida. No quieras meter la pata");
@@ -64,15 +72,11 @@ op_code leer_archivo(uint32_t pid, const char *nombre_archivo){
         string_append(&instructions, buffer);
     }
 
-    log_info(logger, "Archivo Leido: %s tam: %ld", instructions, strlen(instructions));
-
 
     t_memoria* pid_memoria = malloc(sizeof(t_memoria));
     pid_memoria->pid = pid;
     pid_memoria->file = string_split(instructions, "\n");
     pid_memoria->pages = list_create();
-
-    log_info(logger, "Cantidad instrucciones: %i", string_array_size(pid_memoria->file));
 
     dictionary_put(memoria_procesos, string_itoa((int) pid), pid_memoria);
 
@@ -87,7 +91,6 @@ char** get_instruction_pid(uint32_t pid, uint32_t pc){
     t_memoria* memoria_pid = dictionary_get(memoria_procesos, string_itoa((int) pid));
 
     char* instruccion = *(memoria_pid->file + pc);
-
     char** instruccion_formateada = string_split(instruccion, " ");
 
     return instruccion_formateada;
@@ -100,8 +103,72 @@ void enviar_instruccion(int client_fd, char** array_instruction){
         agregar_a_paquete(paquete, array_instruction[i], strlen(array_instruction[i]) + 1);
     }
 
-    usleep(config_get_int_value(config, KEY_RETARDO_RESPUESTA) * 1000);
-
+    retardo();
     enviar_paquete(paquete, client_fd);
     eliminar_paquete(paquete);
+}
+
+void resize_process(int client_fd){
+    uint32_t pid, size;
+    t_memoria* pid_mem;
+    op_code code_op = MEM_SUCCESS;
+
+    recv(client_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
+    recv(client_fd, &size, sizeof(uint32_t), MSG_WAITALL);
+
+    pid_mem = dictionary_get(memoria_procesos, string_itoa((int) pid));
+    int pages = ceil((double)size / page_size) - list_size(pid_mem->pages);
+
+    if (pages > 0) code_op = resize_up(pages, pid_mem->pages);
+    if (pages < 0) resize_down(pages * (-1), pid_mem->pages);
+
+    retardo();
+
+    send(client_fd, &code_op, sizeof(op_code), 0);
+}
+
+
+/*
+    Itero desde la nueva posicion de pagina hasta que:
+        -> Se recorrio todo el bitmap
+        -> Se hayan asignado todas las paginas pedidas
+    
+    Si termino de iterar y pages es mayor a 0 significa que hubvieron paginas que no se pudieron asignar
+*/
+op_code resize_up(int pages, t_list* list_pages){
+    for(int i = 0; i < bitarray_get_max_bit(bit_map) && pages > 0; i += 1){
+        if(!bitarray_test_bit(bit_map, i)) {
+            uint32_t* frame = malloc(sizeof(uint32_t));
+            *(frame) = i;
+            list_add(list_pages, frame);
+            bitarray_set_bit(bit_map, i);
+            pages -= 1;
+        }
+    }
+
+    if (pages > 0) return MEM_ERROR;
+
+    return MEM_SUCCESS;
+}
+
+/* 
+    Itero desde la ultima pagina hasta que:
+        -> No haya mas paginas para liberar
+        -> Ya libere todas las paginas
+    
+    Por cada iteracion remuevo la pagina y pongo en 0 el frame del bitmap correspondiente
+*/
+void resize_down(int pages, t_list* list_pages){
+    for(int i = list_size(list_pages) - 1; i >= 0 && pages > 0; i -= 1){
+        uint32_t* frame = list_remove(list_pages, i);
+        bitarray_clean_bit(bit_map, *(frame));
+
+        free(frame);
+        pages -= 1;
+    }
+
+}
+
+void retardo(void){
+    usleep(config_get_int_value(config, KEY_RETARDO_RESPUESTA) * 1000);
 }
