@@ -56,6 +56,9 @@ int main(int argc, char* argv[]) {
 
     log_destroy(logger);
     config_destroy(config);
+    bitarray_destroy(bit_map);
+    free(bits);
+    free(memoria_usuario);
     
     return EXIT_SUCCESS;
 }
