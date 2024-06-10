@@ -41,6 +41,9 @@ void resize_process(int);
 op_code resize_up(int, t_list*);
 void resize_down(int, t_list*);
 void retardo(void);
+void get_pid_page(int);
+void escribir_memoria(int);
+void lee_memoria(int);
 
 #endif
  /* 

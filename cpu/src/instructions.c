@@ -97,6 +97,117 @@ pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
     return BLOCKED;
 }
 
+// Falta uint8
+pid_status mov_out(int memoria_fd, char* direccion_logica, char* registro){
+    uint32_t size_register = (uint32_t) sizeof_register(registro);
+    uint32_t regis = *((uint32_t*) get_register(registro));
+    t_list* frames = list_create();
+
+    mmu(memoria_fd, atouint32(direccion_logica), size_register, frames);
+
+    while(list_size(frames)){
+        t_memoria_fisica* frame = list_remove(frames, 0); // El memcpy de agregar paquete hace de menos a mas significativo
+        
+        t_paquete* paquete = crear_paquete(MEM_WRITE);
+
+        agregar_uint_a_paquete(paquete, &frame->direccion_fisica, sizeof(uint32_t));
+        agregar_a_paquete(paquete, &regis, frame->bytes);
+
+        enviar_paquete(paquete, memoria_fd);
+
+        op_code code;
+        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
+
+        regis = regis >> frame->bytes * 8;
+
+        eliminar_paquete(paquete);
+        free(frame);
+
+        if (code != MEM_SUCCESS) return ERROR;
+    }
+
+    return RUNNING;
+}
+
+// Falta uint8
+pid_status mov_in(int memoria_fd, char* registro, char* direccion_logica){
+    uint32_t size_register = (uint32_t) sizeof_register(registro);
+    uint32_t* regis = (uint32_t*) get_register(registro);
+    void* buffer = malloc(size_register);
+    t_list* frames = list_create();
+
+    mmu(memoria_fd, atouint32(direccion_logica), size_register, frames);
+
+    op_code code_op = MEM_READ;
+    int desplazamiento = 0;
+
+    while(list_size(frames)){
+        t_memoria_fisica* frame = list_remove(frames, 0);
+
+        send(memoria_fd, &code_op, sizeof(op_code), 0);
+        send(memoria_fd, &frame->direccion_fisica, sizeof(uint32_t), 0);
+        send(memoria_fd, &frame->bytes, sizeof(uint32_t), 0);
+
+
+        op_code code;
+        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
+        recv(memoria_fd, buffer + desplazamiento, frame->bytes, MSG_WAITALL);
+
+        desplazamiento = desplazamiento + frame->bytes;
+        free(frame);
+
+        if (code != MEM_SUCCESS) return ERROR;
+    }
+
+    memcpy(regis, buffer, size_register);
+
+    log_info(logger, "Leido de memoria: %u", *(regis));
+
+    return RUNNING;
+
+}
+
+void mmu(int memoria_fd, uint32_t direccion_logica, uint32_t size, t_list* frames){
+    uint32_t pagina = floor(direccion_logica / page_size);
+    uint32_t desplazamiento = direccion_logica - pagina * page_size;
+    t_memoria_fisica* frame = calloc(1, sizeof(t_memoria_fisica));
+
+    if (desplazamiento + size <= page_size){
+        frame->bytes = size;
+        size = 0;
+    } else {
+        frame->bytes = page_size - desplazamiento;
+        size = size - frame->bytes;
+    }
+
+    op_code code_op = MEM_PID_PAGE;
+
+    send(memoria_fd, &code_op, sizeof(op_code), 0);
+    send(memoria_fd, &pcb->pid, sizeof(uint32_t), 0);
+    send(memoria_fd, &pagina, sizeof(uint32_t), 0);
+    
+    // t_paquete* paquete = crear_paquete(MEM_PID_PAGE);
+    
+    // agregar_uint_a_paquete(paquete, &pcb->pid, sizeof(uint32_t));
+    // agregar_uint_a_paquete(paquete, &pagina, sizeof(uint32_t));
+
+    // enviar_paquete(paquete, memoria_fd);
+    // eliminar_paquete(paquete);
+
+    
+    recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
+
+    if (code_op == MEM_ERROR) return;
+
+    if (code_op == MEM_SUCCESS) {
+        recv(memoria_fd, &frame->direccion_fisica, sizeof(uint32_t), MSG_WAITALL);
+        frame->direccion_fisica = frame->direccion_fisica * page_size + desplazamiento;
+        list_add(frames, frame);
+    }
+
+    if (size > 0) mmu(memoria_fd, (pagina + 1) * page_size, size, frames);     
+}
+
 // Funciones para updatear un registro (uno es para ++ y el otro para setear valor)
 
 void pc_plus_plus(u_int32_t* registro, u_int32_t value){
@@ -119,6 +230,7 @@ pid_status resize_process(int memoria_fd, char* size){
     send(memoria_fd, &code_op, sizeof(op_code), 0);
     send(memoria_fd, &pcb->pid, sizeof(uint32_t), 0);
     send(memoria_fd, &new_size, sizeof(uint32_t), 0);
+
     recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
 
     if (code_op == MEM_ERROR) return ERROR;

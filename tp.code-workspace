@@ -10,7 +10,8 @@
 			"socket": "c",
 			"string_view": "c",
 			"initializer_list": "c",
-			"utility": "c"
+			"utility": "c",
+			"string": "c"
 		},
 		"C_Cpp.errorSquiggles": "disabled",
 	},

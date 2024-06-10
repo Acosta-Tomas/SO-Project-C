@@ -41,6 +41,11 @@ typedef struct {
     char* params[5];
 } t_intruction_execute;
 
+typedef struct {
+    uint32_t direccion_fisica;
+    uint32_t bytes;
+} t_memoria_fisica;
+
 
 extern t_log* logger;
 extern t_config* config;
@@ -72,6 +77,9 @@ void set_registro_uint32(uint32_t*, uint32_t);
 bool jnz_register(char*, char*);
 pid_status enviar_io(int, t_intruction_execute*);
 pid_status resize_process(int, char*);
+pid_status mov_out(int, char*, char*);
+pid_status mov_in(int, char*, char*);
+void mmu(int, uint32_t, uint32_t, t_list*);
 
 void pc_plus_plus(uint32_t*, uint32_t);
 uint8_t atouint8(char*);

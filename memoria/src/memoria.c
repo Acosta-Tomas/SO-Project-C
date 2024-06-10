@@ -16,6 +16,18 @@ void* memoria(void *client) {
             case MEM_RESIZE:
                 resize_process(cliente_fd);
                 break;
+            
+            case MEM_PID_PAGE:
+                get_pid_page(cliente_fd);
+                break;
+
+            case MEM_WRITE: 
+                escribir_memoria(cliente_fd);
+                break;
+
+            case MEM_READ: 
+                lee_memoria(cliente_fd);
+                break;
 
             case INIT_PID:
                 t_init_pid* pid_to_init = recibir_init_process(cliente_fd, logger);
@@ -125,6 +137,86 @@ void resize_process(int client_fd){
     retardo();
 
     send(client_fd, &code_op, sizeof(op_code), 0);
+}
+
+void get_pid_page(int client_fd) {
+    uint32_t pid, page;
+    t_memoria* pid_mem;
+    uint32_t* frame;
+
+    recv(client_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
+    recv(client_fd, &page, sizeof(uint32_t), MSG_WAITALL);
+
+    pid_mem = dictionary_get(memoria_procesos, string_itoa((int) pid));
+
+    int s = list_size(pid_mem->pages);
+
+    if (page >= s) {
+        op_code code = MEM_ERROR;
+        send(client_fd, &code, sizeof(op_code), 0);
+        return;
+    }
+
+    frame = list_get(pid_mem->pages, page);
+
+    retardo();
+
+    op_code code = MEM_SUCCESS;
+    send(client_fd, &code, sizeof(op_code), 0);
+    send(client_fd, frame, sizeof(uint32_t), 0);
+
+}
+
+void escribir_memoria(int client_fd){
+    int size;
+    int desplazamiento = 0;
+    void* buffer;
+    uint32_t direccion_fisica;
+	int value_size;
+
+    buffer = recibir_buffer(&size, client_fd);
+
+    memcpy(&direccion_fisica, buffer + desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    memcpy(&value_size, buffer + desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+	void* value = malloc(value_size);
+    memcpy(value, buffer + desplazamiento, value_size);
+    desplazamiento += value_size;
+
+    if (size != desplazamiento) log_info(logger, "Error al recibir PID Para iniciar");
+
+	free(buffer);
+
+    void* memoria_desplazada = memoria_usuario + direccion_fisica;
+
+    memcpy(memoria_desplazada, value, value_size);
+
+    retardo();
+
+    op_code code_op = MEM_SUCCESS;
+
+    send(client_fd, &code_op, sizeof(op_code), 0);
+}
+
+void lee_memoria(int client_fd){
+    uint32_t direccion_fisica;
+    int buffer_size;
+
+    recv(client_fd, &direccion_fisica, sizeof(uint32_t), MSG_WAITALL);
+    recv(client_fd, &buffer_size, sizeof(uint32_t), MSG_WAITALL);
+
+    void* buffer = malloc(buffer_size);
+
+    void* memoria_desplazada = memoria_usuario + direccion_fisica;
+
+    memcpy(buffer, memoria_desplazada, buffer_size);
+
+    retardo();
+
+    op_code code_op = MEM_SUCCESS;
+    send(client_fd, &code_op, sizeof(op_code), 0);
+    send(client_fd, buffer, buffer_size, 0);
 }
 
 
