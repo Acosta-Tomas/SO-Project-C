@@ -4,7 +4,14 @@
 		"files.associations": {
 			"*.h": "c",
 			"type_traits": "c",
-			"cmath": "c"
+			"cmath": "c",
+			"array": "c",
+			"buffer": "c",
+			"socket": "c",
+			"string_view": "c",
+			"initializer_list": "c",
+			"utility": "c",
+			"string": "c"
 		},
 		"C_Cpp.errorSquiggles": "disabled",
 	},

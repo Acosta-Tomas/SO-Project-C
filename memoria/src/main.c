@@ -1,10 +1,18 @@
 #include "main.h"
 
-t_list* lista_memoria;
+t_dictionary* memoria_procesos;
+void* memoria_usuario;
+t_bitarray* bit_map;
+
+uint32_t page_size;
+uint32_t max_pages;
+
 t_log* logger;
+t_config* config;
+
 
 int main(int argc, char* argv[]) {
-    t_config* config = config_create("memoria.config");
+    config = config_create("memoria.config");
 
     if (config == NULL) exit(EXIT_FAILURE); 
 
@@ -13,7 +21,24 @@ int main(int argc, char* argv[]) {
     int server_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA));
     log_info(logger, "Server ready - SOCKET: %d", server_fd);
 
-    lista_memoria = list_create();
+    memoria_procesos = dictionary_create();
+
+    uint32_t mem_size = (uint32_t) config_get_int_value(config, KEY_TAM_MEMORIA);
+    page_size = (uint32_t) config_get_int_value(config, KEY_TAM_PAGINA);
+    max_pages = mem_size/page_size;
+    memoria_usuario = calloc(1, mem_size);
+
+    char* string = "Quiero escribir mas de una pagina, para saber cuanto ocupa o hasta donde lee";
+    memcpy(memoria_usuario, string, strlen(string) + 1);
+
+    void* bits = calloc(1, max_pages/8);
+
+    if (bits == NULL) {
+        perror("Error al asignar memoria");
+        return EXIT_FAILURE;
+    }
+
+    bit_map = bitarray_create_with_mode(bits, max_pages/8, MSB_FIRST);
 
     while (1) {
         int* cliente_fd = malloc(sizeof(int));
@@ -31,6 +56,9 @@ int main(int argc, char* argv[]) {
 
     log_destroy(logger);
     config_destroy(config);
+    bitarray_destroy(bit_map);
+    free(bits);
+    free(memoria_usuario);
     
     return EXIT_SUCCESS;
 }

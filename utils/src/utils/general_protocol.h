@@ -8,6 +8,7 @@
 #include <commons/collections/list.h>
 #include <commons/config.h>
 #include <commons/string.h>
+#include <math.h>
 
 #include "sockets.h"
 
@@ -22,7 +23,14 @@ typedef enum{
 	INIT_PID,
 	INIT_PID_SUCCESS,
 	INIT_PID_ERROR,
-	INTERRUPT
+	INTERRUPT,
+	MEM_PAGE_SIZE,
+	MEM_RESIZE,
+	MEM_READ,
+	MEM_WRITE,
+	MEM_PID_PAGE,
+	MEM_SUCCESS,
+	MEM_ERROR,
 } op_code;
 
 typedef struct{

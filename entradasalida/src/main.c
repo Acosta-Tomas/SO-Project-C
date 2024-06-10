@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 
             if (to_send == IO_SUCCESS) {
                 log_info(logger, "Se solicita: %s - %s segundos", io->name_interface, io->sleep_time);
-                sleep(15);
+                sleep(atoi(io->sleep_time));
             }
 
             free(io->name_interface);

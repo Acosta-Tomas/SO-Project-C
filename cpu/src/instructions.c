@@ -97,6 +97,166 @@ pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
     return BLOCKED;
 }
 
+// Falta uint8
+pid_status mov_out(int memoria_fd, char* direccion_logica, char* registro){
+    uint32_t size_register = (uint32_t) sizeof_register(registro);
+    void* buffer = malloc(size_register);
+    t_list* frames = list_create();
+    pid_status status;
+
+    if (size_register == sizeof(uint32_t)) memcpy(buffer, (uint32_t*) get_register(registro), size_register);
+    else memcpy(buffer, (uint8_t*) get_register(registro), size_register);
+
+    status = mmu(memoria_fd, atouint32(direccion_logica), size_register, frames);
+    if (status == RUNNING) {
+        status = escribir_memoria(memoria_fd, buffer, frames);
+    }
+    
+    list_destroy(frames);
+    free(buffer);
+    return status;
+}
+
+pid_status mov_in(int memoria_fd, char* registro, char* direccion_logica){
+    uint32_t size_register = (uint32_t) sizeof_register(registro);
+    void* buffer = malloc(size_register);
+    t_list* frames = list_create();
+    pid_status status;
+
+    status = mmu(memoria_fd, atouint32(direccion_logica), size_register, frames);
+    if (status == RUNNING) {
+        status = leer_memoria(memoria_fd, buffer, frames);
+    }
+
+    if (size_register == sizeof(uint32_t)) memcpy((uint32_t*) get_register(registro), buffer, size_register);
+    else memcpy((uint8_t*) get_register(registro), buffer, size_register);
+
+    list_destroy(frames);
+    free(buffer);
+    return status;
+}
+
+pid_status copy_string(int memoria_fd, char* tamaño){
+    uint32_t size = atouint32(tamaño);
+    uint32_t src_register = *((uint32_t*) get_register("SI"));
+    uint32_t dst_register = *((uint32_t*) get_register("DI"));
+    t_list* src_frames = list_create();
+    t_list* dst_frames = list_create();
+    void* buffer = malloc(size);
+    pid_status status;
+
+    status = mmu(memoria_fd, src_register, size, src_frames);
+    status = mmu(memoria_fd, dst_register, size, dst_frames);
+
+    if (status == RUNNING) {
+        status = leer_memoria(memoria_fd, buffer, src_frames);
+        log_info(logger, "STRING LEIDO: %s", (char*) buffer);
+        status = escribir_memoria(memoria_fd, buffer, dst_frames);
+    }
+
+
+    list_destroy(src_frames);
+    list_destroy(dst_frames);
+    free(buffer);
+    return status;
+}
+
+pid_status escribir_memoria(int memoria_fd, void* buffer, t_list* frames){
+    int offset_buffer = 0;
+
+    while(list_size(frames)){
+        t_memoria_fisica* frame = list_remove(frames, 0);
+        t_paquete* paquete = crear_paquete(MEM_WRITE);
+        op_code code;
+
+        agregar_uint_a_paquete(paquete, &frame->direccion_fisica, sizeof(uint32_t));
+        agregar_a_paquete(paquete, buffer + offset_buffer, frame->bytes);
+        enviar_paquete(paquete, memoria_fd);
+        eliminar_paquete(paquete);
+
+        offset_buffer += frame->bytes;
+        free(frame);
+
+        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
+        if (code != MEM_SUCCESS) return ERROR;
+    }
+
+    return RUNNING;
+}
+
+pid_status leer_memoria(int memoria_fd, void* buffer, t_list* frames){
+    int offset_buffer = 0;
+    op_code code_op = MEM_READ;
+
+    while(list_size(frames)){
+        t_memoria_fisica* frame = list_remove(frames, 0);
+        op_code code;
+
+        send(memoria_fd, &code_op, sizeof(op_code), 0);
+        send(memoria_fd, &frame->direccion_fisica, sizeof(uint32_t), 0);
+        send(memoria_fd, &frame->bytes, sizeof(uint32_t), 0);
+
+        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
+        recv(memoria_fd, buffer + offset_buffer, frame->bytes, MSG_WAITALL);
+
+        offset_buffer += frame->bytes;
+        free(frame);
+
+        if (code != MEM_SUCCESS) return ERROR;
+    }
+
+    return RUNNING;
+}
+
+/*
+    Armo lista de frames, con cantidad de bytes a leer en cada frame por orden de pagina digamos.
+    Es recursiva, disminuyendo el size de lo que hay leer a medida que avanzo de pagina.
+*/
+
+pid_status mmu(int memoria_fd, uint32_t direccion_logica, uint32_t size, t_list* frames){
+    uint32_t pagina = floor(direccion_logica / page_size);
+    uint32_t desplazamiento = direccion_logica - pagina * page_size;
+    t_memoria_fisica* frame = calloc(1, sizeof(t_memoria_fisica));
+    pid_status status = RUNNING;
+
+    if (desplazamiento + size <= page_size){
+        frame->bytes = size;
+        size = 0;
+    } else {
+        frame->bytes = page_size - desplazamiento;
+        size = size - frame->bytes;
+    }
+
+    op_code code_op = MEM_PID_PAGE;
+
+    send(memoria_fd, &code_op, sizeof(op_code), 0);
+    send(memoria_fd, &pcb->pid, sizeof(uint32_t), 0);
+    send(memoria_fd, &pagina, sizeof(uint32_t), 0);
+    
+    // t_paquete* paquete = crear_paquete(MEM_PID_PAGE);
+    
+    // agregar_uint_a_paquete(paquete, &pcb->pid, sizeof(uint32_t));
+    // agregar_uint_a_paquete(paquete, &pagina, sizeof(uint32_t));
+
+    // enviar_paquete(paquete, memoria_fd);
+    // eliminar_paquete(paquete);
+
+    
+    recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
+
+    if (code_op == MEM_ERROR) return ERROR;
+
+    if (code_op == MEM_SUCCESS) {
+        recv(memoria_fd, &frame->direccion_fisica, sizeof(uint32_t), MSG_WAITALL);
+        frame->direccion_fisica = frame->direccion_fisica * page_size + desplazamiento;
+        list_add(frames, frame);
+    }
+
+    if (size > 0) status = mmu(memoria_fd, (pagina + 1) * page_size, size, frames);     
+
+    return status;
+}
+
 // Funciones para updatear un registro (uno es para ++ y el otro para setear valor)
 
 void pc_plus_plus(u_int32_t* registro, u_int32_t value){
@@ -109,6 +269,23 @@ void set_registro_uint8(uint8_t* registro, uint8_t value) {
 
 void set_registro_uint32(uint32_t* registro, uint32_t value) {
     *(registro) = value;
+}
+
+pid_status resize_process(int memoria_fd, char* size){
+    uint32_t new_size = atouint32(size);
+    op_code code_op = MEM_RESIZE;
+
+
+    // preguntar si hace falta serializar para esto
+    send(memoria_fd, &code_op, sizeof(op_code), 0);
+    send(memoria_fd, &pcb->pid, sizeof(uint32_t), 0);
+    send(memoria_fd, &new_size, sizeof(uint32_t), 0);
+
+    recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
+
+    if (code_op == MEM_ERROR) return ERROR;
+
+    return RUNNING;
 }
 
 // El numero en char que viene de lo leido en memoria, hay que pasarlo a uint que corresponda
@@ -143,6 +320,12 @@ set_instruction mapInstruction (char* intruction) {
     if (strcmp(intruction, "SUM") == 0) return SUM;
     if (strcmp(intruction, "SUB") == 0) return SUB;
     if (strcmp(intruction, "JNZ") == 0) return JNZ;
+    if (strcmp(intruction, "MOV_IN") == 0) return MOV_IN;
+    if (strcmp(intruction, "MOV_OUT") == 0) return MOV_OUT;
+    if (strcmp(intruction, "RESIZE") == 0) return RESIZE;
+    if (strcmp(intruction, "COPY_STRING") == 0) return COPY_STRING;
+    if (strcmp(intruction, "IO_STDIN_READ") == 0) return IO_STDIN_READ;
+    if (strcmp(intruction, "IO_STDOUT_WRITE") == 0) return IO_STDOUT_WRITE;
     if (strcmp(intruction, "IO_GEN_SLEEP") == 0) return IO_GEN_SLEEP;
     if (strcmp(intruction, "EXIT") == 0) return EXIT;
     return UNKNOWN;

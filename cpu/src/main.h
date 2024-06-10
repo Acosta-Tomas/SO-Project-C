@@ -41,11 +41,18 @@ typedef struct {
     char* params[5];
 } t_intruction_execute;
 
+typedef struct {
+    uint32_t direccion_fisica;
+    uint32_t bytes;
+} t_memoria_fisica;
+
 
 extern t_log* logger;
 extern t_config* config;
 extern t_pcb* pcb;
+
 extern bool has_interrupt;
+extern uint32_t page_size;
 
 extern sem_t mutex_interrupt;
 // extern sem_t mutex_pcb;
@@ -56,7 +63,7 @@ void* interrupt(void*);
 void cpu(int, int);
 t_list* fetch(int);
 t_intruction_execute* decode(t_list*);
-pid_status exec(t_intruction_execute*, int);
+pid_status exec(t_intruction_execute*, int, int);
 bool check_interrupt();
 
 void* get_register(char*);
@@ -69,6 +76,14 @@ void set_registro_uint8(uint8_t*, uint8_t);
 void set_registro_uint32(uint32_t*, uint32_t);
 bool jnz_register(char*, char*);
 pid_status enviar_io(int, t_intruction_execute*);
+pid_status resize_process(int, char*);
+pid_status mov_out(int, char*, char*);
+pid_status mov_in(int, char*, char*);
+pid_status copy_string(int, char*);
+
+pid_status mmu(int, uint32_t, uint32_t, t_list*);
+pid_status escribir_memoria(int, void*, t_list*);
+pid_status leer_memoria(int, void*, t_list*);
 
 void pc_plus_plus(uint32_t*, uint32_t);
 uint8_t atouint8(char*);
@@ -77,3 +92,15 @@ unsigned long sizeof_register(char*);
 set_instruction mapInstruction(char*);
 
 #endif
+
+/*
+    Agregar instrucciones de:
+        MOV_IN, 
+        MOV_OUT, 
+        RESIZE, OK
+        COPY_STRING, 
+        IO_STDIN_READ, 
+        IO_STDOUT_WRITE.
+        SIGNA, -> Si llego con manejador de recursos
+        WAIT -> Si llego con manejador de recursos
+*/

@@ -10,7 +10,7 @@ void cpu(int memoria_fd, int kernel_fd){
     while(result == RUNNING && !interrupt) {
         list_instruction = fetch(memoria_fd);
         decoded_instruction = decode(list_instruction);
-        result = exec(decoded_instruction, kernel_fd);
+        result = exec(decoded_instruction, kernel_fd, memoria_fd);
         interrupt = check_interrupt(result);
     }
 
@@ -49,39 +49,79 @@ t_list* fetch(int memoria_fd) {
 
 t_intruction_execute* decode(t_list* list_instruction) {
     t_intruction_execute* decoded_instruction = malloc(sizeof(t_intruction_execute));
-    
-    char* instruction_type = list_remove(list_instruction, 0);
-    log_info(logger, "Execute: %s", instruction_type);
+    char* params = string_new();
 
+    void paramToPrint(void* param) {
+        string_append(&params, (char*) param);
+        string_append(&params, " ");
+    }
+
+    char* instruction_type = list_remove(list_instruction, 0);
+    list_iterate(list_instruction, &paramToPrint);
+    log_info(logger, "PID: %u - Ejectuando: %s - %s", pcb->pid, instruction_type, params);
+    
     switch (mapInstruction(instruction_type)){
         case SET:
             decoded_instruction->operation = SET;
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
             break;
         case SUM:
             decoded_instruction->operation = SUM;
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
             break;
         case SUB:
             decoded_instruction->operation = SUB; 
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
             break;
         case JNZ:
             decoded_instruction->operation = JNZ;
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
             break;
+
+        case RESIZE:
+            decoded_instruction->operation = RESIZE;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 1;
+            break;
+
+        case MOV_IN:
+            decoded_instruction->operation = MOV_IN;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
+            break;
+
+        case MOV_OUT:
+            decoded_instruction->operation = MOV_OUT;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
+            break;
+        
+        case COPY_STRING:
+            decoded_instruction->operation = COPY_STRING;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 1;
+            break;
+
         case IO_GEN_SLEEP:
             decoded_instruction->operation = IO_GEN_SLEEP;
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
             break;    
 
         case EXIT:
             decoded_instruction->operation = EXIT;
+            decoded_instruction->total_params = 0;
             break;
         
         default:
@@ -89,14 +129,12 @@ t_intruction_execute* decode(t_list* list_instruction) {
             break;
     }
 
-    decoded_instruction->total_params = 2;
-
     list_destroy(list_instruction);
 
     return decoded_instruction;
 }
 
-pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd) {
+pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int memoria_fd) {
     pid_status status = RUNNING; 
     bool ignorePC = false;
 
@@ -124,6 +162,22 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd) {
 
         case JNZ:
             ignorePC = jnz_register(decoded_instruction->params[0], decoded_instruction->params[1]);
+            break;
+
+        case RESIZE: 
+            status = resize_process(memoria_fd, decoded_instruction->params[0]);
+            break;
+
+        case MOV_IN:
+            status = mov_in(memoria_fd, decoded_instruction->params[0], decoded_instruction->params[1]);
+            break;
+
+        case MOV_OUT:
+            status = mov_out(memoria_fd, decoded_instruction->params[0], decoded_instruction->params[1]);
+            break;
+
+        case COPY_STRING:
+            status = copy_string(memoria_fd, decoded_instruction->params[0]);
             break;
 
         case IO_GEN_SLEEP:
