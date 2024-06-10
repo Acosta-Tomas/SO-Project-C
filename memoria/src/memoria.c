@@ -26,7 +26,7 @@ void* memoria(void *client) {
                 break;
 
             case MEM_READ: 
-                lee_memoria(cliente_fd);
+                leer_memoria(cliente_fd);
                 break;
 
             case INIT_PID:
@@ -199,7 +199,7 @@ void escribir_memoria(int client_fd){
     send(client_fd, &code_op, sizeof(op_code), 0);
 }
 
-void lee_memoria(int client_fd){
+void leer_memoria(int client_fd){
     uint32_t direccion_fisica;
     int buffer_size;
 

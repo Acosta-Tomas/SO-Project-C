@@ -75,7 +75,7 @@ t_pcb* crear_context(uint32_t pid){
     new_context->pc = 0;
     new_context->status = NEW;
     new_context->pid = pid;
-    new_context->registers = malloc(sizeof(t_registros));
+    new_context->registers = calloc(1, sizeof(t_registros));
 
     new_context->registers->pc = 0;
 

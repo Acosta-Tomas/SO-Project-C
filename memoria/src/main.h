@@ -43,7 +43,7 @@ void resize_down(int, t_list*);
 void retardo(void);
 void get_pid_page(int);
 void escribir_memoria(int);
-void lee_memoria(int);
+void leer_memoria(int);
 
 #endif
  /* 
