@@ -109,6 +109,7 @@ t_intruction_execute* decode(t_list* list_instruction) {
         case COPY_STRING:
             decoded_instruction->operation = COPY_STRING;
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 1;
             break;
 
         case IO_GEN_SLEEP:
