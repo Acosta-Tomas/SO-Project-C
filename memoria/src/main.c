@@ -28,9 +28,6 @@ int main(int argc, char* argv[]) {
     max_pages = mem_size/page_size;
     memoria_usuario = calloc(1, mem_size);
 
-    char* string = "Quiero escribir mas de una pagina, para saber cuanto ocupa o hasta donde lee";
-    memcpy(memoria_usuario, string, strlen(string) + 1);
-
     void* bits = calloc(1, max_pages/8);
 
     if (bits == NULL) {

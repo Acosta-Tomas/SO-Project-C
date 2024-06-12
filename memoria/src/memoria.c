@@ -65,11 +65,13 @@ void* memoria(void *client) {
 }
 
 
-op_code leer_archivo(uint32_t pid, const char *nombre_archivo){
-    FILE* archivo = fopen(nombre_archivo, "r");
+op_code leer_archivo(uint32_t pid, char *nombre_archivo){
+    char* path = config_get_string_value(config, KEY_PATH_INSTRUCCIONES);
+    string_append(&path, nombre_archivo);
+    FILE* archivo = fopen(path, "r");
 
     if(archivo == NULL){
-        log_info(logger, "No se encontro el archivo deseasdo: %s", nombre_archivo);
+        log_info(logger, "No se encontro el archivo deseasdo: %s", path);
         return INIT_PID_ERROR;
     }
 

@@ -98,16 +98,17 @@ pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
 }
 
 // Falta uint8
-pid_status mov_out(int memoria_fd, char* direccion_logica, char* registro){
-    uint32_t size_register = (uint32_t) sizeof_register(registro);
+pid_status mov_out(int memoria_fd, char* registro_dl, char* registro_datos){
+    uint32_t size_register = (uint32_t) sizeof_register(registro_datos);
+    uint32_t* direccion_logica = (uint32_t*) get_register(registro_dl);
     void* buffer = malloc(size_register);
     t_list* frames = list_create();
     pid_status status;
 
-    if (size_register == sizeof(uint32_t)) memcpy(buffer, (uint32_t*) get_register(registro), size_register);
-    else memcpy(buffer, (uint8_t*) get_register(registro), size_register);
+    if (size_register == sizeof(uint32_t)) memcpy(buffer, (uint32_t*) get_register(registro_datos), size_register);
+    else memcpy(buffer, (uint8_t*) get_register(registro_datos), size_register);
 
-    status = mmu(memoria_fd, atouint32(direccion_logica), size_register, frames);
+    status = mmu(memoria_fd, *(direccion_logica), size_register, frames);
     if (status == RUNNING) {
         status = escribir_memoria(memoria_fd, buffer, frames);
     }
@@ -117,19 +118,20 @@ pid_status mov_out(int memoria_fd, char* direccion_logica, char* registro){
     return status;
 }
 
-pid_status mov_in(int memoria_fd, char* registro, char* direccion_logica){
-    uint32_t size_register = (uint32_t) sizeof_register(registro);
+pid_status mov_in(int memoria_fd, char* registro_datos, char* registro_dl){
+    uint32_t size_register = (uint32_t) sizeof_register(registro_datos);
+    uint32_t* direccion_logica = (uint32_t*) get_register(registro_dl);
     void* buffer = malloc(size_register);
     t_list* frames = list_create();
     pid_status status;
 
-    status = mmu(memoria_fd, atouint32(direccion_logica), size_register, frames);
+    status = mmu(memoria_fd, *(direccion_logica), size_register, frames);
     if (status == RUNNING) {
         status = leer_memoria(memoria_fd, buffer, frames);
     }
 
-    if (size_register == sizeof(uint32_t)) memcpy((uint32_t*) get_register(registro), buffer, size_register);
-    else memcpy((uint8_t*) get_register(registro), buffer, size_register);
+    if (size_register == sizeof(uint32_t)) memcpy((uint32_t*) get_register(registro_datos), buffer, size_register);
+    else memcpy((uint8_t*) get_register(registro_datos), buffer, size_register);
 
     list_destroy(frames);
     free(buffer);

@@ -17,6 +17,7 @@
 #define KEY_RETARDO_RESPUESTA "RETARDO_RESPUESTA"
 #define KEY_TAM_MEMORIA "TAM_MEMORIA"
 #define KEY_TAM_PAGINA "TAM_PAGINA"
+#define KEY_PATH_INSTRUCCIONES "PATH_INSTRUCCIONES"
 
 typedef struct {
 	uint32_t pid;
@@ -33,7 +34,7 @@ extern t_dictionary* memoria_procesos; // necesita sem?
 extern t_log* logger;
 extern t_config* config;
 
-op_code leer_archivo(uint32_t, const char*);
+op_code leer_archivo(uint32_t, char*);
 void* memoria(void*);
 char** get_instruction_pid(uint32_t, uint32_t);
 void enviar_instruccion(int, char**);
