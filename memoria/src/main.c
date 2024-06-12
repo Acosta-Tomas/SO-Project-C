@@ -10,6 +10,10 @@ uint32_t max_pages;
 t_log* logger;
 t_config* config;
 
+sem_t mutex_bit_map;
+sem_t mutex_mem_usuario;
+sem_t mutex_mem_procesos;
+
 
 int main(int argc, char* argv[]) {
     config = config_create("memoria.config");
@@ -37,6 +41,10 @@ int main(int argc, char* argv[]) {
 
     bit_map = bitarray_create_with_mode(bits, max_pages/8, MSB_FIRST);
 
+    sem_init(&mutex_bit_map, 0, 1);
+    sem_init(&mutex_mem_usuario, 0, 1);
+    sem_init(&mutex_mem_procesos, 0, 1);
+
     while (1) {
         int* cliente_fd = malloc(sizeof(int));
         *(cliente_fd) = esperar_cliente(server_fd);
@@ -50,6 +58,10 @@ int main(int argc, char* argv[]) {
     }
 
     close(server_fd);
+
+    sem_destroy(&mutex_bit_map);
+    sem_destroy(&mutex_mem_procesos);
+    sem_destroy(&mutex_mem_usuario);
 
     log_destroy(logger);
     config_destroy(config);

@@ -67,8 +67,12 @@ void* memoria(void *client) {
 
 op_code leer_archivo(uint32_t pid, char *nombre_archivo){
     char* path = config_get_string_value(config, KEY_PATH_INSTRUCCIONES);
-    string_append(&path, nombre_archivo);
-    FILE* archivo = fopen(path, "r");
+    char* full_path = string_new();
+    string_append(&full_path, path);
+    string_append(&full_path, nombre_archivo);
+    FILE* archivo = fopen(full_path, "r");
+
+    log_info(logger, "archivo a leer: %s", full_path);
 
     if(archivo == NULL){
         log_info(logger, "No se encontro el archivo deseasdo: %s", path);
@@ -92,17 +96,22 @@ op_code leer_archivo(uint32_t pid, char *nombre_archivo){
     pid_memoria->file = string_split(instructions, "\n");
     pid_memoria->pages = list_create();
 
+    sem_wait(&mutex_mem_procesos);
     dictionary_put(memoria_procesos, string_itoa((int) pid), pid_memoria);
+    sem_post(&mutex_mem_procesos);
 
     fclose(archivo);
     free(buffer);
     free(instructions);
+    free(full_path);
 
     return INIT_PID_SUCCESS;
 }
 
 char** get_instruction_pid(uint32_t pid, uint32_t pc){
+    sem_wait(&mutex_mem_procesos);
     t_memoria* memoria_pid = dictionary_get(memoria_procesos, string_itoa((int) pid));
+    sem_post(&mutex_mem_procesos);
 
     char* instruccion = *(memoria_pid->file + pc);
     char** instruccion_formateada = string_split(instruccion, " ");
@@ -130,7 +139,9 @@ void resize_process(int client_fd){
     recv(client_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
     recv(client_fd, &size, sizeof(uint32_t), MSG_WAITALL);
 
+    sem_wait(&mutex_mem_procesos);
     pid_mem = dictionary_get(memoria_procesos, string_itoa((int) pid));
+    sem_post(&mutex_mem_procesos);
     int pages = ceil((double)size / page_size) - list_size(pid_mem->pages);
 
     if (pages > 0) code_op = resize_up(pages, pid_mem->pages);
@@ -192,7 +203,9 @@ void escribir_memoria(int client_fd){
 
     void* memoria_desplazada = memoria_usuario + direccion_fisica;
 
+    sem_wait(&mutex_mem_usuario);
     memcpy(memoria_desplazada, value, value_size);
+    sem_post(&mutex_mem_usuario);
 
     retardo();
 
@@ -212,8 +225,9 @@ void leer_memoria(int client_fd){
 
     void* memoria_desplazada = memoria_usuario + direccion_fisica;
 
+    sem_wait(&mutex_mem_usuario);
     memcpy(buffer, memoria_desplazada, buffer_size);
-
+    sem_post(&mutex_mem_usuario);
     retardo();
 
     op_code code_op = MEM_SUCCESS;
@@ -231,11 +245,18 @@ void leer_memoria(int client_fd){
 */
 op_code resize_up(int pages, t_list* list_pages){
     for(int i = 0; i < bitarray_get_max_bit(bit_map) && pages > 0; i += 1){
-        if(!bitarray_test_bit(bit_map, i)) {
+        sem_wait(&mutex_bit_map);
+        bool isBitFree = !bitarray_test_bit(bit_map, i);
+        sem_post(&mutex_bit_map);
+        
+        if(isBitFree) { // hace falta mutex para leer el bit?
             uint32_t* frame = malloc(sizeof(uint32_t));
             *(frame) = i;
-            list_add(list_pages, frame);
+            list_add(list_pages, frame); 
+
+            sem_wait(&mutex_bit_map);
             bitarray_set_bit(bit_map, i);
+            sem_post(&mutex_bit_map);
             pages -= 1;
         }
     }
@@ -255,7 +276,10 @@ op_code resize_up(int pages, t_list* list_pages){
 void resize_down(int pages, t_list* list_pages){
     for(int i = list_size(list_pages) - 1; i >= 0 && pages > 0; i -= 1){
         uint32_t* frame = list_remove(list_pages, i);
+
+        sem_wait(&mutex_bit_map);
         bitarray_clean_bit(bit_map, *(frame));
+        sem_post(&mutex_bit_map);
 
         free(frame);
         pages -= 1;

@@ -4,6 +4,7 @@
 #include <utils/mem_protocol.h>
 #include <commons/collections/dictionary.h>
 #include <commons/bitarray.h>
+#include <semaphore.h>
 
 // FILES
 #define CONFIG_FILE "memoria.config"
@@ -33,6 +34,10 @@ extern t_bitarray* bit_map; // Neceista sem?
 extern t_dictionary* memoria_procesos; // necesita sem?
 extern t_log* logger;
 extern t_config* config;
+
+extern sem_t mutex_bit_map;
+extern sem_t mutex_mem_usuario;
+extern sem_t mutex_mem_procesos;
 
 op_code leer_archivo(uint32_t, char*);
 void* memoria(void*);
