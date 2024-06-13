@@ -34,14 +34,12 @@ void* corto_main(void *arg){
         if (pcb->status == TERMINATED) {
             log_info(logger, "Proceso Finalizado - PID: %u", pcb->pid);
             log_registers(pcb, logger);
-            free(pcb->registers);
-            free(pcb);
+            finalizar_proceso(pcb);
         }
 
         if (pcb->status == ERROR) {
             log_error(logger, "Error en proceso - PID: %u", pcb->pid);
-            free(pcb->registers);
-            free(pcb);
+            finalizar_proceso(pcb);
         }
 
         if (pcb->status == RUNNING) {

@@ -38,6 +38,10 @@ void* memoria(void *client) {
                 free(pid_to_init->path);
                 free(pid_to_init);
                 break;
+
+            case END_PID:
+                liberar_memoria(cliente_fd);
+                break;
                 
             case INSTRUCTION:
                 uint32_t pc;
@@ -109,9 +113,9 @@ op_code leer_archivo(uint32_t pid, char *nombre_archivo){
 }
 
 char** get_instruction_pid(uint32_t pid, uint32_t pc){
-    sem_wait(&mutex_mem_procesos);
-    t_memoria* memoria_pid = dictionary_get(memoria_procesos, string_itoa((int) pid));
-    sem_post(&mutex_mem_procesos);
+    t_memoria* memoria_pid;
+
+    memoria_pid = get_pid(pid);
 
     char* instruccion = *(memoria_pid->file + pc);
     char** instruccion_formateada = string_split(instruccion, " ");
@@ -139,9 +143,7 @@ void resize_process(int client_fd){
     recv(client_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
     recv(client_fd, &size, sizeof(uint32_t), MSG_WAITALL);
 
-    sem_wait(&mutex_mem_procesos);
-    pid_mem = dictionary_get(memoria_procesos, string_itoa((int) pid));
-    sem_post(&mutex_mem_procesos);
+    pid_mem = get_pid(pid);
     int pages = ceil((double)size / page_size) - list_size(pid_mem->pages);
 
     if (pages > 0) code_op = resize_up(pages, pid_mem->pages);
@@ -160,7 +162,7 @@ void get_pid_page(int client_fd) {
     recv(client_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
     recv(client_fd, &page, sizeof(uint32_t), MSG_WAITALL);
 
-    pid_mem = dictionary_get(memoria_procesos, string_itoa((int) pid));
+    pid_mem = get_pid(pid);
 
     int s = list_size(pid_mem->pages);
 
@@ -285,6 +287,31 @@ void resize_down(int pages, t_list* list_pages){
         pages -= 1;
     }
 
+}
+
+void liberar_memoria(int client_fd){
+    uint32_t pid;
+    t_memoria* pid_mem;
+
+    recv(client_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
+
+    sem_wait(&mutex_mem_procesos);
+    pid_mem = dictionary_remove(memoria_procesos, string_itoa((int) pid));
+    sem_post(&mutex_mem_procesos);
+
+    resize_down(0, pid_mem->pages); // Libera el bit array simulando que el resize del proceso es 0;
+    list_destroy(pid_mem->pages);
+    string_array_destroy(pid_mem->file);
+    free(pid_mem);
+}
+
+ t_memoria* get_pid(uint32_t pid){
+     t_memoria* pid_mem;
+    sem_wait(&mutex_mem_procesos);
+    pid_mem = dictionary_get(memoria_procesos, string_itoa((int) pid));
+    sem_post(&mutex_mem_procesos);
+
+    return pid_mem;
 }
 
 void retardo(void){

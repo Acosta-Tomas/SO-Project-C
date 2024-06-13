@@ -1,6 +1,7 @@
 #include "main.h"
 
 uint32_t next_pid;
+int memoria_fd;
 
 void* consola_main(void *arg){
     log_info(logger, "Thread consola creado");
@@ -8,9 +9,9 @@ void* consola_main(void *arg){
     next_pid = 0;
 	char* ip_memoria = config_get_string_value(config, KEY_IP_MEMORIA);
     char* puerto_memoria = config_get_string_value(config, KEY_PUERTO_MEMORIA);
-    int conexion = crear_conexion(ip_memoria, puerto_memoria);
+    memoria_fd = crear_conexion(ip_memoria, puerto_memoria);
 
-    log_info(logger, "Connected to Memoria - SOCKET: %d", conexion);
+    log_info(logger, "Connected to Memoria - SOCKET: %d", memoria_fd);
 
     printf("Ecribir INICIAR_PROCESO y su path para comenzar un programa\n");
 
@@ -22,7 +23,7 @@ void* consola_main(void *arg){
 
         if (strcmp(command[0], "INICIAR_PROCESO") == 0) {
             printf("Inciando proceso, por favor espere...\n");
-            op_code estado = iniciar_proceso(conexion, command[0], command[1]);
+            op_code estado = iniciar_proceso(memoria_fd, command[0], command[1]);
 
             if (estado == INIT_PID_SUCCESS) {
                 enviar_new();
@@ -33,7 +34,7 @@ void* consola_main(void *arg){
 
     }
 
-    liberar_conexion(conexion);
+    liberar_conexion(memoria_fd);
    
    return EXIT_SUCCESS;
 }

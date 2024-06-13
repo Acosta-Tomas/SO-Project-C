@@ -50,6 +50,8 @@ void retardo(void);
 void get_pid_page(int);
 void escribir_memoria(int);
 void leer_memoria(int);
+void liberar_memoria(int);
+t_memoria* get_pid(uint32_t);
 
 #endif
  /* 

@@ -32,6 +32,8 @@ typedef struct {
 extern t_config* config;
 extern t_log* logger;
 
+extern int memoria_fd;
+
 extern sem_t hay_ready;
 extern sem_t mutex_ready;
 extern sem_t hay_io;
@@ -49,17 +51,19 @@ extern uint32_t next_pid;
 extern t_quantum* running_pid;
 
 
-void* largo_main(void *arg);
-void* corto_main(void *arg);
-void* io_main(void *arg);
-void* consola_main(void *arg);
-void* quantum_main(void *arg);
+void* largo_main(void*);
+void* corto_main(void*);
+void* io_main(void*);
+void* consola_main(void*);
+void* quantum_main(void*);
+void* memoria_finalizar_proceso(void*);
 
 op_code iniciar_proceso(int, char*, char*);
 void enviar_new(void);
 t_pcb* crear_context(uint32_t);
 void enviar_cpu(int, t_pcb*);
 t_pcb* esperar_cpu(int);
+void finalizar_proceso(t_pcb*);
 
 #endif
 
