@@ -336,6 +336,8 @@ set_instruction mapInstruction (char* intruction) {
     if (strcmp(intruction, "MOV_OUT") == 0) return MOV_OUT;
     if (strcmp(intruction, "RESIZE") == 0) return RESIZE;
     if (strcmp(intruction, "COPY_STRING") == 0) return COPY_STRING;
+    if (strcmp(intruction, "WAIT") == 0) return WAIT;
+    if (strcmp(intruction, "SIGNAL") == 0) return SIGNAL;
     if (strcmp(intruction, "IO_STDIN_READ") == 0) return IO_STDIN_READ;
     if (strcmp(intruction, "IO_STDOUT_WRITE") == 0) return IO_STDOUT_WRITE;
     if (strcmp(intruction, "IO_GEN_SLEEP") == 0) return IO_GEN_SLEEP;

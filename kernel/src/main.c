@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
     sem_init(&mutex_io, 0, 1); 
     sem_init(&mutex_blocked, 0, 1);
     sem_init(&start_quantum, 0, 0);    
-    sem_init(&cont_multi, 0, config_get_int_value(config, KEY_ALGORITMO_PLANIFICACION)); 
+    sem_init(&cont_multi, 0, config_get_int_value(config, KEY_GRADO_MULTIPROGRAMACION)); 
 
     queue_priority_ready = queue_create();
     queue_ready = queue_create();

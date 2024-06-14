@@ -99,10 +99,16 @@ t_pcb* esperar_cpu(int conexion){
 
     if (cod_op == WAIT_RECURSO){
         uint32_t size;
+        int buffer_size;
+        void* buffer;
 
-        recv(conexion, &size, sizeof(uint32_t), MSG_WAITALL);
+        buffer = recibir_buffer(&buffer_size, conexion);
+
+        memcpy(&size, buffer, sizeof(uint32_t));
         char* nombre_recurso = malloc(size);
-        recv(conexion, nombre_recurso, size, MSG_WAITALL);
+        memcpy(nombre_recurso, buffer + sizeof(uint32_t), size);
+
+        free(buffer);
 
         cod_op = recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
@@ -114,7 +120,7 @@ t_pcb* esperar_cpu(int conexion){
 
         t_recursos* recurso = dictionary_get(dict_recursos, nombre_recurso);
 
-        if(recurso->cant_instancias > 0) {
+        if(recurso->cant_instancias >= 0) {
             recurso->cant_instancias -= 1;
             pcb_updated->status = RUNNING;
 
@@ -127,10 +133,16 @@ t_pcb* esperar_cpu(int conexion){
 
     if (cod_op == SIGNAL_RECURSO){
         uint32_t size;
+        int buffer_size;
+        void* buffer;
 
-        recv(conexion, &size, sizeof(uint32_t), MSG_WAITALL);
+        buffer = recibir_buffer(&buffer_size, conexion);
+
+        memcpy(&size, buffer, sizeof(uint32_t));
         char* nombre_recurso = malloc(size);
-        recv(conexion, nombre_recurso, size, MSG_WAITALL);
+        memcpy(nombre_recurso, buffer + sizeof(uint32_t), size);
+
+        free(buffer);
 
         cod_op = recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
@@ -142,16 +154,17 @@ t_pcb* esperar_cpu(int conexion){
 
         t_recursos* recurso = dictionary_get(dict_recursos, nombre_recurso);
 
-        recurso->cant_instancias -= 1;
+        recurso->cant_instancias += 1;
 
-        t_pcb* pcb_to_ready = queue_pop(recurso->queue_waiting);
+        if(!queue_is_empty(recurso->queue_waiting)) {
+            t_pcb* pcb_to_ready = queue_pop(recurso->queue_waiting);
 
-        sem_wait(&mutex_ready);
-        queue_push(queue_ready, pcb_to_ready);
-        sem_post(&mutex_ready);
-        sem_post(&hay_ready);
-        
-        
+            sem_wait(&mutex_ready);
+            queue_push(queue_ready, pcb_to_ready);
+            sem_post(&mutex_ready);
+            sem_post(&hay_ready);
+        }
+
         pcb_updated->status = RUNNING_RECURSO;
     }
 
