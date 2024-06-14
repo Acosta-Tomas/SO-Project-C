@@ -8,6 +8,8 @@ typedef enum {
 	RUNNING,
     TERMINATED,
     BLOCKED,
+    BLOCKED_RECURSO,
+    RUNNING_RECURSO,
     ERROR
 } pid_status; // Kernel - cpu
 

@@ -23,11 +23,19 @@
 #define KEY_PUERTO_MEMORIA "PUERTO_MEMORIA"
 #define KEY_ALGORITMO_PLANIFICACION "ALGORITMO_PLANIFICACION"
 #define KEY_QUANTUM "QUANTUM"
+#define KEY_GRADO_MULTIPROGRAMACION "GRADO_MULTIPROGRAMACION"
+#define KEY_RECURSOS "RECURSOS"
+#define KEY_INSTANCIAS_RECURSOS "INSTANCIAS_RECURSOS"
 
 typedef struct {
 	uint32_t pid;
 	uint32_t quantum;
 } t_quantum; // Kenrel
+
+typedef struct {
+	uint32_t cant_instancias;
+	t_queue* queue_waiting;
+} t_recursos;
 
 extern t_config* config;
 extern t_log* logger;
@@ -42,13 +50,16 @@ extern sem_t hay_new;
 extern sem_t mutex_new;
 extern sem_t mutex_blocked;
 extern sem_t start_quantum;
+extern sem_t cont_multi;
 
+extern uint32_t next_pid;
 extern t_queue* queue_ready;
+extern t_queue* queue_priority_ready;
 extern t_queue* queue_io;
 extern t_queue* queue_new;
 extern t_queue* queue_blocked;
-extern uint32_t next_pid;
 extern t_quantum* running_pid;
+extern t_dictionary* dict_recursos;
 
 
 void* largo_main(void*);
@@ -72,4 +83,14 @@ void finalizar_proceso(t_pcb*);
 	Aceptar varias I/O con su respectivo nombre (Manejar que no exista la interfaz pedida de CPU)
 	Planificador largo plazo (maximo de proceso y eliminar un programa)
 	Manejar recursos (menos prioridad)
+
+	COnsultar como aumentar el tamanio maximo de un semafor ya inicializado, con destroy y eso se puede pero que pasa
+	con los que estabann esperando ?
+
+	REVISAR NOMBRE DE PCB STATUS, separar en:
+		RUNNING_QUANTUM -> Si va a cola de prioridad o no
+		RUNNING_SIGNAL -> Va a cola de prioridad en el primer lugar (tiene que volver a correr) y pasa a cola normal ready un recurso que haya pedido
+		BLOCKED_IO -> Agregar a cola de blocked del nombre de entrada salida o si no existe EXIT
+		BLOCKED_WAIT -> Agregar a la cola del waiting para el recurso pedido si existe, sino EXIT
+
 */

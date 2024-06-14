@@ -111,6 +111,18 @@ t_intruction_execute* decode(t_list* list_instruction) {
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->total_params = 1;
             break;
+        
+        case WAIT: 
+            decoded_instruction->operation = WAIT;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 1;
+            break;
+
+        case SIGNAL: 
+            decoded_instruction->operation = SIGNAL;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 1;
+            break;
 
         case IO_GEN_SLEEP:
             decoded_instruction->operation = IO_GEN_SLEEP;
@@ -178,6 +190,14 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int me
 
         case COPY_STRING:
             status = copy_string(memoria_fd, decoded_instruction->params[0]);
+            break;
+
+        case WAIT:
+            status = semaphore(kernel_fd, WAIT_RECURSO,  decoded_instruction->params[0]);
+            break;
+
+        case SIGNAL:
+            status = semaphore(kernel_fd, SIGNAL_RECURSO,  decoded_instruction->params[0]);
             break;
 
         case IO_GEN_SLEEP:

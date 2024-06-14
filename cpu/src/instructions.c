@@ -210,6 +210,16 @@ pid_status leer_memoria(int memoria_fd, void* buffer, t_list* frames){
     return RUNNING;
 }
 
+pid_status semaphore(int kernek_fd, op_code code, char* recurso){
+    t_paquete* paquete = crear_paquete(code);
+
+    agregar_a_paquete(paquete, recurso, strlen(recurso) + 1);
+    enviar_paquete(paquete, kernek_fd);
+    eliminar_paquete(paquete);
+
+    return BLOCKED;
+}
+
 /*
     Armo lista de frames, con cantidad de bytes a leer en cada frame por orden de pagina digamos.
     Es recursiva, disminuyendo el size de lo que hay leer a medida que avanzo de pagina.

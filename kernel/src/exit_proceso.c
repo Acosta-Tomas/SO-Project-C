@@ -13,6 +13,8 @@ void finalizar_proceso(t_pcb* pcb){
 
     free(pcb->registers);
     free(pcb);
+
+    sem_post(&cont_multi);
 }
 
 void* memoria_finalizar_proceso(void* pid){

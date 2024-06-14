@@ -97,5 +97,63 @@ t_pcb* esperar_cpu(int conexion){
         pcb_updated = recibir_pcb(conexion, logger);
     }
 
+    if (cod_op == WAIT_RECURSO){
+        uint32_t size;
+
+        recv(conexion, &size, sizeof(uint32_t), MSG_WAITALL);
+        char* nombre_recurso = malloc(size);
+        recv(conexion, nombre_recurso, size, MSG_WAITALL);
+
+        cod_op = recibir_operacion(conexion);
+        pcb_updated = recibir_pcb(conexion, logger);
+
+        if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
+            pcb_updated->status = TERMINATED;
+            return pcb_updated;
+        } 
+
+        t_recursos* recurso = dictionary_get(dict_recursos, nombre_recurso);
+
+        if(recurso->cant_instancias > 0) {
+            recurso->cant_instancias -= 1;
+            pcb_updated->status = RUNNING;
+
+            return pcb_updated;
+        }
+        
+        queue_push(recurso->queue_waiting, pcb_updated);
+        pcb_updated->status = BLOCKED_RECURSO;
+    }
+
+    if (cod_op == SIGNAL_RECURSO){
+        uint32_t size;
+
+        recv(conexion, &size, sizeof(uint32_t), MSG_WAITALL);
+        char* nombre_recurso = malloc(size);
+        recv(conexion, nombre_recurso, size, MSG_WAITALL);
+
+        cod_op = recibir_operacion(conexion);
+        pcb_updated = recibir_pcb(conexion, logger);
+
+        if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
+            pcb_updated->status = TERMINATED;
+            return pcb_updated;
+        } 
+
+        t_recursos* recurso = dictionary_get(dict_recursos, nombre_recurso);
+
+        recurso->cant_instancias -= 1;
+
+        t_pcb* pcb_to_ready = queue_pop(recurso->queue_waiting);
+
+        sem_wait(&mutex_ready);
+        queue_push(queue_ready, pcb_to_ready);
+        sem_post(&mutex_ready);
+        sem_post(&hay_ready);
+        
+        
+        pcb_updated->status = RUNNING_RECURSO;
+    }
+
     return pcb_updated;
 }
