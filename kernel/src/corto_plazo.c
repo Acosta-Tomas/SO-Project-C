@@ -17,7 +17,7 @@ void* corto_main(void *arg){
     while (1) {
         sem_wait(&hay_ready);
         sem_wait(&mutex_ready);
-        t_pcb* pcb = queue_pop(queue_ready);
+        t_pcb* pcb = queue_is_empty(queue_priority_ready) ? queue_pop(queue_ready) : queue_pop(queue_priority_ready);
         pcb->status = RUNNING;
         sem_post(&mutex_ready);
 
@@ -42,7 +42,7 @@ void* corto_main(void *arg){
             finalizar_proceso(pcb);
         }
 
-        if (pcb->status == RUNNING) {
+        if (pcb->status == RUNNING_QUANTUM) {
             log_info(logger, "Proceso fin de Quantum - PID: %u", pcb->pid);
 
             sem_wait(&mutex_ready);
@@ -51,12 +51,11 @@ void* corto_main(void *arg){
             sem_post(&hay_ready);
         }
 
-        if (pcb->status == BLOCKED) {
-            log_info(logger, "Proceso bloqueado - PID: %u", pcb->pid);
-
-            sem_wait(&mutex_blocked);
-            queue_push(queue_blocked, pcb);
-            sem_post(&mutex_blocked);
+        if (pcb->status == RUNNING_SIGNAL){
+            sem_wait(&mutex_ready);
+            queue_push(queue_priority_ready, pcb);
+            sem_post(&mutex_ready);
+            sem_post(&hay_ready);
         }
     }
 
@@ -83,18 +82,36 @@ t_pcb* esperar_cpu(int conexion){
     op_code cod_op = recibir_operacion(conexion);
 
     if (cod_op == PCB) 
-        pcb_updated = recibir_pcb(conexion, logger);
+        return recibir_pcb(conexion, logger);
     
     if (cod_op == IO){
-        io_request = recibir_io(conexion, logger);
+        char* name_interface;
+        io_request = recibir_io(conexion, name_interface, logger);
 
-        sem_wait(&mutex_io);
-        queue_push(queue_io, io_request);
-        sem_post(&mutex_io);
-        sem_post(&hay_io);
-
-        cod_op = recibir_operacion(conexion);
+        recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
+
+        if(dictionary_has_key(dict_io_clients, name_interface)){
+            t_io_client* io_client = dictionary_get(dict_io_clients, name_interface);
+            t_io_queue* io_queue = malloc(sizeof(t_io_queue));
+
+            io_queue->pcb = pcb_updated;
+            io_queue->io_info = io_request;
+
+
+            sem_wait(&io_client->mutex_io);
+            queue_push(io_client->queue_io, io_queue);  
+            sem_post(&io_client->mutex_io);
+            sem_post(&io_client->hay_io);
+
+            log_info(logger, "Proceso bloqueado - PID: %u", pcb_updated->pid);
+
+            return pcb_updated;
+        }
+
+        pcb_updated->status = ERROR;
+
+        return pcb_updated;
     }
 
     if (cod_op == WAIT_RECURSO){
@@ -110,7 +127,7 @@ t_pcb* esperar_cpu(int conexion){
 
         free(buffer);
 
-        cod_op = recibir_operacion(conexion);
+        recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
 
         if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
@@ -122,13 +139,14 @@ t_pcb* esperar_cpu(int conexion){
 
         if(recurso->cant_instancias >= 0) {
             recurso->cant_instancias -= 1;
-            pcb_updated->status = RUNNING;
+            if (pcb_updated->status != RUNNING_QUANTUM) pcb_updated->status = RUNNING;
 
             return pcb_updated;
         }
         
         queue_push(recurso->queue_waiting, pcb_updated);
-        pcb_updated->status = BLOCKED_RECURSO;
+
+        return pcb_updated;
     }
 
     if (cod_op == SIGNAL_RECURSO){
@@ -144,7 +162,7 @@ t_pcb* esperar_cpu(int conexion){
 
         free(buffer);
 
-        cod_op = recibir_operacion(conexion);
+        recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
 
         if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
@@ -165,7 +183,7 @@ t_pcb* esperar_cpu(int conexion){
             sem_post(&hay_ready);
         }
 
-        pcb_updated->status = RUNNING_RECURSO;
+        return pcb_updated;
     }
 
     return pcb_updated;

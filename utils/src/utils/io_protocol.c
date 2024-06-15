@@ -1,6 +1,6 @@
 #include "io_protocol.h"
 
-t_io* recibir_io(int conexion, t_log* logger){
+t_io* recibir_io(int conexion, char* name_interface, t_log* logger){
 	int size;
     int desplazamiento = 0;
     void* buffer;
@@ -14,25 +14,60 @@ t_io* recibir_io(int conexion, t_log* logger){
 
     memcpy(&string_size, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-	io->name_interface = malloc(string_size);
-    memcpy(io->name_interface, buffer + desplazamiento, string_size);
+	name_interface = malloc(string_size);
+
+    memcpy(name_interface, buffer + desplazamiento, string_size);
     desplazamiento += string_size;
 
-	memcpy(&string_size, buffer + desplazamiento, sizeof(uint32_t));
+	memcpy(&io->buffer_size, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-	io->sleep_time = malloc(string_size);
-	memcpy(io->sleep_time, buffer + desplazamiento, string_size);
-    desplazamiento += string_size;
+	io->buffer = malloc(io->buffer_size);
 
-    if (size != desplazamiento) log_info(logger, "Error al recibir PID Para iniciar");
+	memcpy(io->buffer, buffer + desplazamiento, io->buffer_size);
+    desplazamiento += io->buffer_size;
+
+    if (size != desplazamiento) log_info(logger, "Error al recibir IO de CPU");
 
 	free(buffer);
 
     return io;
 }
 
-void agregar_io_paquete(t_paquete* paquete, set_instruction instruction, char* interfaz, char* time){
+void agregar_io_paquete(t_paquete* paquete, set_instruction instruction, char* params[], int total_params){
 	agregar_uint_a_paquete(paquete, &instruction, sizeof(set_instruction));
-	agregar_a_paquete(paquete, interfaz, strlen(interfaz) + 1);
-	agregar_a_paquete(paquete, time, strlen(time) + 1);
+
+    for(int i = 0; i < total_params; i += 1){
+        agregar_a_paquete(paquete, params[i], strlen(params[i]) + 1);
+    }
+}
+
+void agregar_io_serializado(t_paquete* paquete, t_io* io){
+    agregar_uint_a_paquete(paquete, &io->type_instruction, sizeof(set_instruction));
+
+    agregar_a_paquete(paquete, io->buffer, io->buffer_size);
+}
+
+t_io* recibir_io_serializado(int conexion, t_log* logger){
+	int size;
+    int desplazamiento = 0;
+    void* buffer;
+    t_io* io = malloc(sizeof(t_io));
+
+    buffer = recibir_buffer(&size, conexion);
+
+    memcpy(&io->type_instruction, buffer + desplazamiento, sizeof(set_instruction));
+    desplazamiento += sizeof(uint32_t);
+
+	memcpy(&io->buffer_size, buffer + desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+	io->buffer = malloc(io->buffer_size);
+
+	memcpy(io->buffer, buffer + desplazamiento, io->buffer_size);
+    desplazamiento += io->buffer_size;
+
+    if (size != desplazamiento) log_info(logger, "Error al recibir IO de CPU");
+
+	free(buffer);
+
+    return io;
 }

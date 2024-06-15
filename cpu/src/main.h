@@ -80,7 +80,7 @@ pid_status resize_process(int, char*);
 pid_status mov_out(int, char*, char*);
 pid_status mov_in(int, char*, char*);
 pid_status copy_string(int, char*);
-pid_status semaphore(int, op_code, char*);
+void semaphore(int, op_code, char*);
 
 pid_status mmu(int, uint32_t, uint32_t, t_list*);
 pid_status escribir_memoria(int, void*, t_list*);

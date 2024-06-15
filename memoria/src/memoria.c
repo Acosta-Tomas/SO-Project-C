@@ -6,7 +6,7 @@ void* memoria(void *client) {
     for (int cod_op = recibir_operacion(cliente_fd); cod_op != -1; cod_op = recibir_operacion(cliente_fd)){
         switch (cod_op) {
             case MENSAJE:
-                recibir_mensaje(cliente_fd, logger);
+                recibir_mensaje(cliente_fd);
                 break;
 
             case MEM_PAGE_SIZE:
@@ -64,6 +64,7 @@ void* memoria(void *client) {
     }
 
     log_error(logger, "Client disconnected - SOCKET: %d", cliente_fd);
+    free(client);
 
     return EXIT_SUCCESS;
 }

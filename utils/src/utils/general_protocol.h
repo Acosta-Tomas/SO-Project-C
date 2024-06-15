@@ -49,7 +49,7 @@ typedef struct{
 // Protocolo Server
 t_list* recibir_paquete(int);
 void* recibir_buffer(int*, int);
-void recibir_mensaje(int, t_log*);
+char* recibir_mensaje(int);
 int recibir_operacion(int);
 
 // Protocolo Client

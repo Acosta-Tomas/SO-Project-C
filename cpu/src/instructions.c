@@ -89,12 +89,11 @@ bool jnz_register(char* registro, char* next_pc){
 pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
     t_paquete* paquete = crear_paquete(IO);
     
-    agregar_io_paquete(paquete, decoded->operation, decoded->params[0], decoded->params[1]);
+    agregar_io_paquete(paquete, decoded->operation, decoded->params, decoded->total_params);
     enviar_paquete(paquete, kernel_fd);
     eliminar_paquete(paquete);
 
-    log_info(logger, "Wait IO: %s - time: %s", decoded->params[0], decoded->params[1]);
-    return BLOCKED;
+    return BLOCKED_IO;
 }
 
 // Falta uint8
@@ -210,14 +209,12 @@ pid_status leer_memoria(int memoria_fd, void* buffer, t_list* frames){
     return RUNNING;
 }
 
-pid_status semaphore(int kernek_fd, op_code code, char* recurso){
+void semaphore(int kernek_fd, op_code code, char* recurso){
     t_paquete* paquete = crear_paquete(code);
 
     agregar_a_paquete(paquete, recurso, strlen(recurso) + 1);
     enviar_paquete(paquete, kernek_fd);
     eliminar_paquete(paquete);
-
-    return BLOCKED;
 }
 
 /*
