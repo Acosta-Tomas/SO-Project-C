@@ -6,7 +6,7 @@ void* memoria(void *client) {
     for (int cod_op = recibir_operacion(cliente_fd); cod_op != -1; cod_op = recibir_operacion(cliente_fd)){
         switch (cod_op) {
             case MENSAJE:
-                recibir_mensaje(cliente_fd, logger);
+                recibir_mensaje(cliente_fd);
                 break;
 
             case MEM_PAGE_SIZE:
@@ -64,6 +64,7 @@ void* memoria(void *client) {
     }
 
     log_error(logger, "Client disconnected - SOCKET: %d", cliente_fd);
+    free(client);
 
     return EXIT_SUCCESS;
 }
@@ -246,22 +247,18 @@ void leer_memoria(int client_fd){
     Si termino de iterar y pages es mayor a 0 significa que hubvieron paginas que no se pudieron asignar
 */
 op_code resize_up(int pages, t_list* list_pages){
+    sem_wait(&mutex_bit_map);
     for(int i = 0; i < bitarray_get_max_bit(bit_map) && pages > 0; i += 1){
-        sem_wait(&mutex_bit_map);
-        bool isBitFree = !bitarray_test_bit(bit_map, i);
-        sem_post(&mutex_bit_map);
         
-        if(isBitFree) { // hace falta mutex para leer el bit?
+        if(!bitarray_test_bit(bit_map, i)) { // hace falta mutex para leer el bit?
             uint32_t* frame = malloc(sizeof(uint32_t));
             *(frame) = i;
             list_add(list_pages, frame); 
-
-            sem_wait(&mutex_bit_map);
             bitarray_set_bit(bit_map, i);
-            sem_post(&mutex_bit_map);
             pages -= 1;
         }
     }
+    sem_post(&mutex_bit_map);
 
     if (pages > 0) return MEM_ERROR;
 
@@ -303,6 +300,8 @@ void liberar_memoria(int client_fd){
     list_destroy(pid_mem->pages);
     string_array_destroy(pid_mem->file);
     free(pid_mem);
+
+    log_info(logger, "PID: %u - Liberada memoria", pid);
 }
 
  t_memoria* get_pid(uint32_t pid){

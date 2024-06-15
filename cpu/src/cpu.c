@@ -4,14 +4,13 @@ void cpu(int memoria_fd, int kernel_fd){
     t_list* list_instruction;
     t_intruction_execute* decoded_instruction;
     pid_status result = pcb->status;
-    bool interrupt = check_interrupt(result);
 
-
-    while(result == RUNNING && !interrupt) {
+    while(result == RUNNING) {
         list_instruction = fetch(memoria_fd);
         decoded_instruction = decode(list_instruction);
         result = exec(decoded_instruction, kernel_fd, memoria_fd);
-        interrupt = check_interrupt(result);
+        bool interrupt = check_interrupt(result);
+        if (interrupt && result == RUNNING) result = RUNNING_QUANTUM; 
     }
 
     pcb->pc = pcb->registers->pc;
@@ -21,7 +20,6 @@ void cpu(int memoria_fd, int kernel_fd){
 
     agregar_pcb_paquete(paquete, pcb);
     enviar_paquete(paquete, kernel_fd);
-
     eliminar_paquete(paquete);
 
     log_info(logger, "Proceso enviado a Kernel - PID: %u", pcb->pid);
@@ -41,7 +39,7 @@ t_list* fetch(int memoria_fd) {
 
     log_info(logger, "Fetch PC: %u", pcb->registers->pc);
     
-    op_code cod_op = recibir_operacion(memoria_fd);
+    recibir_operacion(memoria_fd);
     list_instruction = recibir_paquete(memoria_fd);
 
     return list_instruction;
@@ -108,6 +106,18 @@ t_intruction_execute* decode(t_list* list_instruction) {
         
         case COPY_STRING:
             decoded_instruction->operation = COPY_STRING;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 1;
+            break;
+        
+        case WAIT: 
+            decoded_instruction->operation = WAIT;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 1;
+            break;
+
+        case SIGNAL: 
+            decoded_instruction->operation = SIGNAL;
             decoded_instruction->params[0] = list_remove(list_instruction, 0);
             decoded_instruction->total_params = 1;
             break;
@@ -178,6 +188,16 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int me
 
         case COPY_STRING:
             status = copy_string(memoria_fd, decoded_instruction->params[0]);
+            break;
+
+        case WAIT:
+            semaphore(kernel_fd, WAIT_RECURSO,  decoded_instruction->params[0]);
+            status = BLOCKED_WAIT;
+            break;
+
+        case SIGNAL:
+            semaphore(kernel_fd, SIGNAL_RECURSO,  decoded_instruction->params[0]);
+            status = RUNNING_SIGNAL;
             break;
 
         case IO_GEN_SLEEP:

@@ -89,12 +89,11 @@ bool jnz_register(char* registro, char* next_pc){
 pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
     t_paquete* paquete = crear_paquete(IO);
     
-    agregar_io_paquete(paquete, decoded->operation, decoded->params[0], decoded->params[1]);
+    agregar_io_paquete(paquete, decoded->operation, decoded->params, decoded->total_params);
     enviar_paquete(paquete, kernel_fd);
     eliminar_paquete(paquete);
 
-    log_info(logger, "Wait IO: %s - time: %s", decoded->params[0], decoded->params[1]);
-    return BLOCKED;
+    return BLOCKED_IO;
 }
 
 // Falta uint8
@@ -208,6 +207,14 @@ pid_status leer_memoria(int memoria_fd, void* buffer, t_list* frames){
     }
 
     return RUNNING;
+}
+
+void semaphore(int kernek_fd, op_code code, char* recurso){
+    t_paquete* paquete = crear_paquete(code);
+
+    agregar_a_paquete(paquete, recurso, strlen(recurso) + 1);
+    enviar_paquete(paquete, kernek_fd);
+    eliminar_paquete(paquete);
 }
 
 /*
@@ -326,6 +333,8 @@ set_instruction mapInstruction (char* intruction) {
     if (strcmp(intruction, "MOV_OUT") == 0) return MOV_OUT;
     if (strcmp(intruction, "RESIZE") == 0) return RESIZE;
     if (strcmp(intruction, "COPY_STRING") == 0) return COPY_STRING;
+    if (strcmp(intruction, "WAIT") == 0) return WAIT;
+    if (strcmp(intruction, "SIGNAL") == 0) return SIGNAL;
     if (strcmp(intruction, "IO_STDIN_READ") == 0) return IO_STDIN_READ;
     if (strcmp(intruction, "IO_STDOUT_WRITE") == 0) return IO_STDOUT_WRITE;
     if (strcmp(intruction, "IO_GEN_SLEEP") == 0) return IO_GEN_SLEEP;

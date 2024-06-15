@@ -5,13 +5,15 @@
 #include "instruction_protocol.h"
 
 typedef struct {
-	char* name_interface;
 	set_instruction type_instruction;
-	char* sleep_time;
+	uint32_t buffer_size;
+	void* buffer;
 } t_io; // IO - Kernel
 
 
-t_io* recibir_io(int, t_log*);
-void agregar_io_paquete(t_paquete*, set_instruction, char*, char*);
+t_io* recibir_io(int, char**, t_log*);
+void agregar_io_paquete(t_paquete*, set_instruction, char* params[], int);
+void agregar_io_serializado(t_paquete*, t_io*);
+t_io* recibir_io_serializado(int, t_log*);
 
 #endif

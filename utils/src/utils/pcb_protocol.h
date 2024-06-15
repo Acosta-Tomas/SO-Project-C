@@ -6,8 +6,11 @@
 typedef enum {
 	NEW,
 	RUNNING,
+    RUNNING_QUANTUM,
+    RUNNING_SIGNAL,
     TERMINATED,
-    BLOCKED,
+    BLOCKED_IO,
+    BLOCKED_WAIT,
     ERROR
 } pid_status; // Kernel - cpu
 
