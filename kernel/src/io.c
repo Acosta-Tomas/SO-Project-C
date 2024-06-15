@@ -67,8 +67,8 @@ void* io_client(void *client) {
         switch (cod_op){
             case IO_ERROR:
                 log_error(logger, "Error en IO %u", io->pcb->pid);
-                free(io->pcb->registers);
-                free(io->pcb);
+                finalizar_proceso(io->pcb);;
+                free(io);
                 break;
 
             case IO_SUCCESS:
@@ -78,14 +78,17 @@ void* io_client(void *client) {
                 queue_push(queue_ready, io->pcb);
                 sem_post(&mutex_ready);
                 sem_post(&hay_ready);
+
+                free(io);
             break;
             
             default:
                 bad_op = true;
+                log_error(logger, "Error en IO %u", io->pcb->pid);
+                finalizar_proceso(io->pcb);
+                free(io);
                 break;
         }
-
-        free(io);
     }
 
 

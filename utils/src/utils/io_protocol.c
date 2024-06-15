@@ -1,6 +1,6 @@
 #include "io_protocol.h"
 
-t_io* recibir_io(int conexion, char* name_interface, t_log* logger){
+t_io* recibir_io(int conexion, char** name_interface, t_log* logger){
 	int size;
     int desplazamiento = 0;
     void* buffer;
@@ -14,9 +14,9 @@ t_io* recibir_io(int conexion, char* name_interface, t_log* logger){
 
     memcpy(&string_size, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
-	name_interface = malloc(string_size);
+	*(name_interface) = (char*)malloc(string_size);
 
-    memcpy(name_interface, buffer + desplazamiento, string_size);
+    memcpy(*(name_interface), buffer + desplazamiento, string_size);
     desplazamiento += string_size;
 
 	memcpy(&io->buffer_size, buffer + desplazamiento, sizeof(uint32_t));
@@ -43,7 +43,6 @@ void agregar_io_paquete(t_paquete* paquete, set_instruction instruction, char* p
 
 void agregar_io_serializado(t_paquete* paquete, t_io* io){
     agregar_uint_a_paquete(paquete, &io->type_instruction, sizeof(set_instruction));
-
     agregar_a_paquete(paquete, io->buffer, io->buffer_size);
 }
 

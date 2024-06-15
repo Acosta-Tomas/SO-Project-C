@@ -11,7 +11,7 @@ typedef struct {
 } t_io; // IO - Kernel
 
 
-t_io* recibir_io(int, char*, t_log*);
+t_io* recibir_io(int, char**, t_log*);
 void agregar_io_paquete(t_paquete*, set_instruction, char* params[], int);
 void agregar_io_serializado(t_paquete*, t_io*);
 t_io* recibir_io_serializado(int, t_log*);

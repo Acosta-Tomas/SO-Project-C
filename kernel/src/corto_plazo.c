@@ -42,6 +42,15 @@ void* corto_main(void *arg){
             finalizar_proceso(pcb);
         }
 
+        if (pcb->status == RUNNING) {
+            log_info(logger, "Proceso fin de Quantum - PID: %u", pcb->pid);
+
+            sem_wait(&mutex_ready);
+            queue_push(queue_ready, pcb);
+            sem_post(&mutex_ready);
+            sem_post(&hay_ready);
+        }
+
         if (pcb->status == RUNNING_QUANTUM) {
             log_info(logger, "Proceso fin de Quantum - PID: %u", pcb->pid);
 
@@ -85,8 +94,8 @@ t_pcb* esperar_cpu(int conexion){
         return recibir_pcb(conexion, logger);
     
     if (cod_op == IO){
-        char* name_interface;
-        io_request = recibir_io(conexion, name_interface, logger);
+        char* name_interface = NULL;
+        io_request = recibir_io(conexion, &name_interface, logger);
 
         recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
