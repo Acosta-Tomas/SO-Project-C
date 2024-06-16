@@ -10,7 +10,7 @@ t_io* recibir_io(int conexion, char** name_interface, t_log* logger){
     buffer = recibir_buffer(&size, conexion);
 
     memcpy(&io->type_instruction, buffer + desplazamiento, sizeof(set_instruction));
-    desplazamiento += sizeof(uint32_t);
+    desplazamiento += sizeof(set_instruction);
 
     memcpy(&string_size, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);

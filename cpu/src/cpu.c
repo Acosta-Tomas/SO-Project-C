@@ -128,6 +128,22 @@ t_intruction_execute* decode(t_list* list_instruction) {
             decoded_instruction->params[1] = list_remove(list_instruction, 0);
             decoded_instruction->total_params = 2;
             break;    
+        
+        case IO_STDIN_READ:
+            decoded_instruction->operation = IO_STDIN_READ;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->params[2] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 3;
+            break;   
+        
+        case IO_STDOUT_WRITE:
+            decoded_instruction->operation = IO_STDOUT_WRITE;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->params[2] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 3;
+            break;   
 
         case EXIT:
             decoded_instruction->operation = EXIT;
@@ -202,6 +218,14 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int me
 
         case IO_GEN_SLEEP:
             status = enviar_io(kernel_fd, decoded_instruction);
+            break;
+
+        case IO_STDIN_READ:
+            status = io_read_write(memoria_fd, kernel_fd, decoded_instruction);
+            break;
+
+        case IO_STDOUT_WRITE:
+            status = io_read_write(memoria_fd, kernel_fd, decoded_instruction);
             break;
 
         case EXIT: 

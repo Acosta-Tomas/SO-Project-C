@@ -17,6 +17,9 @@
 extern t_log* logger;
 extern t_config* config;
 
+op_code escribir_memoria(int, void*, t_list*);
+op_code leer_memoria(int, void*, t_list*);
+
 #endif
 
 /*

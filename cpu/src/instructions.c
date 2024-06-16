@@ -162,6 +162,45 @@ pid_status copy_string(int memoria_fd, char* tamaño){
     return status;
 }
 
+pid_status io_read_write(int memoria_fd, int kernel_fd, t_intruction_execute* decoded){
+    char* tamaño = decoded->params[2];
+    char* direccion_logica = decoded->params[1];
+    set_instruction io_instruction = decoded->operation;
+
+    uint32_t tamaño_register = *((uint32_t*) get_register(tamaño));
+    uint32_t dl_register = *((uint32_t*) get_register(direccion_logica));
+
+    t_list* frames = list_create();
+    pid_status status = mmu(memoria_fd, dl_register, tamaño_register, frames);
+
+    if (status == RUNNING) {
+        t_paquete* paquete = crear_paquete(IO);
+
+        agregar_io_paquete(paquete, io_instruction, decoded->params, 1); // Solo necesito agregar el nombre como si fuese IO_GEN_SLEEP
+
+        uint32_t buffer_size = list_size(frames) * 8  + sizeof(uint32_t); // tamaño de lo que hay que leer mas tamaño de los frames (cada frame 8 bytes) -> Para que coincida conIO_GES_SLEEP PARA KERNEL
+        agregar_uint_a_paquete(paquete, &buffer_size, sizeof(uint32_t));
+        agregar_uint_a_paquete(paquete, &tamaño_register, sizeof(uint32_t));
+        
+        while(!list_is_empty(frames)){
+            t_memoria_fisica* frame = list_remove(frames, 0);
+            
+            agregar_uint_a_paquete(paquete, &frame->direccion_fisica, sizeof(uint32_t));
+            agregar_uint_a_paquete(paquete, &frame->bytes, sizeof(uint32_t));
+
+            free(frame);
+        }
+
+        enviar_paquete(paquete, kernel_fd);
+        eliminar_paquete(paquete);
+
+        return BLOCKED_IO;
+    }
+
+    return status;
+
+}
+
 pid_status escribir_memoria(int memoria_fd, void* buffer, t_list* frames){
     int offset_buffer = 0;
 

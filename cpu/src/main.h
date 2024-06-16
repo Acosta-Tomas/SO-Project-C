@@ -41,12 +41,6 @@ typedef struct {
     char* params[5];
 } t_intruction_execute;
 
-typedef struct {
-    uint32_t direccion_fisica;
-    uint32_t bytes;
-} t_memoria_fisica;
-
-
 extern t_log* logger;
 extern t_config* config;
 extern t_pcb* pcb;
@@ -81,6 +75,7 @@ pid_status mov_out(int, char*, char*);
 pid_status mov_in(int, char*, char*);
 pid_status copy_string(int, char*);
 void semaphore(int, op_code, char*);
+pid_status io_read_write(int, int, t_intruction_execute*);
 
 pid_status mmu(int, uint32_t, uint32_t, t_list*);
 pid_status escribir_memoria(int, void*, t_list*);
