@@ -1,16 +1,21 @@
 #include "main.h"
 
 int main(int argc, char* argv[]) {
-    if (argc < 2) {
-        printf("Uso: %s <nombre> <edad>\n", argv[0]);
-        return 1;
+    if (argc < 3) {
+        printf("Uso: %s <nombre_interfaz> <config_file>\n", argv[0]);
+        return EXIT_FAILURE;
     }
 
-    t_config* config = config_create(CONFIG_FILE);
+    t_config* config = config_create(argv[2]);
+    char* nombre_interfaz = argv[1];
 
     if (config == NULL) exit(EXIT_FAILURE); 
 
-    t_log* logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_CLIENT_LOG), true, LOG_LEVEL_INFO);
+    char* tipo_interfaz = config_get_string_value(config, KEY_TIPO_INTERFAZ);
+    char* file_logs = string_duplicate(tipo_interfaz);
+    string_append(&file_logs, (char*) ".logs");
+
+    t_log* logger = log_create(file_logs, config_get_string_value(config, KEY_LOGGER), true, LOG_LEVEL_INFO);
 
     char* ip_kernel = config_get_string_value(config, KEY_IP_KERNEL);
     char* puerto_kernel = config_get_string_value(config, KEY_PUERTO_KERNEL);
@@ -23,16 +28,13 @@ int main(int argc, char* argv[]) {
     int memoria_fd = crear_conexion(ip_memoria, puerto_memoria);
     log_info(logger, "Connected to Memoria -  SOCKET: %d", memoria_fd);
 
-    char* nombre_interfaz = argv[1];
-
     enviar_mensaje(nombre_interfaz, kernel_fd);
 
-    t_io* io;
     op_code to_send = IO_ERROR;
 
     for (op_code cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
         if (cod_op == IO){
-            io = recibir_io_serializado(kernel_fd, logger);
+            t_io* io = recibir_io_serializado(kernel_fd, logger);
 
             if(io->type_instruction == IO_GEN_SLEEP) {
                 char* sleep_time = malloc(io->buffer_size);
@@ -68,16 +70,22 @@ int main(int argc, char* argv[]) {
                     list_add(frames, frame);
                 }
 
-                void* buffer = malloc(sizeof(tamaño_escribir));
+                char* buffer = malloc(tamaño_escribir);
 
                 printf("Ingresar datos a guardar: ");
 
                 if (fgets(buffer, tamaño_escribir, stdin) != NULL) {
+                    if (buffer[strlen(buffer) - 1] != '\n') stdin_clear_buffer();
+                
                     printf("Usted ingresó: %s - %ld\n", (char*) buffer, strlen(buffer) + 1);
                 }
 
-                to_send = escribir_memoria(memoria_fd, buffer, frames);
+                int status = escribir_memoria(memoria_fd, buffer, frames);
+                
+                to_send = status == -1 ? IO_ERROR : IO_SUCCESS;
 
+                free(io->buffer);
+                free(io);
                 free(buffer);
                 list_destroy(frames);
             }
@@ -102,18 +110,22 @@ int main(int argc, char* argv[]) {
                     list_add(frames, frame);
                 }
 
-                void* buffer = malloc(sizeof(tamaño_a_leer));
+                char* buffer = (char*) malloc(tamaño_a_leer);
 
-                to_send = leer_memoria(memoria_fd, buffer, frames);
+                int status = leer_memoria(memoria_fd, buffer, frames);
+                
+                to_send = status == -1 ? IO_ERROR : IO_SUCCESS;
 
-                printf("Datos leidos: %s - %ld\n", (char*) buffer, strlen(buffer) + 1);
+                printf("Datos leidos: %s - %ld\n", buffer, strlen(buffer) + 1);
 
+                free(io->buffer);
+                free(io);
                 free(buffer);
                 list_destroy(frames);
             }
 
-            log_info(logger, "Finalizada instruccion, se avisa a kernel");
             send(kernel_fd, &to_send, sizeof(op_code), 0);
+            log_info(logger, "Finalizada instruccion, se avisa a kernel");
         }
     }
 
@@ -127,49 +139,10 @@ int main(int argc, char* argv[]) {
     return EXIT_SUCCESS;
 }
 
-op_code escribir_memoria(int memoria_fd, void* buffer, t_list* frames){
-    int offset_buffer = 0;
-
-    while(list_size(frames)){
-        t_memoria_fisica* frame = list_remove(frames, 0);
-        t_paquete* paquete = crear_paquete(MEM_WRITE);
-        op_code code;
-
-        agregar_uint_a_paquete(paquete, &frame->direccion_fisica, sizeof(uint32_t));
-        agregar_a_paquete(paquete, buffer + offset_buffer, frame->bytes);
-        enviar_paquete(paquete, memoria_fd);
-        eliminar_paquete(paquete);
-
-        offset_buffer += frame->bytes;
-        free(frame);
-
-        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
-        if (code != MEM_SUCCESS) return IO_ERROR;
+void stdin_clear_buffer() {
+    char c = fgetc(stdin);
+    while (c != '\n' && c != EOF) {
+        printf("%c", c);
+        c = fgetc(stdin);
     }
-
-    return IO_SUCCESS;
-}
-
-op_code leer_memoria(int memoria_fd, void* buffer, t_list* frames){
-    int offset_buffer = 0;
-    op_code code_op = MEM_READ;
-
-    while(list_size(frames)){
-        t_memoria_fisica* frame = list_remove(frames, 0);
-        op_code code;
-
-        send(memoria_fd, &code_op, sizeof(op_code), 0);
-        send(memoria_fd, &frame->direccion_fisica, sizeof(uint32_t), 0);
-        send(memoria_fd, &frame->bytes, sizeof(uint32_t), 0);
-
-        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
-        recv(memoria_fd, buffer + offset_buffer, frame->bytes, MSG_WAITALL);
-
-        offset_buffer += frame->bytes;
-        free(frame);
-
-        if (code != MEM_SUCCESS) return IO_ERROR;
-    }
-
-    return IO_SUCCESS;
 }
