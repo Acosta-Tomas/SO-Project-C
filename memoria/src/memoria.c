@@ -273,7 +273,7 @@ op_code resize_up(int pages, t_list* list_pages){
     Por cada iteracion remuevo la pagina y pongo en 0 el frame del bitmap correspondiente
 */
 void resize_down(int pages, t_list* list_pages){
-    for(int i = list_size(list_pages) - 1; i >= 0 && pages > 0; i -= 1){
+    for(int i = list_size(list_pages) - 1; i >= 0 && pages >= 0; i -= 1){
         uint32_t* frame = list_remove(list_pages, i);
 
         sem_wait(&mutex_bit_map);

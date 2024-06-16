@@ -55,27 +55,8 @@ t_memoria* get_pid(uint32_t);
 
 #endif
  /* 
- 
-    To Do: 
-        Arreglar obtencion de instrucciones del pseudocodigo
-        Agregar retardo x archivo de config para responder a cada peticion de instruccion y/o escritura, lectura de memoria de usuario
-        Agregar tablas de paginas en la creación de un proceso
-        Manejar el espacio contiguo de memoria
-        Finalizacion de proceso, marcar frames libres y eliminar las instrucciones 
-        Finalizar por completo el módulo (no olvidarse los logs)
- */
-
-/*
-    Resize -> Check bitmap  -> Frame libre -> Create page para el PID -> Marcar frame opcupad
-                            -> No hay frames libres -> Memory error -> Exit
-
-    PID page -> hay pagina? -> Devolver frame
-                            -> Error
-
-    Read -> DF y Bytes  -> Devolver lo leiod
-
-    Write -> DF, dato   -> Escribir 
-
-    END -> PID -> Clean frames
+    Revisar finalizacion de proceso, no tengo los bitmaps libes
+    p.d Creo que lo arreglue poniendo pages >= 0 en vez de pages > 0 (no permite resize down a 0)
+        probar que no rompa los resize de instruccion y que funcione para bitmap
 
 */
