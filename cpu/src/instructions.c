@@ -96,10 +96,11 @@ pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
     return BLOCKED_IO;
 }
 
-// Falta uint8
+// Falta uint8escribir_memoria
 pid_status mov_out(int memoria_fd, char* registro_dl, char* registro_datos){
     uint32_t size_register = (uint32_t) sizeof_register(registro_datos);
-    uint32_t* direccion_logica = (uint32_t*) get_register(registro_dl);
+    uint32_t size_direccion_logica = (uint32_t) sizeof_register(registro_dl);
+    uint32_t direccion_logica = size_direccion_logica == sizeof(uint32_t) ? *(uint32_t*) get_register(registro_dl) : (uint32_t) *(uint8_t*) get_register(registro_dl);
     void* buffer = malloc(size_register);
     t_list* frames = list_create();
     pid_status status;
@@ -107,9 +108,10 @@ pid_status mov_out(int memoria_fd, char* registro_dl, char* registro_datos){
     if (size_register == sizeof(uint32_t)) memcpy(buffer, (uint32_t*) get_register(registro_datos), size_register);
     else memcpy(buffer, (uint8_t*) get_register(registro_datos), size_register);
 
-    status = mmu(memoria_fd, *(direccion_logica), size_register, frames);
+    status = mmu(memoria_fd, direccion_logica, size_register, frames);
     if (status == RUNNING) {
-        status = escribir_memoria(memoria_fd, buffer, frames);
+        int error = escribir_memoria(memoria_fd, buffer, frames);
+        status = error == -1 ? ERROR : RUNNING;
     }
     
     list_destroy(frames);
@@ -119,14 +121,16 @@ pid_status mov_out(int memoria_fd, char* registro_dl, char* registro_datos){
 
 pid_status mov_in(int memoria_fd, char* registro_datos, char* registro_dl){
     uint32_t size_register = (uint32_t) sizeof_register(registro_datos);
-    uint32_t* direccion_logica = (uint32_t*) get_register(registro_dl);
+    uint32_t size_direccion_logica = (uint32_t) sizeof_register(registro_dl);
+    uint32_t direccion_logica = size_direccion_logica == sizeof(uint32_t) ? *(uint32_t*) get_register(registro_dl) : (uint32_t) *(uint8_t*) get_register(registro_dl);
     void* buffer = malloc(size_register);
     t_list* frames = list_create();
     pid_status status;
 
-    status = mmu(memoria_fd, *(direccion_logica), size_register, frames);
+    status = mmu(memoria_fd, direccion_logica, size_register, frames);
     if (status == RUNNING) {
-        status = leer_memoria(memoria_fd, buffer, frames);
+        int error = leer_memoria(memoria_fd, buffer, frames);
+        status = error == -1 ? ERROR : RUNNING;
     }
 
     if (size_register == sizeof(uint32_t)) memcpy((uint32_t*) get_register(registro_datos), buffer, size_register);
@@ -150,9 +154,13 @@ pid_status copy_string(int memoria_fd, char* tamaño){
     status = mmu(memoria_fd, dst_register, size, dst_frames);
 
     if (status == RUNNING) {
-        status = leer_memoria(memoria_fd, buffer, src_frames);
-        log_info(logger, "STRING LEIDO: %s", (char*) buffer);
-        status = escribir_memoria(memoria_fd, buffer, dst_frames);
+        int error = leer_memoria(memoria_fd, buffer, src_frames);
+        status = error == -1 ? ERROR : RUNNING;
+        
+        if (status != ERROR){
+            error = escribir_memoria(memoria_fd, buffer, dst_frames);
+            status = error == -1 ? ERROR : RUNNING;
+        }
     }
 
 
@@ -167,8 +175,11 @@ pid_status io_read_write(int memoria_fd, int kernel_fd, t_intruction_execute* de
     char* direccion_logica = decoded->params[1];
     set_instruction io_instruction = decoded->operation;
 
-    uint32_t tamaño_register = *((uint32_t*) get_register(tamaño));
-    uint32_t dl_register = *((uint32_t*) get_register(direccion_logica));
+    uint32_t size_tamaño_register = (uint32_t) sizeof_register(tamaño);
+    uint32_t size_dl_register = (uint32_t) sizeof_register(direccion_logica);
+
+    uint32_t tamaño_register = sizeof(uint32_t) == size_tamaño_register ? *((uint32_t*) get_register(tamaño)) : (uint32_t) *((uint8_t*) get_register(tamaño));
+    uint32_t dl_register = sizeof(uint32_t) == size_dl_register ? *((uint32_t*) get_register(direccion_logica)) : (uint32_t) *((uint8_t*) get_register(direccion_logica));
 
     t_list* frames = list_create();
     pid_status status = mmu(memoria_fd, dl_register, tamaño_register, frames);
@@ -199,53 +210,6 @@ pid_status io_read_write(int memoria_fd, int kernel_fd, t_intruction_execute* de
 
     return status;
 
-}
-
-pid_status escribir_memoria(int memoria_fd, void* buffer, t_list* frames){
-    int offset_buffer = 0;
-
-    while(list_size(frames)){
-        t_memoria_fisica* frame = list_remove(frames, 0);
-        t_paquete* paquete = crear_paquete(MEM_WRITE);
-        op_code code;
-
-        agregar_uint_a_paquete(paquete, &frame->direccion_fisica, sizeof(uint32_t));
-        agregar_a_paquete(paquete, buffer + offset_buffer, frame->bytes);
-        enviar_paquete(paquete, memoria_fd);
-        eliminar_paquete(paquete);
-
-        offset_buffer += frame->bytes;
-        free(frame);
-
-        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
-        if (code != MEM_SUCCESS) return ERROR;
-    }
-
-    return RUNNING;
-}
-
-pid_status leer_memoria(int memoria_fd, void* buffer, t_list* frames){
-    int offset_buffer = 0;
-    op_code code_op = MEM_READ;
-
-    while(list_size(frames)){
-        t_memoria_fisica* frame = list_remove(frames, 0);
-        op_code code;
-
-        send(memoria_fd, &code_op, sizeof(op_code), 0);
-        send(memoria_fd, &frame->direccion_fisica, sizeof(uint32_t), 0);
-        send(memoria_fd, &frame->bytes, sizeof(uint32_t), 0);
-
-        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
-        recv(memoria_fd, buffer + offset_buffer, frame->bytes, MSG_WAITALL);
-
-        offset_buffer += frame->bytes;
-        free(frame);
-
-        if (code != MEM_SUCCESS) return ERROR;
-    }
-
-    return RUNNING;
 }
 
 void semaphore(int kernek_fd, op_code code, char* recurso){

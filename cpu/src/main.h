@@ -78,8 +78,6 @@ void semaphore(int, op_code, char*);
 pid_status io_read_write(int, int, t_intruction_execute*);
 
 pid_status mmu(int, uint32_t, uint32_t, t_list*);
-pid_status escribir_memoria(int, void*, t_list*);
-pid_status leer_memoria(int, void*, t_list*);
 
 void pc_plus_plus(uint32_t*, uint32_t);
 uint8_t atouint8(char*);
