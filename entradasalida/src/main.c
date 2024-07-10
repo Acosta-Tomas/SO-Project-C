@@ -70,14 +70,14 @@ int main(int argc, char* argv[]) {
                     list_add(frames, frame);
                 }
 
-                char* buffer = malloc(tamaño_escribir);
+                char* buffer = malloc(tamaño_escribir + 1);
 
                 printf("Ingresar datos a guardar: ");
 
-                if (fgets(buffer, tamaño_escribir, stdin) != NULL) {
+                if (fgets(buffer, tamaño_escribir + 1, stdin) != NULL) {
                     if (buffer[strlen(buffer) - 1] != '\n') stdin_clear_buffer();
                 
-                    printf("Usted ingresó: %s - %ld\n", (char*) buffer, strlen(buffer) + 1);
+                    printf("Usted ingresó: %s - %ld\n", (char*) buffer, strlen(buffer));
                 }
 
                 int status = escribir_memoria(memoria_fd, buffer, frames);
@@ -116,7 +116,7 @@ int main(int argc, char* argv[]) {
                 
                 to_send = status == -1 ? IO_ERROR : IO_SUCCESS;
 
-                printf("Datos leidos: %s - %ld\n", buffer, strlen(buffer) + 1);
+                printf("Datos leidos: %.*s\n", tamaño_a_leer, buffer);
 
                 free(io->buffer);
                 free(io);
