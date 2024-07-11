@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
     int memoria_fd = crear_conexion(ip_memoria, puerto_memoria);
     log_info(logger, "Connected to Memoria -  SOCKET: %d", memoria_fd);
 
-    enviar_mensaje(nombre_interfaz, kernel_fd);
+    enviar_mensaje(nombre_interfaz, kernel_fd, MENSAJE);
 
     op_code to_send = IO_ERROR;
 

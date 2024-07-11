@@ -38,6 +38,17 @@ void* memoria(void *client) {
                 free(pid_to_init->path);
                 free(pid_to_init);
                 break;
+            
+            case INIT_SCRIPT:
+                char* archivo = recibir_mensaje(cliente_fd);
+                char* comandos = string_new();
+
+                op_code codigo = leer_script(archivo, &comandos);
+                
+                if (codigo == INIT_SCRIPT_ERROR) send(cliente_fd, &codigo, sizeof(op_code), 0);
+                else enviar_mensaje(comandos, cliente_fd, codigo);
+
+                break;
 
             case END_PID:
                 liberar_memoria(cliente_fd);
@@ -69,6 +80,33 @@ void* memoria(void *client) {
     return EXIT_SUCCESS;
 }
 
+op_code leer_script(char* nombre_script, char** comandos){
+    char* path = config_get_string_value(config, KEY_PATH_INSTRUCCIONES);
+    char* full_path = string_new();
+    string_append(&full_path, path);
+    string_append(&full_path, nombre_script);
+    FILE* archivo = fopen(full_path, "r");
+
+    log_info(logger, "Script a leer: %s", full_path);
+
+    if(archivo == NULL){
+        log_info(logger, "No se encontro el script deseasdo: %s", path);
+        return INIT_SCRIPT_ERROR;
+    }
+
+    fseek(archivo, 0, SEEK_END);
+    int tamaño_archivo = ftell(archivo);
+    fseek(archivo, 0, SEEK_SET);
+
+    char* buffer = malloc(tamaño_archivo);
+
+    while(fgets(buffer, tamaño_archivo, archivo) != NULL){
+        string_append(comandos, buffer);
+    }
+
+    return INIT_SCRIPT_SUCCESS;
+}
+
 
 op_code leer_archivo(uint32_t pid, char *nombre_archivo){
     char* path = config_get_string_value(config, KEY_PATH_INSTRUCCIONES);
@@ -77,7 +115,7 @@ op_code leer_archivo(uint32_t pid, char *nombre_archivo){
     string_append(&full_path, nombre_archivo);
     FILE* archivo = fopen(full_path, "r");
 
-    log_info(logger, "archivo a leer: %s", full_path);
+    log_info(logger, "Archivo a leer: %s", full_path);
 
     if(archivo == NULL){
         log_info(logger, "No se encontro el archivo deseasdo: %s", path);

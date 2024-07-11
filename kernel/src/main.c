@@ -3,16 +3,17 @@
 t_config* config;
 t_log* logger;
 
-pthread_t consola_thread, largo_thread, corto_thread, io_thread, quatum_thread;
+pthread_t consola_thread, largo_thread, corto_thread, io_thread, interrup_thread;
 
 sem_t mutex_io_clients;
 sem_t mutex_ready;
 sem_t mutex_new;
+sem_t mutex_interrupt;
 
 sem_t hay_ready;
 sem_t hay_new;
 
-sem_t start_quantum;
+sem_t hay_interrupt;
 sem_t cont_multi;
 
 t_queue* queue_priority_ready;
@@ -22,7 +23,7 @@ t_queue* queue_new;
 t_dictionary* dict_recursos;
 t_dictionary* dict_io_clients;
 
-t_quantum* running_pid;
+t_interrupt* interrupt_pid;
 
 int main(int argc, char* argv[]) {
     config = config_create(CONFIG_FILE);
@@ -31,21 +32,20 @@ int main(int argc, char* argv[]) {
     
     logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_LOGGER), false, LOG_LEVEL_DEBUG);
 
-    char* algoritmo = config_get_string_value(config, KEY_ALGORITMO_PLANIFICACION);
-
     sem_init(&mutex_io_clients, 0, 1); 
     sem_init(&mutex_ready, 0, 1);
     sem_init(&mutex_new, 0, 1);   
+    sem_init(&mutex_interrupt, 0, 1);   
     sem_init(&hay_ready, 0, 0);    
     sem_init(&hay_new, 0, 0);    
-    sem_init(&start_quantum, 0, 0);    
+    sem_init(&hay_interrupt, 0, 0);    
     sem_init(&cont_multi, 0, config_get_int_value(config, KEY_GRADO_MULTIPROGRAMACION)); 
 
     queue_priority_ready = queue_create();
     queue_ready = queue_create();
     queue_new = queue_create();
     
-    running_pid = malloc(sizeof(t_quantum));
+    interrupt_pid = malloc(sizeof(t_interrupt));
 
     dict_io_clients = dictionary_create();
     dict_recursos = dictionary_create();
@@ -86,13 +86,9 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    if (strcmp(algoritmo, "FIFO") != 0) {
-        if (pthread_create(&quatum_thread, NULL, quantum_main, NULL)) {
-            log_error(logger, "Problema al crear hilo para el manejo de Interrupt por Quantum");
-            exit(EXIT_FAILURE);
-        } else {
-            pthread_detach(quatum_thread);
-        }
+    if (pthread_create(&interrup_thread, NULL, interrupt_main, NULL)) {
+        log_error(logger, "Problema al crear hilo para el manejo de Interrupt por Quantum");
+        exit(EXIT_FAILURE);
     }
 
     
@@ -101,16 +97,18 @@ int main(int argc, char* argv[]) {
     pthread_join(corto_thread, NULL);
     pthread_join(io_thread, NULL);
     pthread_join(consola_thread, NULL);
+    pthread_join(interrup_thread, NULL);
 
     sem_destroy(&hay_ready);
     sem_destroy(&mutex_ready);
+    sem_destroy(&mutex_interrupt);
     sem_destroy(&hay_new);
     sem_destroy(&mutex_ready);
     sem_destroy(&mutex_io_clients);
-    sem_destroy(&start_quantum);
+    sem_destroy(&hay_interrupt);
     sem_destroy(&cont_multi);
 
-    free(running_pid);
+    free(interrupt_pid);
 
     queue_destroy(queue_ready);
     queue_destroy(queue_new);

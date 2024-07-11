@@ -8,6 +8,7 @@ uint32_t page_size;
 pthread_t thread_dispatch, thread_interrupt;
 
 bool has_interrupt = false;
+op_code interrupt_type;
 
 sem_t mutex_interrupt;
 // sem_t mutex_pcb;
@@ -92,7 +93,7 @@ void* interrupt(void* arg) {
         log_info(logger, "Interrupt connected - SOCKET: %d", kernel_fd);
 
         for (op_code cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
-            if (cod_op == INTERRUPT) {
+            if (cod_op == INTERRUPT || cod_op == END_PID_USER) {
                 uint32_t pid;
                 recv(kernel_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
 
@@ -101,6 +102,7 @@ void* interrupt(void* arg) {
                 if (pcb->pid == pid){
                     sem_wait(&mutex_interrupt);
                     has_interrupt = true;
+                    interrupt_type = cod_op;
                     sem_post(&mutex_interrupt);
                 }
             }

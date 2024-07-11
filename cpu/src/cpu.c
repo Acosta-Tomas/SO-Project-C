@@ -4,13 +4,16 @@ void cpu(int memoria_fd, int kernel_fd){
     t_list* list_instruction;
     t_intruction_execute* decoded_instruction;
     pid_status result = pcb->status;
+    op_code type;
 
     while(result == RUNNING) {
         list_instruction = fetch(memoria_fd);
         decoded_instruction = decode(list_instruction);
         result = exec(decoded_instruction, kernel_fd, memoria_fd);
-        bool interrupt = check_interrupt(result);
-        if (interrupt && result == RUNNING) result = RUNNING_QUANTUM; 
+        bool interrupt = check_interrupt(&type);
+
+        if (interrupt && type == END_PID_USER) result = TERMINATED_USER;
+        if (interrupt && type == INTERRUPT && result == RUNNING) result = RUNNING_QUANTUM; 
     }
 
     pcb->pc = pcb->registers->pc;
@@ -244,11 +247,12 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int me
     return status;
 }
 
-bool check_interrupt() { 
+bool check_interrupt(op_code* type) { 
     bool interrupt;
     sem_wait(&mutex_interrupt);
     interrupt = has_interrupt;
     has_interrupt = false;
+    *type = interrupt_type;
     sem_post(&mutex_interrupt);
 
     return interrupt;

@@ -39,6 +39,7 @@ extern sem_t mutex_bit_map;
 extern sem_t mutex_mem_usuario;
 extern sem_t mutex_mem_procesos;
 
+op_code leer_script(char*, char**);
 op_code leer_archivo(uint32_t, char*);
 void* memoria(void*);
 char** get_instruction_pid(uint32_t, uint32_t);

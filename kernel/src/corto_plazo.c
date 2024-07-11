@@ -1,11 +1,13 @@
 #include "main.h"
 
+uint32_t running_pid;
+
 void* corto_main(void *arg){
     log_info(logger, "Thread planificado de corto plazo creado");
 
     char* algoritmo = config_get_string_value(config, KEY_ALGORITMO_PLANIFICACION);
     uint32_t quantum = (uint32_t) config_get_int_value(config, KEY_QUANTUM);
-    int hay_interrupt = strcmp(algoritmo, "FIFO");
+    int hay_quantum = strcmp(algoritmo, "FIFO");
 
     char* ip_cpu = config_get_string_value(config, KEY_IP_CPU);
     char* puerto_cpu_dispatch = config_get_string_value(config, KEY_PUERTO_CPU_DISPATCH);
@@ -21,18 +23,39 @@ void* corto_main(void *arg){
         pcb->status = RUNNING;
         sem_post(&mutex_ready);
 
-        if(hay_interrupt != 0) {
-            running_pid->pid = pcb->pid;
-            running_pid->quantum = quantum;
-            sem_post(&start_quantum);
-        }
+        pthread_t q_thread;
+        t_quantum* pid_quantum = malloc(sizeof(t_quantum));
+
+        pcb->quantum = quantum;
+        pid_quantum->quantum = quantum;
+        pid_quantum->pid = pcb->pid;
+        running_pid = pcb->pid;
+
 
         enviar_cpu(conexion, pcb);
+        
+        if(hay_quantum) q_thread = create_quantum_thread(pid_quantum);
+        t_temporal* pid_timestamp = temporal_create();
 
         pcb = esperar_cpu(conexion);
 
+        temporal_stop(pid_timestamp);
+        log_info(logger, "VUELVE PROCESO - TIMESTAMP: %li", temporal_gettime(pid_timestamp));
+
+        if (pcb->status != RUNNING_QUANTUM && hay_quantum) {
+            if (pthread_cancel(q_thread) != 0) {
+                log_info(logger, "Error al cancelar quantum thread");
+            }
+        }
+
         if (pcb->status == TERMINATED) {
             log_info(logger, "Proceso Finalizado - PID: %u", pcb->pid);
+            log_registers(pcb, logger);
+            finalizar_proceso(pcb);
+        }
+
+        if (pcb->status == TERMINATED_USER) {
+            log_info(logger, "Proceso Finalizado por usuario - PID: %u", pcb->pid);
             log_registers(pcb, logger);
             finalizar_proceso(pcb);
         }
@@ -43,7 +66,7 @@ void* corto_main(void *arg){
         }
 
         if (pcb->status == RUNNING) {
-            log_info(logger, "Proceso fin de Quantum - PID: %u", pcb->pid);
+            log_info(logger, "Proceso - PID: %u", pcb->pid);
 
             sem_wait(&mutex_ready);
             queue_push(queue_ready, pcb);
@@ -66,6 +89,8 @@ void* corto_main(void *arg){
             sem_post(&mutex_ready);
             sem_post(&hay_ready);
         }
+
+        temporal_destroy(pid_timestamp);
     }
 
     liberar_conexion(conexion);
@@ -148,7 +173,7 @@ t_pcb* esperar_cpu(int conexion){
 
         if(recurso->cant_instancias >= 0) {
             recurso->cant_instancias -= 1;
-            if (pcb_updated->status != RUNNING_QUANTUM) pcb_updated->status = RUNNING;
+            pcb_updated->status = RUNNING;
 
             return pcb_updated;
         }

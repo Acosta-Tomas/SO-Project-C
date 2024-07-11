@@ -25,7 +25,11 @@ typedef enum{
 	INIT_PID,
 	INIT_PID_SUCCESS,
 	INIT_PID_ERROR,
+	INIT_SCRIPT,
+	INIT_SCRIPT_SUCCESS,
+	INIT_SCRIPT_ERROR,
 	END_PID,
+	END_PID_USER,
 	INTERRUPT,
 	MEM_PAGE_SIZE,
 	MEM_RESIZE,
@@ -59,7 +63,7 @@ void agregar_a_paquete(t_paquete*, void*, int);
 void agregar_uint_a_paquete(t_paquete*, void*, int);
 void eliminar_paquete(t_paquete*);
 
-void enviar_mensaje(char*, int);
+void enviar_mensaje(char*, int, op_code);
 
 
 #endif

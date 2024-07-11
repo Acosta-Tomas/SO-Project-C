@@ -13,25 +13,29 @@ void* consola_main(void *arg){
 
     log_info(logger, "Connected to Memoria - SOCKET: %d", memoria_fd);
 
-    printf("Ecribir INICIAR_PROCESO y su path para comenzar un programa\n");
-
     while(1) {
         char* leido = readline("> ");
         char** command = string_split(leido, " ");
 
         free(leido);
-
+        
         if (strcmp(command[0], "INICIAR_PROCESO") == 0) {
-            printf("Inciando proceso, por favor espere...\n");
-            op_code estado = iniciar_proceso(memoria_fd, command[0], command[1]);
+            iniciar_proceso(memoria_fd, command[0], command[1]);
+            continue;
+        }
 
-            if (estado == INIT_PID_SUCCESS) {
-                enviar_new();
-                printf("Inciado correctamente\n");
-            }
-            if (estado == INIT_PID_ERROR) printf("No se pudo iniciar el proceso\n");
-        } else  printf("Comando no reconocido, intente nuevamente\n");
+        if (strcmp(command[0], "EJECUTAR_SCRIPT") == 0) {
+            ejecutar_script(memoria_fd, command[0], command[1]);
+            continue;
+        }
 
+        if (strcmp(command[0], "FINALIZAR_PROCESO") == 0) {
+            if (command[1] == NULL) printf("Faltan argumentos, por favor intente nuevamente\n");
+            else finalizar_pid((uint32_t) atoi(command[1]));
+            continue;
+        }
+
+        printf("Comando no reconocido, escriba help para ver los comandos disponibles\n");
     }
 
     liberar_conexion(memoria_fd);
@@ -39,9 +43,86 @@ void* consola_main(void *arg){
    return EXIT_SUCCESS;
 }
 
+void finalizar_pid(uint32_t pid){
+    if (pid == running_pid) {
+        sem_wait(&mutex_interrupt);
+        interrupt_pid->pid = running_pid;
+        interrupt_pid->type_interrupt = END_PID_USER;
+        sem_post(&mutex_interrupt);
+        sem_post(&hay_interrupt);
 
-op_code iniciar_proceso(int conexion, char* comando, char* archivo){
-    if (archivo == NULL) return INIT_PID_ERROR;
+        return;
+    }
+    
+    t_pcb* pcb_end = NULL;
+
+    bool is_pid_list(void* pcb) {
+        t_pcb* pcb_to_remove = (t_pcb*) pcb;
+
+        return pcb_to_remove->pid == pid;
+    };
+
+    sem_wait(&mutex_ready);
+    pcb_end = list_remove_by_condition(queue_ready->elements, &is_pid_list);
+    if(pcb_end == NULL) pcb_end = list_remove_by_condition(queue_priority_ready->elements, &is_pid_list);
+    sem_post(&mutex_ready);
+
+    if (pcb_end != NULL) {
+        log_info(logger, "Proceso Finalizado por usuario - PID: %u", pcb_end->pid);
+        log_registers(pcb_end, logger);
+        finalizar_proceso(pcb_end);
+        sem_wait(&hay_ready);
+
+        return;
+    }
+
+    printf("No se encontro proceso: %u\n", pid);
+
+    // sem_wait(&mutex_new);
+    // pcb_end = list_remove_by_condition(queue_new->elements, &is_pid_list);
+    // sem_post(&mutex_new);
+
+    // if (pcb_end != NULL) {
+    //     log_info(logger, "Proceso Finalizado por usuario - PID: %u", pcb_end->pid);
+    //     log_registers(pcb_end, logger);
+    //     finalizar_proceso(pcb_end);
+    //     sem_wait(&hay_new);
+
+    //     return;
+    // }
+}
+
+void ejecutar_script(int conexion, char* comando, char* archivo){
+    if (archivo == NULL) {
+        printf("Faltan argumentos, por favor intente nuevamente\n");
+        return;
+    }
+
+    enviar_mensaje(archivo, conexion, INIT_SCRIPT);
+
+    op_code codigo = recibir_operacion(conexion);
+
+    if (codigo == INIT_SCRIPT_SUCCESS) {
+        char* script = recibir_mensaje(conexion);
+
+        char** comandos = string_split(script, "\n");
+
+        for(int i = 0; i < string_array_size(comandos); i += 1){
+            char* leido = *(comandos + i);
+            char** leido_splitted = string_split(leido, " ");
+
+            iniciar_proceso(conexion, leido_splitted[0], leido_splitted[1]);
+        }
+
+    } else printf("Script no se pudo inicializar\n");
+    
+}
+
+void iniciar_proceso(int conexion, char* comando, char* archivo){
+    if (archivo == NULL) {
+        printf("Faltan argumentos, por favor intente nuevamente\n");
+        return;
+    }
 
     t_paquete* paquete = crear_paquete(INIT_PID);
     agregar_init_process_paquete(paquete, next_pid, archivo);
@@ -49,7 +130,14 @@ op_code iniciar_proceso(int conexion, char* comando, char* archivo){
     enviar_paquete(paquete, conexion);
     eliminar_paquete(paquete);
 
-    return recibir_operacion(conexion);
+    op_code estado = recibir_operacion(conexion);
+
+    if (estado == INIT_PID_SUCCESS) {
+        enviar_new();
+        printf("Proceso %s correctamente inicializado\n", archivo);
+    }
+
+    if (estado == INIT_PID_ERROR) printf("Proceso %s no se pudo inicializar\n", archivo);
 
 }
 

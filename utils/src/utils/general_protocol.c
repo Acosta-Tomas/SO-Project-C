@@ -78,10 +78,10 @@ void* serializar_paquete(t_paquete* paquete, int bytes){
 	return magic;
 }
 
-void enviar_mensaje(char* mensaje, int socket_cliente){
+void enviar_mensaje(char* mensaje, int socket_cliente, op_code codigo){
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 
-	paquete->codigo_operacion = MENSAJE;
+	paquete->codigo_operacion = codigo;
 	paquete->buffer = malloc(sizeof(t_buffer));
 	paquete->buffer->size = strlen(mensaje) + 1;
 	paquete->buffer->stream = malloc(paquete->buffer->size);

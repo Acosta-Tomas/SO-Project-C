@@ -9,6 +9,7 @@ typedef enum {
     RUNNING_QUANTUM,
     RUNNING_SIGNAL,
     TERMINATED,
+    TERMINATED_USER,
     BLOCKED_IO,
     BLOCKED_WAIT,
     ERROR

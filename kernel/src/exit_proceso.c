@@ -6,9 +6,7 @@ void finalizar_proceso(t_pcb* pcb){
     if (pthread_create(&exit_thread, NULL, memoria_finalizar_proceso, pcb)) {
         log_error(logger, "No se pudo crear thread para finilzar proceso");
         exit(EXIT_FAILURE);
-    } else {
-        pthread_detach(exit_thread);
-    }
+    } else pthread_detach(exit_thread);
 
     sem_post(&cont_multi);
 }

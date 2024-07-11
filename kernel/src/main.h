@@ -4,6 +4,7 @@
 #include <semaphore.h>
 #include <readline/readline.h>
 #include <commons/collections/queue.h>
+#include <commons/temporal.h>
 #include <utils/pcb_protocol.h>
 #include <utils/io_protocol.h>
 #include <utils/mem_protocol.h>
@@ -33,6 +34,11 @@ typedef struct {
 } t_quantum; // Kenrel
 
 typedef struct {
+	uint32_t pid;
+	op_code type_interrupt;
+} t_interrupt;
+
+typedef struct {
 	uint32_t cant_instancias;
 	t_queue* queue_waiting;
 } t_recursos;
@@ -55,19 +61,21 @@ extern int memoria_fd;
 extern sem_t mutex_io_clients;
 extern sem_t mutex_new;
 extern sem_t mutex_ready;
+extern sem_t mutex_interrupt;
 
 extern sem_t hay_ready;
 extern sem_t hay_new;
 
-extern sem_t start_quantum;
+extern sem_t hay_interrupt;
 extern sem_t cont_multi;
 
 extern uint32_t next_pid;
-extern t_quantum* running_pid;
+extern t_interrupt* interrupt_pid;
 
 extern t_queue* queue_ready;
 extern t_queue* queue_priority_ready;
 extern t_queue* queue_new;
+extern uint32_t running_pid;
 
 extern t_dictionary* dict_recursos;
 extern t_dictionary* dict_io_clients;
@@ -76,17 +84,21 @@ void* largo_main(void*);
 void* corto_main(void*);
 void* io_main(void*);
 void* consola_main(void*);
-void* quantum_main(void*);
+void* interrupt_main(void*);
 void* memoria_finalizar_proceso(void*);
+void* quantum_thread(void*);
+void* io_client(void*);
 
-void* io_client(void *);
-
-op_code iniciar_proceso(int, char*, char*);
+void iniciar_proceso(int, char*, char*);
 void enviar_new(void);
 t_pcb* crear_context(uint32_t);
 void enviar_cpu(int, t_pcb*);
 t_pcb* esperar_cpu(int);
 void finalizar_proceso(t_pcb*);
+pthread_t create_quantum_thread(t_quantum*);
+void finalizar_pid(uint32_t);
+void ejecutar_script(int, char*, char*);
+void cleanup_thread(void*);
 
 #endif
 

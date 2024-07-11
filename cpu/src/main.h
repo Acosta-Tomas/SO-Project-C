@@ -45,6 +45,7 @@ extern t_log* logger;
 extern t_config* config;
 extern t_pcb* pcb;
 
+extern op_code interrupt_type;
 extern bool has_interrupt;
 extern uint32_t page_size;
 
