@@ -27,6 +27,7 @@ void cpu(int memoria_fd, int kernel_fd){
 
     log_info(logger, "Proceso enviado a Kernel - PID: %u", pcb->pid);
     free(pcb->registers);
+    free(pcb->recursos);
     free(pcb);
 }
 

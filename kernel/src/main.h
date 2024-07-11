@@ -39,7 +39,7 @@ typedef struct {
 } t_interrupt;
 
 typedef struct {
-	uint32_t cant_instancias;
+	int cant_instancias;
 	t_queue* queue_waiting;
 } t_recursos;
 
@@ -62,6 +62,7 @@ extern sem_t mutex_io_clients;
 extern sem_t mutex_new;
 extern sem_t mutex_ready;
 extern sem_t mutex_interrupt;
+extern sem_t mutex_recurso;
 
 extern sem_t hay_ready;
 extern sem_t hay_new;
@@ -79,6 +80,8 @@ extern uint32_t running_pid;
 
 extern t_dictionary* dict_recursos;
 extern t_dictionary* dict_io_clients;
+
+extern uint32_t quantum;
 
 void* largo_main(void*);
 void* corto_main(void*);

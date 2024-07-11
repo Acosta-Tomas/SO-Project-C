@@ -21,6 +21,7 @@ int main(int argc, char* argv[]) {
     char* puerto_kernel = config_get_string_value(config, KEY_PUERTO_KERNEL);
     char* ip_memoria = config_get_string_value(config, KEY_IP_MEMORIA);
     char* puerto_memoria = config_get_string_value(config, KEY_PUERTO_MEMORIA);
+    int unidad_trabajo = config_get_int_value(config, KEY_UNIDAD_TRABAJO);
 
     int kernel_fd = crear_conexion(ip_kernel, puerto_kernel);
     log_info(logger, "Connected to Kernel -  SOCKET: %d", kernel_fd);
@@ -41,7 +42,7 @@ int main(int argc, char* argv[]) {
                 memcpy(sleep_time, io->buffer, io->buffer_size);
 
                 log_info(logger, "Se solicita: %s - %s segundos", nombre_interfaz, sleep_time);
-                sleep(atoi(sleep_time));
+                usleep(atoi(sleep_time) * unidad_trabajo * 1000);
 
                 to_send = IO_SUCCESS;
 

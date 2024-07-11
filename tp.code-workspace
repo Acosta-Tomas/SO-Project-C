@@ -12,7 +12,9 @@
 			"initializer_list": "c",
 			"utility": "c",
 			"string": "c",
-			"executor": "c"
+			"executor": "c",
+			"future": "c",
+			"system_error": "c"
 		},
 		"C_Cpp.errorSquiggles": "disabled",
 	},

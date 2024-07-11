@@ -25,6 +25,7 @@ typedef struct {
 	uint32_t pid, pc, quantum;
 	t_registros* registers;
 	pid_status status;
+    char* recursos; // Recursos separados por coman, ejemplo "RA,RB,RC" que usa el Proceso
 } t_pcb; // Kernel - cpu
 
 t_pcb* recibir_pcb(int, t_log*);

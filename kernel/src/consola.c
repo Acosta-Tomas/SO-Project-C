@@ -76,20 +76,27 @@ void finalizar_pid(uint32_t pid){
         return;
     }
 
+    t_list* recursos_list = dictionary_elements(dict_recursos);
+
+    for (int i = 0; i < list_size(recursos_list); i += 1) {
+        t_recursos* recurso = list_get(recursos_list, i);
+
+        sem_wait(&mutex_recurso);
+        pcb_end = list_remove_by_condition(recurso->queue_waiting->elements, &is_pid_list);
+
+        if (pcb_end != NULL) {
+            recurso->cant_instancias += 1;
+            sem_post(&mutex_recurso);
+            finalizar_proceso(pcb_end);
+            list_destroy(recursos_list);
+            return;
+        }
+
+        sem_post(&mutex_recurso);
+
+    }
+
     printf("No se encontro proceso: %u\n", pid);
-
-    // sem_wait(&mutex_new);
-    // pcb_end = list_remove_by_condition(queue_new->elements, &is_pid_list);
-    // sem_post(&mutex_new);
-
-    // if (pcb_end != NULL) {
-    //     log_info(logger, "Proceso Finalizado por usuario - PID: %u", pcb_end->pid);
-    //     log_registers(pcb_end, logger);
-    //     finalizar_proceso(pcb_end);
-    //     sem_wait(&hay_new);
-
-    //     return;
-    // }
 }
 
 void ejecutar_script(int conexion, char* comando, char* archivo){
@@ -156,9 +163,11 @@ t_pcb* crear_context(uint32_t pid){
     t_pcb* new_context = malloc(sizeof(t_pcb));
 
     new_context->pc = 0;
+    new_context->quantum = quantum;
     new_context->status = NEW;
     new_context->pid = pid;
     new_context->registers = calloc(1, sizeof(t_registros));
+    new_context->recursos = string_new();
 
     new_context->registers->pc = 0;
 

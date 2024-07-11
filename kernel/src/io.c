@@ -75,7 +75,7 @@ void* io_client(void *client) {
                 log_info(logger, "Fin IO proceso a ready: %u", io->pcb->pid);
 
                 sem_wait(&mutex_ready);
-                queue_push(queue_ready, io->pcb);
+                io->pcb->quantum < quantum ? queue_push(queue_priority_ready, io->pcb) : queue_push(queue_ready, io->pcb);
                 sem_post(&mutex_ready);
                 sem_post(&hay_ready);
 

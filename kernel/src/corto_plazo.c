@@ -6,8 +6,8 @@ void* corto_main(void *arg){
     log_info(logger, "Thread planificado de corto plazo creado");
 
     char* algoritmo = config_get_string_value(config, KEY_ALGORITMO_PLANIFICACION);
-    uint32_t quantum = (uint32_t) config_get_int_value(config, KEY_QUANTUM);
     int hay_quantum = strcmp(algoritmo, "FIFO");
+    int hay_priority = !strcmp(algoritmo, "VRR");
 
     char* ip_cpu = config_get_string_value(config, KEY_IP_CPU);
     char* puerto_cpu_dispatch = config_get_string_value(config, KEY_PUERTO_CPU_DISPATCH);
@@ -26,21 +26,22 @@ void* corto_main(void *arg){
         pthread_t q_thread;
         t_quantum* pid_quantum = malloc(sizeof(t_quantum));
 
-        pcb->quantum = quantum;
-        pid_quantum->quantum = quantum;
+        pid_quantum->quantum =  pcb->quantum;
         pid_quantum->pid = pcb->pid;
         running_pid = pcb->pid;
 
-
         enviar_cpu(conexion, pcb);
-        
+
         if(hay_quantum) q_thread = create_quantum_thread(pid_quantum);
         t_temporal* pid_timestamp = temporal_create();
 
         pcb = esperar_cpu(conexion);
 
         temporal_stop(pid_timestamp);
-        log_info(logger, "VUELVE PROCESO - TIMESTAMP: %li", temporal_gettime(pid_timestamp));
+        uint32_t used_timestamp = (uint32_t) temporal_gettime(pid_timestamp);
+        if (hay_priority) pcb->quantum = (pcb->quantum != quantum || used_timestamp >= pcb->quantum) ? quantum : quantum - used_timestamp;
+
+        log_info(logger, "PID: %u - Recursos: %s", pcb->pid, pcb->recursos);
 
         if (pcb->status != RUNNING_QUANTUM && hay_quantum) {
             if (pthread_cancel(q_thread) != 0) {
@@ -69,7 +70,7 @@ void* corto_main(void *arg){
             log_info(logger, "Proceso - PID: %u", pcb->pid);
 
             sem_wait(&mutex_ready);
-            queue_push(queue_ready, pcb);
+            pcb->quantum < quantum ? queue_push(queue_priority_ready, pcb) : queue_push(queue_ready, pcb);
             sem_post(&mutex_ready);
             sem_post(&hay_ready);
         }
@@ -91,6 +92,7 @@ void* corto_main(void *arg){
         }
 
         temporal_destroy(pid_timestamp);
+        running_pid = -1;
     }
 
     liberar_conexion(conexion);
@@ -107,6 +109,7 @@ void enviar_cpu(int conexion, t_pcb* pcb){
 
     log_info(logger, "Proceso enviado a CPU - PID: %u", pcb->pid);
     free(pcb->registers);
+    free(pcb->recursos);
     free(pcb);
 }
 
@@ -170,15 +173,23 @@ t_pcb* esperar_cpu(int conexion){
         } 
 
         t_recursos* recurso = dictionary_get(dict_recursos, nombre_recurso);
-
+        
+        sem_wait(&mutex_recurso);
+        recurso->cant_instancias -= 1;
+        
         if(recurso->cant_instancias >= 0) {
-            recurso->cant_instancias -= 1;
+            sem_post(&mutex_recurso);
             pcb_updated->status = RUNNING;
+            string_append(&pcb_updated->recursos, nombre_recurso);
+            string_append(&pcb_updated->recursos, ",");
 
+            free(nombre_recurso);
             return pcb_updated;
         }
         
         queue_push(recurso->queue_waiting, pcb_updated);
+        sem_post(&mutex_recurso);
+        free(nombre_recurso);
 
         return pcb_updated;
     }
@@ -206,16 +217,25 @@ t_pcb* esperar_cpu(int conexion){
 
         t_recursos* recurso = dictionary_get(dict_recursos, nombre_recurso);
 
+        if (string_contains(pcb_updated->recursos, nombre_recurso)) {
+            string_append(&nombre_recurso, ",");
+            char* new_recursos = string_replace(pcb_updated->recursos, nombre_recurso, "");
+            pcb_updated->recursos = new_recursos;
+        }
+
+        sem_wait(&mutex_recurso);
         recurso->cant_instancias += 1;
 
         if(!queue_is_empty(recurso->queue_waiting)) {
             t_pcb* pcb_to_ready = queue_pop(recurso->queue_waiting);
+            sem_post(&mutex_recurso);
 
             sem_wait(&mutex_ready);
             queue_push(queue_ready, pcb_to_ready);
             sem_post(&mutex_ready);
             sem_post(&hay_ready);
-        }
+
+        } else sem_post(&mutex_recurso);
 
         return pcb_updated;
     }

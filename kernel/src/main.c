@@ -9,6 +9,7 @@ sem_t mutex_io_clients;
 sem_t mutex_ready;
 sem_t mutex_new;
 sem_t mutex_interrupt;
+sem_t mutex_recurso;
 
 sem_t hay_ready;
 sem_t hay_new;
@@ -25,6 +26,8 @@ t_dictionary* dict_io_clients;
 
 t_interrupt* interrupt_pid;
 
+uint32_t quantum;
+
 int main(int argc, char* argv[]) {
     config = config_create(CONFIG_FILE);
 
@@ -36,6 +39,7 @@ int main(int argc, char* argv[]) {
     sem_init(&mutex_ready, 0, 1);
     sem_init(&mutex_new, 0, 1);   
     sem_init(&mutex_interrupt, 0, 1);   
+    sem_init(&mutex_recurso, 0, 1);
     sem_init(&hay_ready, 0, 0);    
     sem_init(&hay_new, 0, 0);    
     sem_init(&hay_interrupt, 0, 0);    
@@ -65,6 +69,8 @@ int main(int argc, char* argv[]) {
 
         dictionary_put(dict_recursos, nombre_recurso, recurso);
     }
+
+    quantum = (uint32_t) config_get_int_value(config, KEY_QUANTUM);
 
     if (pthread_create(&largo_thread, NULL, largo_main, NULL)) {
         log_error(logger, "Problema al crear hilo para el planificador de largo plazo");
@@ -102,6 +108,7 @@ int main(int argc, char* argv[]) {
     sem_destroy(&hay_ready);
     sem_destroy(&mutex_ready);
     sem_destroy(&mutex_interrupt);
+    sem_destroy(&mutex_recurso);
     sem_destroy(&hay_new);
     sem_destroy(&mutex_ready);
     sem_destroy(&mutex_io_clients);
@@ -114,6 +121,7 @@ int main(int argc, char* argv[]) {
     queue_destroy(queue_new);
     queue_destroy(queue_priority_ready);
 
+    // Eliminar queue y list de adentro de cada uno
     dictionary_destroy(dict_recursos);
     dictionary_destroy(dict_io_clients);
     log_destroy(logger);
