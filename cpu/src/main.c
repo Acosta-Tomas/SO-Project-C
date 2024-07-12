@@ -11,7 +11,10 @@ bool has_interrupt = false;
 op_code interrupt_type;
 
 sem_t mutex_interrupt;
-// sem_t mutex_pcb;
+
+bool isLRU;
+int numero_entradas;
+t_queue* tlb_queue;
 
 int main(int argc, char* argv[]) {
     config = config_create(CONFIG_FILE);
@@ -19,9 +22,11 @@ int main(int argc, char* argv[]) {
     if (config == NULL) exit(EXIT_FAILURE); 
 
     logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_SERVER_LOG), true, LOG_LEVEL_DEBUG);
+    numero_entradas = config_get_int_value(config, KEY_CANTIDAD_ENTRADAS_TLB);
+    isLRU = !(strcmp(config_get_string_value(config, KEY_ALGORITMO_TLB), "LRU"));
+    tlb_queue = queue_create();
 
     sem_init(&mutex_interrupt, 0, 1);
-    // sem_init(&mutex_pcb, 0, 1);
 
     if (pthread_create(&thread_dispatch, NULL, dispatch, NULL)) {
         log_error(logger, "Problema al crear hilo para el servidor dispatch");
@@ -39,6 +44,7 @@ int main(int argc, char* argv[]) {
     // sem_destroy(&mutex_pcb);
     sem_destroy(&mutex_interrupt);
     
+    queue_destroy(tlb_queue);
     log_destroy(logger);
     config_destroy(config);
 

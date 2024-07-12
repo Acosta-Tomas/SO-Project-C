@@ -230,6 +230,7 @@ pid_status mmu(int memoria_fd, uint32_t direccion_logica, uint32_t size, t_list*
     uint32_t desplazamiento = direccion_logica - pagina * page_size;
     t_memoria_fisica* frame = calloc(1, sizeof(t_memoria_fisica));
     pid_status status = RUNNING;
+    uint32_t marco;
 
     if (desplazamiento + size <= page_size){
         frame->bytes = size;
@@ -239,30 +240,30 @@ pid_status mmu(int memoria_fd, uint32_t direccion_logica, uint32_t size, t_list*
         size = size - frame->bytes;
     }
 
-    op_code code_op = MEM_PID_PAGE;
+    if(!find_tlb(pcb->pid, pagina, &marco)){
+        op_code code_op = MEM_PID_PAGE;
 
-    send(memoria_fd, &code_op, sizeof(op_code), 0);
-    send(memoria_fd, &pcb->pid, sizeof(uint32_t), 0);
-    send(memoria_fd, &pagina, sizeof(uint32_t), 0);
-    
-    // t_paquete* paquete = crear_paquete(MEM_PID_PAGE);
-    
-    // agregar_uint_a_paquete(paquete, &pcb->pid, sizeof(uint32_t));
-    // agregar_uint_a_paquete(paquete, &pagina, sizeof(uint32_t));
+        send(memoria_fd, &code_op, sizeof(op_code), 0);
+        send(memoria_fd, &pcb->pid, sizeof(uint32_t), 0);
+        send(memoria_fd, &pagina, sizeof(uint32_t), 0);
+        
+        // t_paquete* paquete = crear_paquete(MEM_PID_PAGE);
+        
+        // agregar_uint_a_paquete(paquete, &pcb->pid, sizeof(uint32_t));
+        // agregar_uint_a_paquete(paquete, &pagina, sizeof(uint32_t));
 
-    // enviar_paquete(paquete, memoria_fd);
-    // eliminar_paquete(paquete);
+        // enviar_paquete(paquete, memoria_fd);
+        // eliminar_paquete(paquete);
 
-    
-    recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
+        recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
+        if (code_op == MEM_ERROR) return ERROR;
+        recv(memoria_fd, &marco, sizeof(uint32_t), MSG_WAITALL);
 
-    if (code_op == MEM_ERROR) return ERROR;
-
-    if (code_op == MEM_SUCCESS) {
-        recv(memoria_fd, &frame->direccion_fisica, sizeof(uint32_t), MSG_WAITALL);
-        frame->direccion_fisica = frame->direccion_fisica * page_size + desplazamiento;
-        list_add(frames, frame);
+        add_tlb(pcb->pid, pagina, marco);
     }
+
+    frame->direccion_fisica = marco * page_size + desplazamiento;
+    list_add(frames, frame);
 
     if (size > 0) status = mmu(memoria_fd, (pagina + 1) * page_size, size, frames);     
 

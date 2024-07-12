@@ -4,6 +4,7 @@
 #include <utils/mem_protocol.h>
 #include <commons/collections/dictionary.h>
 #include <commons/bitarray.h>
+#include <commons/memory.h>
 #include <semaphore.h>
 
 // FILES

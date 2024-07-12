@@ -4,6 +4,7 @@
 #include <semaphore.h>
 #include <utils/pcb_protocol.h>
 #include <utils/io_protocol.h>
+#include <commons/collections/queue.h>
 
 // FILES
 #define CONFIG_FILE "cpu.config"
@@ -16,6 +17,8 @@
 #define KEY_PUERTO_ESCUCHA_INTERRUPT "PUERTO_ESCUCHA_INTERRUPT"
 #define KEY_IP_MEMORIA "IP_MEMORIA"
 #define KEY_PUERTO_MEMORIA "PUERTO_MEMORIA"
+#define KEY_CANTIDAD_ENTRADAS_TLB "CANTIDAD_ENTRADAS_TLB"
+#define KEY_ALGORITMO_TLB "ALGORITMO_TLB"
 
 
 #define PC "PC"
@@ -41,6 +44,12 @@ typedef struct {
     char* params[5];
 } t_intruction_execute;
 
+typedef struct {
+    uint32_t pid;
+    uint32_t page;
+    uint32_t frame;
+} t_tlb_entry;
+
 extern t_log* logger;
 extern t_config* config;
 extern t_pcb* pcb;
@@ -49,8 +58,11 @@ extern op_code interrupt_type;
 extern bool has_interrupt;
 extern uint32_t page_size;
 
+extern bool isLRU;
+extern int numero_entradas;
+extern t_queue* tlb_queue;
+
 extern sem_t mutex_interrupt;
-// extern sem_t mutex_pcb;
 
 void* dispatch(void*);
 void* interrupt(void*);
@@ -79,6 +91,8 @@ void semaphore(int, op_code, char*);
 pid_status io_read_write(int, int, t_intruction_execute*);
 
 pid_status mmu(int, uint32_t, uint32_t, t_list*);
+bool find_tlb(uint32_t, uint32_t, uint32_t*);
+void add_tlb(uint32_t, uint32_t, uint32_t);
 
 void pc_plus_plus(uint32_t*, uint32_t);
 uint8_t atouint8(char*);

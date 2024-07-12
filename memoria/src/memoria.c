@@ -311,7 +311,7 @@ op_code resize_up(int pages, t_list* list_pages){
     Por cada iteracion remuevo la pagina y pongo en 0 el frame del bitmap correspondiente
 */
 void resize_down(int pages, t_list* list_pages){
-    for(int i = list_size(list_pages) - 1; i >= 0 && pages >= 0; i -= 1){
+    for(int i = list_size(list_pages) - 1; i >= 0 && pages > 0; i -= 1){
         uint32_t* frame = list_remove(list_pages, i);
 
         sem_wait(&mutex_bit_map);
@@ -334,7 +334,8 @@ void liberar_memoria(int client_fd){
     pid_mem = dictionary_remove(memoria_procesos, string_itoa((int) pid));
     sem_post(&mutex_mem_procesos);
 
-    resize_down(0, pid_mem->pages); // Libera el bit array simulando que el resize del proceso es 0;
+    resize_down(list_size(pid_mem->pages), pid_mem->pages); // Libera el bit array simulando que el resize del proceso es 0;
+    mem_hexdump(bit_map->bitarray, bit_map->size);
     list_destroy(pid_mem->pages);
     string_array_destroy(pid_mem->file);
     free(pid_mem);
