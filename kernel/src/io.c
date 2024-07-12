@@ -49,6 +49,7 @@ void* io_client(void *client) {
 
     while (!bad_op){
         sem_wait(&io_client->hay_io);
+        check_plani();
         sem_wait(&io_client->mutex_io);
         t_io_queue* io = queue_pop(io_client->queue_io);
         sem_post(&io_client->mutex_io);
@@ -63,6 +64,7 @@ void* io_client(void *client) {
         free(io->io_info);
 
         op_code cod_op = recibir_operacion(cliente_fd);
+        check_plani();
 
         switch (cod_op){
             case IO_ERROR:

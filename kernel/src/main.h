@@ -69,6 +69,7 @@ extern sem_t hay_new;
 
 extern sem_t hay_interrupt;
 extern sem_t cont_multi;
+extern sem_t plani_run;
 
 extern uint32_t next_pid;
 extern t_interrupt* interrupt_pid;
@@ -82,6 +83,8 @@ extern t_dictionary* dict_recursos;
 extern t_dictionary* dict_io_clients;
 
 extern uint32_t quantum;
+extern bool isStopped;
+extern uint32_t multiprogramacion;
 
 void* largo_main(void*);
 void* corto_main(void*);
@@ -96,12 +99,16 @@ void iniciar_proceso(int, char*, char*);
 void enviar_new(void);
 t_pcb* crear_context(uint32_t);
 void enviar_cpu(int, t_pcb*);
-t_pcb* esperar_cpu(int);
+t_pcb* esperar_cpu(int, t_temporal*);
 void finalizar_proceso(t_pcb*);
 pthread_t create_quantum_thread(t_quantum*);
 void finalizar_pid(uint32_t);
 void ejecutar_script(int, char*, char*);
 void cleanup_thread(void*);
+
+void* multi_change_waits(void*);
+void cambiar_multiprogramacion(uint32_t);
+void check_plani(void);
 
 #endif
 

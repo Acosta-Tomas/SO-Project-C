@@ -18,6 +18,7 @@ void* corto_main(void *arg){
 
     while (1) {
         sem_wait(&hay_ready);
+        check_plani();
         sem_wait(&mutex_ready);
         t_pcb* pcb = queue_is_empty(queue_priority_ready) ? queue_pop(queue_ready) : queue_pop(queue_priority_ready);
         pcb->status = RUNNING;
@@ -35,13 +36,10 @@ void* corto_main(void *arg){
         if(hay_quantum) q_thread = create_quantum_thread(pid_quantum);
         t_temporal* pid_timestamp = temporal_create();
 
-        pcb = esperar_cpu(conexion);
+        pcb = esperar_cpu(conexion, pid_timestamp);
 
-        temporal_stop(pid_timestamp);
         uint32_t used_timestamp = (uint32_t) temporal_gettime(pid_timestamp);
         if (hay_priority) pcb->quantum = (pcb->quantum != quantum || used_timestamp >= pcb->quantum) ? quantum : quantum - used_timestamp;
-
-        log_info(logger, "PID: %u - Recursos: %s", pcb->pid, pcb->recursos);
 
         if (pcb->status != RUNNING_QUANTUM && hay_quantum) {
             if (pthread_cancel(q_thread) != 0) {
@@ -113,13 +111,19 @@ void enviar_cpu(int conexion, t_pcb* pcb){
     free(pcb);
 }
 
-t_pcb* esperar_cpu(int conexion){
+t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
     t_pcb* pcb_updated;
     t_io* io_request;
     op_code cod_op = recibir_operacion(conexion);
 
-    if (cod_op == PCB) 
-        return recibir_pcb(conexion, logger);
+    if (cod_op == PCB) {
+        pcb_updated = recibir_pcb(conexion, logger);
+        temporal_stop(pid_timestamp);
+        check_plani();
+
+        return pcb_updated;
+    }
+
     
     if (cod_op == IO){
         char* name_interface = NULL;
@@ -127,6 +131,8 @@ t_pcb* esperar_cpu(int conexion){
 
         recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
+        temporal_stop(pid_timestamp);
+        check_plani();
 
         if(dictionary_has_key(dict_io_clients, name_interface)){
             t_io_client* io_client = dictionary_get(dict_io_clients, name_interface);
@@ -166,6 +172,8 @@ t_pcb* esperar_cpu(int conexion){
 
         recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
+        temporal_stop(pid_timestamp);
+        check_plani();
 
         if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
             pcb_updated->status = TERMINATED;
@@ -209,6 +217,8 @@ t_pcb* esperar_cpu(int conexion){
 
         recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
+        temporal_stop(pid_timestamp);
+        check_plani();
 
         if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
             pcb_updated->status = TERMINATED;

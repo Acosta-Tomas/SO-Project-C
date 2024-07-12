@@ -14,6 +14,8 @@ void finalizar_proceso(t_pcb* pcb){
 void* memoria_finalizar_proceso(void* pcb){
     t_pcb* pcb_end = (t_pcb*) pcb;
     op_code code = END_PID;
+    
+    check_plani();
 
    if (strlen(pcb_end->recursos)) {
         char** recursos = string_split(pcb_end->recursos, ",");

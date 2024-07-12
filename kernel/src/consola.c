@@ -32,6 +32,32 @@ void* consola_main(void *arg){
         if (strcmp(command[0], "FINALIZAR_PROCESO") == 0) {
             if (command[1] == NULL) printf("Faltan argumentos, por favor intente nuevamente\n");
             else finalizar_pid((uint32_t) atoi(command[1]));
+
+            continue;
+        }
+
+        if (strcmp(command[0], "DETENER_PLANIFICACION") == 0) {
+            if (isStopped) printf("Ya se encuentra detenida la planificación\n");
+            else {
+                isStopped = true;
+                sem_wait(&plani_run);
+            }
+
+            continue;
+        }
+
+        if (strcmp(command[0], "INICIAR_PLANIFICACION") == 0) {
+            if (isStopped) {
+                isStopped = false;
+                sem_post(&plani_run);
+            } else printf("Ya esta corriendo la planificación\n");
+
+            continue;
+        }
+
+        if (strcmp(command[0], "MULTIPROGRAMACION") == 0) {
+            if (command[1] == NULL) printf("Faltan argumentos, por favor intente nuevamente\n");
+            else cambiar_multiprogramacion((uint32_t) atoi(command[1]));
             continue;
         }
 
@@ -41,6 +67,43 @@ void* consola_main(void *arg){
     liberar_conexion(memoria_fd);
    
    return EXIT_SUCCESS;
+}
+
+void cambiar_multiprogramacion(uint32_t new_multi){
+    if (new_multi > multiprogramacion) {
+        uint32_t cant_singals = new_multi - multiprogramacion;
+        multiprogramacion = new_multi;
+
+        log_info(logger, "Signals: %u", cant_singals);
+        
+        for(int i = 0; i < cant_singals; i += 1) sem_post(&cont_multi);
+
+        return;
+    }
+
+    if (new_multi < multiprogramacion) {
+        uint32_t cant_waits = multiprogramacion - new_multi;
+        multiprogramacion = new_multi;
+
+        pthread_t wait_thread;
+    
+        if (pthread_create(&wait_thread, NULL, multi_change_waits, &cant_waits)) {
+            log_error(logger, "Wait threads no se pudo inicializar");
+            exit(EXIT_FAILURE);
+        } else pthread_detach(wait_thread);
+
+        return;
+    }
+}
+
+void* multi_change_waits(void* waits){
+    uint32_t cant_waits = *(uint32_t*) waits;
+
+    log_info(logger, "Waits: %u", cant_waits);
+
+    for(int i = 0; i < cant_waits; i += 1) sem_wait(&cont_multi);
+
+    return EXIT_SUCCESS;
 }
 
 void finalizar_pid(uint32_t pid){

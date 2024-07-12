@@ -6,6 +6,7 @@ void* largo_main(void *arg){
     while (1){
         sem_wait(&hay_new);
         sem_wait(&cont_multi);
+        check_plani();
         sem_wait(&mutex_new);
         t_pcb* pcb = queue_pop(queue_new);
         sem_post(&mutex_new);

@@ -16,6 +16,7 @@ sem_t hay_new;
 
 sem_t hay_interrupt;
 sem_t cont_multi;
+sem_t plani_run;
 
 t_queue* queue_priority_ready;
 t_queue* queue_ready;
@@ -25,8 +26,10 @@ t_dictionary* dict_recursos;
 t_dictionary* dict_io_clients;
 
 t_interrupt* interrupt_pid;
+uint32_t multiprogramacion;
 
 uint32_t quantum;
+bool isStopped = false;
 
 int main(int argc, char* argv[]) {
     config = config_create(CONFIG_FILE);
@@ -34,7 +37,8 @@ int main(int argc, char* argv[]) {
     if (config == NULL) exit(EXIT_FAILURE); 
     
     logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_LOGGER), false, LOG_LEVEL_DEBUG);
-
+    multiprogramacion = (uint32_t) config_get_int_value(config, KEY_GRADO_MULTIPROGRAMACION);
+    
     sem_init(&mutex_io_clients, 0, 1); 
     sem_init(&mutex_ready, 0, 1);
     sem_init(&mutex_new, 0, 1);   
@@ -43,7 +47,8 @@ int main(int argc, char* argv[]) {
     sem_init(&hay_ready, 0, 0);    
     sem_init(&hay_new, 0, 0);    
     sem_init(&hay_interrupt, 0, 0);    
-    sem_init(&cont_multi, 0, config_get_int_value(config, KEY_GRADO_MULTIPROGRAMACION)); 
+    sem_init(&cont_multi, 0, multiprogramacion);
+    sem_init(&plani_run, 0, 1);    
 
     queue_priority_ready = queue_create();
     queue_ready = queue_create();
@@ -114,6 +119,7 @@ int main(int argc, char* argv[]) {
     sem_destroy(&mutex_io_clients);
     sem_destroy(&hay_interrupt);
     sem_destroy(&cont_multi);
+    sem_destroy(&plani_run);
 
     free(interrupt_pid);
 
@@ -127,4 +133,16 @@ int main(int argc, char* argv[]) {
     log_destroy(logger);
     config_destroy(config);
     return EXIT_SUCCESS;
+}
+
+
+/*
+    La idea es que se chequee en la entrada de cada etapa,
+    Cuando vuelve de exec hay que chequear en las condiciones para pausar exactamente ahi
+    Cuando vuelve de io lo mismo.
+    En new, ready y end se chequea al entrar, si pasa continua.
+*/
+void check_plani(void) {
+    sem_wait(&plani_run);
+    sem_post(&plani_run);
 }
