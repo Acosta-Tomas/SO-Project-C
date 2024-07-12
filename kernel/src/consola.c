@@ -61,6 +61,11 @@ void* consola_main(void *arg){
             continue;
         }
 
+        if (strcmp(command[0], "PROCESO_ESTADO") == 0) {
+            print_estados_procesos();
+            continue;
+        }
+
         printf("Comando no reconocido, escriba help para ver los comandos disponibles\n");
     }
 
@@ -82,12 +87,13 @@ void cambiar_multiprogramacion(uint32_t new_multi){
     }
 
     if (new_multi < multiprogramacion) {
-        uint32_t cant_waits = multiprogramacion - new_multi;
+        uint32_t* cant_waits = malloc(sizeof(u_int32_t));
+        *(cant_waits) = multiprogramacion - new_multi;
         multiprogramacion = new_multi;
 
         pthread_t wait_thread;
     
-        if (pthread_create(&wait_thread, NULL, multi_change_waits, &cant_waits)) {
+        if (pthread_create(&wait_thread, NULL, multi_change_waits, cant_waits)) {
             log_error(logger, "Wait threads no se pudo inicializar");
             exit(EXIT_FAILURE);
         } else pthread_detach(wait_thread);
@@ -98,11 +104,12 @@ void cambiar_multiprogramacion(uint32_t new_multi){
 
 void* multi_change_waits(void* waits){
     uint32_t cant_waits = *(uint32_t*) waits;
+    free(waits);
 
     log_info(logger, "Waits: %u", cant_waits);
 
     for(int i = 0; i < cant_waits; i += 1) sem_wait(&cont_multi);
-
+    
     return EXIT_SUCCESS;
 }
 
@@ -235,4 +242,38 @@ t_pcb* crear_context(uint32_t pid){
     new_context->registers->pc = 0;
 
     return new_context;
+}
+
+void print_pid(void* pcb) {
+    t_pcb* pcb_print = (t_pcb*) pcb;
+
+    printf("\t- PID: %u\n", pcb_print->pid); 
+}
+
+void print_io(char* key, void* io){
+     t_io_client* io_print = (t_io_client*) io_print;
+
+     printf("\t- IO: %s\n", key);
+     list_iterate(io_print->queue_io->elements, &print_pid);
+}
+
+void print_recursos(char* key, void* recurso){
+     t_recursos* recurso_print = (t_recursos*) recurso;
+
+     printf("\t- WAIT: %s\n", key);
+     list_iterate(recurso_print->queue_waiting->elements, &print_pid);
+}
+
+void print_estados_procesos(void){
+    printf("NEW:\n");
+    list_iterate(queue_new->elements, &print_pid);
+    printf("\nREADY - PRIORITY:\n");
+    list_iterate(queue_priority_ready->elements, &print_pid);
+    printf("\nREADY:\n");
+    list_iterate(queue_ready->elements, &print_pid);
+    printf("\nEXEC:\n");
+    if (running_pid >= 0) printf("\t- PID: %i\n", running_pid);
+    printf("\nBLOCKED:\n");
+    dictionary_iterator(dict_io_clients, &print_io);
+    dictionary_iterator(dict_recursos, &print_recursos);
 }

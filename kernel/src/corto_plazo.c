@@ -1,6 +1,6 @@
 #include "main.h"
 
-uint32_t running_pid;
+int running_pid = -1;
 
 void* corto_main(void *arg){
     log_info(logger, "Thread planificado de corto plazo creado");

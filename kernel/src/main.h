@@ -77,7 +77,7 @@ extern t_interrupt* interrupt_pid;
 extern t_queue* queue_ready;
 extern t_queue* queue_priority_ready;
 extern t_queue* queue_new;
-extern uint32_t running_pid;
+extern int running_pid;
 
 extern t_dictionary* dict_recursos;
 extern t_dictionary* dict_io_clients;
@@ -109,6 +109,10 @@ void cleanup_thread(void*);
 void* multi_change_waits(void*);
 void cambiar_multiprogramacion(uint32_t);
 void check_plani(void);
+void print_estados_procesos(void);
+void print_pid(void*);
+void print_io(char*, void*);
+void print_recursos(char*, void*);
 
 #endif
 
