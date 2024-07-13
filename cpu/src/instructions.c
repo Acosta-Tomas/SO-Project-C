@@ -96,6 +96,27 @@ pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
     return BLOCKED_IO;
 }
 
+pid_status enviar_io_truncate_fs(int kernel_fd, t_intruction_execute* decoded){
+    char* tamaño = decoded->params[2];
+    uint32_t size_tamaño_register = (uint32_t) sizeof_register(tamaño);
+    uint32_t tamaño_register = sizeof(uint32_t) == size_tamaño_register ? *((uint32_t*) get_register(tamaño)) : (uint32_t) *((uint8_t*) get_register(tamaño));
+
+    t_paquete* paquete = crear_paquete(IO);
+
+    agregar_io_paquete(paquete, decoded->operation, decoded->params, 1);
+
+    uint32_t buffer_size = sizeof(uint32_t) + strlen(decoded->params[1]) + 1 + sizeof(int);
+
+    agregar_uint_a_paquete(paquete, &buffer_size, sizeof(uint32_t));
+    agregar_a_paquete(paquete, decoded->params[1], strlen(decoded->params[1]) + 1);
+    agregar_uint_a_paquete(paquete, &tamaño_register, sizeof(uint32_t));
+
+    enviar_paquete(paquete, kernel_fd);
+    eliminar_paquete(paquete);
+
+    return BLOCKED_IO;
+}
+
 // Falta uint8escribir_memoria
 pid_status mov_out(int memoria_fd, char* registro_dl, char* registro_datos){
     uint32_t size_register = (uint32_t) sizeof_register(registro_datos);
@@ -189,7 +210,7 @@ pid_status io_read_write(int memoria_fd, int kernel_fd, t_intruction_execute* de
 
         agregar_io_paquete(paquete, io_instruction, decoded->params, 1); // Solo necesito agregar el nombre como si fuese IO_GEN_SLEEP
 
-        uint32_t buffer_size = list_size(frames) * 8  + sizeof(uint32_t); // tamaño de lo que hay que leer mas tamaño de los frames (cada frame 8 bytes) -> Para que coincida conIO_GES_SLEEP PARA KERNEL
+        uint32_t buffer_size = list_size(frames) * sizeof(t_memoria_fisica)  + sizeof(uint32_t); // tamaño de lo que hay que leer mas tamaño de los frames (cada frame 8 bytes) -> Para que coincida conIO_GES_SLEEP PARA KERNEL
         agregar_uint_a_paquete(paquete, &buffer_size, sizeof(uint32_t));
         agregar_uint_a_paquete(paquete, &tamaño_register, sizeof(uint32_t));
         
@@ -209,7 +230,59 @@ pid_status io_read_write(int memoria_fd, int kernel_fd, t_intruction_execute* de
     }
 
     return status;
+}
 
+pid_status io_read_write_fs(int memoria_fd, int kernel_fd, t_intruction_execute* decoded){
+    char* tamaño = decoded->params[3];
+    char* direccion_logica = decoded->params[2];
+    char* puntero_archivo = decoded->params[4];
+    set_instruction io_instruction = decoded->operation;
+
+    uint32_t size_tamaño_register = (uint32_t) sizeof_register(tamaño);
+    uint32_t size_dl_register = (uint32_t) sizeof_register(direccion_logica);
+    uint32_t size_ptr_archivo = (uint32_t) sizeof_register(puntero_archivo);
+
+    uint32_t tamaño_register = sizeof(uint32_t) == size_tamaño_register ? *((uint32_t*) get_register(tamaño)) : (uint32_t) *((uint8_t*) get_register(tamaño));
+    uint32_t dl_register = sizeof(uint32_t) == size_dl_register ? *((uint32_t*) get_register(direccion_logica)) : (uint32_t) *((uint8_t*) get_register(direccion_logica));
+    uint32_t ptr_archivo = sizeof(uint32_t) == size_ptr_archivo ? *((uint32_t*) get_register(puntero_archivo)) : (uint32_t) *((uint8_t*) get_register(puntero_archivo));
+
+    t_list* frames = list_create();
+    pid_status status = mmu(memoria_fd, dl_register, tamaño_register, frames);
+
+    if (status == RUNNING) {
+        t_paquete* paquete = crear_paquete(IO);
+
+        agregar_io_paquete(paquete, io_instruction, decoded->params, 1); // Solo necesito agregar el nombre como si fuese IO_GEN_SLEEP
+
+        /* 
+            Como Kernel solo hace forward, necesita de ante mano saber todo el buffer. Este esta compuesto por:
+                estructura de frame * cantidad de frames +
+                strlen(nombre_archivo) + 1 + int (agregar a paquete agregar el tmaaño de la cadena)
+                2 * uint32 por el registro tamaño y registro puntero de archivo.
+        */
+        uint32_t buffer_size = list_size(frames) * sizeof(t_memoria_fisica)  + 2 * sizeof(uint32_t) + strlen(decoded->params[1]) + 1 + sizeof(int);
+
+        agregar_uint_a_paquete(paquete, &buffer_size, sizeof(uint32_t));
+        agregar_a_paquete(paquete, decoded->params[1], strlen(decoded->params[1]) + 1);
+        agregar_uint_a_paquete(paquete, &ptr_archivo, sizeof(uint32_t));
+        agregar_uint_a_paquete(paquete, &tamaño_register, sizeof(uint32_t));
+        
+        while(!list_is_empty(frames)){
+            t_memoria_fisica* frame = list_remove(frames, 0);
+            
+            agregar_uint_a_paquete(paquete, &frame->direccion_fisica, sizeof(uint32_t));
+            agregar_uint_a_paquete(paquete, &frame->bytes, sizeof(uint32_t));
+
+            free(frame);
+        }
+
+        enviar_paquete(paquete, kernel_fd);
+        eliminar_paquete(paquete);
+
+        return BLOCKED_IO;
+    }
+
+    return status;
 }
 
 void semaphore(int kernek_fd, op_code code, char* recurso){
@@ -342,6 +415,11 @@ set_instruction mapInstruction (char* intruction) {
     if (strcmp(intruction, "IO_STDIN_READ") == 0) return IO_STDIN_READ;
     if (strcmp(intruction, "IO_STDOUT_WRITE") == 0) return IO_STDOUT_WRITE;
     if (strcmp(intruction, "IO_GEN_SLEEP") == 0) return IO_GEN_SLEEP;
+    if (strcmp(intruction, "IO_FS_CREATE") == 0) return IO_FS_CREATE;
+    if (strcmp(intruction, "IO_FS_DELETE") == 0) return IO_FS_DELETE;
+    if (strcmp(intruction, "IO_FS_TRUNCATE") == 0) return IO_FS_TRUNCATE;
+    if (strcmp(intruction, "IO_FS_READ") == 0) return IO_FS_READ;
+    if (strcmp(intruction, "IO_FS_WRITE") == 0) return IO_FS_WRITE;
     if (strcmp(intruction, "EXIT") == 0) return EXIT;
     return UNKNOWN;
 }

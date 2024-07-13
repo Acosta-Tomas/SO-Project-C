@@ -149,6 +149,48 @@ t_intruction_execute* decode(t_list* list_instruction) {
             decoded_instruction->total_params = 3;
             break;   
 
+        case IO_FS_CREATE:
+            decoded_instruction->operation = IO_FS_CREATE;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
+            break; 
+
+        case IO_FS_DELETE:
+            decoded_instruction->operation = IO_FS_DELETE;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 2;
+            break; 
+
+        case IO_FS_TRUNCATE:
+            decoded_instruction->operation = IO_FS_TRUNCATE;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->params[2] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 3;
+            break; 
+
+        case IO_FS_WRITE:
+            decoded_instruction->operation = IO_FS_WRITE;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->params[2] = list_remove(list_instruction, 0);
+            decoded_instruction->params[3] = list_remove(list_instruction, 0);
+            decoded_instruction->params[4] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 5;
+            break; 
+
+        case IO_FS_READ:
+            decoded_instruction->operation = IO_FS_READ;
+            decoded_instruction->params[0] = list_remove(list_instruction, 0);
+            decoded_instruction->params[1] = list_remove(list_instruction, 0);
+            decoded_instruction->params[2] = list_remove(list_instruction, 0);
+            decoded_instruction->params[3] = list_remove(list_instruction, 0);
+            decoded_instruction->params[4] = list_remove(list_instruction, 0);
+            decoded_instruction->total_params = 5;
+            break; 
+
         case EXIT:
             decoded_instruction->operation = EXIT;
             decoded_instruction->total_params = 0;
@@ -230,6 +272,26 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int me
 
         case IO_STDOUT_WRITE:
             status = io_read_write(memoria_fd, kernel_fd, decoded_instruction);
+            break;
+
+        case IO_FS_CREATE:
+            status = enviar_io(kernel_fd, decoded_instruction);
+            break;
+
+        case IO_FS_DELETE:
+            status = enviar_io(kernel_fd, decoded_instruction);
+            break;
+
+        case IO_FS_TRUNCATE:
+            status = enviar_io_truncate_fs(kernel_fd, decoded_instruction);
+            break;
+
+        case IO_FS_WRITE:
+            status = io_read_write_fs(memoria_fd, kernel_fd, decoded_instruction);
+            break;
+
+        case IO_FS_READ:
+            status = io_read_write_fs(memoria_fd, kernel_fd, decoded_instruction);
             break;
 
         case EXIT: 

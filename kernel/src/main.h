@@ -3,6 +3,7 @@
 
 #include <semaphore.h>
 #include <readline/readline.h>
+#include <readline/history.h>
 #include <commons/collections/queue.h>
 #include <commons/temporal.h>
 #include <utils/pcb_protocol.h>

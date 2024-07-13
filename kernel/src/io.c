@@ -69,7 +69,7 @@ void* io_client(void *client) {
         switch (cod_op){
             case IO_ERROR:
                 log_error(logger, "Error en IO %u", io->pcb->pid);
-                finalizar_proceso(io->pcb);;
+                finalizar_proceso(io->pcb);
                 free(io);
                 break;
 

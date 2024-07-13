@@ -15,6 +15,12 @@ void* consola_main(void *arg){
 
     while(1) {
         char* leido = readline("> ");
+        if (leido) add_history(leido);
+        if (!strncmp(leido, "exit", 4)) {
+            free(leido);
+            break;
+        }
+
         char** command = string_split(leido, " ");
 
         free(leido);
@@ -251,7 +257,7 @@ void print_pid(void* pcb) {
 }
 
 void print_io(char* key, void* io){
-     t_io_client* io_print = (t_io_client*) io_print;
+     t_io_client* io_print = (t_io_client*) io;
 
      printf("\t- IO: %s\n", key);
      list_iterate(io_print->queue_io->elements, &print_pid);

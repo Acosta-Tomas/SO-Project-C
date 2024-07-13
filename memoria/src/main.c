@@ -40,6 +40,7 @@ int main(int argc, char* argv[]) {
     }
 
     bit_map = bitarray_create_with_mode(bits, max_pages/8, MSB_FIRST);
+    mem_hexdump(bit_map->bitarray, bit_map->size);
 
     sem_init(&mutex_bit_map, 0, 1);
     sem_init(&mutex_mem_usuario, 0, 1);

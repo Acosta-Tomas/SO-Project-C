@@ -2,6 +2,8 @@
 #define MAIN_H_
 
 #include <utils/io_protocol.h>
+#include <commons/bitarray.h>
+#include <commons/memory.h>
 
 // KEYS_CONFIG_FILE
 #define KEY_TIPO_INTERFAZ "TIPO_INTERFAZ"
@@ -11,6 +13,10 @@
 #define KEY_PUERTO_MEMORIA "PUERTO_MEMORIA"
 #define KEY_TIPO_INTERFAZ "TIPO_INTERFAZ"
 #define KEY_UNIDAD_TRABAJO "TIEMPO_UNIDAD_TRABAJO"
+#define KEY_PATH_BASE_DIALFS "PATH_BASE_DIALFS"
+#define KEY_BLOCK_SIZE "BLOCK_SIZE"
+#define KEY_BLOCK_COUNT "BLOCK_COUNT"
+#define KEY_RETRASO_COMPACTACION "RETRASO_COMPACTACION"
 #define KEY_LOGGER "LOGGER"
 
 extern t_log* logger;
