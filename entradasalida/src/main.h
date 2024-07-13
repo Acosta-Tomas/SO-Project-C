@@ -27,7 +27,7 @@ void stdin_clear_buffer();
 #endif
 
 /*
-    Revisar STDOUT que impriome caracteres de mas, me llegan al buffer tambien de memoria
-    (por ahi hay que armar paquete para esta operacion)
-    Agregar separacion de Operaciones Permitidas por tipo de interfaz
+    Me traigo todo el bloques.dat, bitmap.dat y los archivos a un config.
+    Cada vez que hago una operacion, hago el write al donde corresponda.
+    No hace falta leer cada vez porque vos manjeas los estados.
 */
