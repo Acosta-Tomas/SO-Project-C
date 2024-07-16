@@ -73,14 +73,10 @@ t_intruction_execute* decode(t_list*);
 pid_status exec(t_intruction_execute*, int, int);
 bool check_interrupt();
 
-void* get_register(char*);
-
 void update_register_uint32(char*, void (*update_function)(uint32_t*, uint32_t), uint32_t);
 void update_register_uint8(char*, void (*update_function)(uint8_t*, uint8_t), uint8_t);
 void operation_register_uint8(char*, char*, cpu_operation);
 void operation_register_uint32(char*, char*, cpu_operation);
-void set_registro_uint8(uint8_t*, uint8_t);
-void set_registro_uint32(uint32_t*, uint32_t);
 bool jnz_register(char*, char*);
 pid_status enviar_io(int, t_intruction_execute*);
 pid_status enviar_io_truncate_fs(int, t_intruction_execute*);
@@ -96,22 +92,15 @@ pid_status mmu(int, uint32_t, uint32_t, t_list*);
 bool find_tlb(uint32_t, uint32_t, uint32_t*);
 void add_tlb(uint32_t, uint32_t, uint32_t);
 
+void* get_register(char*);
 void pc_plus_plus(uint32_t*, uint32_t);
+uint32_t get_normaliced_register(char*);
+void set_registro_uint8(uint8_t*, uint8_t);
+void set_registro_uint32(uint32_t*, uint32_t);
 uint8_t atouint8(char*);
 uint32_t atouint32(char*);
 unsigned long sizeof_register(char*);
 set_instruction mapInstruction(char*);
+void print_instruction(t_list*, char*);
 
 #endif
-
-/*
-    Agregar instrucciones de:
-        MOV_IN, 
-        MOV_OUT, 
-        RESIZE, OK
-        COPY_STRING, 
-        IO_STDIN_READ, 
-        IO_STDOUT_WRITE.
-        SIGNA, -> Si llego con manejador de recursos
-        WAIT -> Si llego con manejador de recursos
-*/

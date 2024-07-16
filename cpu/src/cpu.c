@@ -49,19 +49,13 @@ t_list* fetch(int memoria_fd) {
     return list_instruction;
 }
 
+
 t_intruction_execute* decode(t_list* list_instruction) {
     t_intruction_execute* decoded_instruction = malloc(sizeof(t_intruction_execute));
-    char* params = string_new();
-
-    void paramToPrint(void* param) {
-        string_append(&params, (char*) param);
-        string_append(&params, " ");
-    }
-
     char* instruction_type = list_remove(list_instruction, 0);
-    list_iterate(list_instruction, &paramToPrint);
-    log_info(logger, "PID: %u - Ejectuando: %s - %s", pcb->pid, instruction_type, params);
-    
+
+    print_instruction(list_instruction, instruction_type);
+
     switch (mapInstruction(instruction_type)){
         case SET:
             decoded_instruction->operation = SET;
@@ -197,7 +191,7 @@ t_intruction_execute* decode(t_list* list_instruction) {
             break;
         
         default:
-            decoded_instruction->operation = UNKNOWN;
+            decoded_instruction->operation = UNKNOWN; // posible heap loss
             break;
     }
 
@@ -303,6 +297,7 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int me
             break;
     }
 
+    // cleand decoded, recorrer y hacer free
     free(decoded_instruction);
 
     if (!ignorePC) update_register_uint32(PC, pc_plus_plus, (uint32_t) 1);

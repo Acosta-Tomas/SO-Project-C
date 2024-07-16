@@ -41,10 +41,9 @@ int main(int argc, char* argv[]) {
     pthread_join(thread_dispatch, NULL);
     pthread_join(thread_interrupt, NULL);
     
-    // sem_destroy(&mutex_pcb);
     sem_destroy(&mutex_interrupt);
     
-    queue_destroy(tlb_queue);
+    queue_destroy(tlb_queue); //Tengo que iterar para eliminar lo de adentro.
     log_destroy(logger);
     config_destroy(config);
 
@@ -100,7 +99,9 @@ void* interrupt(void* arg) {
 
         for (op_code cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
             if (cod_op == INTERRUPT || cod_op == END_PID_USER) {
-                uint32_t pid;
+                uint32_t pid, size_discard;
+
+                recv(kernel_fd, &size_discard, sizeof(u_int32_t), MSG_WAITALL); // Recibo tamaño buffer pero no me interesa (se manda por la serializacion de codigo de operacion con uint32)
                 recv(kernel_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
 
                 log_info(logger, "Interrupcion - PID: %u", pid);
