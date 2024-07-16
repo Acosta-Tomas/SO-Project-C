@@ -14,6 +14,7 @@ sem_t mutex_bit_map;
 sem_t mutex_mem_usuario;
 sem_t mutex_mem_procesos;
 
+char* path_scripts;
 
 int main(int argc, char* argv[]) {
     config = config_create("memoria.config");
@@ -25,10 +26,13 @@ int main(int argc, char* argv[]) {
     int server_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA));
     log_info(logger, "Server ready - SOCKET: %d", server_fd);
 
+
     memoria_procesos = dictionary_create();
 
+    path_scripts = config_get_string_value(config, KEY_PATH_INSTRUCCIONES);
     uint32_t mem_size = (uint32_t) config_get_int_value(config, KEY_TAM_MEMORIA);
     page_size = (uint32_t) config_get_int_value(config, KEY_TAM_PAGINA);
+    
     max_pages = mem_size/page_size;
     memoria_usuario = calloc(1, mem_size);
 
@@ -67,10 +71,14 @@ int main(int argc, char* argv[]) {
     log_destroy(logger);
     config_destroy(config);
     bitarray_destroy(bit_map);
+    dictionary_destroy(memoria_procesos);
     free(bits);
     free(memoria_usuario);
     
     return EXIT_SUCCESS;
 }
 
+void retardo(void){
+    usleep(config_get_int_value(config, KEY_RETARDO_RESPUESTA) * 1000);
+}
                            

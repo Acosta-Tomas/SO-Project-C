@@ -30,30 +30,42 @@ typedef struct {
 
 extern uint32_t page_size;
 extern uint32_t max_pages;
+
 extern void* memoria_usuario; 
-extern t_bitarray* bit_map; // Neceista sem?
-extern t_dictionary* memoria_procesos; // necesita sem?
+
+extern t_bitarray* bit_map;
+extern t_dictionary* memoria_procesos;
+
 extern t_log* logger;
 extern t_config* config;
+
+extern char* path_scripts;
 
 extern sem_t mutex_bit_map;
 extern sem_t mutex_mem_usuario;
 extern sem_t mutex_mem_procesos;
 
-op_code leer_script(char*, char**);
-op_code leer_archivo(uint32_t, char*);
 void* memoria(void*);
-char** get_instruction_pid(uint32_t, uint32_t);
-void enviar_instruccion(int, char**);
+void retardo(void);
+void liberar_memoria(int);
+void init_proceso(int);
+void init_script(int);
+
 void resize_process(int);
 op_code resize_up(int, t_list*);
 void resize_down(int, t_list*);
-void retardo(void);
-void get_pid_page(int);
 void escribir_memoria(int);
 void leer_memoria(int);
-void liberar_memoria(int);
-t_memoria* get_pid(uint32_t);
+
+FILE* open_file(char*);
+int get_file_size(FILE*);
+op_code leer_script(char*, char**);
+op_code leer_archivo(uint32_t, char*);
+void get_instruction(int);
+void get_pid_page(int);
+t_memoria* get_pid_mem(uint32_t);
+void enviar_instruccion(int, char**);
+char** get_instruction_pid(uint32_t, uint32_t);
 
 #endif
  /* 

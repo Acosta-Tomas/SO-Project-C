@@ -15,7 +15,10 @@
 			"executor": "c",
 			"future": "c",
 			"system_error": "c",
-			"cstdlib": "c"
+			"cstdlib": "c",
+			"ratio": "c",
+			"functional": "c",
+			"tuple": "c"
 		},
 		"C_Cpp.errorSquiggles": "disabled",
 	},
