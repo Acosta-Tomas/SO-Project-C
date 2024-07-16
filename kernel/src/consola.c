@@ -27,18 +27,25 @@ void* consola_main(void *arg){
         
         if (strcmp(command[0], "INICIAR_PROCESO") == 0) {
             iniciar_proceso(memoria_fd, command[0], command[1]);
+            free(command);
             continue;
         }
 
         if (strcmp(command[0], "EJECUTAR_SCRIPT") == 0) {
             ejecutar_script(memoria_fd, command[0], command[1]);
+            free(command);
             continue;
         }
 
         if (strcmp(command[0], "FINALIZAR_PROCESO") == 0) {
             if (command[1] == NULL) printf("Faltan argumentos, por favor intente nuevamente\n");
-            else finalizar_pid((uint32_t) atoi(command[1]));
-
+            else {
+                finalizar_pid((uint32_t) atoi(command[1]));
+                free(command[1]);
+            };
+            
+            free(command[0]);
+            free(command);
             continue;
         }
 
@@ -49,6 +56,8 @@ void* consola_main(void *arg){
                 sem_wait(&plani_run);
             }
 
+            free(command[0]);   
+            free(command);   
             continue;
         }
 
@@ -58,17 +67,27 @@ void* consola_main(void *arg){
                 sem_post(&plani_run);
             } else printf("Ya esta corriendo la planificación\n");
 
+            free(command[0]);
+            free(command);
             continue;
         }
 
         if (strcmp(command[0], "MULTIPROGRAMACION") == 0) {
             if (command[1] == NULL) printf("Faltan argumentos, por favor intente nuevamente\n");
-            else cambiar_multiprogramacion((uint32_t) atoi(command[1]));
+            else {
+                cambiar_multiprogramacion((uint32_t) atoi(command[1]));
+                free(command[1]);
+            }
+
+            free(command[0]);
+            free(command);            
             continue;
         }
 
         if (strcmp(command[0], "PROCESO_ESTADO") == 0) {
             print_estados_procesos();
+            free(command[0]);
+            free(command);
             continue;
         }
 
@@ -182,7 +201,6 @@ void ejecutar_script(int conexion, char* comando, char* archivo){
     }
 
     enviar_mensaje(archivo, conexion, INIT_SCRIPT);
-
     op_code codigo = recibir_operacion(conexion);
 
     if (codigo == INIT_SCRIPT_SUCCESS) {
@@ -195,10 +213,17 @@ void ejecutar_script(int conexion, char* comando, char* archivo){
             char** leido_splitted = string_split(leido, " ");
 
             iniciar_proceso(conexion, leido_splitted[0], leido_splitted[1]);
+            free(leido);
+            free(leido_splitted);
         }
 
+        free(comandos);
+        free(script);
+
     } else printf("Script no se pudo inicializar\n");
-    
+
+    free(comando);
+    free(archivo);
 }
 
 void iniciar_proceso(int conexion, char* comando, char* archivo){
@@ -222,6 +247,8 @@ void iniciar_proceso(int conexion, char* comando, char* archivo){
 
     if (estado == INIT_PID_ERROR) printf("Proceso %s no se pudo inicializar\n", archivo);
 
+    free(comando);
+    free(archivo);
 }
 
 void enviar_new(){

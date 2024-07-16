@@ -93,6 +93,7 @@ void* io_client(void *client) {
         }
     }
 
+    log_error(logger, "Client disconnected - SOCKET: %d", cliente_fd);
 
     sem_wait(&mutex_io_clients);
     dictionary_remove(dict_io_clients, nombre_cliente);
@@ -102,8 +103,7 @@ void* io_client(void *client) {
     sem_destroy(&io_client->hay_io);
     sem_destroy(&io_client->mutex_io);
 
-
-    log_error(logger, "Client disconnected - SOCKET: %d", cliente_fd);
+    free(nombre_cliente);
     free(client);
     
     return EXIT_SUCCESS;

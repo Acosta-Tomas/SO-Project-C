@@ -13,8 +13,6 @@ void finalizar_proceso(t_pcb* pcb){
 
 void* memoria_finalizar_proceso(void* pcb){
     t_pcb* pcb_end = (t_pcb*) pcb;
-    op_code code = END_PID;
-    
     check_plani();
 
    if (strlen(pcb_end->recursos)) {
@@ -35,11 +33,14 @@ void* memoria_finalizar_proceso(void* pcb){
                 sem_post(&hay_ready);
     
             } else sem_post(&mutex_recurso);
+
+            free(recursos[i]);
         }
     }
 
-    send(memoria_fd, &code, sizeof(uint32_t), 0);
-    send(memoria_fd, &pcb_end->pid, sizeof(uint32_t), 0);
+    t_paquete* paquete = crear_paquete(END_PID);
+ 
+    agregar_uint_a_paquete(paquete, &pcb_end->pid, sizeof(uint32_t));
 
     free(pcb_end->registers);
     free(pcb_end->recursos);

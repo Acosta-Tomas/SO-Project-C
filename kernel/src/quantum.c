@@ -9,11 +9,17 @@ void* interrupt_main(void *arg){
     log_info(logger, "Connected to CPU Interrupt -  SOCKET: %d", conexion);
 
     while (1){
+        t_paquete* paquete;
+
         sem_wait(&hay_interrupt);
         sem_wait(&mutex_interrupt);
-        send(conexion, &interrupt_pid->type_interrupt, sizeof(op_code), 0);
-        send(conexion, &interrupt_pid->pid,  sizeof(uint32_t), 0);
+        paquete = crear_paquete(interrupt_pid->type_interrupt);
+        agregar_uint_a_paquete(paquete, &interrupt_pid->pid, sizeof(uint32_t));
         sem_post(&mutex_interrupt);
+        
+        enviar_paquete(paquete, conexion);
+        eliminar_paquete(paquete);
+
         log_info(logger, "Enviada Interrupcion PID: %u", interrupt_pid->pid);
     }
 

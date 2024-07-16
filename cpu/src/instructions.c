@@ -244,11 +244,7 @@ pid_status io_read_write_fs(int memoria_fd, int kernel_fd, t_intruction_execute*
 }
 
 void semaphore(int kernek_fd, op_code code, char* recurso){
-    t_paquete* paquete = crear_paquete(code);
-
-    agregar_a_paquete(paquete, recurso, strlen(recurso) + 1);
-    enviar_paquete(paquete, kernek_fd);
-    eliminar_paquete(paquete);
+    enviar_mensaje(recurso, kernek_fd, code);
 }
 
 pid_status resize_process(int memoria_fd, char* size){

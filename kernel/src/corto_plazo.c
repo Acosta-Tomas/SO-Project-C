@@ -141,34 +141,25 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
             io_queue->pcb = pcb_updated;
             io_queue->io_info = io_request;
 
-
             sem_wait(&io_client->mutex_io);
             queue_push(io_client->queue_io, io_queue);  
             sem_post(&io_client->mutex_io);
             sem_post(&io_client->hay_io);
 
             log_info(logger, "Proceso bloqueado - PID: %u", pcb_updated->pid);
+            free(name_interface);
 
             return pcb_updated;
         }
 
         pcb_updated->status = ERROR;
 
+        free(name_interface);
         return pcb_updated;
     }
 
     if (cod_op == WAIT_RECURSO){
-        uint32_t size;
-        int buffer_size;
-        void* buffer;
-
-        buffer = recibir_buffer(&buffer_size, conexion);
-
-        memcpy(&size, buffer, sizeof(uint32_t));
-        char* nombre_recurso = malloc(size);
-        memcpy(nombre_recurso, buffer + sizeof(uint32_t), size);
-
-        free(buffer);
+        char* nombre_recurso = recibir_mensaje(conexion);
 
         recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
@@ -177,6 +168,7 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
 
         if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
             pcb_updated->status = TERMINATED;
+            free(nombre_recurso);
             return pcb_updated;
         } 
 
@@ -203,17 +195,7 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
     }
 
     if (cod_op == SIGNAL_RECURSO){
-        uint32_t size;
-        int buffer_size;
-        void* buffer;
-
-        buffer = recibir_buffer(&buffer_size, conexion);
-
-        memcpy(&size, buffer, sizeof(uint32_t));
-        char* nombre_recurso = malloc(size);
-        memcpy(nombre_recurso, buffer + sizeof(uint32_t), size);
-
-        free(buffer);
+        char* nombre_recurso = recibir_mensaje(conexion);
 
         recibir_operacion(conexion);
         pcb_updated = recibir_pcb(conexion, logger);
@@ -222,6 +204,7 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
 
         if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
             pcb_updated->status = TERMINATED;
+            free(nombre_recurso);
             return pcb_updated;
         } 
 
@@ -247,6 +230,7 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
 
         } else sem_post(&mutex_recurso);
 
+        free(nombre_recurso);
         return pcb_updated;
     }
 
