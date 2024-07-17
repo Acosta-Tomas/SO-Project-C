@@ -70,3 +70,23 @@ t_io* recibir_io_serializado(int conexion, t_log* logger){
 
     return io;
 }
+
+uint32_t get_io_frames(t_io* io, t_list* frames){
+    uint32_t desplazamiento = 0;
+    uint32_t size_io;
+
+    memcpy(&size_io, io->buffer, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+
+    while(desplazamiento < io->buffer_size){
+        t_memoria_fisica* frame = malloc(sizeof(t_memoria_fisica));
+
+        memcpy(&frame->direccion_fisica, io->buffer + desplazamiento, sizeof(uint32_t));
+        desplazamiento += sizeof(uint32_t);
+
+        memcpy(&frame->bytes, io->buffer + desplazamiento, sizeof(uint32_t));
+        desplazamiento += sizeof(uint32_t);
+
+        list_add(frames, frame);
+    }
+}

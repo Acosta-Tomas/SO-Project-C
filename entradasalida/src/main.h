@@ -19,10 +19,24 @@
 #define KEY_RETRASO_COMPACTACION "RETRASO_COMPACTACION"
 #define KEY_LOGGER "LOGGER"
 
+typedef enum {
+    GENERICA,
+    STDIN,
+    STDOUT,
+    DIALFS
+} t_interfaz;
+
 extern t_log* logger;
 extern t_config* config;
 
+t_interfaz mapInterfaz (char*);
+void *read_stdin(uint32_t);
 void stdin_clear_buffer();
+
+void generica_io(char*, t_config*);
+void stdin_io(char*, t_config*);
+void stdout_io(char*, t_config*);
+void dialfs_io(char*, t_config*);
 
 #endif
 
