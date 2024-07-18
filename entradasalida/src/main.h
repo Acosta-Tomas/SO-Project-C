@@ -4,6 +4,7 @@
 #include <utils/io_protocol.h>
 #include <commons/bitarray.h>
 #include <commons/memory.h>
+#include <dirent.h>
 
 // KEYS_CONFIG_FILE
 #define KEY_TIPO_INTERFAZ "TIPO_INTERFAZ"
@@ -19,17 +20,20 @@
 #define KEY_RETRASO_COMPACTACION "RETRASO_COMPACTACION"
 #define KEY_LOGGER "LOGGER"
 
+#define BLOQUE_INICIAL "BLOQUE_INICIAL"
+#define TAMANIO_ARCHIVO "nTAMANIO_ARCHIVO"
+
 typedef enum {
     GENERICA,
     STDIN,
     STDOUT,
     DIALFS
-} t_interfaz;
+} interfaz;
 
 extern t_log* logger;
 extern t_config* config;
 
-t_interfaz mapInterfaz (char*);
+interfaz mapInterfaz (char*);
 void *read_stdin(uint32_t);
 void stdin_clear_buffer();
 

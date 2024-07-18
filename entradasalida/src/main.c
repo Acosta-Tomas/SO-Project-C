@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
     return EXIT_SUCCESS;
 }
 
-t_interfaz mapInterfaz (char* interfaz) {
+interfaz mapInterfaz (char* interfaz) {
     if (strcmp(interfaz, "STDIN") == 0) return STDIN;
     if (strcmp(interfaz, "STDOUT") == 0) return STDOUT;
     if (strcmp(interfaz, "GENERICA") == 0) return GENERICA;

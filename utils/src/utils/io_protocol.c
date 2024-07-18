@@ -89,4 +89,17 @@ uint32_t get_io_frames(t_io* io, t_list* frames){
 
         list_add(frames, frame);
     }
+
+    return size_io;
+}
+
+char* get_io_file(t_io* io, char* path){
+    char* file_name = malloc(io->buffer_size); 
+    char* fiel_path = string_duplicate(path);
+
+    memcpy(file_name, io->buffer, io->buffer_size);
+    string_append(&fiel_path, file_name);
+
+    free(file_name);
+    return fiel_path;
 }
