@@ -249,14 +249,14 @@ void semaphore(int kernek_fd, op_code code, char* recurso){
 
 pid_status resize_process(int memoria_fd, char* size){
     uint32_t new_size = atouint32(size);
-    op_code code_op = MEM_RESIZE;
+    t_paquete* paquete = crear_paquete(MEM_RESIZE);
 
+    agregar_uint_a_paquete(paquete, &pcb->pid, sizeof(uint32_t));
+    agregar_uint_a_paquete(paquete, &new_size, sizeof(uint32_t));
+    enviar_paquete(paquete, memoria_fd);
+    eliminar_paquete(paquete);
 
-    // preguntar si hace falta serializar para esto
-    send(memoria_fd, &code_op, sizeof(op_code), 0);
-    send(memoria_fd, &pcb->pid, sizeof(uint32_t), 0);
-    send(memoria_fd, &new_size, sizeof(uint32_t), 0);
-
+    op_code code_op;
     recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
 
     if (code_op == MEM_ERROR) return ERROR;

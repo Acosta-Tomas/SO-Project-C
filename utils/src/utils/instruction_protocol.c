@@ -38,13 +38,16 @@ int leer_memoria(int memoria_fd, void* buffer, t_list* frames){
         enviar_paquete(paquete, memoria_fd);
         eliminar_paquete(paquete);
 
-        op_code code;
-        recv(memoria_fd, &code, sizeof(op_code), MSG_WAITALL);
-        recv(memoria_fd, &frame->bytes, sizeof(uint32_t), MSG_WAITALL);
-        recv(memoria_fd, buffer + offset_buffer, frame->bytes, MSG_WAITALL);
+        int buffer_size;
+        op_code code = recibir_operacion(memoria_fd);
+        void* buffer_memoria = recibir_buffer(&buffer_size, memoria_fd);
+
+        memcpy(&frame->bytes, buffer_memoria, sizeof(uint32_t));
+        memcpy(buffer + offset_buffer, buffer_memoria + sizeof(uint32_t), frame->bytes);
 
         offset_buffer += frame->bytes;
         free(frame);
+        free(buffer_memoria);
 
         if (code != MEM_SUCCESS) return -1;
     }

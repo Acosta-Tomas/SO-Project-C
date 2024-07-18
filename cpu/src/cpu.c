@@ -35,8 +35,8 @@ t_list* fetch(int memoria_fd) {
     t_list* list_instruction;
     t_paquete* pc_paquete = crear_paquete(INSTRUCTION);
 
-    agregar_uint_a_paquete(pc_paquete, get_register(PC), sizeof(uint32_t));
     agregar_uint_a_paquete(pc_paquete, &pcb->pid, sizeof(uint32_t));
+    agregar_uint_a_paquete(pc_paquete, get_register(PC), sizeof(uint32_t));
 
     enviar_paquete(pc_paquete, memoria_fd);
     eliminar_paquete(pc_paquete);

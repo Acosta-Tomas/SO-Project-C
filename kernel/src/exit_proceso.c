@@ -41,6 +41,8 @@ void* memoria_finalizar_proceso(void* pcb){
     t_paquete* paquete = crear_paquete(END_PID);
  
     agregar_uint_a_paquete(paquete, &pcb_end->pid, sizeof(uint32_t));
+    enviar_paquete(paquete, memoria_fd);
+    eliminar_paquete(paquete);
 
     free(pcb_end->registers);
     free(pcb_end->recursos);

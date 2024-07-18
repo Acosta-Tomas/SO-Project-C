@@ -286,14 +286,14 @@ void print_pid(void* pcb) {
 void print_io(char* key, void* io){
      t_io_client* io_print = (t_io_client*) io;
 
-     printf("\t- IO: %s\n", key);
+     printf("\tIO: %s\n", key);
      list_iterate(io_print->queue_io->elements, &print_pid);
 }
 
 void print_recursos(char* key, void* recurso){
      t_recursos* recurso_print = (t_recursos*) recurso;
 
-     printf("\t- WAIT: %s\n", key);
+     printf("\tWAIT: %s\n", key);
      list_iterate(recurso_print->queue_waiting->elements, &print_pid);
 }
 

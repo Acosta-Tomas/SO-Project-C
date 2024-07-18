@@ -101,7 +101,7 @@ void print_instruction(t_list* list, char* instruction) {
     void paramToPrint(void* param) {
         string_append(&params, (char*) param);
         string_append(&params, " ");
-    }
+    };
 
     list_iterate(list, &paramToPrint);
     log_info(logger, "PID: %u - Ejectuando: %s - %s", pcb->pid, instruction, params);
