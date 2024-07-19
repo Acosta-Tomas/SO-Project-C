@@ -29,7 +29,7 @@ void* corto_main(void *arg){
 
         pid_quantum->quantum =  pcb->quantum;
         pid_quantum->pid = pcb->pid;
-        running_pid = pcb->pid;
+        running_pid = (int) pcb->pid;
 
         enviar_cpu(conexion, pcb);
 

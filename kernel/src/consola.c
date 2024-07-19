@@ -139,9 +139,9 @@ void* multi_change_waits(void* waits){
 }
 
 void finalizar_pid(uint32_t pid){
-    if (pid == running_pid) {
+    if ((int) pid == running_pid) {
         sem_wait(&mutex_interrupt);
-        interrupt_pid->pid = running_pid;
+        interrupt_pid->pid = (uint32_t) running_pid;
         interrupt_pid->type_interrupt = END_PID_USER;
         sem_post(&mutex_interrupt);
         sem_post(&hay_interrupt);
