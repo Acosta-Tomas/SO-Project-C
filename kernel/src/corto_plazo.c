@@ -123,7 +123,6 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
 
         return pcb_updated;
     }
-
     
     if (cod_op == IO){
         char* name_interface = NULL;

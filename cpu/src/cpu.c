@@ -202,7 +202,7 @@ t_intruction_execute* decode(t_list* list_instruction) {
 
 pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int memoria_fd) {
     pid_status status = RUNNING; 
-    bool ignorePC = false;
+    update_register_uint32(PC, pc_plus_plus, (uint32_t) 1);
 
     switch (decoded_instruction->operation){
         case SET: 
@@ -227,7 +227,7 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int me
             break;
 
         case JNZ:
-            ignorePC = jnz_register(decoded_instruction->params[0], decoded_instruction->params[1]);
+            jnz_register(decoded_instruction->params[0], decoded_instruction->params[1]);
             break;
 
         case RESIZE: 
@@ -299,8 +299,6 @@ pid_status exec(t_intruction_execute* decoded_instruction, int kernel_fd, int me
 
     // cleand decoded, recorrer y hacer free
     free(decoded_instruction);
-
-    if (!ignorePC) update_register_uint32(PC, pc_plus_plus, (uint32_t) 1);
 
     return status;
 }

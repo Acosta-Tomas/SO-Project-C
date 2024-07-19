@@ -12,9 +12,7 @@ void update_register_uint32(char* registro, void (*update_function) (uint32_t *,
 
 void operation_register_uint8(char* destino, char* origen, cpu_operation operation){
     uint8_t* reg_destino = (uint8_t*) get_register(destino);
-    uint8_t* reg_origen = (uint8_t*) get_register(origen);
-
-    if (sizeof(*(reg_destino)) != sizeof(*(reg_origen))) return;
+    uint8_t* reg_origen = (uint8_t*) get_register(origen); // castear de uint32 a uint8 solo acota y se pierden bytes de info, pero no hay error. (no hace falta normalice)
 
     switch (operation){
         case SUMA: set_registro_uint8(reg_destino, *(reg_destino) + *(reg_origen));
@@ -29,15 +27,13 @@ void operation_register_uint8(char* destino, char* origen, cpu_operation operati
 
 void operation_register_uint32(char* destino, char* origen, cpu_operation operation){
     uint32_t* reg_destino = (uint32_t*) get_register(destino);
-    uint32_t* reg_origen = (uint32_t*) get_register(origen);
-
-    if (sizeof(*(reg_destino)) != sizeof(*(reg_origen))) return;
+    uint32_t reg_origen = get_normaliced_register(origen); // Castear puntero de uint8 a uint32 hace leer memoria no deseada -> uso el normalice a uint32
 
     switch (operation){
-        case SUMA: set_registro_uint32(reg_destino, *(reg_destino) + *(reg_origen));
+        case SUMA: set_registro_uint32(reg_destino, *(reg_destino) + reg_origen);
             break;
         
-        case RESTA: set_registro_uint32(reg_destino, *(reg_destino) - *(reg_origen));
+        case RESTA: set_registro_uint32(reg_destino, *(reg_destino) - reg_origen);
             break;
         default:
             break;
@@ -45,10 +41,10 @@ void operation_register_uint32(char* destino, char* origen, cpu_operation operat
 }
 
 
-bool jnz_register(char* registro, char* next_pc){
+void jnz_register(char* registro, char* next_pc){
     bool isZero;
 
-    if (sizeof_register(registro) == sizeof(u_int8_t)){
+    if (sizeof_register(registro) == sizeof(uint8_t)){
         uint8_t* reg = (uint8_t*) get_register(registro);
         isZero = *(reg) == 0;
     } else {
@@ -56,12 +52,11 @@ bool jnz_register(char* registro, char* next_pc){
         isZero = *(reg) == 0;
     }
 
-    if (isZero) return false;
+    if (isZero) return;
 
     uint32_t new_pc = atouint32(next_pc);
     update_register_uint32(PC, set_registro_uint32, new_pc);
 
-    return true;
 }
 
 pid_status enviar_io(int kernel_fd, t_intruction_execute* decoded){
@@ -249,6 +244,8 @@ void semaphore(int kernek_fd, op_code code, char* recurso){
 
 pid_status resize_process(int memoria_fd, char* size){
     uint32_t new_size = atouint32(size);
+    modify_tlb_on_resize(new_size, pcb->pid);
+
     t_paquete* paquete = crear_paquete(MEM_RESIZE);
 
     agregar_uint_a_paquete(paquete, &pcb->pid, sizeof(uint32_t));

@@ -114,6 +114,7 @@ void print_estados_procesos(void);
 void print_pid(void*);
 void print_io(char*, void*);
 void print_recursos(char*, void*);
+void print_io_pd(void*);
 
 #endif
 

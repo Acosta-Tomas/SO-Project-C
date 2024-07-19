@@ -18,7 +18,9 @@
 			"cstdlib": "c",
 			"ratio": "c",
 			"functional": "c",
-			"tuple": "c"
+			"tuple": "c",
+			"chrono": "c",
+			"numbers": "c"
 		},
 		"C_Cpp.errorSquiggles": "disabled",
 	},

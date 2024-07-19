@@ -188,8 +188,41 @@ void finalizar_pid(uint32_t pid){
         }
 
         sem_post(&mutex_recurso);
-
     }
+
+    list_destroy(recursos_list);
+
+    t_list* io_list = dictionary_elements(dict_io_clients);
+
+    bool is_pid_list_io(void* io) {
+        t_io_queue* io_to_remove = (t_io_queue*) io;
+
+        return io_to_remove->pcb->pid == pid;
+    };
+
+    for (int i = 0; i < list_size(io_list); i += 1){
+        t_io_client* io_client = list_get(io_list, i);
+
+        sem_wait(&io_client->mutex_io);
+        t_io_queue* io = list_remove_by_condition(io_client->queue_io->elements, &is_pid_list_io);
+
+        if (io != NULL) {
+            pcb_end = io->pcb;
+            sem_post(&io_client->mutex_io);
+            sem_wait(&io_client->hay_io);
+            finalizar_proceso(pcb_end);
+
+            free(io->io_info->buffer);
+            free(io->io_info);
+            free(io);
+            list_destroy(io_list);
+            return;
+        }
+
+        sem_post(&io_client->mutex_io);
+    }
+
+    list_destroy(io_list);
 
     printf("No se encontro proceso: %u\n", pid);
 }
@@ -283,11 +316,17 @@ void print_pid(void* pcb) {
     printf("\t- PID: %u\n", pcb_print->pid); 
 }
 
+void print_io_pd(void *io) {
+    t_io_queue* io_print = (t_io_queue*) io;
+
+    printf("\t- PID: %u\n", io_print->pcb->pid); 
+}
+
 void print_io(char* key, void* io){
      t_io_client* io_print = (t_io_client*) io;
 
      printf("\tIO: %s\n", key);
-     list_iterate(io_print->queue_io->elements, &print_pid);
+     list_iterate(io_print->queue_io->elements, &print_io_pd);
 }
 
 void print_recursos(char* key, void* recurso){

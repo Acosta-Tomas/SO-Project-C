@@ -48,6 +48,7 @@ typedef struct {
     uint32_t pid;
     uint32_t page;
     uint32_t frame;
+    bool valid;
 } t_tlb_entry;
 
 extern t_log* logger;
@@ -77,7 +78,7 @@ void update_register_uint32(char*, void (*update_function)(uint32_t*, uint32_t),
 void update_register_uint8(char*, void (*update_function)(uint8_t*, uint8_t), uint8_t);
 void operation_register_uint8(char*, char*, cpu_operation);
 void operation_register_uint32(char*, char*, cpu_operation);
-bool jnz_register(char*, char*);
+void jnz_register(char*, char*);
 pid_status enviar_io(int, t_intruction_execute*);
 pid_status enviar_io_truncate_fs(int, t_intruction_execute*);
 pid_status resize_process(int, char*);
@@ -91,6 +92,7 @@ pid_status io_read_write_fs(int, int, t_intruction_execute*);
 pid_status mmu(int, uint32_t, uint32_t, t_list*);
 bool find_tlb(uint32_t, uint32_t, uint32_t*);
 void add_tlb(uint32_t, uint32_t, uint32_t);
+void modify_tlb_on_resize(uint32_t, uint32_t);
 
 void* get_register(char*);
 void pc_plus_plus(uint32_t*, uint32_t);
