@@ -101,5 +101,81 @@ char* get_io_file(t_io* io, char* path){
     string_append(&fiel_path, file_name);
 
     free(file_name);
+    free(io->buffer);
+    free(io);
+    return fiel_path;
+}
+
+char* get_io_truncate(t_io* io, char* path, int* size){
+    uint32_t file_size;
+    uint32_t desplazamiento = 0;
+    char* fiel_path = string_duplicate(path);
+
+    memcpy(&file_size, io->buffer, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    char* file_name = malloc(file_size); 
+
+    memcpy(file_name, io->buffer + desplazamiento, file_size);
+    desplazamiento += file_size;
+    
+    memcpy(size, io->buffer + desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+
+    if(io->buffer_size != desplazamiento) {
+        free(file_name);
+        free(io->buffer);
+        free(io);
+        return NULL;
+    }
+
+    string_append(&fiel_path, file_name);
+    free(io->buffer);
+    free(io);
+    return fiel_path;
+}
+
+char* get_io_read_write(t_io* io, char* path, t_fs_rw* fs_info) {
+    fs_info->frames = list_create();
+    uint32_t desplazamiento = 0;
+    char* fiel_path = string_duplicate(path);
+    uint32_t file_size;
+
+    memcpy(&file_size, io->buffer, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+    char* file_name = malloc(file_size); 
+
+    memcpy(file_name, io->buffer + desplazamiento, file_size);
+    desplazamiento += file_size;
+
+    memcpy(&fs_info->ptr, io->buffer + desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+
+    memcpy(&fs_info->size, io->buffer + desplazamiento, sizeof(uint32_t));
+    desplazamiento += sizeof(uint32_t);
+
+    while(desplazamiento < io->buffer_size){
+        t_memoria_fisica* frame = malloc(sizeof(t_memoria_fisica));
+
+        memcpy(&frame->direccion_fisica, io->buffer + desplazamiento, sizeof(uint32_t));
+        desplazamiento += sizeof(uint32_t);
+
+        memcpy(&frame->bytes, io->buffer + desplazamiento, sizeof(uint32_t));
+        desplazamiento += sizeof(uint32_t);
+
+        list_add(fs_info->frames, frame);
+    }
+
+    if(io->buffer_size != desplazamiento) {
+        list_destroy(fs_info->frames);
+        free(fs_info);
+        free(file_name);
+        free(io->buffer);
+        free(io);
+        return NULL;
+    }
+
+    string_append(&fiel_path, file_name);
+    free(io->buffer);
+    free(io);
     return fiel_path;
 }

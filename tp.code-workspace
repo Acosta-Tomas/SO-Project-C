@@ -20,7 +20,8 @@
 			"functional": "c",
 			"tuple": "c",
 			"chrono": "c",
-			"numbers": "c"
+			"numbers": "c",
+			"*.tcc": "c"
 		},
 		"C_Cpp.errorSquiggles": "disabled",
 	},

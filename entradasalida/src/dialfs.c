@@ -93,11 +93,11 @@ int get_init_block_file(t_bitarray* bitmap, uint32_t size){
             int k = i + 1;
 
             while (k - i < size && k < bitmap_size && flag) {
-                if(bitarray_test_bit(bitmap, i)) flag = false;
+                if(bitarray_test_bit(bitmap, k)) flag = false;
                 k += 1;
             }
 
-            if (flag) {
+            if (flag && k - i == size) {
                 posicion = i;
                 break;
             } 
@@ -132,7 +132,7 @@ t_config* remove_config(t_list* config_list, char* path){
 op_code create_file(t_list* metadata, char* nombre, int bloque_inicial){
     t_config* new_file_cfg = get_config(metadata, nombre);
 
-    if (new_file_cfg == NULL) return IO_ERROR;
+    if (new_file_cfg != NULL) return IO_ERROR;
 
     char* info = string_new();
     string_append(&info, "BLOQUE_INICIAL=");
@@ -149,6 +149,47 @@ op_code create_file(t_list* metadata, char* nombre, int bloque_inicial){
     free(info);
 
     return IO_SUCCESS;
+}
+
+void resize_down(t_bitarray* bitmap, int init_bit, int end_bit){
+    for (int i = init_bit; i < end_bit; i += 1)
+        bitarray_clean_bit(bitmap, i);
+}
+
+bool check_space_contiguo(t_bitarray* bitmap, int init_bit, int end_bit){
+    if (init_bit < 0) return false;
+    for (int i = init_bit; i < end_bit; i += 1){
+        if(bitarray_get_max_bit(bitmap) == i || bitarray_test_bit(bitmap, i)) return false;
+    }
+
+    return true;
+}
+
+bool check_space_total(t_bitarray* bitmap, int cant_bits){
+    for (int i = 0; i < bitarray_get_max_bit(bitmap); i += 1){
+        if(!bitarray_test_bit(bitmap, i)) cant_bits -= 1;
+    }
+
+    return cant_bits < 1;
+}
+
+void resize_up(t_bitarray* bitmap, int init_bit, int end_bit){
+    for (int i = init_bit; i < end_bit; i += 1)
+        bitarray_set_bit(bitmap, i);
+}
+
+void realocate_data(void* buffer, uint32_t current_pos, uint32_t new_pos, uint32_t size){
+    memcpy(buffer + new_pos, buffer + current_pos, size);
+}
+
+bool sory_by_init_block(void* config1, void* config2){
+    t_config* cfg1 = (t_config*) config1;
+    t_config* cfg2 = (t_config*) config2;
+
+    int bloque_cfg1 = config_get_int_value(cfg1, BLOQUE_INICIAL);
+    int bloque_cfg2 = config_get_int_value(cfg2, BLOQUE_INICIAL);
+
+    return bloque_cfg1 < bloque_cfg2;
 }
 
 void dialfs_io(char* nombre, t_config* config){
@@ -173,8 +214,6 @@ void dialfs_io(char* nombre, t_config* config){
     void* bloques = get_bloques(fd_bloques, size_block_file);
     t_bitarray* bitmap = get_bitmap(fd_bitmap, size_bit_file);
     t_list* metadata = get_metadata(fs_path);
-
-    return;
 
     char* ip_kernel = config_get_string_value(config, KEY_IP_KERNEL);
     char* puerto_kernel = config_get_string_value(config, KEY_PUERTO_KERNEL);
@@ -212,8 +251,6 @@ void dialfs_io(char* nombre, t_config* config){
                     }
 
                     free(file_path_create);
-                    free(io->buffer);
-                    free(io);
                     break;
                     
                 case IO_FS_DELETE:
@@ -224,160 +261,199 @@ void dialfs_io(char* nombre, t_config* config){
                     t_config* file_cfg = remove_config(metadata, file_path_delete);
 
                     if (file_cfg != NULL) {
-                        int init_bloque = config_get_int_value(file_cfg, "BLOQUE_INICIAL");
+                        int init_bloque = config_get_int_value(file_cfg, BLOQUE_INICIAL);
+                        int size = config_get_int_value(file_cfg, TAMANIO_ARCHIVO);
+                        size = (int) ceil((double)size / block_size);
                         remove(file_path_delete);
 
-                        bitarray_clean_bit(bitmap, init_bloque);
+                        if (size == 0 && init_block > -1) size = 1;
+                        resize_down(bitmap, init_bloque, init_bloque + size);
                         update_bitmap(fd_bitmap, bitmap, size_bit_file);
 
                         config_destroy(file_cfg);
                     }
 
                     free(file_path_delete);
-                    free(io->buffer);
-                    free(io);
                     break;
                 
-                case IO_FS_TRUNCATE:
+                case IO_FS_TRUNCATE: 
+                    int new_size;
+                    char* file_truncate = get_io_truncate(io, fs_path, &new_size);
+                    to_send = IO_ERROR;
+
+                    if (file_truncate) {
+                        log_info(logger, "Archivo %s truncate size %i", file_truncate, new_size);
+                        t_config* file_cfg = get_config(metadata, file_truncate);
+
+                        if(file_cfg == NULL) {
+                            free(file_truncate);
+                            break;
+                        };
+
+                        int current_size = config_get_int_value(file_cfg, TAMANIO_ARCHIVO);
+                        int init_block = config_get_int_value(file_cfg, BLOQUE_INICIAL);
+                        current_size = (int) ceil((double)current_size / block_size);
+                        new_size = (int) ceil((double)new_size / block_size);
+                        if (current_size == 0 && init_block > -1) current_size = 1;
+
+                        if (new_size == current_size) {
+                            config_set_value(file_cfg, TAMANIO_ARCHIVO, string_itoa(new_size * block_size));
+                            config_save(file_cfg);
+
+                            to_send = IO_SUCCESS;
+                            free(file_truncate);
+                            break;
+                        }
+
+                        if (new_size < current_size) {
+                            resize_down(bitmap, init_block + new_size, init_block + current_size);
+                            config_set_value(file_cfg, TAMANIO_ARCHIVO, string_itoa(new_size * block_size));
+                            if (!new_size) config_set_value(file_cfg, BLOQUE_INICIAL, string_itoa(-1));
+
+                            config_save(file_cfg);
+                            update_bitmap(fd_bitmap, bitmap, size_bit_file);
+
+                            to_send = IO_SUCCESS;
+                            free(file_truncate);
+                            break;
+                        }
+
+                        if (new_size > current_size) {
+                            bool tiene_espacio = check_space_contiguo(bitmap, init_block + current_size, init_block + new_size);
+
+                            if (tiene_espacio) {
+                                resize_up(bitmap, init_block + current_size, init_block + new_size);
+                                config_set_value(file_cfg, TAMANIO_ARCHIVO, string_itoa(new_size * block_size));
+
+                                update_bitmap(fd_bitmap, bitmap, size_bit_file);
+                                config_save(file_cfg);
+
+                                to_send = IO_SUCCESS;
+                                free(file_truncate);
+                                break;
+                            }
+
+                            int new_init_block = get_init_block_file(bitmap, new_size);
+
+                            if (new_init_block > -1) {
+                                resize_down(bitmap, init_block, init_block + current_size);
+                                resize_up(bitmap, new_init_block, new_init_block + new_size);
+                                realocate_data(bloques, init_block, new_init_block, current_size * block_size);
+                                config_set_value(file_cfg, BLOQUE_INICIAL, string_itoa(new_init_block));
+                                config_set_value(file_cfg, TAMANIO_ARCHIVO, string_itoa(new_size * block_size));
+
+                                update_bloques(fd_bloques, bloques, size_block_file);
+                                update_bitmap(fd_bitmap, bitmap, size_bit_file);
+                                config_save(file_cfg);
+
+                                to_send = IO_SUCCESS;
+                                free(file_truncate);
+                                break;
+                            }
+
+                            if (check_space_total(bitmap, new_size)) {
+                                list_sort(metadata, &sory_by_init_block);
+                                resize_down(bitmap, 0, bitarray_get_max_bit(bitmap));
+
+                                for(int i = 0; i < list_size(metadata); i += 1){
+                                    t_config* cfg = list_get(metadata, i);
+                                    bool isCfgTruncate = !strcmp(file_cfg->path, cfg->path);
+                                    int init_block = config_get_int_value(cfg, BLOQUE_INICIAL);
+                                    int size = config_get_int_value(cfg, TAMANIO_ARCHIVO);
+                                    int bit_size = isCfgTruncate ? new_size : (int) ceil((double)size / block_size);
+                                    int new_block = get_init_block_file(bitmap, bit_size);
+
+                                    resize_up(bitmap, new_block, new_block + bit_size);
+
+                                    void* buffer = malloc(size);
+                                    memcpy(buffer, bloques + init_block * block_size, size);
+                                    memcpy(bloques + init_block * block_size, buffer, size);
+
+                                    config_set_value(cfg, BLOQUE_INICIAL, string_itoa(new_block));
+                                    if(isCfgTruncate) config_set_value(cfg, TAMANIO_ARCHIVO, string_itoa(bit_size * block_size));
+                                    config_save(cfg);
+                                    free(buffer);
+                                }
+
+                                update_bitmap(fd_bitmap, bitmap, size_bit_file);
+                                update_bloques(fd_bloques, bloques, size_block_file);
+                                usleep(retraso_compactacion * 1000);
+                                to_send = IO_SUCCESS;
+                                free(file_truncate);
+                                break;
+
+                            }
+                        }
+
+                    }
+                    
                     break;
                 
-                case IO_FS_READ:
+                case IO_FS_WRITE: 
+                    to_send = IO_ERROR;
+                    t_fs_rw* fs_info_w = malloc(sizeof(t_fs_rw));
+                    char* file_write = get_io_read_write(io, fs_path, fs_info_w);
+
+                    if (file_write) {
+                        log_info(logger, "Archivo %s write", file_write);
+
+                        t_config* file_cfg = get_config(metadata, file_write);
+                        char* buffer = (char*) malloc(fs_info_w->size);
+                        int status = leer_memoria(memoria_fd, buffer, fs_info_w->frames);
+
+                        if(file_cfg != NULL && status > -1) {
+                            int bloque = config_get_int_value(file_cfg, BLOQUE_INICIAL);
+
+                            memcpy(bloques + bloque * block_size + fs_info_w->ptr, buffer, fs_info_w->size);
+                            update_bloques(fd_bloques, bloques, size_block_file);
+                            to_send = IO_SUCCESS;
+                        }
+
+                        list_destroy(fs_info_w->frames);
+                        free(file_write);
+                        free(fs_info_w);
+                        free(buffer);
+                    }
+
                     break;
 
-                case IO_FS_WRITE:
+                case IO_FS_READ: to_send = IO_ERROR;
+                    to_send = IO_ERROR;
+                    t_fs_rw* fs_info_r = malloc(sizeof(t_fs_rw));
+                    char* file_read = get_io_read_write(io, fs_path, fs_info_r);
+
+                    if (file_write) {
+                        log_info(logger, "Archivo %s write", file_read);
+
+                        t_config* file_cfg = get_config(metadata, file_read);
+                        char* buffer = (char*) malloc(fs_info_r->size);
+
+                        if(file_cfg != NULL) {
+                            int bloque = config_get_int_value(file_cfg, BLOQUE_INICIAL);
+
+                            memcpy(buffer, bloques + bloque * block_size + fs_info_r->ptr, fs_info_r->size);
+                            
+                            int status = escribir_memoria(memoria_fd, buffer, fs_info_r->frames);
+                            if (status > -1 ) to_send = IO_SUCCESS;
+                        }
+
+                        list_destroy(fs_info_r->frames);
+                        free(file_read);
+                        free(fs_info_r);
+                        free(buffer);
+                    }
+
                     break;
         
                 default:
                     log_info(logger, "Instruccion no valida, se avisa a kernel");
                     break;
-
-                usleep(unidad_trabajo * 1000);
-                send(kernel_fd, &to_send, sizeof(op_code), 0);
-                log_info(logger, "Finalizada instruccion, se avisa a kernel");
             }
 
-            // if(io->type_instruction == IO_FS_TRUNCATE) {
-            //     char* nombre_archivo;
-            //     int tamaño_nombre;
-            //     uint32_t valor_truncate;
-
-            //     memcpy(&tamaño_nombre, io->buffer, sizeof(int));
-            //     nombre_archivo = malloc(tamaño_nombre);
-            //     memcpy(nombre_archivo, io->buffer + sizeof(int), tamaño_nombre);
-            //     memcpy(&valor_truncate, io->buffer + sizeof(int) + tamaño_nombre, sizeof(uint32_t));
-
-            //     log_info(logger, "Archivo - %s truncate %u", nombre_archivo, valor_truncate);
-            //     usleep(unidad_trabajo * 1000);
-
-            //     to_send = IO_SUCCESS;
-
-            //     free(nombre_archivo);
-            //     free(io->buffer);
-            //     free(io);
-            // }
-
-            // if(io->type_instruction == IO_FS_READ){
-            //     t_list* frames = list_create();
-            //     uint32_t desplazamiento = 0;
-            //     char* nombre_archivo;
-            //     int tamaño_nombre;
-            //     uint32_t comienzo_puntero;
-            //     uint32_t tamaño_escribir;
-
-
-            //     memcpy(&tamaño_nombre, io->buffer, sizeof(uint32_t));
-            //     desplazamiento += sizeof(uint32_t);
-            //     nombre_archivo = malloc(tamaño_nombre);
-
-            //     memcpy(nombre_archivo, io->buffer + desplazamiento, tamaño_nombre);
-            //     desplazamiento += tamaño_nombre;
-
-            //     memcpy(&comienzo_puntero, io->buffer + desplazamiento, sizeof(uint32_t));
-            //     desplazamiento += sizeof(uint32_t);
-
-            //     memcpy(&tamaño_escribir, io->buffer + desplazamiento, sizeof(uint32_t));
-            //     desplazamiento += sizeof(uint32_t);
-
-            //     while(desplazamiento < io->buffer_size){
-            //         t_memoria_fisica* frame = malloc(sizeof(t_memoria_fisica));
-
-            //         memcpy(&frame->direccion_fisica, io->buffer + desplazamiento, sizeof(uint32_t));
-            //         desplazamiento += sizeof(uint32_t);
-
-            //         memcpy(&frame->bytes, io->buffer + desplazamiento, sizeof(uint32_t));
-            //         desplazamiento += sizeof(uint32_t);
-
-            //         list_add(frames, frame);
-            //     }
-
-            //     char* buffer = malloc(tamaño_escribir + 1);
-
-            //     printf("Leer %s cantidad %u desde %u", nombre_archivo, tamaño_escribir, comienzo_puntero);
-
-            //     if (fgets(buffer, tamaño_escribir + 1, stdin) != NULL) {
-            //         if (buffer[strlen(buffer) - 1] != '\n') stdin_clear_buffer();
-                
-            //         printf("Usted ingresó: %s - %ld\n", (char*) buffer, strlen(buffer));
-            //     }
-
-            //     int status = escribir_memoria(memoria_fd, buffer, frames);
-                
-            //     to_send = status == -1 ? IO_ERROR : IO_SUCCESS;
-
-            //     free(io->buffer);
-            //     free(io);
-            //     free(buffer);
-            //     list_destroy(frames);
-            // }
-
-            // if(io->type_instruction == IO_FS_WRITE){
-            //     t_list* frames = list_create();
-            //     uint32_t desplazamiento = 0;
-            //     char* nombre_archivo;
-            //     int tamaño_nombre;
-            //     uint32_t comienzo_puntero;
-            //     uint32_t tamaño_a_leer;
-
-
-            //     memcpy(&tamaño_nombre, io->buffer, sizeof(uint32_t));
-            //     desplazamiento += sizeof(uint32_t);
-            //     nombre_archivo = malloc(tamaño_nombre);
-
-            //     memcpy(nombre_archivo, io->buffer + desplazamiento, tamaño_nombre);
-            //     desplazamiento += tamaño_nombre;
-
-            //     memcpy(&comienzo_puntero, io->buffer + desplazamiento, sizeof(uint32_t));
-            //     desplazamiento += sizeof(uint32_t);
-
-            //     memcpy(&tamaño_a_leer, io->buffer + desplazamiento, sizeof(uint32_t));
-            //     desplazamiento += sizeof(uint32_t);
-
-            //     while(desplazamiento < io->buffer_size){
-            //         t_memoria_fisica* frame = malloc(sizeof(t_memoria_fisica));
-
-            //         memcpy(&frame->direccion_fisica, io->buffer + desplazamiento, sizeof(uint32_t));
-            //         desplazamiento += sizeof(uint32_t);
-
-            //         memcpy(&frame->bytes, io->buffer + desplazamiento, sizeof(uint32_t));
-            //         desplazamiento += sizeof(uint32_t);
-
-            //         list_add(frames, frame);
-            //     }
-
-            //     char* buffer = (char*) malloc(tamaño_a_leer);
-
-            //     int status = leer_memoria(memoria_fd, buffer, frames);
-                
-            //     to_send = status == -1 ? IO_ERROR : IO_SUCCESS;
-
-            //     printf("Escribir %s cantidad %u desde %u\n", nombre_archivo, tamaño_a_leer, comienzo_puntero);
-            //     printf("Datos leidos: %.*s\n", tamaño_a_leer, buffer);
-
-            //     free(io->buffer);
-            //     free(io);
-            //     free(buffer);
-            //     list_destroy(frames);
-            // }
+        
+            usleep(unidad_trabajo * 1000);
+            send(kernel_fd, &to_send, sizeof(op_code), 0);
+            log_info(logger, "Finalizada instruccion, se avisa a kernel");
         }
     }
 

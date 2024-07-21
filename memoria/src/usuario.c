@@ -65,7 +65,7 @@ op_code resize_up(int pages, t_list* list_pages){
     sem_wait(&mutex_bit_map);
     for(int i = 0; i < bitarray_get_max_bit(bit_map) && pages > 0; i += 1){
         
-        if(!bitarray_test_bit(bit_map, i)) { // hace falta mutex para leer el bit?
+        if(!bitarray_test_bit(bit_map, i)) { 
             uint32_t* frame = malloc(sizeof(uint32_t));
             *(frame) = i;
             list_add(list_pages, frame); 

@@ -105,6 +105,7 @@ void add_tlb(uint32_t pid, uint32_t pagina, uint32_t frame){
 }
 
 void modify_tlb_on_resize(uint32_t new_size, uint32_t pid){
+    if (numero_entradas < 1) return;
     int max_page = ceil((double)new_size / page_size);
     
     void entry_to_modify(void* e) {
