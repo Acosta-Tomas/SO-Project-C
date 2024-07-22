@@ -53,25 +53,3 @@ void stdin_io(char* nombre, t_config* config){
 	liberar_conexion(kernel_fd);
     liberar_conexion(memoria_fd);
 }
-
-void *read_stdin(uint32_t size){
-    char* buffer = malloc(size + 1);
-
-    printf("Ingresar datos: ");
-
-    if (fgets(buffer, size + 1, stdin) != NULL) {
-        if (buffer[strlen(buffer) - 1] != '\n') stdin_clear_buffer();
-    
-        printf("Usted ingresó: %s - %ld\n", (char*) buffer, strlen(buffer));
-    }
-
-    return buffer;
-}
-
-void stdin_clear_buffer() {
-    char c = fgetc(stdin);
-    while (c != '\n' && c != EOF) {
-        printf("%c", c);
-        c = fgetc(stdin);
-    }
-}
