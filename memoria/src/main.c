@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
     logger = log_create("memoria.logs", config_get_string_value(config, KEY_SERVER_LOG), true, LOG_LEVEL_DEBUG);
 
     int server_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA));
-    log_info(logger, "Server ready - SOCKET: %d", server_fd);
+    log_info(logger, "SOCKET: %d - Esperando Clientes", server_fd);
 
 
     memoria_procesos = dictionary_create();
@@ -53,7 +53,7 @@ int main(int argc, char* argv[]) {
     while (1) {
         int* cliente_fd = malloc(sizeof(int));
         *(cliente_fd) = esperar_cliente(server_fd);
-        log_info(logger, "New client - SOCKET: %d", *(cliente_fd));
+        log_info(logger, "SOCKET: %d - Cliente conectado", *(cliente_fd));
 
         pthread_t cliente;
         if (pthread_create(&cliente, NULL, memoria, (void*) cliente_fd)) {

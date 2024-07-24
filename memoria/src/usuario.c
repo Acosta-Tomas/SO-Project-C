@@ -10,6 +10,8 @@ void escribir_memoria(int client_fd){
     memcpy(memoria_usuario + direccion_fisica, value_write, value_size);
     sem_post(&mutex_mem_usuario);
 
+    log_info(logger, "Acción: ESCRIBIR - Dirección física: %u - Tamaño: %i", direccion_fisica, value_size);
+
     retardo();
     op_code code_op = MEM_SUCCESS;
     send(client_fd, &code_op, sizeof(op_code), 0);
@@ -26,6 +28,8 @@ void leer_memoria(int client_fd){
     sem_wait(&mutex_mem_usuario);
     memcpy(value_read, memoria_usuario + direccion_fisica, value_size);
     sem_post(&mutex_mem_usuario);
+
+    log_info(logger, "Acción: LEER - Dirección física: %u - Tamaño: %i", direccion_fisica, value_size);
     
     retardo();
     t_paquete* paquete = crear_paquete(MEM_SUCCESS);
@@ -46,6 +50,8 @@ void resize_process(int client_fd){
     pid_mem = get_pid_mem(pid);
 
     int pages = ceil((double)new_size / page_size) - list_size(pid_mem->pages);
+
+    log_info(logger, "PID: %u - Tamaño Actual: %i - Tamaño a %s: %u", pid, list_size(pid_mem->pages) * page_size, pages > 0 ? "Ampliar" : "Reducir", new_size);
 
     if (pages > 0) code_op = resize_up(pages, pid_mem->pages);
     if (pages < 0) resize_down(pages * (-1), pid_mem->pages);

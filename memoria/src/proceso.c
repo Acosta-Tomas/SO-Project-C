@@ -53,7 +53,7 @@ FILE* open_file(char* nombre){
     string_append(&full_path, nombre);
     FILE* archivo = fopen(full_path, "r");
 
-    log_info(logger, "Archivo a leer: %s", full_path);
+    log_debug(logger, "Archivo a leer: %s", full_path);
 
     free(full_path);
 
@@ -74,7 +74,7 @@ void get_instruction(int client_fd){
     pid = recibir_pid_con_uint32(client_fd, &pc, logger);
     enviar_instruccion(client_fd, get_instruction_pid(pid, pc));     
 
-    log_info(logger, "PID: %u - PC: %u enviado a CPU", pid, pc);  
+    log_debug(logger, "PID: %u - PC: %u enviado a CPU", pid, pc);  
 }
 
 char** get_instruction_pid(uint32_t pid, uint32_t pc){
@@ -127,6 +127,8 @@ void get_pid_page(int client_fd) {
     }
 
     uint32_t* frame = list_get(pid_mem->pages, page);
+
+    log_info(logger, "PID: %u - Pagina: %u - Marco: %u", pid, page, *frame);
 
     retardo();
     t_paquete* paquete = crear_paquete(MEM_SUCCESS);

@@ -29,7 +29,7 @@ void* memoria(void *client) {
         }
     }
 
-    log_error(logger, "Client disconnected - SOCKET: %d", cliente_fd);
+    log_error(logger, "SOCKET: %d - Cliente desconectado", cliente_fd);
     free(client);
 
     return EXIT_SUCCESS;
@@ -60,6 +60,7 @@ void init_proceso(int client_fd){
     t_init_pid* pid_to_init = recibir_init_process(client_fd, logger);
 
     op_code status = leer_archivo(pid_to_init->pid, pid_to_init->path);
+    retardo();
     send(client_fd, &status, sizeof(op_code), 0);
 
     free(pid_to_init->path);
@@ -71,6 +72,8 @@ void init_script(int client_fd){
     char* comandos = string_new();
 
     op_code codigo = leer_script(archivo, &comandos);
+
+    retardo();
     
     if (codigo == INIT_SCRIPT_ERROR) send(client_fd, &codigo, sizeof(op_code), 0);
     else enviar_mensaje(comandos, client_fd, codigo);

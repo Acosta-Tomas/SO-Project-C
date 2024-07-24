@@ -19,7 +19,7 @@ t_init_pid* recibir_init_process(int conexion, t_log* logger){
     memcpy(pid_to_init->path, buffer + desplazamiento, string_size);
     desplazamiento += string_size;
 
-    if (size != desplazamiento) log_info(logger, "Error al recibir PID Para iniciar");
+    if (size != desplazamiento) log_error(logger, "Error al recibir PID Para iniciar");
 
 	free(buffer);
 
@@ -48,7 +48,7 @@ void* recibir_mem_write(int conexion, uint32_t* direccion_fisica, int* value_siz
     memcpy(value, buffer + desplazamiento, *(value_size));
     desplazamiento += *(value_size);
 
-    if (size != desplazamiento) log_info(logger, "Error al recibir PID Para iniciar");
+    if (size != desplazamiento) log_error(logger, "Error en protocolo de escritura en memoria");
 
 	free(buffer);
     return value;
@@ -67,7 +67,7 @@ void* recibir_mem_read(int conexion, uint32_t* direccion_fisica, int* value_size
     memcpy(value_size, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
 
-    if (size != desplazamiento) log_info(logger, "Error al recibir PID Para iniciar");
+    if (size != desplazamiento) log_error(logger, "Error en protocolo de lectura de memoria");
     free(buffer);
     
     return malloc(*(value_size));
@@ -87,7 +87,7 @@ uint32_t recibir_pid_con_uint32(int conexion, uint32_t* info, t_log* logger){
     memcpy(info, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
 
-    if (buffer_size != desplazamiento) log_info(logger, "Error al recibir PID Para iniciar");
+    if (buffer_size != desplazamiento) log_error(logger, "Error en protocolo");
     free(buffer);
 
     return pid;
