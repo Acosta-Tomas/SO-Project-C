@@ -1,18 +1,16 @@
 #include "main.h"
 
 void* io_main(void *arg) {
-    log_info(logger, "Thread entrada salida creado");
+    log_debug(logger, "Thread entrada salida creado");
 
 
     int server_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA));
-    log_info(logger, "Server ready - SOCKET: %d", server_fd);
+    log_info(logger, "SOCKET: %d - Esperando IO", server_fd);
 
     while (1) {
         
         int* cliente_fd = malloc(sizeof(int));
         *(cliente_fd) = esperar_cliente(server_fd);
-
-        log_info(logger, "New client - SOCKET: %d", *(cliente_fd));
 
         pthread_t cliente;
         
@@ -32,7 +30,7 @@ void* io_client(void *client) {
     recibir_operacion(cliente_fd);
     char* nombre_cliente = recibir_mensaje(cliente_fd);
 
-    log_info(logger, "Interfaz: %s", nombre_cliente);
+    log_info(logger, "SOCKET: %d - Nueva IO: Interfaz: %s", cliente_fd, nombre_cliente);
 
     t_io_client* io_client = malloc(sizeof(t_io_client));
 
@@ -68,13 +66,12 @@ void* io_client(void *client) {
 
         switch (cod_op){
             case IO_ERROR:
-                log_error(logger, "Error en IO %u", io->pcb->pid);
-                finalizar_proceso(io->pcb);
+                finalizar_proceso(io->pcb, "ERROR");
                 free(io);
                 break;
 
             case IO_SUCCESS:
-                log_info(logger, "Fin IO proceso a ready: %u", io->pcb->pid);
+                cambio_estado(io->pcb, READY);
 
                 sem_wait(&mutex_ready);
                 io->pcb->quantum < quantum ? queue_push(queue_priority_ready, io->pcb) : queue_push(queue_ready, io->pcb);
@@ -86,14 +83,13 @@ void* io_client(void *client) {
             
             default:
                 bad_op = true;
-                log_error(logger, "Error en IO %u", io->pcb->pid);
-                finalizar_proceso(io->pcb);
+                finalizar_proceso(io->pcb, "ERROR");
                 free(io);
                 break;
         }
     }
 
-    log_error(logger, "Client disconnected - SOCKET: %d", cliente_fd);
+    log_error(logger, "SOCKET: %d - Disconnect IO: Interfaz: %s", cliente_fd, nombre_cliente);
 
     sem_wait(&mutex_io_clients);
     dictionary_remove(dict_io_clients, nombre_cliente);

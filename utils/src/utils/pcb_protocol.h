@@ -5,6 +5,7 @@
 
 typedef enum {
 	NEW,
+    READY,
 	RUNNING,
     RUNNING_QUANTUM,
     RUNNING_SIGNAL,
@@ -12,7 +13,11 @@ typedef enum {
     TERMINATED_USER,
     BLOCKED_IO,
     BLOCKED_WAIT,
-    ERROR
+    ERROR,
+    ERROR_IO,
+    ERROR_INTERFACE,
+    ERROR_RESOURCE,
+    ERROR_MEMORY
 } pid_status; // Kernel - cpu
 
 typedef struct {

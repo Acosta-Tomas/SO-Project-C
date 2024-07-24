@@ -1,7 +1,10 @@
 #include "main.h"
 
-void finalizar_proceso(t_pcb* pcb){ 
+void finalizar_proceso(t_pcb* pcb, char* motivo){ 
     pthread_t exit_thread;
+
+    cambio_estado(pcb, TERMINATED);
+    log_info(logger, "Finaliza el proceso %u - Motivo: %s", pcb->pid, motivo);
     
     if (pthread_create(&exit_thread, NULL, memoria_finalizar_proceso, pcb)) {
         log_error(logger, "No se pudo crear thread para finilzar proceso");
@@ -27,8 +30,11 @@ void* memoria_finalizar_proceso(void* pcb){
             if(!queue_is_empty(recurso->queue_waiting)) {
                 t_pcb* pcb_to_ready = queue_pop(recurso->queue_waiting);
                 sem_post(&mutex_recurso);
+
+                cambio_estado(pcb_to_ready, READY);
+
                 sem_wait(&mutex_ready);
-                queue_push(queue_ready, pcb_to_ready);
+                pcb_to_ready->quantum < quantum ? queue_push(queue_priority_ready, pcb_to_ready) : queue_push(queue_ready, pcb_to_ready);
                 sem_post(&mutex_ready);
                 sem_post(&hay_ready);
     

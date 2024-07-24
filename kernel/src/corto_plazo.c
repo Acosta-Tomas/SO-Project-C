@@ -3,7 +3,7 @@
 int running_pid = -1;
 
 void* corto_main(void *arg){
-    log_info(logger, "Thread planificado de corto plazo creado");
+    log_debug(logger, "Thread planificado de corto plazo creado");
 
     char* algoritmo = config_get_string_value(config, KEY_ALGORITMO_PLANIFICACION);
     int hay_quantum = strcmp(algoritmo, "FIFO");
@@ -14,15 +14,18 @@ void* corto_main(void *arg){
     int conexion = crear_conexion(ip_cpu, puerto_cpu_dispatch);
 
 
-    log_info(logger, "Connected to CPU Dispatch - SOCKET: %d", conexion);
+    log_info(logger, "SOCKET: %d - CPU Dispatch", conexion);
 
     while (1) {
         sem_wait(&hay_ready);
+
         check_plani();
+
         sem_wait(&mutex_ready);
         t_pcb* pcb = queue_is_empty(queue_priority_ready) ? queue_pop(queue_ready) : queue_pop(queue_priority_ready);
-        pcb->status = RUNNING;
         sem_post(&mutex_ready);
+
+        cambio_estado(pcb, RUNNING);
 
         pthread_t q_thread;
         t_quantum* pid_quantum = malloc(sizeof(t_quantum));
@@ -43,29 +46,24 @@ void* corto_main(void *arg){
 
         if (pcb->status != RUNNING_QUANTUM && hay_quantum) {
             if (pthread_cancel(q_thread) != 0) {
-                log_info(logger, "Error al cancelar quantum thread");
+                log_debug(logger, "Error al cancelar quantum thread");
             }
         }
 
-        if (pcb->status == TERMINATED) {
-            log_info(logger, "Proceso Finalizado - PID: %u", pcb->pid);
-            log_registers(pcb, logger);
-            finalizar_proceso(pcb);
-        }
+        if (pcb->status == TERMINATED) finalizar_proceso(pcb, "SUCCESS");
 
-        if (pcb->status == TERMINATED_USER) {
-            log_info(logger, "Proceso Finalizado por usuario - PID: %u", pcb->pid);
-            log_registers(pcb, logger);
-            finalizar_proceso(pcb);
-        }
+        if (pcb->status == TERMINATED_USER) finalizar_proceso(pcb, "INTERRUPTED_BY_USER");
 
-        if (pcb->status == ERROR) {
-            log_error(logger, "Error en proceso - PID: %u", pcb->pid);
-            finalizar_proceso(pcb);
-        }
+        if (pcb->status == ERROR) finalizar_proceso(pcb, "ERROR");
+
+        if (pcb->status == ERROR_RESOURCE) finalizar_proceso(pcb, "INVALID_RESOURCE");
+
+        if (pcb->status == ERROR_INTERFACE) finalizar_proceso(pcb, "INVALID_INTERFACE");
+
+        if (pcb->status == ERROR_MEMORY) finalizar_proceso(pcb, "OUT_OF_MEMORY");
 
         if (pcb->status == RUNNING) {
-            log_info(logger, "Proceso - PID: %u", pcb->pid);
+            cambio_estado(pcb, READY);
 
             sem_wait(&mutex_ready);
             pcb->quantum < quantum ? queue_push(queue_priority_ready, pcb) : queue_push(queue_ready, pcb);
@@ -74,7 +72,8 @@ void* corto_main(void *arg){
         }
 
         if (pcb->status == RUNNING_QUANTUM) {
-            log_info(logger, "Proceso fin de Quantum - PID: %u", pcb->pid);
+            log_info(logger, "PID: %u - Desalojado por fin de Quantum", pcb->pid);
+            cambio_estado(pcb, READY);
 
             sem_wait(&mutex_ready);
             queue_push(queue_ready, pcb);
@@ -83,6 +82,8 @@ void* corto_main(void *arg){
         }
 
         if (pcb->status == RUNNING_SIGNAL){
+            cambio_estado(pcb, READY);
+
             sem_wait(&mutex_ready);
             queue_push(queue_priority_ready, pcb);
             sem_post(&mutex_ready);
@@ -105,7 +106,7 @@ void enviar_cpu(int conexion, t_pcb* pcb){
     enviar_paquete(paquete, conexion);
     eliminar_paquete(paquete);
 
-    log_info(logger, "Proceso enviado a CPU - PID: %u", pcb->pid);
+    log_debug(logger, "Proceso enviado a CPU - PID: %u", pcb->pid);
     free(pcb->registers);
     free(pcb->recursos);
     free(pcb);
@@ -133,6 +134,8 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
         temporal_stop(pid_timestamp);
         check_plani();
 
+        log_info(logger, "PID: %u - Bloqueado por: %s", pcb_updated->pid, name_interface);
+
         if(dictionary_has_key(dict_io_clients, name_interface)){
             t_io_client* io_client = dictionary_get(dict_io_clients, name_interface);
             t_io_queue* io_queue = malloc(sizeof(t_io_queue));
@@ -140,18 +143,20 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
             io_queue->pcb = pcb_updated;
             io_queue->io_info = io_request;
 
+            pcb_updated->status = RUNNING;
+            cambio_estado(pcb_updated, BLOCKED_IO);
+
             sem_wait(&io_client->mutex_io);
             queue_push(io_client->queue_io, io_queue);  
             sem_post(&io_client->mutex_io);
             sem_post(&io_client->hay_io);
 
-            log_info(logger, "Proceso bloqueado - PID: %u", pcb_updated->pid);
             free(name_interface);
 
             return pcb_updated;
         }
 
-        pcb_updated->status = ERROR;
+        pcb_updated->status = ERROR_INTERFACE;
 
         free(name_interface);
         return pcb_updated;
@@ -166,7 +171,7 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
         check_plani();
 
         if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
-            pcb_updated->status = TERMINATED;
+            pcb_updated->status = ERROR_RESOURCE;
             free(nombre_recurso);
             return pcb_updated;
         } 
@@ -188,6 +193,9 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
         
         queue_push(recurso->queue_waiting, pcb_updated);
         sem_post(&mutex_recurso);
+
+        log_info(logger, "PID: %u - Bloqueado por: %s", pcb_updated->pid, nombre_recurso);
+        cambio_estado(pcb_updated, BLOCKED_WAIT);
         free(nombre_recurso);
 
         return pcb_updated;
@@ -202,7 +210,7 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
         check_plani();
 
         if(!dictionary_has_key(dict_recursos, nombre_recurso)) {
-            pcb_updated->status = TERMINATED;
+            pcb_updated->status = ERROR_RESOURCE;
             free(nombre_recurso);
             return pcb_updated;
         } 
@@ -222,8 +230,10 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
             t_pcb* pcb_to_ready = queue_pop(recurso->queue_waiting);
             sem_post(&mutex_recurso);
 
+            cambio_estado(pcb_to_ready, READY);
+
             sem_wait(&mutex_ready);
-            queue_push(queue_ready, pcb_to_ready);
+            pcb_to_ready->quantum < quantum ? queue_push(queue_priority_ready, pcb_to_ready) : queue_push(queue_ready, pcb_to_ready);
             sem_post(&mutex_ready);
             sem_post(&hay_ready);
 

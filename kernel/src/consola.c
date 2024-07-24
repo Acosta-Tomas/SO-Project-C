@@ -4,14 +4,14 @@ uint32_t next_pid;
 int memoria_fd;
 
 void* consola_main(void *arg){
-    log_info(logger, "Thread consola creado");
+    log_debug(logger, "Thread consola creado");
 
     next_pid = 0;
 	char* ip_memoria = config_get_string_value(config, KEY_IP_MEMORIA);
     char* puerto_memoria = config_get_string_value(config, KEY_PUERTO_MEMORIA);
     memoria_fd = crear_conexion(ip_memoria, puerto_memoria);
 
-    log_info(logger, "Connected to Memoria - SOCKET: %d", memoria_fd);
+    log_info(logger, "SOCKET: %d - Memoria", memoria_fd);
 
     while(1) {
         char* leido = readline("> ");
@@ -91,7 +91,7 @@ void* consola_main(void *arg){
             continue;
         }
 
-        printf("Comando no reconocido, escriba help para ver los comandos disponibles\n");
+        printf("Comando no reconocido");
     }
 
     liberar_conexion(memoria_fd);
@@ -103,8 +103,6 @@ void cambiar_multiprogramacion(uint32_t new_multi){
     if (new_multi > multiprogramacion) {
         uint32_t cant_singals = new_multi - multiprogramacion;
         multiprogramacion = new_multi;
-
-        log_info(logger, "Signals: %u", cant_singals);
         
         for(int i = 0; i < cant_singals; i += 1) sem_post(&cont_multi);
 
@@ -130,8 +128,6 @@ void cambiar_multiprogramacion(uint32_t new_multi){
 void* multi_change_waits(void* waits){
     uint32_t cant_waits = *(uint32_t*) waits;
     free(waits);
-
-    log_info(logger, "Waits: %u", cant_waits);
 
     for(int i = 0; i < cant_waits; i += 1) sem_wait(&cont_multi);
     
@@ -163,11 +159,8 @@ void finalizar_pid(uint32_t pid){
     sem_post(&mutex_ready);
 
     if (pcb_end != NULL) {
-        log_info(logger, "Proceso Finalizado por usuario - PID: %u", pcb_end->pid);
-        log_registers(pcb_end, logger);
-        finalizar_proceso(pcb_end);
+        finalizar_proceso(pcb_end, "INTERRUPTED_BY_USER");
         sem_wait(&hay_ready);
-
         return;
     }
 
@@ -182,7 +175,7 @@ void finalizar_pid(uint32_t pid){
         if (pcb_end != NULL) {
             recurso->cant_instancias += 1;
             sem_post(&mutex_recurso);
-            finalizar_proceso(pcb_end);
+            finalizar_proceso(pcb_end, "INTERRUPTED_BY_USER");
             list_destroy(recursos_list);
             return;
         }
@@ -210,7 +203,7 @@ void finalizar_pid(uint32_t pid){
             pcb_end = io->pcb;
             sem_post(&io_client->mutex_io);
             sem_wait(&io_client->hay_io);
-            finalizar_proceso(pcb_end);
+            finalizar_proceso(pcb_end, "INTERRUPTED_BY_USER");
 
             free(io->io_info->buffer);
             free(io->io_info);
@@ -224,7 +217,7 @@ void finalizar_pid(uint32_t pid){
 
     list_destroy(io_list);
 
-    printf("No se encontro proceso: %u\n", pid);
+    printf("PID: %u\n no existe o no se pudo finalizar", pid);
 }
 
 void ejecutar_script(int conexion, char* comando, char* archivo){
@@ -287,6 +280,8 @@ void iniciar_proceso(int conexion, char* comando, char* archivo){
 void enviar_new(){
     t_pcb* pid_context = crear_context(next_pid);
 
+    log_info(logger, "Se crea el proceso %u en NEW", next_pid);
+
     sem_wait(&mutex_new);
     queue_push(queue_new, pid_context);
     sem_post(&mutex_new);
@@ -313,38 +308,38 @@ t_pcb* crear_context(uint32_t pid){
 void print_pid(void* pcb) {
     t_pcb* pcb_print = (t_pcb*) pcb;
 
-    printf("\t- PID: %u\n", pcb_print->pid); 
+    printf("%u, ", pcb_print->pid); 
 }
 
 void print_io_pd(void *io) {
     t_io_queue* io_print = (t_io_queue*) io;
 
-    printf("\t- PID: %u\n", io_print->pcb->pid); 
+    printf("%u, ", io_print->pcb->pid); 
 }
 
 void print_io(char* key, void* io){
      t_io_client* io_print = (t_io_client*) io;
 
-     printf("\tIO: %s\n", key);
+     printf("\tIO - %s: ", key);
      list_iterate(io_print->queue_io->elements, &print_io_pd);
 }
 
 void print_recursos(char* key, void* recurso){
      t_recursos* recurso_print = (t_recursos*) recurso;
 
-     printf("\tWAIT: %s\n", key);
+     printf("\tWAIT - %s: ", key);
      list_iterate(recurso_print->queue_waiting->elements, &print_pid);
 }
 
 void print_estados_procesos(void){
-    printf("NEW:\n");
+    printf("NEW: ");
     list_iterate(queue_new->elements, &print_pid);
-    printf("\nREADY - PRIORITY:\n");
+    printf("\nREADY - PRIORITY: ");
     list_iterate(queue_priority_ready->elements, &print_pid);
-    printf("\nREADY:\n");
+    printf("\nREADY: ");
     list_iterate(queue_ready->elements, &print_pid);
-    printf("\nEXEC:\n");
-    if (running_pid >= 0) printf("\t- PID: %i\n", running_pid);
+    printf("\nEXEC: ");
+    if (running_pid >= 0) printf("%i\n", running_pid);
     printf("\nBLOCKED:\n");
     dictionary_iterator(dict_io_clients, &print_io);
     dictionary_iterator(dict_recursos, &print_recursos);

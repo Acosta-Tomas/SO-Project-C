@@ -46,7 +46,7 @@ t_pcb* recibir_pcb(int conexion, t_log* logger){
     memcpy(pcb->recursos, buffer + desplazamiento, size_recursos);
     desplazamiento += size_recursos;
 
-    if (size != desplazamiento) log_info(logger, "Error al recibir PCB");
+    if (size != desplazamiento) log_error(logger, "Error al recibir PCB");
 
 	free(buffer);
 
@@ -76,15 +76,15 @@ void agregar_pcb_paquete(t_paquete* paquete, t_pcb* pcb){
 }
 
 void log_registers (t_pcb* pcb, t_log* logger) {
-    log_info(logger, "PC %u", pcb->registers->pc);
-    log_info(logger, "AX %hhu", pcb->registers->ax);
-    log_info(logger, "BX %hhu", pcb->registers->bx);
-    log_info(logger, "CX %hhu", pcb->registers->cx);
-    log_info(logger, "DX %hhu", pcb->registers->dx);
-    log_info(logger, "EAX %u", pcb->registers->eax);
-    log_info(logger, "EBX %u", pcb->registers->ebx);
-    log_info(logger, "ECX %u", pcb->registers->ecx);
-    log_info(logger, "EDX %u", pcb->registers->edx);
-    log_info(logger, "SI %u", pcb->registers->si);
-    log_info(logger, "DI %u", pcb->registers->di);
+    log_debug(logger, "PC %u", pcb->registers->pc);
+    log_debug(logger, "AX %hhu", pcb->registers->ax);
+    log_debug(logger, "BX %hhu", pcb->registers->bx);
+    log_debug(logger, "CX %hhu", pcb->registers->cx);
+    log_debug(logger, "DX %hhu", pcb->registers->dx);
+    log_debug(logger, "EAX %u", pcb->registers->eax);
+    log_debug(logger, "EBX %u", pcb->registers->ebx);
+    log_debug(logger, "ECX %u", pcb->registers->ecx);
+    log_debug(logger, "EDX %u", pcb->registers->edx);
+    log_debug(logger, "SI %u", pcb->registers->si);
+    log_debug(logger, "DI %u", pcb->registers->di);
 }

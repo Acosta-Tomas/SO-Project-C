@@ -101,7 +101,7 @@ void enviar_new(void);
 t_pcb* crear_context(uint32_t);
 void enviar_cpu(int, t_pcb*);
 t_pcb* esperar_cpu(int, t_temporal*);
-void finalizar_proceso(t_pcb*);
+void finalizar_proceso(t_pcb*, char*);
 pthread_t create_quantum_thread(t_quantum*);
 void finalizar_pid(uint32_t);
 void ejecutar_script(int, char*, char*);
@@ -115,22 +115,8 @@ void print_pid(void*);
 void print_io(char*, void*);
 void print_recursos(char*, void*);
 void print_io_pd(void*);
+void log_pid(void*);
+void cambio_estado(t_pcb*, pid_status);
+char* map_status(pid_status);
 
 #endif
-
-/*
-	Arreglar el RR y agregar el RR (dejar que mueran o matar hilos) usar de commons el times
-	Aceptar varias I/O con su respectivo nombre (Manejar que no exista la interfaz pedida de CPU)
-	Planificador largo plazo (maximo de proceso y eliminar un programa)
-	Manejar recursos (menos prioridad)
-
-	COnsultar como aumentar el tamanio maximo de un semafor ya inicializado, con destroy y eso se puede pero que pasa
-	con los que estabann esperando ?
-
-	REVISAR NOMBRE DE PCB STATUS, separar en:
-		RUNNING_QUANTUM -> Si va a cola de prioridad o no
-		RUNNING_SIGNAL -> Va a cola de prioridad en el primer lugar (tiene que volver a correr) y pasa a cola normal ready un recurso que haya pedido
-		BLOCKED_IO -> Agregar a cola de blocked del nombre de entrada salida o si no existe EXIT
-		BLOCKED_WAIT -> Agregar a la cola del waiting para el recurso pedido si existe, sino EXIT
-
-*/
