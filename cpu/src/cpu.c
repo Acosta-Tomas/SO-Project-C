@@ -25,7 +25,7 @@ void cpu(int memoria_fd, int kernel_fd){
     enviar_paquete(paquete, kernel_fd);
     eliminar_paquete(paquete);
 
-    log_info(logger, "Proceso enviado a Kernel - PID: %u", pcb->pid);
+    log_debug(logger, "Proceso enviado a Kernel - PID: %u", pcb->pid);
     free(pcb->registers);
     free(pcb->recursos);
     free(pcb);
@@ -41,7 +41,7 @@ t_list* fetch(int memoria_fd) {
     enviar_paquete(pc_paquete, memoria_fd);
     eliminar_paquete(pc_paquete);
 
-    log_info(logger, "Fetch PC: %u", pcb->registers->pc);
+    log_info(logger, "PID: %u - FETCH - Program Counter: %u", pcb->pid, pcb->registers->pc);
     
     recibir_operacion(memoria_fd);
     list_instruction = recibir_paquete(memoria_fd);

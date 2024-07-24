@@ -32,7 +32,7 @@ typedef struct {
 
 
 
-int escribir_memoria(int, void*, t_list*);
-int leer_memoria(int, void*, t_list*);
+int escribir_memoria(int, void*, t_list*, t_log*, uint32_t);
+int leer_memoria(int, void*, t_list*, t_log*, uint32_t);
 
 #endif

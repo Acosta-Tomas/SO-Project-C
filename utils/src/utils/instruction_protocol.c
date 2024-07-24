@@ -1,6 +1,6 @@
 #include "instruction_protocol.h"
 
-int escribir_memoria(int memoria_fd, void* buffer, t_list* frames){
+int escribir_memoria(int memoria_fd, void* buffer, t_list* frames, t_log* logger, uint32_t pid){
     int offset_buffer = 0;
 
     while(list_size(frames)){
@@ -12,6 +12,8 @@ int escribir_memoria(int memoria_fd, void* buffer, t_list* frames){
 
         enviar_paquete(paquete, memoria_fd);
         eliminar_paquete(paquete);
+
+        log_info(logger, "PID: %u - Acción: ESCRIBIR - Dirección Física: %u - Valor: %.*s", pid, frame->direccion_fisica, frame->bytes, (char*)(buffer + offset_buffer));
 
         offset_buffer += frame->bytes;
         free(frame);
@@ -25,7 +27,7 @@ int escribir_memoria(int memoria_fd, void* buffer, t_list* frames){
     return 0;
 }
 
-int leer_memoria(int memoria_fd, void* buffer, t_list* frames){
+int leer_memoria(int memoria_fd, void* buffer, t_list* frames, t_log* logger, uint32_t pid){
     int offset_buffer = 0;
 
     while(list_size(frames)){
@@ -44,6 +46,8 @@ int leer_memoria(int memoria_fd, void* buffer, t_list* frames){
 
         memcpy(&frame->bytes, buffer_memoria, sizeof(uint32_t));
         memcpy(buffer + offset_buffer, buffer_memoria + sizeof(uint32_t), frame->bytes);
+
+        log_info(logger, "PID: %u - Acción: LEER - Dirección Física: %u - Valor: %.*s", pid, frame->direccion_fisica, frame->bytes, (char*)(buffer + offset_buffer));
 
         offset_buffer += frame->bytes;
         free(frame);

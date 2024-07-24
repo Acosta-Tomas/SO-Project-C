@@ -45,6 +45,8 @@ pid_status mmu(int memoria_fd, uint32_t direccion_logica, uint32_t size, t_list*
     frame->direccion_fisica = marco * page_size + desplazamiento;
     list_add(frames, frame);
 
+    log_info(logger, "PID: %u - OBTENER MARCO - Página: %u  - Marco: %u", pcb->pid, pagina, marco);
+
     if (size > 0) status = mmu(memoria_fd, (pagina + 1) * page_size, size, frames);     
 
     return status;

@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
 
 void* dispatch(void* arg) {
     int dispatch_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA_DISPATCH));
-    log_info(logger, "Dispatch - SOCKET: %d", dispatch_fd);
+    log_info(logger, "SOCKET: %d - Dispatch", dispatch_fd);
 
     char* ip_memoria = config_get_string_value(config, KEY_IP_MEMORIA);
     char* puerto_memoria = config_get_string_value(config, KEY_PUERTO_MEMORIA);
@@ -62,17 +62,17 @@ void* dispatch(void* arg) {
     send(memoria_fd, &code_op , sizeof(op_code), 0);
     recv(memoria_fd, &page_size, sizeof(uint32_t), MSG_WAITALL);
 
-    log_info(logger, "Memoria - SOCKET: %d - Page size: %u", memoria_fd, page_size);
+    log_info(logger, "SOCKET: %d - Memoria - Tamaño pagina: %u", memoria_fd, page_size);
 
     while(1) {
         int kernel_fd = esperar_cliente(dispatch_fd);
-        log_info(logger, "Dispatch connected - SOCKET: %d", kernel_fd);
+        log_info(logger, "SOCKET: %d - Dispatch - Kernel conectado", kernel_fd);
 
         for (op_code cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
             if (cod_op == PCB) {
                 pcb = recibir_pcb(kernel_fd, logger);
 
-                log_info(logger, "Se recibio PID: %u", pcb->pid);
+                log_debug(logger, "Se recibio PID: %u", pcb->pid);
 
                 sem_wait(&mutex_interrupt);
                 has_interrupt = false;
@@ -82,7 +82,7 @@ void* dispatch(void* arg) {
             }
         }
 
-        log_error(logger, "Dispatch disconnected - SOCKET: %d", kernel_fd);
+        log_error(logger, "SOCKET: %d - Dispatch - Kernel desconectado", kernel_fd);
     }
     
     liberar_conexion(memoria_fd);
@@ -91,11 +91,11 @@ void* dispatch(void* arg) {
 
 void* interrupt(void* arg) {
     int dispatch_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA_INTERRUPT));
-    log_info(logger, "Interrupt - SOCKET: %d", dispatch_fd);
+    log_info(logger, "SOCKET: %d - Interrupt ", dispatch_fd);
 
     while(1) {
         int kernel_fd = esperar_cliente(dispatch_fd);
-        log_info(logger, "Interrupt connected - SOCKET: %d", kernel_fd);
+        log_info(logger, "SOCKET: %d - Interrupt - Kernel conectado", kernel_fd);
 
         for (op_code cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
             if (cod_op == INTERRUPT || cod_op == END_PID_USER) {
@@ -104,7 +104,7 @@ void* interrupt(void* arg) {
                 recv(kernel_fd, &size_discard, sizeof(u_int32_t), MSG_WAITALL); // Recibo tamaño buffer pero no me interesa (se manda por la serializacion de codigo de operacion con uint32)
                 recv(kernel_fd, &pid, sizeof(uint32_t), MSG_WAITALL);
 
-                log_info(logger, "Interrupcion - PID: %u", pid);
+                log_debug(logger, "Interrupcion - PID: %u", pid);
 
                 if (pcb->pid == pid){
                     sem_wait(&mutex_interrupt);
@@ -115,7 +115,7 @@ void* interrupt(void* arg) {
             }
         }
 
-        log_error(logger, "Interrupt disconnected - SOCKET: %d", kernel_fd);
+        log_error(logger, "SOCKET: %d - Interrupt - Kernel desconectado", kernel_fd);
     }
 
     close(dispatch_fd);

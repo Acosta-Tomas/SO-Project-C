@@ -100,7 +100,7 @@ pid_status mov_out(int memoria_fd, char* registro_dl, char* registro_datos){
     status = mmu(memoria_fd, direccion_logica, size_register, frames);
 
     if (status == RUNNING) {
-        int error = escribir_memoria(memoria_fd, buffer, frames);
+        int error = escribir_memoria(memoria_fd, buffer, frames, logger, pcb->pid);
         status = error == -1 ? ERROR : RUNNING;
     }
     
@@ -120,7 +120,7 @@ pid_status mov_in(int memoria_fd, char* registro_datos, char* registro_dl){
     status = mmu(memoria_fd, direccion_logica, size_register, frames);
 
     if (status == RUNNING) {
-        int error = leer_memoria(memoria_fd, buffer, frames);
+        int error = leer_memoria(memoria_fd, buffer, frames, logger, pcb->pid);
         status = error == -1 ? ERROR : RUNNING;
     }
 
@@ -145,15 +145,14 @@ pid_status copy_string(int memoria_fd, char* tamaño){
     status = mmu(memoria_fd, dst_register, size, dst_frames);
 
     if (status == RUNNING) {
-        int error = leer_memoria(memoria_fd, buffer, src_frames);
+        int error = leer_memoria(memoria_fd, buffer, src_frames, logger, pcb->pid);
         status = error == -1 ? ERROR : RUNNING;
         
         if (status != ERROR){
-            error = escribir_memoria(memoria_fd, buffer, dst_frames);
+            error = escribir_memoria(memoria_fd, buffer, dst_frames, logger, pcb->pid);
             status = error == -1 ? ERROR : RUNNING;
         }
     }
-
 
     list_destroy(src_frames);
     list_destroy(dst_frames);
