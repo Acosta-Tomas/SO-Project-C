@@ -17,11 +17,11 @@ int numero_entradas;
 t_queue* tlb_queue;
 
 int main(int argc, char* argv[]) {
-    config = config_create(CONFIG_FILE);
+    config = argc > 1 ? config_create(argv[1]) : config_create(CONFIG_FILE);
 
     if (config == NULL) exit(EXIT_FAILURE); 
 
-    logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_SERVER_LOG), true, LOG_LEVEL_DEBUG);
+    logger = log_create(LOGS_FILE, config_get_string_value(config, KEY_SERVER_LOG), true, log_level_from_string(config_get_string_value(config, KEY_LOG_LEVEL)));
     numero_entradas = config_get_int_value(config, KEY_CANTIDAD_ENTRADAS_TLB);
     isLRU = !(strcmp(config_get_string_value(config, KEY_ALGORITMO_TLB), "LRU"));
     tlb_queue = queue_create();

@@ -3,7 +3,7 @@
 t_log* logger;
 
 void dialfs_io(char* nombre, t_config* config){
-    logger = log_create("DIALFS.logs", config_get_string_value(config, KEY_LOGGER), true, LOG_LEVEL_INFO);
+    logger = log_create("DIALFS.logs", config_get_string_value(config, KEY_LOGGER), true, log_level_from_string(config_get_string_value(config, KEY_LOG_LEVEL)));
 
     char* fs_path = config_get_string_value(config, KEY_PATH_BASE_DIALFS);
     uint32_t block_count = (uint32_t) config_get_int_value(config, KEY_BLOCK_COUNT);

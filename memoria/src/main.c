@@ -17,11 +17,11 @@ sem_t mutex_mem_procesos;
 char* path_scripts;
 
 int main(int argc, char* argv[]) {
-    config = config_create("memoria.config");
+    config = argc > 1 ? config_create(argv[1]) : config_create(CONFIG_FILE);
 
     if (config == NULL) exit(EXIT_FAILURE); 
 
-    logger = log_create("memoria.logs", config_get_string_value(config, KEY_SERVER_LOG), true, LOG_LEVEL_DEBUG);
+    logger = log_create("memoria.logs", config_get_string_value(config, KEY_SERVER_LOG), true, log_level_from_string(config_get_string_value(config, KEY_LOG_LEVEL)));
 
     int server_fd = iniciar_servidor(config_get_string_value(config, KEY_PUERTO_ESCUCHA));
     log_info(logger, "SOCKET: %d - Esperando Clientes", server_fd);

@@ -20,6 +20,7 @@
 #define KEY_TAM_MEMORIA "TAM_MEMORIA"
 #define KEY_TAM_PAGINA "TAM_PAGINA"
 #define KEY_PATH_INSTRUCCIONES "PATH_INSTRUCCIONES"
+#define KEY_LOG_LEVEL "LOG_LEVEL"
 
 typedef struct {
 	uint32_t pid;

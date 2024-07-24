@@ -1,7 +1,7 @@
 #include "main.h"
 
 void stdin_io(char* nombre, t_config* config){
-    t_log* logger = log_create("STDIN.logs", config_get_string_value(config, KEY_LOGGER), true, LOG_LEVEL_INFO);
+    t_log* logger = log_create("STDIN.logs", config_get_string_value(config, KEY_LOGGER), true, log_level_from_string(config_get_string_value(config, KEY_LOG_LEVEL)));
 
     char* ip_kernel = config_get_string_value(config, KEY_IP_KERNEL);
     char* puerto_kernel = config_get_string_value(config, KEY_PUERTO_KERNEL);
