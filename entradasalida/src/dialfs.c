@@ -36,10 +36,10 @@ void dialfs_io(char* nombre, t_config* config){
     int unidad_trabajo = config_get_int_value(config, KEY_UNIDAD_TRABAJO);
 
     int kernel_fd = crear_conexion(ip_kernel, puerto_kernel);
-    log_info(logger, "Connected to Kernel -  SOCKET: %d", kernel_fd);
+    log_info(logger, "SOCKET: %d - Kernel", kernel_fd);
 
     int memoria_fd = crear_conexion(ip_memoria, puerto_memoria);
-    log_info(logger, "Connected to Memoria -  SOCKET: %d", memoria_fd);
+    log_info(logger, "SOCKET: %d - Memoria", memoria_fd);
 
     enviar_mensaje(nombre, kernel_fd, MENSAJE);
 
@@ -47,18 +47,21 @@ void dialfs_io(char* nombre, t_config* config){
 
     for (op_code cod_op = recibir_operacion(kernel_fd); cod_op != -1; cod_op = recibir_operacion(kernel_fd)){
         if (cod_op == IO){
-            t_io* io = recibir_io_serializado(kernel_fd, logger);
+            uint32_t pid;
+            t_io* io = recibir_io_serializado(kernel_fd, &pid, logger);
+
+            log_info(logger, "PID: %u - Operacion: %s", pid, map_instruction(io->type_instruction));
 
             switch (io->type_instruction){
-                case IO_FS_CREATE: to_send = fs_create_file(io, metadata, bitmap, fs_path); break;
+                case IO_FS_CREATE: to_send = fs_create_file(io, metadata, bitmap, fs_path, pid); break;
                     
-                case IO_FS_DELETE: to_send = fs_delete_file(io, metadata, bitmap, bloques, fs_path); break;
+                case IO_FS_DELETE: to_send = fs_delete_file(io, metadata, bitmap, bloques, fs_path, pid); break;
                 
-                case IO_FS_TRUNCATE: to_send = fs_truncate_file(io, metadata, bitmap, bloques, fs_path); break;
+                case IO_FS_TRUNCATE: to_send = fs_truncate_file(io, metadata, bitmap, bloques, fs_path, pid); break;
                 
-                case IO_FS_WRITE: to_send = fs_write_file(io, metadata, bloques, fs_path, memoria_fd); break;
+                case IO_FS_WRITE: to_send = fs_write_file(io, metadata, bloques, fs_path, memoria_fd, pid); break;
 
-                case IO_FS_READ: to_send = fs_read_file(io, metadata, bloques, fs_path, memoria_fd); break;
+                case IO_FS_READ: to_send = fs_read_file(io, metadata, bloques, fs_path, memoria_fd, pid); break;
         
                 default: log_warning(logger, "Instruccion no valida, se avisa a kernel"); break;
             }
@@ -80,9 +83,9 @@ void dialfs_io(char* nombre, t_config* config){
     free(bitmap);
 }
 
-op_code fs_create_file(t_io* io, t_list* metadata, t_bitmap* bitmap , char* fs_path){
+op_code fs_create_file(t_io* io, t_list* metadata, t_bitmap* bitmap , char* fs_path, uint32_t pid){
     char* file_path = get_io_file(io, fs_path);
-    log_info(logger, "Archivo %s crear", file_path);
+    log_info(logger, "PID: %u - Crear Archivo: %.*s", pid, (int) (strlen(file_path) - strlen(fs_path)), file_path + strlen(fs_path));
 
     int init_block = get_init_block_file(bitmap->bitmap, 1);
 
@@ -102,9 +105,9 @@ op_code fs_create_file(t_io* io, t_list* metadata, t_bitmap* bitmap , char* fs_p
     return status;
 }
 
-op_code fs_delete_file(t_io* io, t_list* metadata, t_bitmap* bitmap, t_bloques* bloques, char* fs_path){
+op_code fs_delete_file(t_io* io, t_list* metadata, t_bitmap* bitmap, t_bloques* bloques, char* fs_path, uint32_t pid){
     char* file_path = get_io_file(io, fs_path);
-    log_info(logger, "Archivo %s borrar", file_path);
+    log_info(logger, "PID: %u - Eliminar Archivo: %.*s", pid,  (int) (strlen(file_path) - strlen(fs_path)), file_path + strlen(fs_path));
     
     t_config* file_cfg = remove_config(metadata, file_path);
 
@@ -129,19 +132,19 @@ op_code fs_delete_file(t_io* io, t_list* metadata, t_bitmap* bitmap, t_bloques* 
     return IO_SUCCESS;
 }
 
-op_code fs_write_file(t_io* io, t_list* metadata, t_bloques* bloques, char* fs_path, int memoria_fd) {
+op_code fs_write_file(t_io* io, t_list* metadata, t_bloques* bloques, char* fs_path, int memoria_fd, uint32_t pid) {
     op_code status = IO_ERROR;
     t_fs_rw* fs_info_w = malloc(sizeof(t_fs_rw));
     char* file_path = get_io_read_write(io, fs_path, fs_info_w);
 
     if (file_path) {
-        log_info(logger, "Archivo %s write", file_path);
+        log_info(logger, "PID: %u - Leer Archivo: %.*s - Tamaño a Leer: %u - Puntero Archivo: %u", pid,  (int) (strlen(file_path) - strlen(fs_path)), file_path + strlen(fs_path), fs_info_w->size, fs_info_w->ptr);
 
         t_config* file_cfg = get_config(metadata, file_path);
 
         char* buffer = (char*) malloc(fs_info_w->size);
 
-        if(leer_memoria(memoria_fd, buffer, fs_info_w->frames) > -1 && file_cfg != NULL) {
+        if(leer_memoria(memoria_fd, buffer, fs_info_w->frames, logger, pid) > -1 && file_cfg != NULL) {
             int bloque = config_get_int_value(file_cfg, BLOQUE_INICIAL);
 
             memcpy(bloques->bloques + bloque * bloques->bloques_size + fs_info_w->ptr, buffer, fs_info_w->size);
@@ -159,13 +162,13 @@ op_code fs_write_file(t_io* io, t_list* metadata, t_bloques* bloques, char* fs_p
     return status;
 }
 
-op_code fs_read_file(t_io* io, t_list* metadata, t_bloques* bloques, char* fs_path, int memoria_fd){
+op_code fs_read_file(t_io* io, t_list* metadata, t_bloques* bloques, char* fs_path, int memoria_fd, uint32_t pid){
     op_code status = IO_ERROR;
     t_fs_rw* fs_info_r = malloc(sizeof(t_fs_rw));
     char* file_path = get_io_read_write(io, fs_path, fs_info_r);
 
     if (file_path) {
-        log_info(logger, "Archivo %s write", file_path);
+        log_info(logger, "PID: %u - Leer Archivo: %.*s - Tamaño a Escribir: %u - Puntero Archivo: %u", pid,  (int) (strlen(file_path) - strlen(fs_path)), file_path + strlen(fs_path), fs_info_r->size, fs_info_r->ptr);
 
         t_config* file_cfg = get_config(metadata, file_path);
 
@@ -175,7 +178,7 @@ op_code fs_read_file(t_io* io, t_list* metadata, t_bloques* bloques, char* fs_pa
 
             memcpy(buffer, bloques->bloques + bloque * bloques->bloques_size + fs_info_r->ptr, fs_info_r->size);
 
-            status = escribir_memoria(memoria_fd, buffer, fs_info_r->frames) > -1 ? IO_SUCCESS : IO_ERROR;
+            status = escribir_memoria(memoria_fd, buffer, fs_info_r->frames, logger, pid) > -1 ? IO_SUCCESS : IO_ERROR;
 
             free(buffer);
         }
@@ -189,12 +192,12 @@ op_code fs_read_file(t_io* io, t_list* metadata, t_bloques* bloques, char* fs_pa
     return status;
 }
 
-op_code fs_truncate_file(t_io* io, t_list* metadata, t_bitmap* bitmap, t_bloques* bloques, char* fs_path){
+op_code fs_truncate_file(t_io* io, t_list* metadata, t_bitmap* bitmap, t_bloques* bloques, char* fs_path, uint32_t pid){
     int new_size;
     char* file_path = get_io_truncate(io, fs_path, &new_size);
 
     if (file_path) {
-        log_info(logger, "Archivo %s truncate size %i", file_path, new_size);
+        log_info(logger, "PID: %u - Truncar Archivo: %.*s - Tamaño: %i", pid,  (int) (strlen(file_path) - strlen(fs_path)), file_path + strlen(fs_path), new_size);
         t_config* file_cfg = get_config(metadata, file_path);
 
         if(file_cfg == NULL) {
@@ -264,7 +267,7 @@ op_code fs_truncate_file(t_io* io, t_list* metadata, t_bitmap* bitmap, t_bloques
 
 
             if (check_space_total(bitmap->bitmap, new_size)) {
-                log_info(logger, "Compactando...");
+                log_info(logger, "PID: %u - Inicio Compactación.", pid);
 
                 list_sort(metadata, &sory_by_init_block);
                 resize_down(bitmap->bitmap, 0, bitarray_get_max_bit(bitmap->bitmap));
@@ -283,6 +286,8 @@ op_code fs_truncate_file(t_io* io, t_list* metadata, t_bitmap* bitmap, t_bloques
                 update_bloques(bloques);
                 
                 usleep(bloques->compactacion_delay);
+
+                log_info(logger, "PID: %u - Fin Compactación.", pid);
                 
                 free(file_path);
                 return IO_SUCCESS;

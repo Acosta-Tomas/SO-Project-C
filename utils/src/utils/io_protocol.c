@@ -26,7 +26,7 @@ t_io* recibir_io(int conexion, char** name_interface, t_log* logger){
 	memcpy(io->buffer, buffer + desplazamiento, io->buffer_size);
     desplazamiento += io->buffer_size;
 
-    if (size != desplazamiento) log_info(logger, "Error al recibir IO de CPU");
+    if (size != desplazamiento) log_error(logger, "Error al recibir IO");
 
 	free(buffer);
 
@@ -41,12 +41,13 @@ void agregar_io_paquete(t_paquete* paquete, set_instruction instruction, char* p
     }
 }
 
-void agregar_io_serializado(t_paquete* paquete, t_io* io){
+void agregar_io_serializado(t_paquete* paquete, t_io* io, uint32_t pid){
+    agregar_uint_a_paquete(paquete, &pid, sizeof(uint32_t));
     agregar_uint_a_paquete(paquete, &io->type_instruction, sizeof(set_instruction));
     agregar_a_paquete(paquete, io->buffer, io->buffer_size);
 }
 
-t_io* recibir_io_serializado(int conexion, t_log* logger){
+t_io* recibir_io_serializado(int conexion, uint32_t* pid, t_log* logger){
 	int size;
     int desplazamiento = 0;
     void* buffer;
@@ -54,8 +55,11 @@ t_io* recibir_io_serializado(int conexion, t_log* logger){
 
     buffer = recibir_buffer(&size, conexion);
 
-    memcpy(&io->type_instruction, buffer + desplazamiento, sizeof(set_instruction));
+    memcpy(pid, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
+
+    memcpy(&io->type_instruction, buffer + desplazamiento, sizeof(set_instruction));
+    desplazamiento += sizeof(set_instruction);
 
 	memcpy(&io->buffer_size, buffer + desplazamiento, sizeof(uint32_t));
     desplazamiento += sizeof(uint32_t);
@@ -64,7 +68,7 @@ t_io* recibir_io_serializado(int conexion, t_log* logger){
 	memcpy(io->buffer, buffer + desplazamiento, io->buffer_size);
     desplazamiento += io->buffer_size;
 
-    if (size != desplazamiento) log_info(logger, "Error al recibir IO de CPU");
+    if (size != desplazamiento) log_error(logger, "Error al recibir IO");
 
 	free(buffer);
 

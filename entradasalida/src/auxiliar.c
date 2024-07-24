@@ -11,12 +11,12 @@ interfaz mapInterfaz (char* interfaz) {
 void *read_stdin(uint32_t size){
     char* buffer = malloc(size + 1);
 
-    printf("Ingresar datos: ");
+    printf("Ingresar %u caracteres: ", size);
 
     if (fgets(buffer, size + 1, stdin) != NULL) {
         if (buffer[strlen(buffer) - 1] != '\n') stdin_clear_buffer();
     
-        printf("Usted ingresó: %s - %ld\n", (char*) buffer, strlen(buffer));
+        printf("Usted ingresó: %s\n", (char*) buffer);
     }
 
     return buffer;
@@ -242,4 +242,20 @@ void realocate_compactacion(t_config* file_cfg, t_bitmap* bitmap, t_bloques* blo
     config_set_value(file_cfg, BLOQUE_INICIAL, string_itoa(new_block));
     config_save(file_cfg);
     free(buffer);
+}
+
+char* map_instruction(set_instruction instruction){
+    switch (instruction){
+        case IO_FS_CREATE: return "IO_FS_CREATE";
+        
+        case IO_FS_DELETE: return "IO_FS_DELETE";
+
+        case IO_FS_TRUNCATE: return "IO_FS_TRUNCATE";
+
+        case IO_FS_WRITE: return "IO_FS_WRITE";
+
+        case IO_FS_READ: return "IO_FS_READ";
+
+        default: return "UKNOWN";
+    }
 }

@@ -51,11 +51,11 @@ void generica_io(char*, t_config*);
 void stdin_io(char*, t_config*);
 void stdout_io(char*, t_config*);
 void dialfs_io(char*, t_config*);
-op_code fs_create_file(t_io*, t_list*, t_bitmap*, char*);
-op_code fs_read_file(t_io*, t_list*, t_bloques*, char*, int);
-op_code fs_write_file(t_io*, t_list*, t_bloques*, char*, int);
-op_code fs_delete_file(t_io*, t_list*, t_bitmap*, t_bloques*, char*);
-op_code fs_truncate_file(t_io*, t_list*, t_bitmap*, t_bloques*, char*);
+op_code fs_create_file(t_io*, t_list*, t_bitmap*, char*, uint32_t);
+op_code fs_read_file(t_io*, t_list*, t_bloques*, char*, int, uint32_t);
+op_code fs_write_file(t_io*, t_list*, t_bloques*, char*, int, uint32_t);
+op_code fs_delete_file(t_io*, t_list*, t_bitmap*, t_bloques*, char*, uint32_t);
+op_code fs_truncate_file(t_io*, t_list*, t_bitmap*, t_bloques*, char*, uint32_t);
 
 void *read_stdin(uint32_t);
 void stdin_clear_buffer();
@@ -80,6 +80,7 @@ void resize_up(t_bitarray*, int, int);
 void realocate_data(void*, uint32_t, uint32_t, uint32_t);
 bool sory_by_init_block(void*, void*);
 void realocate_compactacion(t_config*, t_bitmap*, t_bloques*, int);
+char* map_instruction(set_instruction);
 
 #endif
 

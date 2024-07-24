@@ -54,7 +54,7 @@ void* io_client(void *client) {
 
         t_paquete* paquete = crear_paquete(IO);
     
-        agregar_io_serializado(paquete,  io->io_info);
+        agregar_io_serializado(paquete, io->io_info, io->pcb->pid);
         enviar_paquete(paquete, cliente_fd);
         eliminar_paquete(paquete);
 
