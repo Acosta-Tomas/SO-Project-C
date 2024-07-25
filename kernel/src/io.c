@@ -30,7 +30,7 @@ void* io_client(void *client) {
     recibir_operacion(cliente_fd);
     char* nombre_cliente = recibir_mensaje(cliente_fd);
 
-    log_info(logger, "SOCKET: %d - Nueva IO: Interfaz: %s", cliente_fd, nombre_cliente);
+    log_info(logger, "SOCKET: %d - Nueva IO: %s", cliente_fd, nombre_cliente);
 
     t_io_client* io_client = malloc(sizeof(t_io_client));
 
@@ -89,7 +89,7 @@ void* io_client(void *client) {
         }
     }
 
-    log_error(logger, "SOCKET: %d - Disconnect IO: Interfaz: %s", cliente_fd, nombre_cliente);
+    log_error(logger, "SOCKET: %d - Disconnect IO: %s", cliente_fd, nombre_cliente);
 
     sem_wait(&mutex_io_clients);
     dictionary_remove(dict_io_clients, nombre_cliente);

@@ -116,7 +116,6 @@ void print_pid(void*);
 void print_io(char*, void*);
 void print_recursos(char*, void*);
 void print_io_pd(void*);
-void log_pid(void*);
 void cambio_estado(t_pcb*, pid_status);
 char* map_status(pid_status);
 

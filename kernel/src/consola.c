@@ -91,7 +91,7 @@ void* consola_main(void *arg){
             continue;
         }
 
-        printf("Comando no reconocido");
+        printf("Comando no reconocido\n");
     }
 
     liberar_conexion(memoria_fd);
@@ -320,14 +320,14 @@ void print_io_pd(void *io) {
 void print_io(char* key, void* io){
      t_io_client* io_print = (t_io_client*) io;
 
-     printf("\tIO - %s: ", key);
+     printf("\n\tIO - %s: ", key);
      list_iterate(io_print->queue_io->elements, &print_io_pd);
 }
 
 void print_recursos(char* key, void* recurso){
      t_recursos* recurso_print = (t_recursos*) recurso;
 
-     printf("\tWAIT - %s: ", key);
+     printf("\n\tWAIT - %s: ", key);
      list_iterate(recurso_print->queue_waiting->elements, &print_pid);
 }
 
@@ -343,4 +343,5 @@ void print_estados_procesos(void){
     printf("\nBLOCKED:\n");
     dictionary_iterator(dict_io_clients, &print_io);
     dictionary_iterator(dict_recursos, &print_recursos);
+    printf(" \n");
 }

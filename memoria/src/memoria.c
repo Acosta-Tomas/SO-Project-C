@@ -47,7 +47,6 @@ void liberar_memoria(int client_fd){
     sem_post(&mutex_mem_procesos);
 
     resize_down(list_size(pid_mem->pages), pid_mem->pages);
-    mem_hexdump(bit_map->bitarray, bit_map->size);
 
     list_destroy(pid_mem->pages);
     string_array_destroy(pid_mem->file);

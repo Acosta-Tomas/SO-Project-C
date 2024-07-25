@@ -19,18 +19,21 @@ void* largo_main(void *arg){
         queue_push(queue_ready, pcb);
         sem_post(&mutex_ready);
         
-        log_info(logger, "Cola Ready / Ready Prioridad: ");
+        char* read_list = string_new();
+        void log_pid(void* pcb) {
+            t_pcb* pcb_print = (t_pcb*) pcb;
+
+            string_append(&read_list, string_itoa((int) pcb_print->pid));
+            string_append(&read_list, ", ");
+        }
+
         list_iterate(queue_priority_ready->elements, &log_pid);
         list_iterate(queue_ready->elements, &log_pid);
 
+        log_info(logger, "Cola Ready / Ready Prioridad: %s", read_list);
+        free(read_list);
         sem_post(&hay_ready);
     }
     
     return EXIT_SUCCESS;
-}
-
-void log_pid(void* pcb) {
-    t_pcb* pcb_print = (t_pcb*) pcb;
-
-    log_info(logger, "%u, ", pcb_print->pid); 
 }

@@ -50,7 +50,10 @@ void* corto_main(void *arg){
             }
         }
 
-        if (pcb->status == TERMINATED) finalizar_proceso(pcb, "SUCCESS");
+        if (pcb->status == TERMINATED) {
+            pcb->status = RUNNING;
+            finalizar_proceso(pcb, "SUCCESS");
+        }
 
         if (pcb->status == TERMINATED_USER) finalizar_proceso(pcb, "INTERRUPTED_BY_USER");
 
@@ -60,7 +63,10 @@ void* corto_main(void *arg){
 
         if (pcb->status == ERROR_INTERFACE) finalizar_proceso(pcb, "INVALID_INTERFACE");
 
-        if (pcb->status == ERROR_MEMORY) finalizar_proceso(pcb, "OUT_OF_MEMORY");
+        if (pcb->status == ERROR_MEMORY) {
+            pcb->status = RUNNING;
+            finalizar_proceso(pcb, "OUT_OF_MEMORY");
+        }
 
         if (pcb->status == RUNNING) {
             cambio_estado(pcb, READY);
@@ -195,6 +201,7 @@ t_pcb* esperar_cpu(int conexion, t_temporal* pid_timestamp){
         sem_post(&mutex_recurso);
 
         log_info(logger, "PID: %u - Bloqueado por: %s", pcb_updated->pid, nombre_recurso);
+        pcb_updated->status = RUNNING;
         cambio_estado(pcb_updated, BLOCKED_WAIT);
         free(nombre_recurso);
 

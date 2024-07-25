@@ -255,7 +255,7 @@ pid_status resize_process(int memoria_fd, char* size){
     op_code code_op;
     recv(memoria_fd, &code_op, sizeof(op_code), MSG_WAITALL);
 
-    if (code_op == MEM_ERROR) return ERROR;
+    if (code_op == MEM_ERROR) return ERROR_MEMORY;
 
     return RUNNING;
 }
