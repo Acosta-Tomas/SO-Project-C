@@ -15,7 +15,7 @@ int escribir_memoria(int memoria_fd, void* buffer, t_list* frames, t_log* logger
 
         char* value_print = malloc(frame->bytes + 1);
         memcpy(value_print, buffer + offset_buffer, frame->bytes);
-        log_info(logger, "PID: %u - Acción: ESCRIBIR - Dirección Física: %u - Valor: %s", pid, frame->direccion_fisica, value_print);
+        log_info(logger, "PID: %u - Acción: ESCRIBIR - Dirección Física: %u - Valor: %.*s", pid, frame->direccion_fisica, frame->bytes, value_print);
 
 
         offset_buffer += frame->bytes;
@@ -53,7 +53,7 @@ int leer_memoria(int memoria_fd, void* buffer, t_list* frames, t_log* logger, ui
         memcpy(buffer + offset_buffer, buffer_memoria + sizeof(uint32_t), frame->bytes);
         memcpy(value_print, buffer_memoria + sizeof(uint32_t), frame->bytes);
 
-        log_info(logger, "PID: %u - Acción: LEER - Dirección Física: %u - Valor: %s", pid, frame->direccion_fisica, value_print);
+        log_info(logger, "PID: %u - Acción: LEER - Dirección Física: %u - Valor: %.*s", pid, frame->direccion_fisica, frame->bytes, value_print);
 
         offset_buffer += frame->bytes;
         free(frame);
